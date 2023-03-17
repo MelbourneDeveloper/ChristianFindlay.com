@@ -236,11 +236,15 @@ three_columns:
         {% assign chck_number = forloop.index | modulo: 2 %}
         <!--/.row -->
         <div class="space120"></div>
+        <div class="row align-items-center">
 
-        <!--Service-->
-
-        <div class="services-container">
-          <div class="services-column-1">
+          {% if service.image %}
+          <div class="col-lg-6 order-lg-{{chck_number}}">
+            <img src="{{service.image}}" style="width: 200px" alt="{{service.title}}" />
+          </div>
+          {% endif %}
+          <div class="space30 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-6 pr-60 pr-md-15">
             <h3>{{service.title}}</h3>
             <div class="space10"></div>
             <p>{{service.description}}</p>
@@ -252,11 +256,9 @@ three_columns:
             <div class="space10"></div>
             <a href="{{service.button_url}}" class="btn btn-violet">{{service.button_text}}</a>
           </div>
-          <div class="services-column-2">
-            <img src="{{service.image}}" style="width: 200px" alt="{{service.title}}" />
-          </div>
+          <!--/column -->
         </div>
-
+        <!--/.row -->
         {% endfor %}
       </div>
       {% endif %}
