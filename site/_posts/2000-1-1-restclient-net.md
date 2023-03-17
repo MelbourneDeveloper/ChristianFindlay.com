@@ -41,7 +41,7 @@ To install RestClient .NET, run the following command in the [Package Manager Co
 
 Install-Package RestClient.NET
 
-![NuGet](https://uploads-ssl.webflow.com/62b7c41e60a360d43510906f/62ba6f9f3bf03223f61c3f86_nuget.png){:width="100%"}
+‍![Install](/assets/images/blog/restclientdotnet/install.png){:width="100%"}
 
 ## All Platforms
 
