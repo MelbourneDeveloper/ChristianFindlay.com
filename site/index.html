@@ -194,14 +194,7 @@ three_columns:
 
       {% if page.services_area.enable %}
       <div class="services-area">
-        <div class="row">
-          <div class="col-md-7 mx-auto">
-            <div class="space140"></div>
-            <h2 class="title-color color-gray text-center">{{page.services_area.title}}</h2>
-            <h3 class="display-3 text-center">{{page.services_area.sub_title}}</h3>
-            <div class="space40"></div>
-          </div>
-        </div>
+
         {% for service in page.services_area.services %}
         {% assign chck_number = forloop.index | modulo: 2 %}
         <!--/.row -->
