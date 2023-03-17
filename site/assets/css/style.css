@@ -7172,6 +7172,5 @@ footer.inverse-text address {
 }
 
 .services-column-2 {
-    width: 200px;
+    max-width: 200px;
 }
-
