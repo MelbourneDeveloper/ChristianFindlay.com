@@ -5,3 +5,15 @@ This is the [Jekyll](https://jekyllrb.com/) and HTML/CSS source code for my pers
 ## Hire Me
 
 I build Flutter and .NET apps. Contact me through [Twitter](https://twitter.com/CFDevelop), [LinkedIn](https://www.linkedin.com/in/christian-findlay/) or the [contact form](https://www.christianfindlay.com/contact) on my website.
+
+## Run/Test Website Locally
+
+You need to install Jekyll which runs on [Ruby](https://www.ruby-lang.org/en/documentation/installation/).
+
+Follow the instructions for installing Jekyll [here](https://jekyllrb.com/docs/installation/). 
+
+Once everything is installed, you can run the website locally by running the following command in the `site` directory of the project:
+
+```
+bundle exec jekyll serve
+```
