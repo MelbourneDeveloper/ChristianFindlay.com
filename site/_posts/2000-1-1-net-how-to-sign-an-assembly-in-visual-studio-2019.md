@@ -31,7 +31,7 @@ Turn Off Signing On Debug
 
 1.  Open the .csproj file in Visual Studio Code. It will look like this.
 
-![](https://uploads-ssl.webflow.com/62b7c41e60a360d43510906f/62ba6faf7b968d68c150ac71_image.png){:width="100%"}
+![Project XML](/assets/images/blog/sign/project.png){:width="100%"}
 
 1.  Find the sections related to signing (SignAssembly, AssemblyOriginatorKeyFile) and delete those lines.
 2.  Add this Choose block after the PropertyGroup but inside the Project
@@ -53,9 +53,8 @@ Turn Off Signing On Debug
    </When>
 </Choose>
 ```
-    
 
-![](https://uploads-ssl.webflow.com/62b7c41e60a360d43510906f/62ba6faff04e595b958667e8_image-1.png){:width="100%"}
+![Project XML](/assets/images/blog/sign/project2.png){:width="100%"}
 
 You can see a working example from [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net) [here](https://github.com/MelbourneDeveloper/RestClient.Net/blob/58f6a1d552357f7de443a7d846039a68703325d2/RestClient.Net/RestClient.Net.csproj#L54). You should be able to download and compile this project as a reference.
 
