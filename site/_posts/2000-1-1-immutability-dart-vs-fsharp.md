@@ -68,8 +68,7 @@ But the results are very different. The first thing you should notice about the 
 
 The list on the Dart version is completely mutable. We can modify it at compile time and runtime. This code runs correctly  
   
-
-![](https://uploads-ssl.webflow.com/62b7c41e60a360d43510906f/6365f10f3ce7220061c89839_modifynumbers.png)
+‍![Can add to list](/assets/images/blog/immutibility/addmethod.png){:width="100%"}
 
 How about structural equality? Well, F# does this out of the box. This comparison returns true because all the values in the record match.  
 
