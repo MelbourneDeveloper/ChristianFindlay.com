@@ -1,0 +1,16 @@
+main_menu:
+
+  - text: "Contact"
+    url: "/contact"    
+
+  - text: "Services"
+    url: "/services"    
+  
+  - text: "FAQ"
+    url: "/faq"
+
+  - text: "Portfolio"
+    url: "/portfolio"
+ 
+  - text: "Blog"
+    url: "/blog"

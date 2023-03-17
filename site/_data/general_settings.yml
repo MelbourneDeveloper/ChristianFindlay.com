@@ -1,0 +1,58 @@
+
+title: "Independent Flutter Developer - ChristianFindlay.com"
+description: >- 
+  Christian Findlay is an independent app developer working in
+  Melbourne, Australia and working with Flutter, Firebase, .NET,
+  Google Cloud, and Microsoft Azure.
+
+address_01: 'Melbourne, Australia'
+copyright_text: "© 2023 Christian Findlay. All rights reserved."
+
+google_analytics:
+  enable: true
+  key: "G-JQWT4QXX6C"  
+
+social_accounts:
+  title: "Follow Me"
+  links:
+
+    - url: "https://www.linkedin.com/in/christian-findlay/"
+      icon: "jam jam-linkedin"
+
+    - url: "https://twitter.com/CFDevelop"
+      icon: "jam jam-twitter"
+
+    - url: "https://www.facebook.com/cfdevelop/"
+      icon: "jam jam-facebook"
+
+    - url: "https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw"
+      icon: "jam jam-youtube"
+
+external_links:
+  title: "More"
+  links:
+    - text: "Contact"
+      url: "/contact.html"    
+    - text: "Services"
+      url: "/services.html"
+    - text: "FAQ"
+      url: "/FAQ.html"    
+    - text: "Portfolio"
+      url: "/portfolio.html"  
+    - text: "Blog"
+      url: "/blog"
+      
+
+author_page_header:
+  header_background_image: "assets/images/art/bg31.jpg"
+
+gallery:
+  images:
+  - img: "assets/images/art/z1.svg"
+  - img: "assets/images/art/z2.svg"
+  - img: "assets/images/art/z3.svg"
+  - img: "assets/images/art/z4.svg"
+  - img: "assets/images/art/z5.svg"
+  - img: "assets/images/art/z6.svg"
+  - img: "assets/images/art/z7.svg"
+  - img: "assets/images/art/z8.svg"
