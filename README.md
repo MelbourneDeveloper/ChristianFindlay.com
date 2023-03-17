@@ -6,6 +6,10 @@ This is the [Jekyll](https://jekyllrb.com/) and HTML/CSS source code for my pers
 
 I build Flutter and .NET apps. Contact me through [Twitter](https://twitter.com/CFDevelop), [LinkedIn](https://www.linkedin.com/in/christian-findlay/) or the [contact form](https://www.christianfindlay.com/contact) on my website.
 
+## Blog Posts
+
+Blog posts are in markdown format. Feel free to submit PRs to fix factual inaccuracies or to add additional information. You can find them in the [`_posts`](/_posts) directory.
+
 ## Run/Test Website Locally
 
 You need to install Jekyll which runs on [Ruby](https://www.ruby-lang.org/en/documentation/installation/).
