@@ -4,6 +4,8 @@ title: "Anti-patterns: A Misused Term"
 date: "2019/06/01 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/antipatterns/header.jpg"
+image: "/assets/images/blog/antipatterns/header.jpg"
+description: This is an SEO description
 tags: 
 categories: [software development]
 permalink: /blog/:title
