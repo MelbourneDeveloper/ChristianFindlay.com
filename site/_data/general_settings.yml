@@ -1,9 +1,13 @@
 
 title: "Flutter Developer in Melbourne, Australia"
 description: >- 
-  Christian Findlay is an independent app developer working in
-  Melbourne, Australia and working with Flutter, Firebase, .NET,
+  Christian Findlay is an independent Flutter developer working in
+  Melbourne, Australia and working with .NET, Firebase, 
   Google Cloud, and Microsoft Azure.
+
+twitter:
+  username: cfdevelop
+  card: summary
 
 address_01: 'Melbourne, Australia'
 copyright_text: "© 2023 Christian Findlay. All rights reserved."
@@ -11,6 +15,16 @@ copyright_text: "© 2023 Christian Findlay. All rights reserved."
 google_analytics:
   enable: true
   key: "G-JQWT4QXX6C"  
+
+#For jekyll-seo-tag
+social:
+  name: Christian Findlay
+  links:
+    - https://twitter.com/cfdevelop
+    - https://www.facebook.com/cfdevelop
+    - https://www.linkedin.com/in/christian-findlay/
+    - https://github.com/MelbourneDeveloper
+    - https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw
 
 social_accounts:
   title: "Follow Me"
