@@ -8,7 +8,7 @@ I build Flutter and .NET apps. Contact me through [Twitter](https://twitter.com/
 
 ## Blog Posts
 
-Blog posts are in markdown format. Feel free to submit PRs to fix factual inaccuracies or to add additional information. You can find them in the [`_posts`](/_posts) directory.
+Blog posts are in markdown format. Feel free to submit PRs to fix factual inaccuracies or to add additional information. You can find them in the [`_posts`](site/_posts) directory.
 
 ## Run/Test Website Locally
 
