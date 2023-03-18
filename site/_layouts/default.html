@@ -27,6 +27,7 @@
   {% if site.data.general_settings.google_analytics.enable %}
    {% include analytics.html %}
   {% endif %}
+  {% seo %}
 </head>
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
   <div class="content-wrapper">
@@ -50,4 +51,5 @@
   <script src="{{relative_url}}/assets/js/simple-jekyll-search.min.js"></script>
   <script src="{{relative_url}}/assets/js/scripts.js"></script>
 </body>
+
 </html>
