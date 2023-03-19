@@ -4,6 +4,8 @@ title: "API Versioning: Mandatory Columns"
 date: "2019/03/31 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/versioning/header.jpeg"
+image: "/assets/images/blog/versioning/header.jpeg"
+description: Discover effective strategies to tackle API versioning challenges and ensure data quality without relying on mandatory columns. Learn how to improve user experience, maintain data integrity, and enable seamless back-end upgrades without breaking front-ends.
 tags: app-store deployment
 categories: [software development]
 permalink: /blog/:title
