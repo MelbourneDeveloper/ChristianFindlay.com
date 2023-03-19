@@ -212,7 +212,7 @@ As a result, whenever a user types something in the search bar, the `_performSea
 
 ## Widget Testing
 
-We also need to test the app. Full app widget tests are the best way to test Flutter apps. They can easily cover all the code instead of focusing on the logic only. Create a `test` folder if it doesn't exist and add the file `search_bar_example_test.dart`.
+We also need to test the app. Full app widget tests are the best way to test Flutter apps. You can read more about testing [here](https://www.christianfindlay.com/blog/test-isolation-expensive). They can easily cover all the code instead of focusing on the logic only. Create a `test` folder if it doesn't exist and add the file `search_bar_example_test.dart`.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -267,7 +267,7 @@ void main() {
 }
 ```
 
-The provided tests validate various aspects of a search bar app built using Flutter. The first test ensures that the app displays an `AppBar` containing a `TextField` for search input. The second test verifies that a CircularProgressIndicator is shown during the search process and disappears once the search is complete. The third test checks that the app displays the correct number of search results (in this case, three) after the search is completed. Finally, the fourth test confirms that the app displays no search results when a non-existent query is entered. These tests help ensure the app functions as expected, providing a solid foundation for further development and improvements.
+The provided tests validate various aspects of a search bar app built using Flutter. The first test ensures that the app displays an `AppBar` containing a `TextField` for search input. The second test verifies that a `CircularProgressIndicator` is shown during the search process and disappears once the search is complete. The third test checks that the app displays the correct number of search results (in this case, three) after the search is completed. Finally, the fourth test confirms that the app displays no search results when a non-existent query is entered. These tests help ensure the app functions as expected, providing a solid foundation for further development and improvements.
 
 
 ## Conclusion
