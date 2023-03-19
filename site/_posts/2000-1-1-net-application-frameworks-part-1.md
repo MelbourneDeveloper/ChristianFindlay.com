@@ -6,6 +6,7 @@ tags: frameworks
 categories: [dotnet]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/appframework/header.png"
+image: "/assets/images/blog/appframework/header.png"
 permalink: /blog/:title
 ---
 

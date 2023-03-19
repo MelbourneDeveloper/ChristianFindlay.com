@@ -4,6 +4,7 @@ title: "How to Use F# from C#"
 date: "2020/10/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/fsharp/logo.svg"
+image: "/assets/images/blog/fsharp/logo.svg"
 post_image_size: width:50%
 tags: fsharp csharp
 categories: dotnet

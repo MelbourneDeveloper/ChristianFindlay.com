@@ -4,6 +4,7 @@ title: "Reactive Programming: Hot Vs. Cold Observables"
 date: "2020/10/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/reactive/header.jpeg"
+image: "/assets/images/blog/reactive/header.jpeg"
 tags: reactive csharp
 categories: dotnet
 permalink: /blog/:title

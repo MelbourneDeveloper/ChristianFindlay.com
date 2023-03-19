@@ -6,6 +6,7 @@ tags: csharp
 categories: [dotnet]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplatusb/usbcable.jpg"
+image: "/assets/images/blog/xplatusb/usbcable.jpg"
 permalink: /blog/:title
 ---
 

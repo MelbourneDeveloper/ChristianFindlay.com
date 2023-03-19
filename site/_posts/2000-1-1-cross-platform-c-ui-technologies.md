@@ -4,6 +4,7 @@ title: "Cross-Platform C# UI Technologies"
 date: 2019-05-11 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat1/header.jpg"
+image: "/assets/images/blog/xplat1/header.jpg"
 categories: [dotnet]
 tags: cross-platform csharp avaloniaui uno-platform
 permalink: /blog/:title

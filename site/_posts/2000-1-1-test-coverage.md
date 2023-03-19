@@ -4,6 +4,7 @@ title: "Test Coverage"
 date: "2023/03/09 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/testcoverage/header.jpg"
+image: "/assets/images/blog/testcoverage/header.jpg"
 tags: testing software-quality
 categories: [software development]
 permalink: /blog/:title

@@ -6,6 +6,7 @@ tags: testing dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/mutant.jpg"
+image: "/assets/images/blog/testing/mutant.jpg"
 permalink: /blog/:title
 ---
 

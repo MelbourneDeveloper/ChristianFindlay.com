@@ -6,7 +6,7 @@ categories: [dotnet]
 tags: testing
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xunit/header.png"
-
+image: "/assets/images/blog/xunit/header.png"
 permalink: /blog/:title
 ---
 

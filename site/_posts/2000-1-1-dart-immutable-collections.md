@@ -6,6 +6,7 @@ tags: immutability dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/immutability/header.jpeg"
+image: "/assets/images/blog/immutability/header.jpeg"
 permalink: /blog/:title
 ---
 

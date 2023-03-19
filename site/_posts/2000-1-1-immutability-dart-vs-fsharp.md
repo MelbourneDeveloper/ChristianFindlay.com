@@ -4,6 +4,7 @@ title: "Immutability: Dart vs. F#"
 date: "2022/11/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/immutibility/header.png"
+image: "/assets/images/blog/immutibility/header.png"
 tags: Immutability dart f#
 categories: flutter
 permalink: /blog/:title

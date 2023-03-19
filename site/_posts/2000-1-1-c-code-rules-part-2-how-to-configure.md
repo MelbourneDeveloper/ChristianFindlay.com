@@ -4,6 +4,7 @@ title: "C# Code Rules Part 2 - How To Configure"
 date: 2019-02-23 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"
+image: "/assets/images/blog/coderules/rules.jpg"
 categories: [dotnet]
 tags: code-quality
 permalink: /blog/:title

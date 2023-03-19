@@ -6,6 +6,7 @@ categories: [dotnet]
 tags: code-quality
 author: "Christian Findlay"
 post_image: "/assets/images/blog/quality/header.jpg"
+image: "/assets/images/blog/quality/header.jpg"
 permalink: /blog/:title
 ---
 

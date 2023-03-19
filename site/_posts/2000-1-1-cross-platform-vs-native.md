@@ -4,6 +4,7 @@ title: "Cross-Platform Vs. Native Apps"
 date: "2022/07/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/crossplatform/header.jpg"
+image: "/assets/images/blog/crossplatform/header.jpg"
 tags: cross-platform
 categories: [software development]
 permalink: /blog/:title

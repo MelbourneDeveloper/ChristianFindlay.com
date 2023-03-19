@@ -6,6 +6,7 @@ tags: state-management bloc
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/seperatebusinesslogic/header.jpeg"
+image: "/assets/images/blog/seperatebusinesslogic/header.jpeg"
 permalink: /blog/:title
 ---
 

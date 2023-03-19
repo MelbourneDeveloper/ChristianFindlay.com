@@ -4,6 +4,7 @@ title: "RestClient.Net"
 date: 2016-08-14 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
+image: "/assets/images/blog/restclientdotnet/logo.png"
 categories: [dotnet]
 tags: restclient-net csharp
 permalink: /blog/:title

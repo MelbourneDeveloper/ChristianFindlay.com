@@ -4,6 +4,7 @@ title: ".NET - How to Sign an Assembly in Visual Studio 2019"
 date: "2020/01/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/sign/header.jpeg"
+image: "/assets/images/blog/sign/header.jpeg"
 tags: security csharp
 categories: [dotnet]
 permalink: /blog/:title

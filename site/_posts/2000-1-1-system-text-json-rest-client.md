@@ -4,6 +4,7 @@ title: System.Text.Json Rest Client
 date: "2020/01/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/json/header.svg"
+image: "/assets/images/blog/json/header.svg"
 tags: restclient-net csharp
 categories: dotnet
 post_image_size: width:50%

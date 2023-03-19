@@ -6,7 +6,7 @@ tags: ioc-container cross-platform dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ioc_container/header.jpeg"
-
+image: "/assets/images/blog/ioc_container/header.jpeg"
 trending: true
 permalink: /blog/:title
 ---

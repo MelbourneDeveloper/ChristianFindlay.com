@@ -6,6 +6,7 @@ categories: [dotnet]
 tags: restclient-net csharp
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
+image: "/assets/images/blog/restclientdotnet/logo.png"
 permalink: /blog/:title
 ---
 

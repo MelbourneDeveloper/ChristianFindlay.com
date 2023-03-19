@@ -4,6 +4,7 @@ title: "How To Change the Behavior of a C# Record Constructor"
 date: "2021/04/29 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/record.jpg"
+image: "/assets/images/blog/dotnet/record.jpg"
 tags: records csharp
 categories: [dotnet]
 permalink: /blog/:title

@@ -4,6 +4,7 @@ title: "Blazor vs. React / Angular / Vue.js"
 date: "2020/06/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/blazorjscsharp.png"
+image: "/assets/images/blog/blazor/blazorjscsharp.png"
 tags: blazor web
 categories: dotnet
 permalink: /blog/:title

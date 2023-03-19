@@ -6,6 +6,7 @@ tags: bloc state-management cross-platform
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/art/rubiks.jpg"
+image: "/assets/images/art/rubiks.jpg"
 trending: true
 permalink: /blog/:title
 ---

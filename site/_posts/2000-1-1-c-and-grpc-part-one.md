@@ -6,6 +6,7 @@ tags: grpc csharp
 categories: [dotnet]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/grpc/header.png"
+image: "/assets/images/blog/grpc/header.png"
 permalink: /blog/:title
 ---
 

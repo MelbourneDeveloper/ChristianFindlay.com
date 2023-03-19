@@ -4,6 +4,7 @@ title: "Device.Net Project Status"
 date: "2022/08/06 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/devicenet/logo.png"
+image: "/assets/images/blog/devicenet/logo.png"
 tags: device-net usb hid
 categories: dotnet
 permalink: /blog/:title

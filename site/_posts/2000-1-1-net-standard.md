@@ -4,6 +4,7 @@ title: "Why .NET Standard Is Still Relevant"
 date: "2020/12/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/netstandard/header.png"
+image: "/assets/images/blog/netstandard/header.png"
 tags: dotnet-standard cross-platform
 categories: dotnet
 permalink: /blog/:title

@@ -4,6 +4,7 @@ title: "How to Stop NullReferenceExceptions in .NET"
 date: "2021/07/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/nrt/header.jpeg"
+image: "/assets/images/blog/nrt/header.jpeg"
 tags: csharp
 categories: dotnet
 permalink: /blog/:title

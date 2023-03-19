@@ -4,6 +4,7 @@ title: "Git Submodules Vs. NuGet Dependencies"
 date: "2020/08/28 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/git/header.jpg"
+image: "/assets/images/blog/git/header.jpg"
 tags: git
 categories: [software development]
 permalink: /blog/:title

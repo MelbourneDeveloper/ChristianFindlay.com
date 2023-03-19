@@ -4,6 +4,7 @@ title: "App Store Deployment - Back-end First"
 date: "2019/03/23 00:00:00 +00000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/appdev/header.jpg"
+image: "/assets/images/blog/appdev/header.jpg"
 tags: deployment app-store
 categories: [software development]
 permalink: /blog/:title

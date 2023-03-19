@@ -4,6 +4,7 @@ title: "Google Cloud Run"
 date: "2022/07/26 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/gcp/header.png"
+image: "/assets/images/blog/gcp/header.png"
 tags: google-cloud-platform serverless
 categories: [software development]
 permalink: /blog/:title

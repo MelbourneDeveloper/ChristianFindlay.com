@@ -6,6 +6,7 @@ tags: Dart code-quality
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dartformatting/dartformatting.png"
+image: "/assets/images/blog/dartformatting/dartformatting.png"
 permalink: /blog/:title
 ---
 

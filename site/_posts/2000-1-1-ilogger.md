@@ -4,6 +4,7 @@ title: "How to Use and Unit Test ILogger"
 date: "2020/07/03 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ilogger/header.jpg"
+image: "/assets/images/blog/ilogger/header.jpg"
 tags: csharp ilogger
 categories: dotnet
 permalink: /blog/:title

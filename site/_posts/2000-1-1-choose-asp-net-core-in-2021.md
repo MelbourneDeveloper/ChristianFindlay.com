@@ -4,6 +4,7 @@ title: "Choose ASP.NET Core in 2021"
 date: "2021/02/26 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"
+image: "/assets/images/blog/dotnet/logo.svg"
 tags: csharp web
 categories: dotnet
 permalink: /blog/:title

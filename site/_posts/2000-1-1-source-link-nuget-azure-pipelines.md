@@ -4,6 +4,7 @@ title: "Publish Source Link NuGet Packages with Azure Pipelines"
 date: "2020/12/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"
+image: "/assets/images/blog/dotnet/logo.svg"
 tags: nuget azure ci-cd
 categories: dotnet
 permalink: /blog/:title

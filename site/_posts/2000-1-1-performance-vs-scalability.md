@@ -4,6 +4,7 @@ title: "Performance Vs. Scalability"
 date: "2022/02/13 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/performance/header.jpg"
+image: "/assets/images/blog/performance/header.jpg"
 tags: serverless
 categories: [software development]
 permalink: /blog/:title

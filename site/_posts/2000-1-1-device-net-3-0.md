@@ -4,6 +4,7 @@ title: "Device.Net 3.0"
 date: "2019/08/26 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/devicenet/logo.png"
+image: "/assets/images/blog/devicenet/logo.png"
 tags: device-net usb hid cross-platform
 categories: dotnet
 permalink: /blog/:title

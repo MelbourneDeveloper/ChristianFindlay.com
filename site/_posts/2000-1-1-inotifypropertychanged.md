@@ -4,6 +4,7 @@ title: "XAML: How to Implement INotifyPropertyChanged"
 date: "2020/09/11 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/inotify/header.jpeg"
+image: "/assets/images/blog/inotify/header.jpeg"
 tags: XAML
 categories: dotnet
 permalink: /blog/:title

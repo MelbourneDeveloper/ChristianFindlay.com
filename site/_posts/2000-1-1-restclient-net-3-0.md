@@ -4,6 +4,7 @@ title: RestClient.Net 3.0
 date: "2020/01/03 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
+image: "/assets/images/blog/restclientdotnet/logo.png"
 categories: [dotnet]
 tags: restclient-net
 permalink: /blog/:title

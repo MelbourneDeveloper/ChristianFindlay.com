@@ -4,6 +4,7 @@ title: "Hiring an Independent Software Developer vs. a Software Consultancy"
 date: 2023-01-03 20:37:13 +0600
 author: "Christian Findlay"
 post_image: "/assets/images/art/hiring.jpg"
+image: "/assets/images/art/hiring.jpg"
 categories: [software development]
 trending: true
 permalink: /blog/:title

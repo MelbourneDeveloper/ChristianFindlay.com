@@ -4,6 +4,7 @@ title: "Flutter: First Impressions"
 date: "2021/09/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutter/header.svg"
+image: "/assets/images/blog/flutter/header.svg"
 tags: dart
 categories: flutter
 post_image_size: width:50%

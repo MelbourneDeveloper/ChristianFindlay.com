@@ -4,6 +4,7 @@ title: "C# Delegates with IoC Containers and Dependency Injection"
 date: "2020/05/16 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/csharp/logo.svg"
+image: "/assets/images/blog/csharp/logo.svg"
 tags: csharp
 categories: dotnet
 post_image_size: width:50%

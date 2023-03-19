@@ -4,6 +4,7 @@ title: "Blazor Vs. Traditional Web Apps"
 date: "Jul 9, 2020"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/logo.jpg"
+image: "/assets/images/blog/blazor/logo.jpg"
 tags: blazor web
 categories: dotnet
 permalink: /blog/:title

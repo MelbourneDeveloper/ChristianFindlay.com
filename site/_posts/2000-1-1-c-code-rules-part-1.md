@@ -4,6 +4,7 @@ title: "C# Code Rules Part 1"
 date: 2019-02-11 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"
+image: "/assets/images/blog/coderules/rules.jpg"
 categories: [dotnet]
 tags: code-quality csharp
 permalink: /blog/:title

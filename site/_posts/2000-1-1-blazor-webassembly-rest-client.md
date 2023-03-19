@@ -4,7 +4,7 @@ title: "Blazor WebAssembly Rest Client"
 date: "2020/02/14 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/header.png"
-
+image: "/assets/images/blog/blazor/header.png"
 tags: blazor
 categories: dotnet
 permalink: /blog/:title

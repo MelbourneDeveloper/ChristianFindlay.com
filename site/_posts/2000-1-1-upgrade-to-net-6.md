@@ -4,6 +4,7 @@ title: "Upgrade from .NET Framework to .NET 6"
 date: "2021/12/12 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/upgradedotnet/header.jpg"
+image: "/assets/images/blog/upgradedotnet/header.jpg"
 tags: 
 categories: [dotnet]
 permalink: /blog/:title

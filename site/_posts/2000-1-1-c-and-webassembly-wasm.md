@@ -6,6 +6,7 @@ categories: [dotnet]
 tags: wasm blazor uno-platform avaloniaui
 author: "Christian Findlay"
 post_image: "/assets/images/blog/wasm/header.png"
+image: "/assets/images/blog/wasm/header.png"
 permalink: /blog/:title
 ---
 

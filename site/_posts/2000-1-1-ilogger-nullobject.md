@@ -4,6 +4,7 @@ title: "ILogger and Null Object Pattern"
 date: "2020/09/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ilogger/nothing.jpg"
+image: "/assets/images/blog/ilogger/nothing.jpg"
 tags: ilogger
 categories: dotnet
 permalink: /blog/:title

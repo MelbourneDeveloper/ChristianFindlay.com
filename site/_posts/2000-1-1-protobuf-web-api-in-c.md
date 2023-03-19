@@ -4,6 +4,7 @@ title: Protobuf Web API in C#
 date: "2020/01/11 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/protobuf/header.png"
+image: "/assets/images/blog/protobuf/header.png"
 tags: grpc csharp
 categories: dotnet
 permalink: /blog/:title

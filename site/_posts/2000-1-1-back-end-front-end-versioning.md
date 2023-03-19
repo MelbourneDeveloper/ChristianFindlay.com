@@ -4,6 +4,7 @@ title: "Back-end - Front-End Versioning"
 date: "2019/03/23 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/versioning/header.jpeg"
+image: "/assets/images/blog/versioning/header.jpeg"
 tags: deployment app-store
 categories: [software development]
 permalink: /blog/:title

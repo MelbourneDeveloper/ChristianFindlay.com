@@ -4,6 +4,7 @@ title: "Cross Platform USB and Hid Programming"
 date: 2018-12-30 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplatusb/usbcable.jpg"
+image: "/assets/images/blog/xplatusb/usbcable.jpg"
 categories: [dotnet]
 tags: usb hid csharp cross-platform
 permalink: /blog/:title

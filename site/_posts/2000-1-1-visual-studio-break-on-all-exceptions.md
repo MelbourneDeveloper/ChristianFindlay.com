@@ -6,6 +6,7 @@ categories: [dotnet]
 tags: debugging visual-studio csharp
 author: "Christian Findlay"
 post_image: "/assets/images/blog/exceptionbreak/header.jpg"
+image: "/assets/images/blog/exceptionbreak/header.jpg"
 permalink: /blog/:title
 ---
 

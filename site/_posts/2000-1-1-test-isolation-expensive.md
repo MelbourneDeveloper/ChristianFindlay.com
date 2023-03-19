@@ -4,6 +4,7 @@ title: "Test Isolation is Expensive"
 date: "2023/02/20 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/expensivetests/header.jpg"
+image: "/assets/images/blog/expensivetests/header.jpg"
 tags: testing software-quality
 categories: [software development]
 permalink: /blog/:title

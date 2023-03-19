@@ -4,6 +4,7 @@ title: "Android HID/USB with Flutter and .NET"
 date: "2020/10/09 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutnet/header.png"
+image: "/assets/images/blog/flutnet/header.png"
 tags: usb hid
 categories: flutter
 permalink: /blog/:title

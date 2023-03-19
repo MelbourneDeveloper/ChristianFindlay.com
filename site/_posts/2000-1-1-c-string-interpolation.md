@@ -6,6 +6,7 @@ tags: csharp
 categories: [dotnet]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/stringinterpolation/header.jpg"
+image: "/assets/images/blog/stringinterpolation/header.jpg"
 permalink: /blog/:title
 ---
 

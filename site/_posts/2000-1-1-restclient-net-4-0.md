@@ -4,6 +4,7 @@ title: "RestClient.Net 4"
 date: "2020/06/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
+image: "/assets/images/blog/restclientdotnet/logo.png"
 tags: restclient-net
 categories: [dotnet]
 permalink: /blog/:title

@@ -4,6 +4,7 @@ title: "How To Buy a Computer for Cross-Platform Development"
 date: "2020/08/28 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/computer/header.jpg"
+image: "/assets/images/blog/computer/header.jpg"
 tags: cross-platform
 categories: [software development]
 permalink: /blog/:title
