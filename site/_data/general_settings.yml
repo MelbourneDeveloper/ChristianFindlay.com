@@ -12,10 +12,6 @@ twitter:
 address_01: 'Melbourne, Australia'
 copyright_text: "© 2023 Christian Findlay. All rights reserved."
 
-google_analytics:
-  enable: true
-  key: "G-JQWT4QXX6C"  
-
 #For jekyll-seo-tag
 social:
   name: Christian Findlay
