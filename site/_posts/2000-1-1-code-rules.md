@@ -1,5 +1,5 @@
 ---
-image: "/assets/images/blog/coderules/rules.jpg"
+image: /assets/images/blog/coderules/rules.jpg
 layout: post
 title: "C# Code Rules"
 date: "Apr 24, 2022"
