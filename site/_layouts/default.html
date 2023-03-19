@@ -3,6 +3,9 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  {% if page.post_image %}
+  <meta name="twitter:image" content="{{page.post_image}}" />
+  {% endif %}
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
   <title>{% if page.title %} {{ page.title }} {% else %} {{ site.data.general_settings.title }}{% endif %}</title>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
