@@ -1,10 +1,10 @@
 ---
+image: "/assets/images/blog/coderules/rules.jpg"
 layout: post
 title: "C# Code Rules"
 date: "Apr 24, 2022"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"
-image: "/assets/images/blog/coderules/rules.jpg"
 tags: csharp
 categories: dotnet
 permalink: /blog/:title
