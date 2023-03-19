@@ -5,7 +5,7 @@ sub_title: "About the Author"
 image: "/assets/images/art/ChristianFindlay.jpg"
 primary_author: true
 bio: |
-  Based in Melbourne, Australia, I am a skilled Flutter and .NET developer with expertise in creating user-centric apps. With extensive experience in Google Cloud Platform, Firebase, and Azure, I can help streamline your app development needs by creating a single-source Flutter codebase. Let's connect on social media or through the contact menu to discuss your app development needs.
+  Based in Melbourne, I'm a skilled Flutter and .NET developer, well-versed in Google Cloud Platform, Azure, and Firebase. Crafting user-centric apps with a unified codebase, I'm eager to collaborate on your Flutter project. Reach out via the contact link to connect!
 
 social_accounts:
   - icon: "jam jam-linkedin"
