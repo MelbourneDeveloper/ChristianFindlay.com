@@ -7156,3 +7156,33 @@ footer.inverse-text address {
     object-fit: cover;
     /* Cover the entire circle with the image */
 }
+
+blockquote {
+    font-style: italic;
+    font-size: 1.2em;
+    line-height: 1.4;
+    color: #555;
+    border-left: 4px solid #6b8e23;
+    padding: 1em 0 1em 2em;
+    margin: 2em 0;
+    background-color: #f5f5f5;
+    position: relative;
+}
+
+blockquote:before {
+    content: "“";
+    font-size: 2.5em;
+    color: #6b8e23;
+    position: absolute;
+    top: -0.3em;
+    left: 0.5em;
+}
+
+blockquote:after {
+    content: "”";
+    font-size: 2.5em;
+    color: #6b8e23;
+    position: absolute;
+    bottom: -0.1em;
+    right: 0.5em;
+}
