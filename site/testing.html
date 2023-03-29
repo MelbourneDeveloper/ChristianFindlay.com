@@ -1,0 +1,92 @@
+---
+layout: page
+title: "Flutter Developer in Melbourne, Australia - App Testing"
+sub_title: |
+  Understanding the importance of Widget Tests as part of the software development process
+header_image: "assets/images/art/ChristianFindlay.jpg"
+
+about_area: 
+  enable: true
+  title: "What I Do"
+  sub_title: "I specialise in mobile apps with Flutter, and leverage technologies like Firebase, Google Cloud and Azure to build scalable, secure and reliable solutions."
+  image: "assets/images/art/ChristianFindlay.jpg"
+
+---
+{% include header.html extra_class="transparent navbar-hover-opacity" logo_class="logo" container_class="container" %}
+
+
+<div class="wrapper light-wrapper">
+
+
+  <div class="container inner">
+
+    <div >
+
+      <div class="container-centered">
+        <div class="circle-image">
+          <img src="{{page.about_area.image}}" alt="{{page.about_area.title}}">
+        </div>
+      </div>
+
+      </br>
+      </br>
+      </br>
+
+
+  
+<h1>Flutter Consulting Services: The Critical Necessity of Widget Tests</h1>
+
+<p>I take quality very seriously and putting Flutter widget tests in place is necessity for my services. This includes existing apps. Here's why:</p>
+
+<h>You have an app. It's working. It's doing what it's supposed to do. It's been tested. You hired people to build this and you expect this to continue to work. If there are no automated tests in place, these people are the best people to fix the existing app because they know their own code and they can potnetially fix issues without breaking the app. If I modify code that I am unfamiliar with, there is a high chance I will introduce bugs. It's important that I don't do that.</h>
+
+<p><b>Risk of exacerbating issues:</b> Without widget tests in place, any attempt to fix existing bugs or add new features can
+easily result in further complications. These tests serve as a safeguard, allowing us to catch and address potential
+problems before they escalate. Without them, we cannot confidently provide our services without risking additional
+damage to the app.</p>
+
+Original developers' expertise: If your app lacks widget tests, the original developers who are familiar with the
+codebase would be in a better position to address issues. They can use their intimate knowledge of the app's
+architecture to implement fixes with a lower risk of introducing new problems. Our services are most effective when we
+can work alongside a comprehensive suite of widget tests, ensuring that our contributions are both efficient and
+reliable.
+
+Long-term stability and maintainability: Widget tests are crucial for the app's long-term health. They allow for easier
+updates, bug fixes, and feature additions by ensuring that the app remains stable and functioning as intended throughout
+its life cycle. An app without widget tests will likely face difficulties in adapting to change, becoming less
+maintainable and more prone to issues over time.
+
+In conclusion, widget tests are an indispensable part of any robust Flutter application, and we cannot compromise on
+their importance. To deliver the exceptional consulting services we pride ourselves on, we require that all projects we
+work on have a solid foundation of widget tests in place. This approach guarantees that our contributions are both
+effective and reliable, ensuring that your app thrives in the long run.
+
+      
+    </div>
+
+
+    {% if page.boxes_area.enable %}
+    <div class="boxes-area">
+      <div class="space60"></div>
+      <div class="row text-center">
+        {% for list in page.boxes_area.lists %}
+        <div class="col-md-6 col-lg-3">
+          <div class="box {{list.bg_color}} shadow inverse-text">
+            <div class="icon color-white fs-42 mb-20">
+              <i class="{{list.icon}}"></i>
+            </div>
+            <h5>{{list.title}}</h5>
+            <p>{{list.description}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!--/.row -->
+    </div>
+    {% endif %}
+
+
+
+
+  </div>
+</div>
