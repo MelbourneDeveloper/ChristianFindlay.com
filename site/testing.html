@@ -1,0 +1,147 @@
+---
+layout: page
+title: "Flutter Developer in Melbourne, Australia - App Testing"
+sub_title: |
+  Understanding the importance of Widget Tests as part of the software development process
+header_image: "assets/images/art/ChristianFindlay.jpg"
+
+about_area: 
+  enable: true
+  title: "What I Do"
+  sub_title: "I specialise in mobile apps with Flutter, and leverage technologies like Firebase, Google Cloud and Azure to build scalable, secure and reliable solutions."
+  image: "assets/images/art/ChristianFindlay.jpg"
+
+---
+{% include header.html extra_class="transparent navbar-hover-opacity" logo_class="logo" container_class="container" %}
+
+
+<div class="wrapper light-wrapper">
+
+
+  <div class="container inner">
+
+    <div>
+
+      <div class="container-centered">
+        <div class="circle-image">
+          <img src="{{page.about_area.image}}" alt="{{page.about_area.title}}">
+        </div>
+      </div>
+
+      </br>
+      </br>
+      </br>
+
+
+
+      <h1>Flutter Consulting Services: The Critical Necessity of Widget Tests</h1>
+
+      <p>Ensuring the highest quality in my services is my top priority. Implementing Flutter widget tests is essential,
+        not only
+        for new projects but also for existing apps. Here's why:</p>
+
+      <h>You have an app. It's working. It's doing what it's supposed to do. It's been tested. You hired people to build
+        this and you expect this to continue to work. If there are no automated tests in place, the original people are
+        the
+        best people to fix the existing app because they know their own code and they can potentially fix issues without
+        breaking the app. If I modify code that I am unfamiliar with, there is a high chance I will introduce bugs. It's
+        important that I don't do that.</h>
+
+      </br></br>
+
+      <h2>What Are Widget Tests?</h2>
+
+      <p>Widget tests are a form of automated testing for Flutter apps, focused on verifying the behavior, appearance,
+        and
+        the app as a whole. These tests provide businesses with key
+        advantages:</p>
+
+      <p>First, they streamline the development process by automating testing, allowing me to concentrate on more
+        critical tasks.
+        This accelerates the delivery of new features and improvements, increasing the app's market competitiveness.
+        Second,
+        widget tests ensure a consistently high level of app quality, providing users with a superior experience while
+        minimizing the risk of unexpected errors. Furthermore, widget tests are faster to write and maintain than unit
+        tests,
+        which is why I generally prioritize them over unit tests.</p>
+
+
+      <p>With extensive experience in building widget tests, I can create them quickly and efficiently. Normally, I
+        dedicate 15%
+        - 20% of my time to writing or updating tests, which is sufficient for most apps and provides quick value.
+        However, apps
+        without existing tests may require additional initial effort.</p>
+
+      <h2>Why I Can't Work Without Automated Tests</h2>
+
+
+      <p><b>Risk of exacerbating issues:</b> Without widget tests in place, any attempt to fix existing bugs or add new
+        features can easily result in further
+        complications. These tests serve as a safeguard, allowing us to catch and address potential problems before they
+        escalate. Without them, I cannot confidently provide my services without risking additional damage to the app.
+      </p>
+
+      <p><b>Original developers' expertise:</b> If your app lacks widget tests, the original developers, who are
+        familiar with the codebase, would be in a better
+        position to address issues. They can use their intimate knowledge of the app's architecture to implement fixes
+        with a
+        lower risk of introducing new problems. My services are most effective when widget tests thoroughly cover the
+        main use
+        cases in the app, ensuring that those use cases continue to work after I make changes.</p>
+
+      <p><b>Long-term stability and maintainability:</b> Widget tests are crucial for the app's long-term health. They
+        allow for easier updates, bug fixes, and feature additions
+        by ensuring that the app remains stable and functioning as intended throughout its life cycle. An app without
+        widget
+        tests will likely face difficulties in adapting to change, becoming less maintainable and more error-prone over
+        time.</p>
+
+      <h2>How Long Will It Take?</h2>
+
+      <p>When creating a new app, I add widget tests as part of the process. This doesn't slow me down and I can usually
+        get the test coverage to around 80% - 90% without much extra effort. However apps that don't have any
+        tests can take longer. Apps that don't have tests usually require extra changes to add tests. This does
+        introduce a small amount of risk because I need to refactor. So, you need to retest the app after the changes.
+        It may involve a round of bug fixing at the end. If you have a small app with less than 5,000 lines of code,
+        adding tests may be possible in under five days.
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>Widget tests are an indispensable part of any robust Flutter application, and their importance cannot be
+        overstated. To
+        deliver exceptional services, I require that all projects have a solid foundation of widget tests in place. Of
+        course, I am keenly aware of time and cost so I will not spend time writing tests that do not provide value. I
+        will explain the process and include the work in my estimates before we start.
+        This
+        approach guarantees that my contributions are both effective and reliable, ensuring your app thrives in the long
+        run.</p>
+
+
+    </div>
+
+
+    {% if page.boxes_area.enable %}
+    <div class="boxes-area">
+      <div class="space60"></div>
+      <div class="row text-center">
+        {% for list in page.boxes_area.lists %}
+        <div class="col-md-6 col-lg-3">
+          <div class="box {{list.bg_color}} shadow inverse-text">
+            <div class="icon color-white fs-42 mb-20">
+              <i class="{{list.icon}}"></i>
+            </div>
+            <h5>{{list.title}}</h5>
+            <p>{{list.description}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <!--/.row -->
+    </div>
+    {% endif %}
+
+
+
+
+  </div>
+</div>
