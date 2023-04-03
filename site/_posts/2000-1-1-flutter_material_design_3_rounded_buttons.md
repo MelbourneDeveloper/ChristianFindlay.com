@@ -86,7 +86,7 @@ ElevatedButton(
 ),
 ```
 
-Check out the live sample of all these button customizations here an experiment with them.
+Check out the live sample of all these button customizations here. You can experiment with them to see how changes affect the button's appearance.
 
 <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=6ba74bd132932f48e61db8022a0f60f4&split=70&mode=dart"></iframe>
 
