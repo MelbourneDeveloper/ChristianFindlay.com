@@ -8592,6 +8592,7 @@ blockquote:after {
 
 .adbanner {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
     width: 100%;
@@ -8601,6 +8602,14 @@ blockquote:after {
     padding: 8px;
     text-align: center;
     text-decoration: none;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .adbanner {
+        flex-direction: row;
+        height: auto;
+    }
 }
 
 .adbannericon {
@@ -8612,6 +8621,13 @@ blockquote:after {
     justify-content: center;
     background-color: white;
     padding: 8px;
+    margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+    .adbannericon {
+        margin-bottom: 0;
+    }
 }
 
 .adbannericon img {
@@ -8633,5 +8649,11 @@ blockquote:after {
 }
 
 .adbannercontent {
-    max-width: 75%;
+    max-width: 95%;
+}
+
+@media (min-width: 768px) {
+    .adbannercontent {
+        max-width: 75%;
+    }
 }
