@@ -32,6 +32,24 @@ layout: default
                     {{page.author}}</a></span>
                 {% endif %}
               </div>
+
+              {% if page.categories contains "flutter" %}
+              <a href="https://pub.dev/packages/ioc_container" class="adbanner" target="_blank"
+                rel="noopener noreferrer">
+
+                <div class="adbannericon">
+                  <img src="/assets/images/icons/ioc_container.png">
+                </div>
+                <div class="adbannercontent">
+                  <h1>Try ioc_container!</h1>
+                  <p>A lightweight, flexible, and high-performance dependency injection and service location library for
+                    Dart and Flutter. It's production ready for your Flutter app</p>
+                </div>
+              </a>
+              {% endif %}
+
+              <div class="space40"></div>
+
               {{page.content}}
               {% if page.post_format == "gallery" %}
               <div class="space20"></div>
