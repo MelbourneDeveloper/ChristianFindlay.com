@@ -7,7 +7,7 @@ post_image: "/assets/images/blog/buttons/header.png"
 image: "/assets/images/blog/buttons/header.png"
 description: Learn how to create Material Design 3 rounded buttons in Flutter with this simple guide.
 tags: 
-categories: [software development]
+categories: flutter
 permalink: /blog/:title
 ---
 
