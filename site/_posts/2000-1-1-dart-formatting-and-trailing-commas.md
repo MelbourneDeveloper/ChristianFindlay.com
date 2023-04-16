@@ -2,7 +2,7 @@
 layout: post
 title: "Dart: Formatting and Trailing Commas"
 date: "2022-07-30 00:00:00 +0000"
-tags: Dart code-quality
+tags: dart code-quality
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dartformatting/dartformatting.png"
