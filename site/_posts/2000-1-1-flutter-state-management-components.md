@@ -94,7 +94,7 @@ flutter pub add ioc_container
 flutter pub add listenable_future_builder
 ```
 
-This is a simple counter example that demonstrates how all the components interact with each other. This example has no `StatefulWidget`s and all of the business logic exists in the controller. The builder takes care of the widget rebuilds and the dependency manager takes care of creating the controller.
+This is a simple counter example that demonstrates how all the components interact with each other. This example has no `StatefulWidget`s and all of the business logic exists in the controller. The builder takes care of the widget rebuilds and the dependency manager takes care of creating the controller. You can read about `ListenableFutureBuilder` [here](https://pub.dev/packages/listenable_future_builder).
 
 ```dart
 import 'package:flutter/material.dart';
