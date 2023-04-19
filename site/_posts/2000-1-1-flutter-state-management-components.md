@@ -222,6 +222,35 @@ Live demo:
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=54ab5a472d17b8b09154586a49427959"></iframe>
 </figure>
 
+This is what the widget tree looks like while waiting for the controller
+
+```yaml
+MaterialApp
+  ├─ ListenableFutureBuilder
+      ├─ MaterialApp
+          ├─ Scaffold
+              ├─ Center
+                  ├─ CircularProgressIndicator
+```
+
+This is what it looks like once the controller is ready and the counter has been clicked 3 times
+
+```yaml
+MaterialApp
+  ├─ ListenableFutureBuilder
+      ├─ ListenablePropagator* (contains CounterController - State)
+          ├─ MyHomePage
+              ├─ Scaffold
+                  ├─ AppBar
+                      └─ Text: 'Bringing It Together'
+                  ├─ Center
+                      ├─ Column
+                          ├─ Text: 'You have pushed the button this many times:'
+                          └─ Text: '3'
+                  └─ FloatingActionButton
+                      └─ Icon: 'add'
+```
+
 ## Conclusion
 
 The builder, controller, state, and dependency manager work together to manage the state of your application and provide a responsive user interface. If you use these components effectively, you can build reliable and efficient applications. Take the time to learn and understand these components, and you'll be on your way to building successful Flutter applications.
