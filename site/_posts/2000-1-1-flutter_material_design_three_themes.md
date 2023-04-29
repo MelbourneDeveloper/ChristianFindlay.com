@@ -281,6 +281,4 @@ class MyWidget extends StatelessWidget {
 ```
 
 ## Conclusion
-Congratulations! You've now learned how to create and customize themes in Flutter, as well as how to apply different themes for dark
-
-<sub><sup>Photo by [Rodolfo Clix](https://www.pexels.com/photo/photo-of-clear-glass-measuring-cup-lot-1366942/) from Pexels</sup></sub>
+This article explained how to use Material Design themes with Flutter. Understanding the Material Design system is critical for Flutter developers, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. It is full of great examples and points to the Fluttter documentation.
