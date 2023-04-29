@@ -56,7 +56,7 @@ MaterialApp(
 
 #### Using the Theme Properties
 
-Access the ThemeData properties with the `Theme.of(context)` method. Here's an example of how to use the primary color and text theme in a Text widget:
+Access the ThemeData properties with the [`Theme.of(context)`](https://api.flutter.dev/flutter/material/Theme/of.html) method. Here's an example of how to use the primary color and text theme in a Text widget:
 
 ```dart
 Text(
@@ -112,9 +112,46 @@ MaterialApp(
 ); 
 ```
 
+## Modifying Typography with TextStyles
+
+[Typography](https://m3.material.io/styles/typography) is an important aspect of Material Design, and Flutter's `ThemeData` allows you to customize the typography of your app. This includes adjusting font sizes, weights, and colors for different text styles. The `textTheme` property of `ThemeData` contains a [`TextTheme`](https://api.flutter.dev/flutter/material/TextTheme-class.html) object, which in turn has a set of predefined [`TextStyle`](https://api.flutter.dev/flutter/painting/TextStyle-class.html) properties. These properties represent different text styles like headlines, body text, captions, etc. You can modify the TextStyle properties to customize the typography for each style. This is an example of setting the font sizes and weights.
+
+```dart
+ThemeData lightTheme = ThemeData(
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(
+        fontSize: 96, fontWeight: FontWeight.w300, color: Colors.black),
+    displayMedium: TextStyle(
+        fontSize: 60, fontWeight: FontWeight.w400, color: Colors.black),
+    displaySmall: TextStyle(
+        fontSize: 48, fontWeight: FontWeight.w400, color: Colors.black),
+    headlineMedium: TextStyle(
+        fontSize: 34, fontWeight: FontWeight.w400, color: Colors.black),
+    headlineSmall: TextStyle(
+        fontSize: 24, fontWeight: FontWeight.w400, color: Colors.black),
+    titleLarge: TextStyle(
+        fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+    bodyLarge: TextStyle(
+        fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black87),
+    bodyMedium: TextStyle(
+        fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black87),
+    bodySmall: TextStyle(
+        fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black54),
+    labelLarge: TextStyle(
+        fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
+  ),
+);
+```
+
+You can use these styles in your app with the [`Theme.of(context).textTheme`](https://api.flutter.dev/flutter/material/ThemeData/textTheme.html) property.
+
+#### Typography and Material Design
+
+Material Design provides a set of typographic guidelines that define how to style text across different platforms and devices. These ensure that your app adheres to the Material Design principles, which helps you create a better user experience. The predefined text styles in Flutter's `TextTheme` follow these guidelines, so Flutter apps automatically adhere to the Material Design typography guidelines.
+
 ## Complete Example
 
-Try the live sample in your browser [here](https://dartpad.dev/?id=940b8910603af83786d34e416bc89901)
+Try the live sample in your browser [here](https://dartpad.dev/?id=940b8910603af83786d34e416bc89901). This example allows you to toggle between the three different theme modes so you can see how the dark and light themes look.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -149,14 +186,15 @@ ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
   ),
 );
-
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
-  _MyAppState createState() => _MyAppState();
+  State<MyApp> createState() => _MyAppState();
 }
 
 class _MyAppState extends State<MyApp> {
