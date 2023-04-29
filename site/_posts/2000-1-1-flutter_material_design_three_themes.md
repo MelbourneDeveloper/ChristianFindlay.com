@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/testingheader.jpg"
 image: "/assets/images/blog/testing/testingheader.jpg"
 description: Discover the benefits of full app widget testing in Flutter, and learn how to ensure your app's UI works as intended with comprehensive coverage. This in-depth guide provides code examples, tips on dependency injection, and insights into automated testing and UI behavior for building reliable and high-quality Flutter applications.
-tags: theming [material design] colors
+tags: theming material-design colors
 categories: flutter
 permalink: /blog/:title
 ---
@@ -64,40 +64,102 @@ Text(
 );
 ```
 
-Section 4: Dark and Light Themes
+#### Dark and Light Themes
 
-Flutter also allows you to define separate themes for dark and light mode. This can be done by setting the darkTheme property of the MaterialApp widget.
+Flutter also allows you to define separate themes for dark and light mode. You can set the `darkTheme` property of the `MaterialApp` widget.
 
-4.1 Defining Dark ThemeData Instance
-
-dart
-
+```dart
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  primarySwatch: Colors.red,
-  accentColor: Colors.amber,
-  textTheme: TextTheme(
-    headline1: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-    bodyText1: TextStyle(fontSize: 18, color: Colors.white70),
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(fontSize: 18, color: Colors.white70),
   ),
-  appBarTheme: AppBarTheme(
+  appBarTheme: const AppBarTheme(
     color: Colors.red,
     iconTheme: IconThemeData(color: Colors.white),
   ),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
+      .copyWith(secondary: Colors.amber),
 );
+```
 
-4.2 Applying Dark ThemeData Instance
+#### Applying Dark ThemeData Instance
 
-dart
-
+```dart
 MaterialApp(
   title: 'Custom Theme Demo',
   theme: customTheme,
   darkTheme: darkTheme,
   home: MyHomePage(),
 );
+```
 
-Conclusion
+## Complete Example
 
+```dart
+import 'package:flutter/material.dart';
+
+ThemeData customTheme = ThemeData(
+  useMaterial3: true,
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(fontSize: 18, color: Colors.black87),
+  ),
+  appBarTheme: const AppBarTheme(
+    color: Colors.blue,
+    iconTheme: IconThemeData(color: Colors.white),
+  ),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
+      .copyWith(secondary: Colors.orange),
+);
+
+ThemeData darkTheme = ThemeData(
+  brightness: Brightness.dark,
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+    bodyLarge: TextStyle(fontSize: 18, color: Colors.white70),
+  ),
+  appBarTheme: const AppBarTheme(
+    color: Colors.red,
+    iconTheme: IconThemeData(color: Colors.white),
+  ),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
+      .copyWith(secondary: Colors.amber),
+);
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) => MaterialApp(
+        theme: customTheme,
+        darkTheme: darkTheme,
+        debugShowCheckedModeBanner: false,
+        home: const Scaffold(
+          body: Center(
+            child: MyWidget(),
+          ),
+        ),
+      );
+}
+
+class MyWidget extends StatelessWidget {
+  const MyWidget({super.key});
+
+  @override
+  Widget build(BuildContext context) => Text(
+        'Hello, World!',
+        style: Theme.of(context).textTheme.headlineMedium,
+      );
+}
+```
+
+## Conclusion
 Congratulations! You've now learned how to create and customize themes in Flutter, as well as how to apply different themes for dark
+
 <sub><sup>Photo by [Rodolfo Clix](https://www.pexels.com/photo/photo-of-clear-glass-measuring-cup-lot-1366942/) from Pexels</sup></sub>
