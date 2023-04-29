@@ -3,8 +3,8 @@ layout: post
 title: "Flutter - Themes in Material Design Three"
 date: "2023/04/29 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/testing/testingheader.jpg"
-image: "/assets/images/blog/testing/testingheader.jpg"
+post_image: "/assets/images/blog/materialdesign/logo.png"
+image: "/assets/images/blog/materialdesign/logo.png"
 description: Discover the benefits of full app widget testing in Flutter, and learn how to ensure your app's UI works as intended with comprehensive coverage. This in-depth guide provides code examples, tips on dependency injection, and insights into automated testing and UI behavior for building reliable and high-quality Flutter applications.
 tags: theming material-design colors
 categories: flutter
