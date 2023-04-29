@@ -26,7 +26,8 @@ The `ThemeData` class encapsulates colors, typography, and shape properties for 
 Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. Make sure you set `useMaterial3` because this tells flutter you want to use the latest version of Material Design, which is three.
 
 ```dart
-ThemeData customTheme = ThemeData(
+ThemeData lightTheme = ThemeData(
+  brightness: Brightness.light,
   useMaterial3: true,
   textTheme: const TextTheme(
     displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
@@ -48,7 +49,7 @@ Pass the custom theme to the `theme` property of the `MaterialApp` widget.
 ```dart
 MaterialApp(
   title: 'Custom Theme Demo',
-  theme: customTheme,
+  theme: lightTheme,
   home: MyHomePage(),
 );
 ```
@@ -66,7 +67,7 @@ Text(
 
 #### Dark and Light Themes
 
-Flutter also allows you to define separate themes for dark and light mode. You can set the `darkTheme` property of the `MaterialApp` widget.
+Flutter also allows you to define separate themes for dark and light mode. You can set the `darkTheme` property of the `MaterialApp` widget. Make sure you set the theme's `brightness` property to `Brightness.dark` to indicate that it's a dark theme.
 
 ```dart
 ThemeData darkTheme = ThemeData(
@@ -79,12 +80,16 @@ ThemeData darkTheme = ThemeData(
     color: Colors.red,
     iconTheme: IconThemeData(color: Colors.white),
   ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
-      .copyWith(secondary: Colors.amber),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
+    secondary: Colors.amber,
+    brightness: Brightness.dark,
+  ),
 );
 ```
 
 #### Applying Dark ThemeData Instance
+
+This tells Flutter that there are two themes: light and dark. Flutter will automatically switch between the two themes based on the device's brightness settings. 
 
 ```dart
 MaterialApp(
@@ -95,12 +100,15 @@ MaterialApp(
 );
 ```
 
+You can also manually set the theme mode to light or dark using the `themeMode` property of the `MaterialApp` widget.
+
 ## Complete Example
 
 ```dart
 import 'package:flutter/material.dart';
 
 ThemeData customTheme = ThemeData(
+  brightness: Brightness.light,
   useMaterial3: true,
   textTheme: const TextTheme(
     displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
@@ -124,8 +132,10 @@ ThemeData darkTheme = ThemeData(
     color: Colors.red,
     iconTheme: IconThemeData(color: Colors.white),
   ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red)
-      .copyWith(secondary: Colors.amber),
+  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
+    secondary: Colors.amber,
+    brightness: Brightness.dark,
+  ),
 );
 
 void main() {
@@ -139,6 +149,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
         theme: customTheme,
         darkTheme: darkTheme,
+        themeMode: ThemeMode.light,
         debugShowCheckedModeBanner: false,
         home: const Scaffold(
           body: Center(
