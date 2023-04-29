@@ -94,20 +94,32 @@ This tells Flutter that there are two themes: light and dark. Flutter will autom
 ```dart
 MaterialApp(
   title: 'Custom Theme Demo',
-  theme: customTheme,
+  theme: lightTheme,
   darkTheme: darkTheme,
   home: MyHomePage(),
 );
 ```
 
-You can also manually set the theme mode to light or dark using the `themeMode` property of the `MaterialApp` widget.
+You can also manually set the theme mode to light or dark using the `themeMode` property of the `MaterialApp` widget. If you do this, the Flutter app will ignore your device's brightness setting and use the theme you specify.
+
+```dart
+MaterialApp(
+  title: 'Custom Theme Demo',
+  theme: lightTheme,
+  darkTheme: darkTheme,
+  themeMode: ThemeMode.light,
+  home: MyHomePage(),
+); 
+```
 
 ## Complete Example
+
+Try the live sample in your browser [here](https://dartpad.dev/?id=940b8910603af83786d34e416bc89901)
 
 ```dart
 import 'package:flutter/material.dart';
 
-ThemeData customTheme = ThemeData(
+ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   useMaterial3: true,
   textTheme: const TextTheme(
@@ -139,34 +151,94 @@ ThemeData darkTheme = ThemeData(
 );
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  ThemeMode _themeMode = ThemeMode.light;
+
+  IconData get _themeModeIcon {
+    switch (_themeMode) {
+      case ThemeMode.light:
+        return Icons.brightness_low;
+      case ThemeMode.dark:
+        return Icons.brightness_3;
+      case ThemeMode.system:
+      default:
+        return Icons.brightness_auto;
+    }
+  }
+
+  void _toggleThemeMode() {
+    setState(() {
+      _themeMode = _themeMode == ThemeMode.light
+          ? ThemeMode.dark
+          : _themeMode == ThemeMode.dark
+              ? ThemeMode.system
+              : ThemeMode.light;
+    });
+  }
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-        theme: customTheme,
-        darkTheme: darkTheme,
-        themeMode: ThemeMode.light,
-        debugShowCheckedModeBanner: false,
-        home: const Scaffold(
-          body: Center(
-            child: MyWidget(),
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: lightTheme,
+      darkTheme: darkTheme,
+      themeMode: _themeMode,
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Theme Toggler'),
+          actions: [
+            IconButton(
+              icon: const Icon(Icons.brightness_6),
+              onPressed: _toggleThemeMode,
+            ),
+          ],
+        ),
+        body: Center(
+          child: MyWidget(
+            themeMode: _themeMode,
+            themeModeIcon: _themeModeIcon,
           ),
         ),
-      );
+      ),
+    );
+  }
 }
 
 class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+  final ThemeMode themeMode;
+  final IconData themeModeIcon;
+
+  const MyWidget(
+      {required this.themeMode, required this.themeModeIcon, Key? key})
+      : super(key: key);
 
   @override
-  Widget build(BuildContext context) => Text(
-        'Hello, World!',
-        style: Theme.of(context).textTheme.headlineMedium,
-      );
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Hello, World!',
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+        const SizedBox(height: 20),
+        Text(
+          'Current Theme Mode: ${themeMode.toString().split('.').last}',
+          style: Theme.of(context).textTheme.bodyLarge,
+        ),
+        const SizedBox(height: 10),
+        Icon(themeModeIcon, size: 48),
+      ],
+    );
+  }
 }
 ```
 
