@@ -112,7 +112,35 @@ MaterialApp(
 ); 
 ```
 
+## The Importance of ColorScheme in Material Design 3
 
+Flutter widgets pay particular attention to the `ColorScheme` in your theme data. They use the colors here for default color values.
+
+#### What is ColorScheme?
+
+[`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) is a class that defines the set of colors that your app can use. It should have a cohesive set of colors, and follow the Material Design [color system](https://m3.material.io/styles/color/the-color-system). It contains properties for primary, secondary, surface, background, error, and other colors that make up your application's color palette. 
+
+In Material Design 3, `ColorScheme` plays an even more significant role, as it defines the default colors for many widgets and provides a straightforward way to create adaptive themes that work well in both light and dark modes. 
+
+#### Default colors in Material Design 3
+
+The primary purpose of a `ColorScheme` is to define a set of default colors for your app, which are then applied to various widgets and UI elements. In Material Design 3, many components and themes rely on the `ColorScheme` to determine their default colors. This makes it easier to create a consistent color palette for your app while still adhering to Material Design guidelines.
+
+In Material Design 3, components like [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), `OutlinedButton`, and `TextButton` use the `ColorScheme` to derive their default colors. For example, an `ElevatedButton` will use the `ColorScheme.primary` as its default background color and the `ColorScheme.onPrimary` as its default text color. This is what the widget's documentation says:
+
+> The label's Text and Icon widgets are displayed in style's ButtonStyle.foregroundColor and the button's filled background is the ButtonStyle.backgroundColor.
+
+When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the `ColorScheme.fromSwatch()` method or by specifying each color property individually:
+
+```dart
+ThemeData(
+  colorScheme: ColorScheme.fromSwatch(
+    primarySwatch: Colors.blue,
+  ).copyWith(
+    secondary: Colors.orange,
+  ),
+);
+```
 
 ## Modifying Typography with TextStyles
 
