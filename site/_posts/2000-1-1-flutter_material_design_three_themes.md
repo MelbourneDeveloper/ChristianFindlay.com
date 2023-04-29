@@ -112,6 +112,8 @@ MaterialApp(
 ); 
 ```
 
+
+
 ## Modifying Typography with TextStyles
 
 [Typography](https://m3.material.io/styles/typography) is an important aspect of Material Design, and Flutter's `ThemeData` allows you to customize the typography of your app. This includes adjusting font sizes, weights, and colors for different text styles. The `textTheme` property of `ThemeData` contains a [`TextTheme`](https://api.flutter.dev/flutter/material/TextTheme-class.html) object, which in turn has a set of predefined [`TextStyle`](https://api.flutter.dev/flutter/painting/TextStyle-class.html) properties. These properties represent different text styles like headlines, body text, captions, etc. You can modify the TextStyle properties to customize the typography for each style. This is an example of setting the font sizes and weights.
@@ -148,6 +150,19 @@ You can use these styles in your app with the [`Theme.of(context).textTheme`](ht
 #### Typography and Material Design
 
 Material Design provides a set of typographic guidelines that define how to style text across different platforms and devices. These ensure that your app adheres to the Material Design principles, which helps you create a better user experience. The predefined text styles in Flutter's `TextTheme` follow these guidelines, so Flutter apps automatically adhere to the Material Design typography guidelines.
+
+## Identifying the Theme Property for Widget Colors
+
+You need to identify the theme property that sets the color for that specific widget. These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html). Generally, the color property for a widget is stored within a specific property of an object in the `ThemeData`. Your first point of call should be the Flutter API documentation for that widget. It should tell you which properties you need to set.
+
+```dart
+ThemeData(
+  appBarTheme: const AppBarTheme(
+    color: Colors.pink,
+  ),
+);
+```
+
 
 ## Complete Example
 
