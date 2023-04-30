@@ -8657,3 +8657,10 @@ blockquote:after {
         max-width: 75%;
     }
 }
+
+.center-iframe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
