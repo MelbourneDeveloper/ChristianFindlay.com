@@ -16,7 +16,7 @@ permalink: /blog/:title
 
 Watch how the menu adapts to screen size changes on a desktop screen. It behaves the same way on phones and other form factors. Check out the [complete example in the repo](https://github.com/MelbourneDeveloper/navigation_drawer_menu), or see the example code [here](https://github.com/MelbourneDeveloper/navigation_drawer_menu/blob/c1adc9644ee34cb5f317a42a555af9f6c4169ea2/example/lib/main.dart#L4). This example is a work in progress, and the long-term aim is to implement the material design pattern as closely as possible.
 
-‍![Desktop](/assets/images/blog/navigationdrawer/desktop.png)
+‍![Desktop](/assets/images/blog/navigationdrawer/desktop.png){:width="100%"}
 
 If you're looking for a simple menu drawer example that isn't adaptive, please check out this [article](https://flutter.dev/docs/cookbook/design/drawer).
 
