@@ -126,9 +126,11 @@ In Material Design 3, `ColorScheme` plays an even more significant role, as it d
 
 The primary purpose of a `ColorScheme` is to define a set of default colors for your app, which are then applied to various widgets and UI elements. In Material Design 3, many components and themes rely on the `ColorScheme` to determine their default colors. This makes it easier to create a consistent color palette for your app while still adhering to Material Design guidelines.
 
-In Material Design 3, components like [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), `OutlinedButton`, and `TextButton` use the `ColorScheme` to derive their default colors. For example, an `ElevatedButton` will use the `ColorScheme.primary` as its default background color and the `ColorScheme.onPrimary` as its default text color. This is what the widget's documentation says:
+In Material Design 3, components like [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) use the `ColorScheme` to derive their default colors. For example, an `ElevatedButton` will use the `ColorScheme.primary` as its default background color and the `ColorScheme.onPrimary` as its default text color. This is what the widget's documentation says:
 
 > The label's Text and Icon widgets are displayed in style's ButtonStyle.foregroundColor and the button's filled background is the ButtonStyle.backgroundColor.
+
+> The elevated button's default style is defined by defaultStyleOf. The style of this elevated button can be overridden with its style parameter. The style of all elevated buttons in a subtree can be overridden with the ElevatedButtonTheme, and the style of all of the elevated buttons in an app can be overridden with the Theme's ThemeData.elevatedButtonTheme property.
 
 When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the `ColorScheme.fromSwatch()` method or by specifying each color property individually:
 
