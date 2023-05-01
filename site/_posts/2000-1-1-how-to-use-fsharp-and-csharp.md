@@ -100,25 +100,25 @@ Compiled F# assemblies are basically the same as C# assemblies. The only differe
 Firstly, check that you have the [F# tools](https://docs.microsoft.com/en-us/visualstudio/ide/fsharp-visual-studio?view=vs-2019) installed. You probably do.
 
 Create an F# .NET class library
-![](/assets/images/blog/fsharp/image.png)
+![](/assets/images/blog/fsharp/image.png){:width="100%"}
 
 Change to target .NET Standard 2.1
 
-![](/assets/images/blog/fsharp/image-1.png)
+![](/assets/images/blog/fsharp/image-1.png){:width="100%"}
 
 Create a C# .NET Core console app (3.1) unless you already have a project you want to leverage F# from.
 
-![](/assets/images/blog/fsharp/image-2.png)
+![](/assets/images/blog/fsharp/image-2.png){:width="100%"}
 
 Reference the F# project from the C# project.
 
-![](/assets/images/blog/fsharp/image-3.png)
+![](/assets/images/blog/fsharp/image-3.png){:width="100%"}
 
 You can now directly use code from the F# library in your C# console app. It’s that simple.
 
-![](/assets/images/blog/fsharp/image-4.png)
+![](/assets/images/blog/fsharp/image-4.png){:width="100%"}
 
-![](/assets/images/blog/fsharp/image-5.png)
+![](/assets/images/blog/fsharp/image-5.png){:width="100%"}
 
 How to Convert F# to C#
 -----------------------
@@ -133,13 +133,13 @@ F# compiles to .NET IL, and you can use dnSpy to convert IL to C#. This is great
 
 This is what the F# Point record type looks like when opened in dnSpy and converted to C#
 
-![](/assets/images/blog/fsharp/image-6.png)
+![](/assets/images/blog/fsharp/image-6.png){:width="100%"}
 
 Click on the image to see all the code
 
 Here is the same thing with a C# record and viewed in dnSpy.
 
-![](/assets/images/blog/fsharp/image-7.png)
+![](/assets/images/blog/fsharp/image-7.png){:width="100%"}
 
 Click on the image to see all the code
 
