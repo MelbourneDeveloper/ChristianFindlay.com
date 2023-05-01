@@ -16,20 +16,20 @@ This article uses Visual Studio code and I recommend this IDE for Flutter, but y
 
 ### 1. Create the App
 
-<img src="/assets/images/blog/testing/createapp1.jpeg" alt="Create the App" width="700"/>
+<img src="/assets/images/blog/testing/createapp1.jpeg" alt="Create the App" style="width:100%"/>
 
 
 This template creates a minimal app with a widget test
 
-<img src="/assets/images/blog/testing/createapp2.jpeg" alt="Create the App" width="700"/>
+<img src="/assets/images/blog/testing/createapp2.jpeg" alt="Create the App" style="width:100%"/>
 
 This is the out of the box widget test
 
-<img src="/assets/images/blog/testing/widgetTest.jpeg" alt="Widget test" width="700"/>
+<img src="/assets/images/blog/testing/widgetTest.jpeg" alt="Widget test" style="width:100%"/>
 
 You can run or debug the test here. You will notice that the test doesn't deploy to a device or show anything in a window. That's the difference between a widget test and an integration test.
 
-<img src="/assets/images/blog/testing/widgetTestRunning.jpeg" alt="Running widget test" width="700"/>
+<img src="/assets/images/blog/testing/widgetTestRunning.jpeg" alt="Running widget test" style="width:100%"/>
 
 ### 2. Add Integration Testing to the Project
 
@@ -47,17 +47,17 @@ dev_dependencies:
 
 Flutter picks up integration tests in the `integration_test` folder. So, create the folder and copy the existing widget test file into the folder.
 
-<img src="/assets/images/blog/testing/integrationTest.jpeg" alt="integration test" width="700"/>
+<img src="/assets/images/blog/testing/integrationTest.jpeg" alt="integration test" style="width:100%"/>
 
 You can run the integration test. You should see the app pop and disappear
 
-<img src="/assets/images/blog/testing/runIntegrationTest.jpeg" alt="run integration test" width="700"/>
+<img src="/assets/images/blog/testing/runIntegrationTest.jpeg" alt="run integration test" style="width:100%"/>
 
-<img src="(/assets/images/blog/testing/integrationTestRunning.jpeg" alt="integration test running" width="700"/>
+<img src="/assets/images/blog/testing/integrationTestRunning.jpeg" alt="integration test running" style="width:100%"/>
 
 Run flutter test `integration_test` at the terminal to choose the platform.
 
-<img src="/assets/images/blog/testing/runInTerminal.jpeg" alt="run from terminal" width="700"/>
+<img src="/assets/images/blog/testing/runInTerminal.jpeg" alt="run from terminal" style="width:100%"/>
 
 4. Share The Code
 ------------------
@@ -66,13 +66,13 @@ You've ended up with a duplicate test file. All you need to do is make the test 
 
 Highlight the test code and refactor it into a new method. Call it sharedTest
 
-<img src="/assets/images/blog/testing/refactorTest.jpeg" alt="refactor" width="700"/>
+<img src="/assets/images/blog/testing/refactorTest.jpeg" alt="refactor" style="width:100%"/>
 
-<img src="/assets/images/blog/testing/sharedTest.jpeg" alt="shared test" width="700"/>
+<img src="/assets/images/blog/testing/sharedTest.jpeg" alt="shared test" style="width:100%"/>
 
 Rename this file and delete the test code
 
-<img src="/assets/images/blog/testing/renameFile.jpeg" alt="rename file" width="700"/>
+<img src="/assets/images/blog/testing/renameFile.jpeg" alt="rename file" style="width:100%"/>
 
 Add an import to the original widget test and call the shared test method from the widget test file.
 
