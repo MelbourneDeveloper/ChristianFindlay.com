@@ -17,7 +17,7 @@ Exceptions carry a stack trace with them, so they can provide a wealth of inform
 _Note: let's not get too caught up on the semantics of "apps and APIs should be designed so that under normal use, exceptions do not occur". It just means that if all is well, the app shouldn't throw exceptions._
 
 Watch the tutorial for Visual Studio on Mac
-<iframe width="560" height="315" src="https://www.youtube.com/embed/h6TpMY5Xtcs" title="Visual Studio Mac: How To Break on All Exceptions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/h6TpMY5Xtcs" title="Visual Studio Mac: How To Break on All Exceptions" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Exception Handling
 You should acquaint yourself with [Exception handling](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/exceptions/) in C# first and foremost. Microsoft has a [best practices guide](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/best-practices-for-exceptions) that is also very useful. As a general rule, it is a good idea to always debug with break on all exceptions turned on. It means that if anything in the app goes wrong, there is an immediate alert at the point of failure. There is a general programming principle behind this called [fail fast](https://en.wikipedia.org/wiki/Fail-fast). However, to use break on all exceptions, the app's code should never throw exceptions under normal circumstances. If the code does so, the debugging flow is interrupted. Also, Exceptions [are costly operations](https://buildplease.com/pages/slow-exceptions/).
@@ -27,7 +27,7 @@ Turn it On
 
 On Windows, Debug -> Windows -> Exceptions Settings
 
-![Exception Settings](/assets/images/blog/exceptionbreak/exceptionssettings.png)
+![Exception Settings](/assets/images/blog/exceptionbreak/exceptionssettings.png){:width="100%"}
 
 The window appears like so. "Common Language Runtime Exceptions" is the section we are interested in for C# and .NET.
 
@@ -37,7 +37,7 @@ _Note: Mac instructions are coming_
 
 Clicking this twice results in a tick for all Exception types. If this checkbox is checked, this means that Break on All Exceptions is turned on. The debugger always breaks whenever the code throws an exception. It looks like this when the node is expanded.
 
-![Exception Settings 3](/assets/images/blog/exceptionbreak/exceptionssettings3.png)
+![Exception Settings 3](/assets/images/blog/exceptionbreak/exceptionsettings3.png){:width="100%"}
 
 Example
 -------
@@ -48,17 +48,17 @@ In this example, the feature is not turned on. The app executes and completes wi
 
 _Note: production code should always log exceptions in some way_
 
-![Exceptions 1](/assets/images/blog/exceptionbreak/exceptions1.png)
+![Exceptions 1](/assets/images/blog/exceptionbreak/exceptions1.png){:width="100%"}
 
 The output
 
-![Exceptions 2](/assets/images/blog/exceptionbreak/exceptions2.png)
+![Exceptions 2](/assets/images/blog/exceptionbreak/exceptions2.png){:width="100%"}
 
 ### Break On All Exceptions turned On
 
 If we turn break on all exceptions on and rerun the example, this is what happens. The debugger stops at the source of the Exception, and the IDE can rewind the Call Stack. If the app is well-designed, it is possible to debug like this in all scenarios.
 
-![Exceptions 3](/assets/images/blog/exceptionbreak/exceptions3.png)
+![Exceptions 3](/assets/images/blog/exceptionbreak/exceptions3.png){:width="100%"}
 
 More Information
 ----------------
@@ -66,7 +66,7 @@ More Information
 *   If the app throws too many exceptions, it is sometimes still possible to turn on breaking for most Exception types. Just turn off the ones that are causing issues with the checkbox.
 *   It's typically preferable to debug with "Just My Code" turned on. It is the default setting in Visual Studio
 
-![jmc](/assets/images/blog/exceptionbreak/jmc.png)
+![jmc](/assets/images/blog/exceptionbreak/jmc.png){:width="100%"}
 
 It means that Exceptions are only caught in the debugger when the code from the project being debugged throws them or, the underlying code is throwing an Exception that is not being suppressed by a try/catch. Turning this off is often useful for getting details about Exceptions in the underlying code, but it usually ends up disrupting the typical debugging experience.
 
