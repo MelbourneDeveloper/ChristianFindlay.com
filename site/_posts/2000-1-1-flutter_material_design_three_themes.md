@@ -126,11 +126,7 @@ In Material Design 3, `ColorScheme` plays an even more significant role, as it d
 
 The primary purpose of a `ColorScheme` is to define a set of default colors for your app, which are then applied to various widgets and UI elements. In Material Design 3, many components and themes rely on the `ColorScheme` to determine their default colors. This makes it easier to create a consistent color palette for your app while still adhering to Material Design guidelines.
 
-In Material Design 3, components like [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) use the `ColorScheme` to derive their default colors. For example, an `ElevatedButton` will use the `ColorScheme.primary` as its default background color and the `ColorScheme.onPrimary` as its default text color. This is what the widget's documentation says:
-
-> The label's Text and Icon widgets are displayed in style's ButtonStyle.foregroundColor and the button's filled background is the ButtonStyle.backgroundColor.
-
-> The elevated button's default style is defined by defaultStyleOf. The style of this elevated button can be overridden with its style parameter. The style of all elevated buttons in a subtree can be overridden with the ElevatedButtonTheme, and the style of all of the elevated buttons in an app can be overridden with the Theme's ThemeData.elevatedButtonTheme property.
+In Material Design 3, [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) all use the `ColorScheme` to derive their default colors. 
 
 When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the `ColorScheme.fromSwatch()` method or by specifying each color property individually:
 
@@ -143,43 +139,6 @@ ThemeData(
   ),
 );
 ```
-
-## Modifying Typography with TextStyles
-
-[Typography](https://m3.material.io/styles/typography) is an important aspect of Material Design, and Flutter's `ThemeData` allows you to customize the typography of your app. This includes adjusting font sizes, weights, and colors for different text styles. The `textTheme` property of `ThemeData` contains a [`TextTheme`](https://api.flutter.dev/flutter/material/TextTheme-class.html) object, which in turn has a set of predefined [`TextStyle`](https://api.flutter.dev/flutter/painting/TextStyle-class.html) properties. These properties represent different text styles like headlines, body text, captions, etc. You can modify the TextStyle properties to customize the typography for each style. This is an example of setting the font sizes and weights.
-
-```dart
-ThemeData lightTheme = ThemeData(
-  textTheme: const TextTheme(
-    displayLarge: TextStyle(
-        fontSize: 96, fontWeight: FontWeight.w300, color: Colors.black),
-    displayMedium: TextStyle(
-        fontSize: 60, fontWeight: FontWeight.w400, color: Colors.black),
-    displaySmall: TextStyle(
-        fontSize: 48, fontWeight: FontWeight.w400, color: Colors.black),
-    headlineMedium: TextStyle(
-        fontSize: 34, fontWeight: FontWeight.w400, color: Colors.black),
-    headlineSmall: TextStyle(
-        fontSize: 24, fontWeight: FontWeight.w400, color: Colors.black),
-    titleLarge: TextStyle(
-        fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
-    bodyLarge: TextStyle(
-        fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black87),
-    bodyMedium: TextStyle(
-        fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black87),
-    bodySmall: TextStyle(
-        fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black54),
-    labelLarge: TextStyle(
-        fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
-  ),
-);
-```
-
-You can use these styles in your app with the [`Theme.of(context).textTheme`](https://api.flutter.dev/flutter/material/ThemeData/textTheme.html) property.
-
-#### Typography and Material Design
-
-Material Design provides a set of typographic guidelines that define how to style text across different platforms and devices. These ensure that your app adheres to the Material Design principles, which helps you create a better user experience. The predefined text styles in Flutter's `TextTheme` follow these guidelines, so Flutter apps automatically adhere to the Material Design typography guidelines.
 
 ## Identifying the Theme Property for Widget Colors
 
@@ -324,6 +283,43 @@ class MyWidget extends StatelessWidget {
   }
 }
 ```
+
+## Modifying Typography with TextStyles
+
+[Typography](https://m3.material.io/styles/typography) is an important aspect of Material Design, and Flutter's `ThemeData` allows you to customize the typography of your app. This includes adjusting font sizes, weights, and colors for different text styles. The `textTheme` property of `ThemeData` contains a [`TextTheme`](https://api.flutter.dev/flutter/material/TextTheme-class.html) object, which in turn has a set of predefined [`TextStyle`](https://api.flutter.dev/flutter/painting/TextStyle-class.html) properties. These properties represent different text styles like headlines, body text, captions, etc. You can modify the TextStyle properties to customize the typography for each style. This is an example of setting the font sizes and weights.
+
+```dart
+ThemeData lightTheme = ThemeData(
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(
+        fontSize: 96, fontWeight: FontWeight.w300, color: Colors.black),
+    displayMedium: TextStyle(
+        fontSize: 60, fontWeight: FontWeight.w400, color: Colors.black),
+    displaySmall: TextStyle(
+        fontSize: 48, fontWeight: FontWeight.w400, color: Colors.black),
+    headlineMedium: TextStyle(
+        fontSize: 34, fontWeight: FontWeight.w400, color: Colors.black),
+    headlineSmall: TextStyle(
+        fontSize: 24, fontWeight: FontWeight.w400, color: Colors.black),
+    titleLarge: TextStyle(
+        fontSize: 20, fontWeight: FontWeight.w500, color: Colors.black),
+    bodyLarge: TextStyle(
+        fontSize: 16, fontWeight: FontWeight.w400, color: Colors.black87),
+    bodyMedium: TextStyle(
+        fontSize: 14, fontWeight: FontWeight.w400, color: Colors.black87),
+    bodySmall: TextStyle(
+        fontSize: 12, fontWeight: FontWeight.w400, color: Colors.black54),
+    labelLarge: TextStyle(
+        fontSize: 14, fontWeight: FontWeight.w500, color: Colors.white),
+  ),
+);
+```
+
+You can use these styles in your app with the [`Theme.of(context).textTheme`](https://api.flutter.dev/flutter/material/ThemeData/textTheme.html) property.
+
+#### Typography and Material Design
+
+Material Design provides a set of typographic guidelines that define how to style text across different platforms and devices. These ensure that your app adheres to the Material Design principles, which helps you create a better user experience. The predefined text styles in Flutter's `TextTheme` follow these guidelines, so Flutter apps automatically adhere to the Material Design typography guidelines.
 
 ## Conclusion
 This article explained how to use Material Design themes with Flutter. Understanding the Material Design system is critical for Flutter developers, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. It is full of great examples and points to the Fluttter documentation.
