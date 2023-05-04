@@ -11,19 +11,19 @@ categories: flutter
 permalink: /blog/:title
 ---
 
-One of the most common questions developers ask when working with Flutter is how to efficiently manage themes to create visually appealing and consistent UIs across their apps. Themes are coupled with the design system we use. Flutter apps usually use Material Design, or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/). We'll dive into the details of how to create, customize, and apply themes in your Flutter applications.
+One of the most common questions developers ask when working with Flutter is how to efficiently manage themes to create visually appealing and consistent UIs across their apps. Themes are coupled with the design system we use. Flutter apps usually use Material Design, or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/). This article dives into the details of how to create, customize, and apply themes in your Flutter applications.
 
 ## Understanding Flutter Material Design Themes
 
-Material Design 3 is Google's latest design system for building apps and websites. You should read up about the [design system](https://m3.material.io/) before looking into theming. A theme in Flutter is a collection of property-value pairs that dictate the appearance of the app's widgets. ThemeData is the class responsible for holding these properties. Let's first understand the significance of ThemeData and how it helps in theming.
+Material Design 3 is Google's latest design system for building apps and websites. You should read up about the [design system](https://m3.material.io/) before looking into theming. A theme in Flutter is a collection of property-value pairs that dictate the appearance of the app's widgets. [`ThemeData`](https://api.flutter.dev/flutter/material/ThemeData-class.html) is the class responsible for holding these properties. Let's first understand the significance of `ThemeData` and how it helps in theming.
 
 #### [ThemeData](https://api.flutter.dev/flutter/material/ThemeData-class.html)
 
-The `ThemeData` class encapsulates colors, typography, and shape properties for a material design-based theme. We typically use it as an argument for the [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp-class.html) widget, which in turn applies the theme to all descendant widgets.
+The `ThemeData` class encapsulates colors, typography, and shape properties for a Material Design theme. We typically use it as an argument for the [`MaterialApp`](https://api.flutter.dev/flutter/material/MaterialApp-class.html) widget, which in turn applies the theme to all descendant widgets.
 
 #### Creating a Custom Theme
 
-Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. Make sure you set `useMaterial3` because this tells flutter you want to use the latest version of Material Design, which is three.
+Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. Make sure you set `useMaterial3` to true because this tells flutter you want to use the latest version of Material Design, which is three.
 
 ```dart
 ThemeData lightTheme = ThemeData(
