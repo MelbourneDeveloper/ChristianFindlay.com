@@ -226,11 +226,11 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
 }
 ```
 
-These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) unless you explicitly override the color at the theme level. 
+You should try to utilize the `ColorScheme` colors because if you get these right, your app will automatically adhere to the Material Design guidelines and have a coherent color scheme. However you can also override the colors for the specific widget at the theme level. This can be a shortcut to finding the `ColorScheme` default color but it means you are only changing the color for a given widget. Widgets that should have the same colors according to Material Design 3 may end up with different colors.
 
 #### Override Default Colors
 
-In Material Design 3, [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) all use the `ColorScheme` to derive their default colors. However, you should understand that you can override the default colors for these widgets by setting the `style` property of the specific button, by overriding `buttonStyle` in the `ThemeData` object, or by overriding the button's type's specific style. 
+In Material Design 3, [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) all use the `ColorScheme` to derive their default colors. However, you can override the default colors for these widgets by setting the `style` property of the specific button, or by overriding the button's type's specific style. 
 
 For example, you can override the background color for `ElevatedButton` only like this. Note that we need to convert the color to a [`MaterialStateProperty<Color?>`](https://api.flutter.dev/flutter/material/MaterialStateProperty-class.html). This is because the background color can change depending on the state of the button. This example makes the button red in any state.
 
@@ -245,6 +245,30 @@ ThemeData theme = ThemeData(
   useMaterial3: true,
 );
 ```
+
+Bear in mind that while the you can set `buttonStyle` on the theme, it often has little or no effect. You might think this would make buttons appear in red, but it doesn't
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(
+        theme: ThemeData(
+          buttonTheme: const ButtonThemeData(buttonColor: Colors.red),
+          useMaterial3: true,
+        ),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: ElevatedButton(
+            onPressed: () {},
+            child: const Text('test'),
+          ),
+        ),
+      ),
+    );
+```
+
+‍![Not Red Button](/assets/images/blog/materialdesign/notredbutton.png)
 
 ## Complete Example
 
