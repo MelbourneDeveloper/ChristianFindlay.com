@@ -146,7 +146,7 @@ ThemeData(
 )
 ```
 
-## Identifying How Widgets Get Their Color
+## Identifying How Widgets Get Their Default Color
 
 Widgets get their default color from the `ColorScheme`. Each widget has a set of specific properties that define the various colors it uses. For example, `TextButton` gets the foreground text color from `ColorScheme.primary`. In this example, the button's text displays as green.
 
@@ -177,7 +177,54 @@ void main() => runApp(
 
 ‍![Green Button](/assets/images/blog/materialdesign/greenbutton.png)
 
-Unfortunately, there is no one-size-fits-all way to find out which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the flutter source code, and b) the documentation. You won't always find the answer in the documentation so look at the widget's source code. Flutter is open-source, and you can view the source code for any widget to see exactly how it's built. Simply ctrl+click (or cmd+click on macOS) on the widget name in your editor if you are using an IDE like VSCode or Android Studio, and it should take you to the definition in the source code.
+Unfortunately, there is no one-size-fits-all way to find out which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the flutter source code, and b) the documentation. 
+
+You won't always find the answer in the documentation so look at the widget's source code. Flutter is open-source, and you can view the source code for any widget to see exactly how it's built. Simply ctrl+click (or cmd+click on macOS) on the widget name in your editor if you are using an IDE like VSCode or Android Studio, and it should take you to the definition in the source code.
+
+Buttons have a `defaultStyleOf` method that returns a `ButtonStyle`. This example if from the Flutter source code and returns the defaults from `_TextButtonDefaultsM3`. 
+
+```dart
+@override
+  ButtonStyle defaultStyleOf(BuildContext context) {
+    final ThemeData theme = Theme.of(context);
+    final ColorScheme colorScheme = theme.colorScheme;
+
+    return Theme.of(context).useMaterial3
+      ? _TextButtonDefaultsM3(context)
+      : styleFrom(
+        // [This code is irrelevant for Material Design 3]
+        );
+  }
+```
+
+This is the definition of the `_TextButtonDefaultsM3` class. Most widgets have a class suffixed with `DefaultsM3` that you can find in the widget's source code file. This code shows you how the widget picks up the foreground color from the `ColorScheme.primary` property when the button is enabled.
+
+```dart
+class _TextButtonDefaultsM3 extends ButtonStyle {
+  _TextButtonDefaultsM3(this.context)
+   : super(
+       animationDuration: kThemeChangeDuration,
+       enableFeedback: true,
+       alignment: Alignment.center,
+     );
+
+  final BuildContext context;
+  late final ColorScheme _colors = Theme.of(context).colorScheme;
+
+  // ...
+
+  @override
+  MaterialStateProperty<Color?>? get foregroundColor =>
+    MaterialStateProperty.resolveWith((Set<MaterialState> states) {
+      if (states.contains(MaterialState.disabled)) {
+        return _colors.onSurface.withOpacity(0.38);
+      }
+      return _colors.primary;
+    });
+
+  // ...
+}
+```
 
 These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) unless you explicitly override the color at the theme level. 
 
