@@ -126,32 +126,24 @@ In Material Design 3, `ColorScheme` plays an even more significant role, as it d
 
 The primary purpose of a `ColorScheme` is to define a set of default colors for your app, which are then applied to various widgets and UI elements. In Material Design 3, many components and themes rely on the `ColorScheme` to determine their default colors. This makes it easier to create a consistent color palette for your app while still adhering to Material Design guidelines.
 
-When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the `ColorScheme.fromSwatch()` method or by specifying each color property individually:
+When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the [`ColorScheme.fromSeed()`](https://api.flutter.dev/flutter/material/ColorScheme/ColorScheme.fromSeed.html) (recommended for Material Design 3), [`ColorScheme.fromSwatch()`](https://api.flutter.dev/flutter/material/ColorScheme/ColorScheme.fromSwatch.html) methods or by specifying each color property individually:
 
 ```dart
 ThemeData(
-  colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: Colors.blue,
-  ).copyWith(
-    secondary: Colors.orange,
+  useMaterial3: true,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Colors.blue,
   ),
-);
+)
 ```
 
-In Material Design 3, [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) all use the `ColorScheme` to derive their default colors. However, you should understand that you can override the default colors for these widgets by setting the `style` property of the specific button, by overriding `buttonStyle` in the `ThemeData` object, or by overriding the button's type's specific style. 
-
-For example, you can override the background color for `ElevatedButton` only like this. Note that we need to convert the color to a [`MaterialStateProperty<Color?>`](https://api.flutter.dev/flutter/material/MaterialStateProperty-class.html). This is because the background color can change depending on the state of the button. This example makes the button red in any state.
-
 ```dart
-ThemeData theme = ThemeData(
-  elevatedButtonTheme: ElevatedButtonThemeData(
-      style: ButtonStyle(
-    backgroundColor: MaterialStateProperty.resolveWith<Color?>(
-      (Set<MaterialState> states) => Colors.red,
-    ),
-  )),
+ThemeData(
   useMaterial3: true,
-);
+  colorScheme: ColorScheme.fromSwatch(
+    primarySwatch: Colors.blue,
+  ),
+)
 ```
 
 ## Identifying How Widgets Get Their Color
@@ -185,12 +177,27 @@ void main() => runApp(
 
 ‍![Green Button](/assets/images/blog/materialdesign/greenbutton.png)
 
+Unfortunately, there is no one-size-fits-all way to find out which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the flutter source code, and b) the documentation. You won't always find the answer in the documentation so look at the widget's source code. Flutter is open-source, and you can view the source code for any widget to see exactly how it's built. Simply ctrl+click (or cmd+click on macOS) on the widget name in your editor if you are using an IDE like VSCode or Android Studio, and it should take you to the definition in the source code.
 
-Unfortunately, there is no one-size-fits-all way to find out which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the flutter source code, and b) the documentation.
+These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) unless you explicitly override the color at the theme level. 
 
-> The default app bar `backgroundColor` is the overall theme's ColorScheme.primary
+#### Override Default Colors
 
-You need to identify the theme property that sets the color for that specific widget. These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) unless you explicitly override the color at the theme level. 
+In Material Design 3, [`ElevatedButton`](https://api.flutter.dev/flutter/material/ElevatedButton-class.html), [`OutlinedButton`](https://api.flutter.dev/flutter/material/OutlinedButton-class.html), and [`TextButton`](https://api.flutter.dev/flutter/material/TextButton-class.html) all use the `ColorScheme` to derive their default colors. However, you should understand that you can override the default colors for these widgets by setting the `style` property of the specific button, by overriding `buttonStyle` in the `ThemeData` object, or by overriding the button's type's specific style. 
+
+For example, you can override the background color for `ElevatedButton` only like this. Note that we need to convert the color to a [`MaterialStateProperty<Color?>`](https://api.flutter.dev/flutter/material/MaterialStateProperty-class.html). This is because the background color can change depending on the state of the button. This example makes the button red in any state.
+
+```dart
+ThemeData theme = ThemeData(
+  elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+      (Set<MaterialState> states) => Colors.red,
+    ),
+  )),
+  useMaterial3: true,
+);
+```
 
 ## Complete Example
 
