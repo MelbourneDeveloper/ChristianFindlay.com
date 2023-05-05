@@ -387,6 +387,4 @@ This is a complete example. The first card uses the default shape, and the secon
 </figure>
 
 ## Conclusion
-Grasping Flutter's Material Design 3 themes is key for modern application design, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. This guide discussed creating custom themes with `ThemeData`, defining color palettes with `ColorScheme`, and adhering to Material Design guidelines for a user-friendly experience.
-
-It also examined overriding colors, understanding widget color inheritance, customizing typography, and automated theme switching in Flutter. For a polished UI, implementing Material Design themes in Flutter is essential.
+Grasping Flutter's Material Design 3 themes is key for modern application design, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. Refer back to this guide when you need an overview but remember to take the time to read the official documentation. Also, experiment with themes in Dartpad. This will save you a lot of time. Lastly, remember than you may need to check the actual Flutter code of the widgets to find out where they are getting their default theme values from.
