@@ -5,8 +5,7 @@ date: "2023/05/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/materialdesign/logo.png"
 image: "/assets/images/blog/materialdesign/logo.png"
-description: Discover the benefits of full app widget testing in Flutter, and learn how to ensure your app's UI works as intended with comprehensive coverage. This in-depth guide provides code examples, tips on dependency injection, and insights into automated testing and UI behavior for building reliable and high-quality Flutter applications.
-tags: theming material-design colors
+description: Master Material Design 3 Theming in Flutter with this comprehensive guide. Explore custom themes with ThemeData, define color palettes with ColorScheme, and learn how to adhere to Material Design guidelines. Discover how to override colors, customize typography, and automate theme switching in Flutter. Perfect for Flutter developers looking to enhance their UI design skills and create visually stunning, user-friendly applications.
 categories: Flutter
 permalink: /blog/:title
 ---
