@@ -33,6 +33,18 @@ One of the most common questions developers ask when working with Flutter is how
 
 [The Importance of ColorScheme in Material Design 3](#the-importance-of-colorscheme-in-material-design-3)
 
+[Identifying How Widgets Get Their Default Color](#identifying-how-widgets-get-their-default-color)
+
+[Override Default Colors](#override-default-colors)
+
+[Complete Example](#complete-example)
+
+## Typography
+
+[Modifying Typography with TextStyles](#modifying-typography-with-textstyles)
+
+[Conclusion](#conclusion)
+
 ## Understanding Flutter Material Design Themes
 
 Material Design 3 is Google's latest design system for building apps and websites. You should read up about the [design system](https://m3.material.io/) before looking into theming. A theme in Flutter is a collection of property-value pairs that dictate the appearance of the app's widgets. [`ThemeData`](https://api.flutter.dev/flutter/material/ThemeData-class.html) is the class responsible for holding these properties. Let's first understand the significance of `ThemeData` and how it helps in theming.
@@ -292,134 +304,11 @@ void main() => runApp(
 
 ## Complete Example
 
-Try the live sample in your browser [here](https://dartpad.dev/?id=940b8910603af83786d34e416bc89901). This example allows you to toggle between the three different theme modes so you can see how the dark and light themes look.
+This example allows you to toggle between the three different theme modes so you can see how the dark and light themes look. You can modify the code to check out how the different colors are applied to the widgets.
 
-```dart
-import 'package:flutter/material.dart';
-
-ThemeData lightTheme = ThemeData(
-  brightness: Brightness.light,
-  useMaterial3: true,
-  textTheme: const TextTheme(
-    displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-    bodyLarge: TextStyle(fontSize: 18, color: Colors.black87),
-  ),
-  appBarTheme: const AppBarTheme(
-    color: Colors.blue,
-    iconTheme: IconThemeData(color: Colors.white),
-  ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-      .copyWith(secondary: Colors.orange),
-);
-
-ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
-  textTheme: const TextTheme(
-    displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
-    bodyLarge: TextStyle(fontSize: 18, color: Colors.white70),
-  ),
-  appBarTheme: const AppBarTheme(
-    color: Colors.red,
-    iconTheme: IconThemeData(color: Colors.white),
-  ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
-    secondary: Colors.amber,
-    brightness: Brightness.dark,
-  ),
-);
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  ThemeMode _themeMode = ThemeMode.light;
-
-  IconData get _themeModeIcon {
-    switch (_themeMode) {
-      case ThemeMode.light:
-        return Icons.brightness_low;
-      case ThemeMode.dark:
-        return Icons.brightness_3;
-      case ThemeMode.system:
-      default:
-        return Icons.brightness_auto;
-    }
-  }
-
-  void _toggleThemeMode() {
-    setState(() {
-      _themeMode = _themeMode == ThemeMode.light
-          ? ThemeMode.dark
-          : _themeMode == ThemeMode.dark
-              ? ThemeMode.system
-              : ThemeMode.light;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: lightTheme,
-      darkTheme: darkTheme,
-      themeMode: _themeMode,
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Theme Toggler'),
-          actions: [
-            IconButton(
-              icon: const Icon(Icons.brightness_6),
-              onPressed: _toggleThemeMode,
-            ),
-          ],
-        ),
-        body: Center(
-          child: MyWidget(
-            themeMode: _themeMode,
-            themeModeIcon: _themeModeIcon,
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class MyWidget extends StatelessWidget {
-  final ThemeMode themeMode;
-  final IconData themeModeIcon;
-
-  const MyWidget(
-      {required this.themeMode, required this.themeModeIcon, Key? key})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text(
-          'Hello, World!',
-          style: Theme.of(context).textTheme.headlineMedium,
-        ),
-        const SizedBox(height: 20),
-        Text(
-          'Current Theme Mode: ${themeMode.toString().split('.').last}',
-          style: Theme.of(context).textTheme.bodyLarge,
-        ),
-        const SizedBox(height: 10),
-        Icon(themeModeIcon, size: 48),
-      ],
-    );
-  }
-}
-```
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=940b8910603af83786d34e416bc89901"></iframe>
+</figure>
 
 ## Modifying Typography with TextStyles
 
@@ -452,11 +341,14 @@ ThemeData lightTheme = ThemeData(
 );
 ```
 
-You can use these styles in your app with the [`Theme.of(context).textTheme`](https://api.flutter.dev/flutter/material/ThemeData/textTheme.html) property.
+You can use these styles in your app with the [`Theme.of(context).textTheme`](https://api.flutter.dev/flutter/material/ThemeData/textTheme.html) property, and the [`Text`](https://api.flutter.dev/flutter/widgets/Text-class.html) widget's default `TextStyle` is `bodyMedium`. This example shows how to set the text style, how the `Text` widget picks up the default style, and how to use a named `TextStyle` from the theme.
 
-#### Typography and Material Design
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=57b9f78da95614eef4b1d922ea2f6593"></iframe>
+</figure>
 
-Material Design provides a set of typographic guidelines that define how to style text across different platforms and devices. These ensure that your app adheres to the Material Design principles, which helps you create a better user experience. The predefined text styles in Flutter's `TextTheme` follow these guidelines, so Flutter apps automatically adhere to the Material Design typography guidelines.
 
 ## Conclusion
-This article explained how to use Material Design themes with Flutter. Understanding the Material Design system is critical for Flutter developers, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. It is full of great examples and points to the Fluttter documentation.
+Grasping Flutter's Material Design 3 themes is key for modern application design, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. This guide discussed creating custom themes with `ThemeData`, defining color palettes with `ColorScheme`, and adhering to Material Design guidelines for a user-friendly experience.
+
+It also examined overriding colors, understanding widget color inheritance, customizing typography, and automated theme switching in Flutter. For a polished UI, implementing Material Design themes in Flutter is essential.
