@@ -43,6 +43,10 @@ One of the most common questions developers ask when working with Flutter is how
 
 [Modifying Typography with TextStyles](#modifying-typography-with-textstyles)
 
+## Shapes
+
+[Theme Shapes](#theme-shapes)
+
 [Conclusion](#conclusion)
 
 ## Understanding Flutter Material Design Themes
@@ -347,6 +351,40 @@ You can use these styles in your app with the [`Theme.of(context).textTheme`](ht
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=57b9f78da95614eef4b1d922ea2f6593"></iframe>
 </figure>
 
+## Theme Shapes
+
+Defining shapes at the theme level in Flutter ensures your design remains consistent, making your application more intuitive and appealing to users. Shapes in Material Design 3 can be simple or complex, adding an element of depth and enhancing the visual hierarchy of the user interface. From subtle round edges to bold, expressive cut corners, shape variations can significantly impact a design's feel and functionality. 
+
+To define shapes at the theme level, specify the `shape` parameter of the widget's theme like this.
+
+```dart
+ThemeData(
+  useMaterial3: true,
+  cardTheme: CardTheme(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(4.0),
+    ),
+  ),
+)
+```
+
+The theme sets the default shape for the widget, and you can reference the shape from from `Theme`. 
+
+```dart
+Card(
+  shape: Theme.of(context).cardTheme.shape,
+  child: const SizedBox(
+    width: 100,
+    height: 100,
+  ),
+),
+```
+
+This is a complete example. The first card uses the default shape, and the second card uses a custom shape.
+
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=7ec38a9d1049e037c012bec865630dfc"></iframe>
+</figure>
 
 ## Conclusion
 Grasping Flutter's Material Design 3 themes is key for modern application design, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. This guide discussed creating custom themes with `ThemeData`, defining color palettes with `ColorScheme`, and adhering to Material Design guidelines for a user-friendly experience.
