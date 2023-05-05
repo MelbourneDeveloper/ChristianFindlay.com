@@ -154,11 +154,43 @@ ThemeData theme = ThemeData(
 );
 ```
 
-## Identifying the Theme Property for Widget Colors
+## Identifying How Widgets Get Their Color
+
+Widgets get their default color from the `ColorScheme`. Each widget has a set of specific properties that define the various colors it uses. For example, `TextButton` gets the foreground text color from `ColorScheme.primary`. In this example, the button's text displays as green.
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() => runApp(
+      MaterialApp(
+        theme: ThemeData(
+          brightness: Brightness.light,
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSwatch(
+            primarySwatch: Colors.blue,
+          ).copyWith(
+            primary: Colors.green,
+          ),
+        ),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+          body: TextButton(
+            onPressed: () {},
+            child: const Text('test'),
+          ),
+        ),
+      ),
+    );
+```
+
+‍![Green Button](/assets/images/blog/materialdesign/greenbutton.png)
+
+
+Unfortunately, there is no one-size-fits-all way to find out which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the flutter source code, and b) the documentation.
+
+> The default app bar `backgroundColor` is the overall theme's ColorScheme.primary
 
 You need to identify the theme property that sets the color for that specific widget. These properties should come from the [`ColorScheme`](https://api.flutter.dev/flutter/material/ColorScheme-class.html) unless you explicitly override the color at the theme level. 
-
-
 
 ## Complete Example
 
