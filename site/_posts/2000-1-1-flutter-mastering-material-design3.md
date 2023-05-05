@@ -211,7 +211,7 @@ void main() => runApp(
     );
 ```
 
-‍![Green Button](/assets/images/blog/materialdesign/greenbutton.png)
+‍![Green Button](/assets/images/blog/materialdesign/greenbutton.png){:width="100%"}
 
 Unfortunately, there is no one-size-fits-all way to determine which property of the `ColorScheme` the widget uses because they use different color properties for their default color. The primary sources for learning these are a) the Flutter source code and b) the documentation. 
 
@@ -304,7 +304,7 @@ void main() => runApp(
     );
 ```
 
-‍![Not Red Button](/assets/images/blog/materialdesign/notredbutton.png)
+‍![Not Red Button](/assets/images/blog/materialdesign/notredbutton.png){:width="100%"}
 
 ## Complete Example
 
