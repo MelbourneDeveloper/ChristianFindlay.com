@@ -73,8 +73,7 @@ ThemeData lightTheme = ThemeData(
     color: Colors.blue,
     iconTheme: IconThemeData(color: Colors.white),
   ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue)
-      .copyWith(secondary: Colors.orange),
+  colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
 );
 ```
 
@@ -103,11 +102,10 @@ Text(
 
 #### Dark and Light Themes
 
-Flutter also allows you to define separate themes for dark and light modes. You can set the `darkTheme` property of the `MaterialApp` widget. Make sure you set the theme's `brightness` property to `Brightness.dark` to indicate it's a dark theme.
+Flutter also allows you to define separate themes for dark and light modes. You can set the `darkTheme` property of the `MaterialApp` widget. Make sure you set the `ColorScheme`'s `brightness` property to `Brightness.dark` to indicate it's a dark theme.
 
 ```dart
 ThemeData darkTheme = ThemeData(
-  brightness: Brightness.dark,
   textTheme: const TextTheme(
     displayLarge: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
     bodyLarge: TextStyle(fontSize: 18, color: Colors.white70),
@@ -116,8 +114,8 @@ ThemeData darkTheme = ThemeData(
     color: Colors.red,
     iconTheme: IconThemeData(color: Colors.white),
   ),
-  colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.red).copyWith(
-    secondary: Colors.amber,
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Colors.red,
     brightness: Brightness.dark,
   ),
 );
@@ -162,22 +160,13 @@ In Material Design 3, `ColorScheme` plays an even more significant role. It defi
 
 The primary purpose of a `ColorScheme` is to define a set of default colors for your app, which then applies to various widgets and UI elements. In Material Design 3, many components and themes rely on the `ColorScheme` to determine their default colors. This makes it easier to create a consistent color palette for your app while adhering to Material Design guidelines.
 
-When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the [`ColorScheme.fromSeed()`](https://api.flutter.dev/flutter/material/ColorScheme/ColorScheme.fromSeed.html) (recommended for Material Design 3), [`ColorScheme.fromSwatch()`](https://api.flutter.dev/flutter/material/ColorScheme/ColorScheme.fromSwatch.html) methods or by specifying each color property individually:
+When creating a `ThemeData` object for your app, you can define a custom `ColorScheme` by using the [`ColorScheme.fromSeed()`](https://api.flutter.dev/flutter/material/ColorScheme/ColorScheme.fromSeed.html) (recommended for Material Design 3) or by specifying each color property individually. This example generates the colors from the seed color blue.
 
 ```dart
 ThemeData(
   useMaterial3: true,
   colorScheme: ColorScheme.fromSeed(
     seedColor: Colors.blue,
-  ),
-)
-```
-
-```dart
-ThemeData(
-  useMaterial3: true,
-  colorScheme: ColorScheme.fromSwatch(
-    primarySwatch: Colors.blue,
   ),
 )
 ```
@@ -194,8 +183,8 @@ void main() => runApp(
         theme: ThemeData(
           brightness: Brightness.light,
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.blue,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.blue,
           ).copyWith(
             primary: Colors.green,
           ),
