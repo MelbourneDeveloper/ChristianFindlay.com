@@ -183,8 +183,8 @@ void main() => runApp(
         theme: ThemeData(
           brightness: Brightness.light,
           useMaterial3: true,
-          colorScheme: ColorScheme.fromSwatch(
-            primarySwatch: Colors.blue,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.blue,
           ).copyWith(
             primary: Colors.green,
           ),
