@@ -8,6 +8,7 @@ image: "/assets/images/blog/dart/dart.png"
 tags: dart
 categories: flutter
 permalink: /blog/:title
+description: Dive into Dart 3's new switch expression feature and other features like pattern matching that support it. Understand how these enhance functional programming and improve Flutter development. Learn through examples for a comprehensive understanding of Dart 3.
 ---
 
 Dart 3 adds a new feature called [Switch Expressions](https://dart.dev/language/branches#switch-expressions). Dart is a multi-paradigm language that supports both [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming), [imperative](https://en.wikipedia.org/wiki/Imperative_programming), [functional-style](https://en.wikipedia.org/wiki/Functional_programming) and [declarative](https://en.wikipedia.org/wiki/Declarative_programming) programming. Programmers have adopted it worldwide, primarily because of its simplicity, flexibility, and its seamless integration with the Flutter framework. The release of Dart 3 brought several new features and improvements around functional style programming, with the new switch expression being one.
