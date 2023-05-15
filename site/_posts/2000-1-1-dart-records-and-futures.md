@@ -11,6 +11,10 @@ permalink: /blog/:title
 description: Explore the power of Dart 3 with this comprehensive guide on Records and Futures. Understand how these features enhance the robustness of Dart applications and provide a more efficient way to manage asynchronous programming. Ideal for developers looking to leverage Dart 3 in their applications.
 ---
 
+<h1>
+<a href="https://blog.feedspot.com/flutter_blogs/?feedid=5559981" >
+35 Best Flutter Blogs - Check out the top Flutter blogs
+</a></h1>
 
 Dart 3 adds [Records](https://dart.dev/language/records). Records are an anonymous, immutable, aggregate type that allows bundling multiple objects into one object. They are fixed-sized, heterogeneous, and typed. Records can be stored in variables, passed to and from functions, and stored in lists. We can also use them with [`Future`](https://dart.dev/codelabs/async-await)s, the Dart language's asynchronous programming model. This post explains how to use records with futures.
 
