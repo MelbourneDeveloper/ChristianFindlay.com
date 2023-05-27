@@ -11,6 +11,8 @@ title: Online Training
 <br>
 # Online Training
 
+Fill out the [contact form](/contact) to book a session.
+
 I provide online training for Flutter and Dart. In particular, I teach [Flutter Widget Testing](https://docs.flutter.dev/cookbook/testing/widget/introduction), a very important skill for any Flutter developer. I also teach people how to build Flutter apps with [ChatGPT](https://openai.com/blog/chatgpt). This allows people new to programming to build apps with no prior experience. The online format with Zoom and Visual Studio Code Live Share makes it easy to learn from anywhere worldwide while collaborating in a safe and supportive environment.
 
 ## Flutter Widget Testing
