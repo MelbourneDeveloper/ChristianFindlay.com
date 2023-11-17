@@ -11,7 +11,7 @@ categories: flutter
 permalink: /blog/:title
 ---
 
-Functions and methods are the basic building blocks for reusable code. They are particularly useful for breaking large pieces of widget code into smaller, more manageable and reusable pieces. However, there is some anxiety in the Flutter community about whether it is safe to use them. This blog post explains that while there are some general pitfalls around constructing widgets, functions are not only safe to use - they are often preferable to creating a full Widget class. Avoiding unnecessary widget nodes in the tree simplifies it, and may even improve performance in some cases. This blog post also goes into the history around why there is confusion on this topic and how to avoid some pitfalls when constructing the widget tree.
+Functions and methods are the basic building blocks for reusable code. They are particularly useful for breaking large pieces of widget code into smaller, more manageable and reusable pieces. However, there is some anxiety in the Flutter community about whether it is safe to use them. This blog post explains that while there are some general pitfalls around constructing widgets, functions are not only safe to use - they are often preferable to creating a full Widget class. Avoiding unnecessary widget nodes in the tree simplifies it, and may even improve performance in some cases. This blog post also goes into the history around why there is confusion on this topic, how to avoid some pitfalls when constructing the widget tree and most importantly, adds nuance to the discussion.
 
 ## Background
 
@@ -21,9 +21,11 @@ Ever since the post and the video, the debate over using classes versus function
 
 The Stack Overflow post and the YouTube video both point to Dartpad samples that illustrate some issues about constructing the widget tree, but none of the issues illustrated in those samples necessarily lead to the conclusion that always creating a Widget class is better than using a function to construct the widget tree. They present a [false dichotomy](https://www.dictionary.com/browse/false-dichotomy) where the spectrum of possible options is misrepresented as an either-or choice between two mutually exclusive things. 
 
-Widget classes and functions that construct them are two different things, and the material above conflates them in confusing ways. 
+Widget classes and functions that construct them are two different things, and the material above conflates them in confusing ways. The post and the video both lack nuance and present an absolutist conclusion that results in many developers feeling like their only choice is to work with bloated widget tree code, or create a full Widget class.
 
 ## The Case for Helper Functions
+
+Taming the complexity of the Widget Tree, and the code that constructs the Widget Tree is the key to a maintainable Flutter app. There are several ways to do this, and you shouldn't limit yourself to any single approach. Breaking up the widget tree code vertically and horizontally is critical for readability, and allows you to reuse components.
 
 ### Simplicity and Readability
 
