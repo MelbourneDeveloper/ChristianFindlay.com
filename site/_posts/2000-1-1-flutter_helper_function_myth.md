@@ -15,7 +15,7 @@ Functions and methods are the basic building blocks for reusable code. They are 
 
 ## Background
 
-In 2019, there was already some anxiety around whether or not Flutter developers should break widgets up into smaller functions or methods. Some had already labeled it an "antipattern". A hapless Redditor pointed out that ["Extracting widgets to a function is not an anti-pattern"](https://www.reddit.com/r/FlutterDev/comments/avhvco/extracting_widgets_to_a_function_is_not_an/) and they were right, but the post eventually led to a Stack Overflow post where a Flutter community member argued that we should ["Prefer using classes over functions to make reusable widget-tree"](https://stackoverflow.com/a/53234826/1878141). At the end of 2021, the official Flutter YouTube channel published a [video](https://www.youtube.com/watch?v=IOyq-eTRhvo) that seems to echo the same sentiment.
+In 2019, there was already some anxiety around whether or not Flutter developers should break widgets up into smaller functions or methods. Some had already labeled it an "antipattern". A hapless Redditor pointed out that ["Extracting widgets to a function is not an anti-pattern"](https://www.reddit.com/r/FlutterDev/comments/avhvco/extracting_widgets_to_a_function_is_not_an/) and they were right, but the post eventually led to a Stack Overflow post where a Flutter community member argued that we should ["Prefer using classes over functions to make reusable widget-tree"](https://stackoverflow.com/a/53234826/1878141). At the end of 2021, [the official Flutter YouTube channel](https://www.youtube.com/@flutterdev) published a [video](https://www.youtube.com/watch?v=IOyq-eTRhvo) that seems to echo the same sentiment.
 
 Ever since the post and the video, the debate over using classes versus functions for creating reusable widgets has been a hot topic and has led to confusion in the Flutter community. Today, I'm writing to debunk the myth that has arisen from this debate – the idea that helper functions are not suitable for breaking up reusable components in the widget tree.
 
@@ -23,23 +23,105 @@ The Stack Overflow post and the YouTube video both point to Dartpad samples that
 
 Widget classes and functions that construct them are two different things, and the material above conflates them in confusing ways. The post and the video both lack nuance and present an absolutist conclusion that results in many developers feeling like their only choice is to work with bloated widget tree code, or create a full Widget class.
 
+## What is a Widget Tree?
+
+It's important to understand that your code is not the Widget Tree. Your code constructs the Widget Tree. The Widget Tree is an object model that is a blueprint for rendering your UI. Your app's state informs the tree, and portions of the tree rebuild when the app state changes. The Widget Tree rebuilds eventually trigger the repainting of the UI. Animations are a quick succession of state changes that trigger changes in the Widget Tree and result in visual movement on-screen. 
+
+You can only see the Widget Tree at runtime. This is a Widget Tree represented in the [Flutter Inspector](https://docs.flutter.dev/tools/devtools/inspector). You can use it to inspect the Widget Tree at any point after running your app.
+
+[INSERT IMAGE]
+
+You compose the widget tree by filling in the `build` method of `Widget` classes. When your Flutter app runs, it calls your `build` methods to construct the tree. `Widget`s can have zero, one, or many child widgets. This is a typical example of code that constructs a Widget Tree.
+
+[INSERT IMAGE]
+
+### Widget Classes, Helper Functions, and Other Ways To Construct Widgets
+
+Let's say you have a heading that appears often in your app. It's basically just some fixed text with a `TextStyle` that you want to center horizontally. There are several ways you can construct this for the Widget Tree. You can create a Widget class, return it from a function, or just define a Widget instance as a `const`. Here are the different ways to represent this:    
+
+#### As a Class
+
+```dart
+class CustomHeading extends StatelessWidget {
+  const CustomHeading({super.key});
+
+  @override
+  Widget build(BuildContext context) => const Center(
+        child: Text(
+          'My Heading',
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+      );
+}
+
+// Usage
+const customHeading = CustomHeading();
+```
+
+#### As a Helper Function
+```dart
+Widget customHeading() => const Center(
+      child: Text(
+        'My Heading',
+        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+      ),
+    );
+
+// Usage
+const headingWidget = customHeading();
+```
+
+#### As a Constant
+```dart
+const customHeading = Center(
+  child: Text(
+    'My Heading',
+    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+  ),
+);
+
+// Usage
+customHeading
+```
+
+As you can see, the constant option is the simplest, both in terms of code written, and usage. In cases where the widget has fixed content and no parameters, we don't even need a function. We can simply store the `Widget` as a constant, and this will have the best performance. But, in most cases, we will need to at least pass a value in to construct the widget, and this is where functions (or helper functions) are useful.
+
+It's important to understand the resulting difference in the widget tree using these three cases. The second and third options result in two widgets, while the first option results in three widgets. 
+
+[INSERT CLASS WIDGET TREE HERE]
+
+[INSERT OTHER VERSION HERE]
+
+Notice that the class version constructs a more complex Widget Tree. This is where performance may become a factor. All things being equal, the less complex your widget tree, the less work is necessary for rendering. Without benchmarking this, it is possible to guess that the first version may create more work for the rendering process than the second two options, but the reality is that Flutter is fast and none of these options should pose a performance issue.
+
 ## The Case for Helper Functions
 
-Taming the complexity of the Widget Tree, and the code that constructs the Widget Tree is the key to a maintainable Flutter app. There are several ways to do this, and you shouldn't limit yourself to any single approach. Breaking up the widget tree code vertically and horizontally is critical for readability, and allows you to reuse components.
+Taming the complexity of the Widget Tree, and the code that constructs the Widget Tree is the key to a maintainable Flutter app. There are several ways to do this, and you shouldn't limit yourself to any single approach. Breaking up the widget tree code vertically and horizontally is critical for readability, and allows you to reuse components. 
+
+Questionable...
+Furthermore, it's generally good performance practice to replace smaller chunks in the widget tree instead of larger ones. If your `build` methods are too large, 
 
 ### Simplicity and Readability
 
-Helper functions shine in their simplicity. They allow developers to encapsulate widget logic in a more readable and maintainable way, especially for straightforward, less complex widgets. This approach can lead to cleaner code, as it prevents the overuse of classes for relatively simple tasks.
-Performance Considerations
+Helper functions shine in their simplicity. They allow developers to encapsulate widget logic in a more readable and maintainable way, especially for straightforward, less complex widgets. It leads to cleaner code and IDEs have refactoring tools that allow you to easily break large `build` methods into smaller functions or methods. 
 
-One common misconception is that helper functions inherently lead to performance issues. However, this is not the case. Properly used helper functions can be just as efficient as classes. The key is in knowing when to use them - they are best for widgets that do not require their own state or lifecycle.
-Flexibility and Reusability
+### Performance Considerations
 
-Helper functions offer flexibility. They can be easily reused across different parts of an application, helping to keep the code DRY (Don't Repeat Yourself). This reusability is particularly beneficial for creating consistent UI elements across an app.
-Addressing the Confusion
+One common misconception is that helper functions inherently lead to performance issues. However, this is not the case. Properly used helper functions are just as efficient as classes. Remember, performance derives from the runtime Widget Tree structure and how it changes over time - not how you construct the Widget Tree in your code. Using functions won't adversely affect your app's performance, but that doesn't mean there are no potential performance issues.
+
+### Flexibility and Reusability
+
+Helper functions offer flexibility. You can easily reuse them across different parts of an application to keep the code DRY (Don't Repeat Yourself). This reusability is particularly beneficial for creating consistent UI elements across an app.
+
+### Unnecessary Widget Classes Bloat Your Codebase
+
+You shouldn't create unnecessary classes or types in any language or platform because they bloat your codebase. 
+
+## Addressing the Confusion
 
 The Stack Overflow post argues that classes should be preferred over functions for widget creation, citing issues like performance optimization and framework integration. While these points hold validity in certain scenarios, they do not render helper functions obsolete or always inferior.
-Context Matters
+
+## Context Matters
 
 The choice between classes and helper functions should be based on the specific use case. For complex widgets that require managing state or lifecycle, classes are indeed the better choice. However, for simpler, stateless widgets, helper functions are often more than adequate.
 Not an Either/Or Situation
