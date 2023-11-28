@@ -157,7 +157,9 @@ Best Practices for Using Helper Functions
 
 The YouTube video and the Stack Overflow post both point to Dartpad samples, but nothing about these samples leads to the conclusion that you should prefer Widget classes over functions. These samples demonstrate things that you need to be aware of in general, but you can run into these same issues from the misuse of Dart or the Flutter SDK in any number of ways. Let's pick them apart.
 
+## Custom Classes Bloat the Widget Tree
 
+As a general rule, the best
 
 ## Official Flutter Team Stance
 
@@ -173,9 +175,16 @@ The website does [make mention](https://docs.flutter.dev/perf/best-practices#con
 
 Firstly, this is a clumsy, imprecise sentence. It's not clear what it means. Everything in the widget tree is a widget, and you need to use constructors, methods or functions to build it. Widget constructors are a form of method. 
 
-As I already mentioned, leveraging `const` widgets is not limited to widgets with a predefined type. You can just declare widget constants anywhere in your code and leverage them in the widget tree. Again, the documentation here presents a false dichotomy.
+As I already mentioned, leveraging `const` widgets is not limited to widgets with a custom class. You can just declare widget constants anywhere in your code and leverage them in the widget tree. Again, the documentation here presents a false dichotomy.
 
 I would personally like the Flutter team to issue clarification on the documentation website, and a clarification video. I'd be happy to write a PR for this if the Flutter team would like that.
+
+## It's For The Juniors
+
+Lastly, let's talk about Flutter newcomers. New people are learning about Flutter every day and it is important to consider them when explaining concepts about Flutter. I've seen several people argue that we should shield beginners from certain constructs because some constructs are more error-prone than other constructs.
+
+- That's what peer review and mentoring are for
+- We can't wrap juniors up in cotton wool. There are any number of footguns that juniors will encounter over time and you cannot protect them from all of them. The only thing you can do is help them understand the underlying toolkit, give them room to experiment, and help them write tests to prove that the code is behaving correctly. 
 
 ## Conclusion
 
