@@ -107,13 +107,23 @@ Helper functions shine in their simplicity. They allow developers to encapsulate
 
 ### Performance Considerations
 
-One common misconception is that helper functions inherently lead to performance issues. However, this is not the case. Properly used helper functions are just as efficient as classes. Remember, performance derives from the runtime Widget Tree structure and how it changes over time - not how you construct the Widget Tree in your code. Using functions won't adversely affect your app's performance, but that doesn't mean there are no potential performance issues.
+One misconception that the article and video construe is that helper functions inherently lead to performance issues. This is not the case. Properly used helper functions are just as efficient as classes. Remember, performance derives from the runtime Widget Tree structure and how it changes over time - not how you construct the Widget Tree in your code. Using functions won't adversely affect your app's performance in most cases, but even when they would, that doesn't mean you need to create a full widget class to get the performance benefit. 
 
 #### `const` Constructor
 
 Both the Stack Overflow post, and the video point out that you should use `const` constructors wherever possible. This is true. And, they both make a fair point that functions stop you from using const constructors in some scenarios. Consider this code:
 
 ![Function Const Error](/assets/images/blog/myth/consterror.png){:width="100%"}
+
+As you can see, it won't compile because the `MaterialApp` is declared as `const`. Functions only evaluate at runtime, so calling the `customHeading()` function disallows the `const` keyword. 
+
+The SO post says classes "allow performance optimization", but this is not correct. It's the `const` keyword that allows for the optimization, and creating a widget class is not necessary to achieve this optimization. `const` widgets get compiled into your code. You can reference them anywhere in the widget tree. 
+
+This example demonstrates why it is not necessary to create a widget class in order to leverage the const keyword to get the best possible performance, while at the same time, creating a reusable, named widget.
+
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=e411288a95c34ddfd636a751dc20fb45"></iframe>
+</figure>
 
 ### Flexibility and Reusability
 
