@@ -15,7 +15,7 @@ Functions and methods are the basic building blocks for reusable code. They are 
 
 ## Background
 
-In 2019, there was already some anxiety around whether or not Flutter developers should break widgets up into smaller functions or methods. Some had already labeled it an "antipattern". A hapless Redditor pointed out that ["Extracting widgets to a function is not an anti-pattern"](https://www.reddit.com/r/FlutterDev/comments/avhvco/extracting_widgets_to_a_function_is_not_an/) and they were right, but the post eventually led to a Stack Overflow post where a Flutter community member argued that we should ["Prefer using classes over functions to make reusable widget-tree"](https://stackoverflow.com/a/53234826/1878141). At the end of 2021, [the official Flutter YouTube channel](https://www.youtube.com/@flutterdev) published a [video](https://www.youtube.com/watch?v=IOyq-eTRhvo) that seems to echo the same sentiment.
+In 2019, there was already some anxiety around whether or not Flutter developers should break widgets up into smaller functions or methods. Some had already labeled it an "antipattern". A hapless Redditor pointed out that ["Extracting widgets to a function is not an anti-pattern"](https://www.reddit.com/r/FlutterDev/comments/avhvco/extracting_widgets_to_a_function_is_not_an/) and they were right, but the post eventually led to a Stack Overflow post where a Flutter community member argued that we should ["Prefer using classes over functions to make reusable widget-tree"](https://stackoverflow.com/a/53234826/1878141). At the end of 2021, [the official Flutter YouTube channel](https://www.youtube.com/@flutterdev) published a [video](https://www.youtube.com/watch?v=IOyq-eTRhvo) that seems to echo the same sentiment. There have been several other [blog posts](https://steveos.medium.com/use-separate-widget-over-helper-method-in-flutter-heres-why-better-performace-433672eb7461) that echo the sentiment.
 
 Ever since the post and the video, the debate over using classes versus functions for creating reusable widgets has been a hot topic and has led to confusion in the Flutter community. Today, I'm writing to debunk the myth that has arisen from this debate – the idea that helper functions are not suitable for breaking up reusable components in the widget tree.
 
@@ -137,7 +137,31 @@ Best Practices for Using Helper Functions
 
     Performance Awareness: Be aware of the performance implications. For instance, avoid unnecessary re-rendering of widgets.
 
-Conclusion
+## Addressing the Samples
+
+The YouTube video and the Stack Overflow post both point to Dartpad samples, but nothing about these samples leads to the conclusion that you should prefer Widget classes over functions. These samples demonstrate things that you need to be aware of in general, but you can run into these same issues from the misuse of Dart or the Flutter SDK in any number of ways. Let's pick them apart.
+
+
+
+## Official Flutter Team Stance
+
+The Stack Overflow post makes the bold assertion that
+
+> The Flutter team has now taken an official stance on the matter and stated that classes are preferable
+
+But, I don't think that's true at all. The Flutter team is made up of many individuals and I'm sure they all have differing opinions. Several people in the team make video content and I sincerely doubt that the whole team reviews every video before they publish. I don't know what the vetting process for YouTube videos is, but, surely, if there is an official stance on this matter, it should be on the Flutter documentation website. 
+
+The website does [make mention](https://docs.flutter.dev/perf/best-practices#control-build-cost) of the YouTube video by saying this:
+
+> Widgets vs helper methods, a video from the official Flutter YouTube channel that explains why widgets (especially widgets with const constructors) are more performant than functions.
+
+Firstly, this is a clumsy, imprecise sentence. It's not clear what it means. Everything in the widget tree is a widget, and you need to use constructors, methods or functions to build it. Widget constructors are a form of method. 
+
+As I already mentioned, leveraging `const` widgets is not limited to widgets with a predefined type. You can just declare widget constants anywhere in your code and leverage them in the widget tree. Again, the documentation here presents a false dichotomy.
+
+I would personally like the Flutter team to issue clarification on the documentation website, and a clarification video. I'd be happy to write a PR for this if the Flutter team would like that.
+
+## Conclusion
 
 The myth that helper functions are not suitable for creating reusable widgets in Flutter needs to be dispelled. Both classes and functions have their place in Flutter development, and the decision to use one over the other should be guided by the specific needs of the widget being created. Let's embrace the flexibility that Flutter offers and use the full range of tools at our disposal to create efficient, maintainable, and high-performing applications.
 
