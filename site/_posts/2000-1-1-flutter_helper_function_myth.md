@@ -109,6 +109,12 @@ Helper functions shine in their simplicity. They allow developers to encapsulate
 
 One common misconception is that helper functions inherently lead to performance issues. However, this is not the case. Properly used helper functions are just as efficient as classes. Remember, performance derives from the runtime Widget Tree structure and how it changes over time - not how you construct the Widget Tree in your code. Using functions won't adversely affect your app's performance, but that doesn't mean there are no potential performance issues.
 
+#### `const` Constructor
+
+Both the Stack Overflow post, and the video point out that you should use `const` constructors wherever possible. This is true. And, they both make a fair point that functions stop you from using const constructors in some scenarios. Consider this code:
+
+![Function Const Error](/assets/images/blog/myth/consterror.png){:width="100%"}
+
 ### Flexibility and Reusability
 
 Helper functions offer flexibility. You can easily reuse them across different parts of an application to keep the code DRY (Don't Repeat Yourself). This reusability is particularly beneficial for creating consistent UI elements across an app.
