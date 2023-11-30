@@ -44,13 +44,13 @@ Let's take a step back here. We saw an example where there were two observable v
 
 In most cases, you don't. 
 
-In most cases, we don't need to listen to value changes on each value. It's just not necessary. We can use a simple `ChangeNotifier`, even a `StatefulWidget`. This example bundles the state into the `ChangeNotifier`, and changing the first name or surname updates the UI.
+In most cases, we don't need to listen to value changes on each value. It's just not necessary. We can use a simple `ChangeNotifier`, or even a `StatefulWidget`. This example bundles the state into the `ChangeNotifier`, and changing the first name or surname updates the UI.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=850a8261c535cb64f80620ed372eff33"></iframe>
 </figure>
 
-You only need specialized Rx functionality when there is some special need to listen to multiple values that comprise other values. So, don't try to build Rx into every app level. It only makes things more complicated.
+You only need specialized Rx functionality when there is some special need to listen to multiple values that comprise other values. So, don't try to build Rx into every app level. It may add unnecessary complexity.
 
 ## Surveying the Rx Options
 
@@ -62,7 +62,7 @@ Perhaps you've discovered a case in your app that does actually need to listen t
 
 **Reactive Computation**: It doesn't solve the core problem of automatically computing values. You must explicitly write functions to compute and update values when the underlying state changes, leading to increased boilerplate and potential for errors.
 
-This does the job, but you need to do manual work. It doesn't automate much for you.
+This does the job, but you need to do manual work. It doesn't automate much for you, as you saw above.
 
 ### Riverpod
 
@@ -72,15 +72,15 @@ This does the job, but you need to do manual work. It doesn't automate much for 
 
  **Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes, but it does offer the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
 
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
+</figure>
+
 My personal opinion is that the Riverpod example highlights a non-standard approach to managing variables (state). It's not that top-level declarations are inherently bad. The issue is that the approach usurps the language's normal variable scoping mechanism and moves the variable into a scope that Riverpod manages, while the underlying code that manages this is quite hard to follow.
 
 The `Consumer` widget here is necessary to interact with the state. None of the other approaches require a custom `Widget`. `Consumer` has a non-standard `build` method, which means if you ever need to change state management solutions, you will also have to change the physical widgets instead of just the state.
 
 This is unlike Signals below, where you can benefit from the library without needing custom widgets. This does, however, offer the advantage of automatic disposal.
-
-<figure>
-  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
-</figure>
 
 ### RxDart
 
@@ -98,7 +98,7 @@ This library adds functionality to Dart's existing streams. It doesn't reinvent 
 
 ### Signals
 
-**Overview**: Signals introduces an innovative, elegant solution with its `computed` function. It automatically creates reactive computations that update when any of the dependent values change. This thoroughly sets it apart from the earlier options.
+**Overview**: [Signals](https://pub.dev/packages/signals) introduces an innovative, elegant solution with its `computed` function. It automatically creates reactive computations that update when any of the dependent values change. This thoroughly sets it apart from the earlier options.
 
 **Reactive Computation**: it automatically achieves reactive computation with minimal code. As you can see in the example below, the `computed` callback code only requires the same amount of code that you would need to display the value as text. It automatically detects the dependencies you've used. 
 
