@@ -46,11 +46,11 @@ In most cases, you don't.
 
 In most cases, you don't need to listen to value changes on each value. It's just not necessary. You can use a simple `ChangeNotifier`, or even a `StatefulWidget`. This example bundles the state into the `ChangeNotifier`, and changing the first name or surname updates the UI.
 
+You only need specialized Rx functionality when there is some special need to listen to multiple values that comprise other values. So, don't try to build Rx into every app level. It may add unnecessary complexity.
+
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=850a8261c535cb64f80620ed372eff33"></iframe>
 </figure>
-
-You only need specialized Rx functionality when there is some special need to listen to multiple values that comprise other values. So, don't try to build Rx into every app level. It may add unnecessary complexity.
 
 ### State Management
 
