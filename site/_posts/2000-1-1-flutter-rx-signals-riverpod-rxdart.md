@@ -72,6 +72,13 @@ This does the job, but you need to do manual work. It doesn't automate much for 
 
 **Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes. You need to use the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
 
+According to the documentation:
+
+> You have have noticed that, by default, using ref.watch causes consumers/providers to rebuild whenever any of the properties of an object changes.
+For instance, watching a User and only using its "name" will still cause the consumer to rebuild if the "age" changes.
+
+> This can be achieved by using the select functionality of providers.
+
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
 </figure>
