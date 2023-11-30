@@ -11,7 +11,7 @@ categories: flutter
 permalink: /blog/:title
 ---
 
-This article introduces you to the concept of [Reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) (Rx) in Futter and talks about how a few popular libraries implement it. It talks about the role of "caching" or storing computed values and introduces a new library called [Signals](https://pub.dev/packages/signals) that deals with a fundamental Rx problem that other libraries don't fully cover. This library is a port from the [Preact.js](https://preactjs.com/) framework.
+This article introduces you to the concept of [Reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) (Rx) in Flutter and talks about how a few popular libraries implement it. It talks about the role of "caching" or storing computed values and introduces a new library called [Signals](https://pub.dev/packages/signals) that deals with a fundamental Rx problem that other libraries don't fully cover. This library is a port from the [Preact.js](https://preactjs.com/) framework.
 
 ## Reactive Programming
 Reactive programming is a paradigm centered around reacting to changes in data over time. It facilitates propagating updates automatically. This ensures UI and data remain in sync. In Flutter terms, this means triggering rebuilds automatically whenever the state changes.
@@ -28,7 +28,7 @@ However, storing computed values is important because we don't want to recalcula
 
 ## The Core Problem
 
-The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and we need to combine them into a computation, the Rx library should do this for us automatically.
+The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and we need to combine them into a computation, the Rx library should do this for us automatically. Also, the library should minimize recomputes automatically to enhance performance.
 
 The `ValueNotifier` class in Flutter is reactive in a sense because it notifies observers when there is a value change, but we need to manually listen to changes on all values to compute the full value. Look at this example and note how it requires the `_updateFullName` method to work.
 
