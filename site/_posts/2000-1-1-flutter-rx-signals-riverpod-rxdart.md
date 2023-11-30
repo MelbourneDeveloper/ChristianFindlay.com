@@ -72,11 +72,11 @@ This does the job, but you need to do manual work. It doesn't automate much for 
 
  **Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes, but it does offer the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
 
-Personally, I find that the Riverpod example highlights the fact that Riverpod encourages a non-standard approach to managing variables (state). It's not that top-level declarations are inherently bad. The issue is that the approach usurps the language's normal variable scoping mechanism and moves the variable into a scope that Riverpod manages. Also, the underlying code is quite hard to follow.
+My personal opinion is that the Riverpod example highlights a non-standard approach to managing variables (state). It's not that top-level declarations are inherently bad. The issue is that the approach usurps the language's normal variable scoping mechanism and moves the variable into a scope that Riverpod manages, while the underlying code that manages this is quite hard to follow.
 
 The `Consumer` widget here is necessary to interact with the state. None of the other approaches require a custom `Widget`. `Consumer` has a non-standard `build` method, which means if you ever need to change state management solutions, you will also have to change the physical widgets instead of just the state.
 
-This is unlike Signals below, where you can benefit from the library without needing custom widgets. This does however off the advantage of automatic disposal.
+This is unlike Signals below, where you can benefit from the library without needing custom widgets. This does, however, offer the advantage of automatic disposal.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
@@ -86,7 +86,7 @@ This is unlike Signals below, where you can benefit from the library without nee
 
 **Overview**: Brings the power of [ReactiveX](https://reactivex.io/) to Flutter. 
 
-**Reactive Computation** It has advanced handling of reactive computations compared to `ValueNotifier` but still requires explicit logic to combine and react to different data streams, as shown in the example below.
+**Reactive Computation** As shown in the example below, It has advanced handling of reactive computations compared to `ValueNotifier`. Still, it requires explicit logic to combine and react to different data streams.
 
 **Storing Computed Values**: it doesn't directly store computed values in a stateful way, but it does provide useful operators like [distinctUnique](https://pub.dev/documentation/rxdart/latest/rx/DistinctUniqueExtension/distinctUnique.html) to help you minimize recomputes.
 
@@ -186,4 +186,4 @@ It excels at automating reactive computations with simplicity.
 
 You don't need to use complex Rx libraries to build a Flutter app, and you don't need to use the same approach for every widget. Rx is complicated, and you should reserve it for parts of your app with a complex mesh of observable dependencies. Stick the Flutter basics wherever you can. Don't be afraid to choose different nuanced approaches for different parts of your app.
 
-`ValueNotifier`, Riverpod, and RxDart offer varying degrees of control over reactive computations. However, they often require explicit logic to handle complex relationships between data. Signals, with its computed function, presents a more automated and less error-prone approach. It effectively addresses the core problem of handling manual reactive computations and automatically minimizing recomputes in Flutter development.
+`ValueNotifier`, Riverpod and RxDart offer varying degrees of control over reactive computations. However, they often require explicit logic to handle complex relationships between data. Signals, with its computed function, presents a more automated and less error-prone approach. It effectively addresses the core problem of handling manual, reactive computations and automatically minimizing recomputes in Flutter development.
