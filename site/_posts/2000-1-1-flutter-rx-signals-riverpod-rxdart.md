@@ -70,7 +70,7 @@ This does the job, but you need to do manual work. It doesn't automate much for 
 
 **Reactive Computation**:  It does perform reactive computations automatically. However, combining and reacting to multiple state changes still requires some manual effort. Inside the computed value Provider, you need to manually call watch on each dependency, as seen in the example below.
 
- **Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes, but it does offer the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
+**Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes. You need to use the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
