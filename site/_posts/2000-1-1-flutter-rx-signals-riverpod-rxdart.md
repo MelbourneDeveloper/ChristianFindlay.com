@@ -78,6 +78,10 @@ The `Consumer` widget here is necessary to interact with the state. None of the 
 
 This is unlike Signals below, where you can benefit from the library without needing custom widgets.
 
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
+</figure>
+
 ### RxDart
 
 **Overview**: Brings the power of [ReactiveX](https://reactivex.io/) to Flutter. 
@@ -87,6 +91,10 @@ This is unlike Signals below, where you can benefit from the library without nee
 **Storing Computed Values**: it doesn't directly store computed values in a stateful way, but it does provide useful operators like [distinctUnique](https://pub.dev/documentation/rxdart/latest/rx/DistinctUniqueExtension/distinctUnique.html) to help you minimize recomputes.
 
 This library adds functionality to Dart's existing streams. It doesn't reinvent the wheel and uses patterns familiar to developers on other platforms. This is a safe bet for adding Rx in small doses.
+
+<figure>
+  <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=faca2cbc7c0c4eca96df1254e080c4fb"></iframe>
+</figure>
 
 ### Signals
 
