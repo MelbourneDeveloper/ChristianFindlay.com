@@ -76,7 +76,7 @@ Personally, I find that the Riverpod example highlights the fact that Riverpod e
 
 The `Consumer` widget here is necessary to interact with the state. None of the other approaches require a custom `Widget`. `Consumer` has a non-standard `build` method, which means if you ever need to change state management solutions, you will also have to change the physical widgets instead of just the state.
 
-This is unlike Signals below, where you can benefit from the library without needing custom widgets.
+This is unlike Signals below, where you can benefit from the library without needing custom widgets. This does however off the advantage of automatic disposal.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=3e65ba721a77717ed951e4f9ac269f2a"></iframe>
@@ -107,6 +107,78 @@ This library adds functionality to Dart's existing streams. It doesn't reinvent 
 Signals is a port of Preact.js Signals to Dart and Flutter by [Rody Davis](https://twitter.com/rodydavis), who works on Flutter at Google. Signals deals with Flutter state management by triggering computations when any value (dependency) in the dependency graph changes. Signals efficiently manages a network of interconnected values, where a change in one value automatically propagates updates to other related values. The [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html) extension is the only thing necessary to trigger Flutter rebuilds. 
 
 This feature eliminates the need for manual tracking and updating of dependent values. It significantly simplifies the development of reactive applications. You can declaratively define complex relationships between data points and ensure that changes reflect seamlessly and automatically across the entire dependency graph. 
+
+```dart
+import 'package:flutter/material.dart';
+import 'package:signals/signals_flutter.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) => const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        home: MyHomePage(),
+      );
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  final name = signal('Jane');
+  final surname = signal('Doe');
+  late final ReadonlySignal<String> fullName;
+  late final void Function() _dispose;
+
+  @override
+  void initState() {
+    super.initState();
+    fullName = computed(() => '${name.value} ${surname.value}');
+    _dispose = effect(() => fullName.value);
+  }
+
+  @override
+  Widget build(BuildContext context) => Scaffold(
+        appBar: AppBar(
+          title: const Text('Signals Example'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                fullName.watch(context),
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              ElevatedButton(
+                onPressed: () =>
+                    name.value = name.value == 'Jane' ? 'John' : 'Jane',
+                child: const Text('Change Name'),
+              ),
+              ElevatedButton(
+                onPressed: () =>
+                    surname.value = surname.value == 'Doe' ? 'Dop' : 'Doe',
+                child: const Text('Change Surname'),
+              ),
+            ],
+          ),
+        ),
+      );
+
+  @override
+  void dispose() {
+    _dispose();
+    super.dispose();
+  }
+}
+```
 
 It excels at automating reactive computations with simplicity.
 
