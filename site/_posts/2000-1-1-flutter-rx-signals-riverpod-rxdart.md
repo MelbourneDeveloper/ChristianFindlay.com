@@ -52,13 +52,13 @@ In most cases, you don't need to listen to value changes on each value. It's jus
 
 You only need specialized Rx functionality when there is some special need to listen to multiple values that comprise other values. So, don't try to build Rx into every app level. It may add unnecessary complexity.
 
-## State Management
+### State Management
 
 State management is a very complicated topic, and this article doesn't go into the details of how to manage state in Flutter efficiently. Signals remains agnostic about how you minimize widget rebuilding. This is part of the craft of building Flutter apps.
 
 Instead, it offers the building blocks for Rx that you can use as part of your state management solution. However, it does provide basic widgets like [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html), which is similar to `Consumer`.
 
-At the same time, my personal opinion is that you can easily manage state with the basic Flutter building blocks, and adding Rx where necessary can fill gaps in the existing Flutter toolkit.  
+At the same time, my personal opinion is that you can easily manage state with the basic Flutter building blocks, and adding Rx where necessary can fill gaps in the existing Flutter toolkit. I hope to write a follow-up article that talks more about optimizing rebuilds with Rx.
 
 ## Surveying the Rx Options
 
