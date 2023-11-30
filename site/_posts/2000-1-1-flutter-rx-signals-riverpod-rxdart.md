@@ -24,27 +24,27 @@ Observables notify listeners when the state changes. Anything from a user intera
 ### The Misconception of "Cache" in Reactive Programming
 People often misuse the term "cache" in the reactive programming context. In this context, a better term for "cache" would be "computed values" or ["memoization"](https://en.wikipedia.org/wiki/Memoization). Reactive computation is the process of deriving new values automatically when the underlying data changes. This is unlike traditional caching, which stores data for quick retrieval and usually has a time-based expiry. Reactive computations dynamically generate new states based on changes in underlying data.
 
-However, storing computed values is important because we don't want to recalculate values unnecessarily. 
+However, storing computed values is important because you don't want to recalculate values unnecessarily. 
 
 ## The Core Problem
 
-The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and we need to combine them into a computation, the Rx library should do this for us automatically. Also, the library should minimize recomputes automatically to enhance performance.
+The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and you need to combine them into a computation, the Rx library should do this for us automatically. Also, the library should minimize recomputes automatically to enhance performance.
 
-The `ValueNotifier` class in Flutter is reactive in a sense because it notifies observers when there is a value change, but we need to manually listen to changes on all values to compute the full value. Look at this example and note how it requires the `_updateFullName` method to work.
+The `ValueNotifier` class in Flutter is reactive in a sense because it notifies observers when there is a value change, but you need to manually listen to changes on all values to compute the full value. Look at this example and note how it requires the `_updateFullName` method to work.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=b59fdfa637188576d073dbfa53fd7689"></iframe>
 </figure>
 
-If we make a mistake in the code above, changing either of the names won't result in a UI update. This could be problematic.
+If you make a mistake in the code above, changing either of the names won't result in a UI update. This could be problematic.
 
-## Do We Need Rx?
+## Do I Need Rx?
 
-Let's take a step back here. We saw an example where there were two observable values that we wanted to combine into another observable: `fullName`. But do you need an Rx framework to deal with this?  
+Let's take a step back here. You saw an example where there were two observable values that we wanted to combine into another observable: `fullName`. But do you need an Rx framework to deal with this?  
 
 In most cases, you don't. 
 
-In most cases, we don't need to listen to value changes on each value. It's just not necessary. We can use a simple `ChangeNotifier`, or even a `StatefulWidget`. This example bundles the state into the `ChangeNotifier`, and changing the first name or surname updates the UI.
+In most cases, you don't need to listen to value changes on each value. It's just not necessary. You can use a simple `ChangeNotifier`, or even a `StatefulWidget`. This example bundles the state into the `ChangeNotifier`, and changing the first name or surname updates the UI.
 
 <figure>
   <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-flutter.html?id=850a8261c535cb64f80620ed372eff33"></iframe>
@@ -68,7 +68,7 @@ This does the job, but you need to do manual work. It doesn't automate much for 
 
 **Overview**: [Riverpod](https://riverpod.dev/docs/introduction/why_riverpod) is a library that aims at being a "reactive caching framework"
 
-**Reactive Computation**:  It does perform reactive computations automatically. However, combining and reacting to multiple state changes still requires some manual effort. Inside the computed value Provider, we need to manually call watch on each dependency, as seen in the example below.
+**Reactive Computation**:  It does perform reactive computations automatically. However, combining and reacting to multiple state changes still requires some manual effort. Inside the computed value Provider, you need to manually call watch on each dependency, as seen in the example below.
 
  **Storing Computed Values**: Riverpod stores computed values. It doesn't automatically minimize recomputes, but it does offer the [select](https://riverpod.dev/docs/advanced/select#filtering-widgetprovider-rebuild-using-select) method to help you minimize recomputes.
 
