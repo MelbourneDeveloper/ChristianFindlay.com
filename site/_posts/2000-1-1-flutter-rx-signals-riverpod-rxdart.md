@@ -184,6 +184,6 @@ It excels at automating reactive computations with simplicity.
 
 ## Conclusion
 
-You don't need to use complex Rx libraries to build a Flutter app, and you don't need to use the same approach for every widget. Rx is complicated, and you should reserve it for parts of your app with a complex mesh of observable dependencies. Stick the Flutter basics wherever you can. Don't be afraid to choose different nuanced approaches for different parts of your app.
+You don't need to use complex Rx libraries to build a Flutter app, and you don't need to use the same approach for every widget. Rx is complicated, and you should reserve it for parts of your app with a complex mesh of observable dependencies. Stick to the Flutter basics wherever you can. Don't be afraid to choose different nuanced approaches for different parts of your app.
 
 `ValueNotifier`, Riverpod and RxDart offer varying degrees of control over reactive computations. However, they often require explicit logic to handle complex relationships between data. Signals, with its computed function, presents a more automated and less error-prone approach. It effectively addresses the core problem of handling manual, reactive computations and automatically minimizing recomputes in Flutter development.
