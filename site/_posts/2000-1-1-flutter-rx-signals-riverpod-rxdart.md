@@ -104,7 +104,7 @@ This library adds functionality to Dart's existing streams. It doesn't reinvent 
 
 **Storing Computed Values**: This framework automatically minimizes recomputes by versioning values. When a new value arrives, it only recomputes delta changes. This saves on performance.
 
-Signals is a port of Preact.js Signals to Dart and Flutter by [Rody Davis](https://twitter.com/rodydavis), who works on Flutter at Google. Signals deals with Flutter state management by triggering computations when any value (dependency) in the dependency graph changes. Signals efficiently manages a network of interconnected values, where a change in one value automatically propagates updates to other related values. The [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html) extension is the only thing necessary to trigger Flutter rebuilds. 
+Signals is a port of Preact.js Signals to Dart and Flutter by [Rody Davis](https://twitter.com/rodydavis), who works on the solutions DevRel team at Google. Signals deals with Flutter state management by triggering computations when any value (dependency) in the dependency graph changes. Signals efficiently manages a network of interconnected values, where a change in one value automatically propagates updates to other related values. The [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html) extension is the only thing necessary to trigger Flutter rebuilds. 
 
 This feature eliminates the need for manual tracking and updating of dependent values. It significantly simplifies the development of reactive applications. You can declaratively define complex relationships between data points and ensure that changes reflect seamlessly and automatically across the entire dependency graph. 
 
@@ -134,13 +134,13 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final name = signal('Jane');
   final surname = signal('Doe');
-  late final ReadonlySignal<String> fullName;
+  late final ReadonlySignal<String> fullName =
+      computed(() => '${name.value} ${surname.value}');
   late final void Function() _dispose;
 
   @override
   void initState() {
     super.initState();
-    fullName = computed(() => '${name.value} ${surname.value}');
     _dispose = effect(() => fullName.value);
   }
 
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-It excels at automating reactive computations with simplicity.
+It excels at automating reactive computations with simplicity. Lastly, Signals has a [Watch](https://rodydavis.github.io/signals.dart/reference/watch/) widget, which is similar to Riverpod's Consumer widget. It automatically disposes the signals when necessary.
 
 ## Conclusion
 
