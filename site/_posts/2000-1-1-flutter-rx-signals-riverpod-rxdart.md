@@ -1,12 +1,12 @@
 ---
 layout: post
 title: "Reactive Programming in Flutter: Understanding the Power of Observables and Computed Values with Signals, Riverpod and RxDart"
-date: "2023/04/03 00:00:00 +0000"
+date: "2023/11/30 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/buttons/header.png"
-image: "/assets/images/blog/buttons/header.png"
-description: Learn how to create Material Design 3 rounded buttons in Flutter with this simple guide.
-tags: 
+post_image: "/assets/images/blog/reactive/flutterrx.png"
+image: "/assets/images/blog/reactive/flutterrx.png"
+description: "Explore the dynamic world of Reactive Programming in Flutter with this comprehensive blog post. Delve into the intricacies of Observables and Computed Values, and discover how libraries like Signals, Riverpod, and RxDart simplify state management in Flutter. The expert analysis navigates through the frameworks, emphasizing the unique approaches to reactive computations, dependency tracking, and minimizing unnecessary recomputes. Ideal for both beginners and seasoned Flutter developers, this post illuminates the advantages of integrating reactive patterns in your Flutter applications, ensuring your UI and data stay perfectly in sync. Master the art of reactive Flutter development!"
+tags: reactive dart
 categories: flutter
 permalink: /blog/:title
 ---
