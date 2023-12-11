@@ -56,7 +56,7 @@ You only need specialized Rx functionality when there is some special need to li
 
 State management is a very complicated topic, and this article doesn't go into the details of how to manage state in Flutter efficiently. Signals remains agnostic about how you minimize widget rebuilding. This is part of the craft of building Flutter apps.
 
-Instead, it offers the building blocks for Rx that you can use as part of your state management solution. However, it does provide basic widgets like [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html), which is similar to `Consumer`.
+Instead, it offers the building blocks for Rx that you can use as part of your state management solution. However, it does provide basic widgets like [`watch`](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html), which is similar to [`ConsumerWidget`](https://pub.dev/documentation/flutter_riverpod/latest/flutter_riverpod/ConsumerWidget-class.html).
 
 At the same time, my personal opinion is that you can easily manage state with the basic Flutter building blocks, and adding Rx where necessary can fill gaps in the existing Flutter toolkit. I hope to write a follow-up article that talks more about optimizing rebuilds with Rx.
 
@@ -93,7 +93,7 @@ For instance, watching a User and only using its "name" will still cause the con
 
 My personal opinion is that the Riverpod example highlights a non-standard approach to managing variables (state). It's not that top-level declarations are inherently bad. The issue is that the approach usurps the language's normal variable scoping mechanism and moves the variable into a scope that Riverpod manages, while the underlying code that manages this is quite hard to follow.
 
-The `Consumer` widget here is necessary to interact with the state. None of the other approaches require a custom `Widget`. `Consumer` has a non-standard `build` method, which means if you ever need to change state management solutions, you will also have to change the physical widgets instead of just the state.
+The `ConsumerWidget` here is necessary to interact with the state. None of the other approaches require a custom `Widget`. `ConsumerWidget` has a non-standard `build` method, which means if you ever need to change state management solutions, you will also have to change the physical widgets instead of just the state.
 
 This is unlike Signals below, where you can benefit from the library without needing custom widgets. This does, however, offer the advantage of automatic disposal.
 
@@ -195,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-It excels at automating reactive computations with simplicity. Lastly, Signals has a [Watch](https://rodydavis.github.io/signals.dart/reference/watch/) widget, which is similar to Riverpod's Consumer widget. It automatically disposes the signals when necessary.
+It excels at automating reactive computations with simplicity. Lastly, Signals has a [Watch](https://rodydavis.github.io/signals.dart/reference/watch/) widget, which is similar to Riverpod's `ConsumerWidget`. It automatically disposes the signals when necessary.
 
 ## Conclusion
 
@@ -204,3 +204,5 @@ You don't need to use complex Rx libraries to build a Flutter app, and you don't
 `ValueNotifier`, Riverpod and RxDart offer varying degrees of control over reactive computations. However, they often require explicit logic to handle complex relationships between data. Signals, with its computed function, presents a more automated and less error-prone approach. It effectively addresses the core problem of handling manual, reactive computations and automatically minimizing recomputes in Flutter development.
 
 When you do need to implement reactivity in your app, consider the Signals package.
+
+<sub><sup>Edit: this article was edited for accuracy December 11 2023. If you see any inaccuracies, please report them to Christian Findlay</sup></sub>
