@@ -53,6 +53,29 @@ layout: default
             </a>
             {% endif %}
 
+            {% if page.categories contains "dotnet" %}
+            <div class="adbanner ">
+              <img src="/assets/images/ads/dotnet.svg"
+                style="width: 80px;height: 80px;margin-left: 32px;margin-right: 32px;margin-top: 32px;">
+              <div style="padding-bottom: 16px;flex:content;">
+                <br>
+                <h2 style="color: white;"> Hire me to elevate your .NET codebase</h2>
+
+                <div>
+
+                  <p>Build Microservices • Unit Testing</p>
+                  <p>Upgrade to .NET 8 • CI / CD</p>
+
+                </div>
+
+
+                <a href="/contact" class="tp-caption btn btn-l btn-cobalt"
+                  style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">Contact
+                  me today</a>
+              </div>
+            </div>
+            {% endif %}
+
             <div class="space40"></div>
 
             {{page.content}}
