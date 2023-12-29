@@ -34,78 +34,77 @@ layout: default
               </div>
 
               {% if page.categories contains "flutter" %}
-              <a href="/contact" class="adbanner">
+              <div class="adbanner">
 
-                <div class="adbannericon">
-                  <img src="/assets/images/icons/buildapp.png">
-                </div>
-                <div class="adbannercontent">
-                  <h1>Ready to bring your app idea to life? Let's make it happen! 🚀</h1>
-                  <p>Contact me today for a seamless journey from concept to reality. With my expert guidance and a
-                    wealth of Flutter experience, I'll
-                    help you build an app that stands out. Fill out the contact form and let's get started!</p>
+                <img src="/assets/images/icons/buildapp.png">
+
+                <h1>Ready to bring your app idea to life? Let's make it happen!</h1>
+                <a href="/contact" class="tp-button">Build an App Now</a>
+
+              </div>
+
                 </div>
               </a>
               {% endif %}
 
-              <div class="space40"></div>
+            <div class="space40"></div>
 
-              {{page.content}}
-              {% if page.post_format == "gallery" %}
-              <div class="space20"></div>
-              <div class="post-gallery light-gallery-wrapper">
-                <div class="tiles tiles-s">
-                  <div class="items row">
-                    {% for gallery in page.gallery %}
-                    <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
-                      <figure class="overlay overlay1 rounded">
-                        <a href="{{gallery.img}}" class="lightbox">
-                          <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
-                        <figcaption>
-                          <h5 class="from-top mb-0">View Larger</h5>
-                        </figcaption>
-                      </figure>
-                    </div>
-                    <!--/.item -->
-                    {% endfor %}
+            {{page.content}}
+            {% if page.post_format == "gallery" %}
+            <div class="space20"></div>
+            <div class="post-gallery light-gallery-wrapper">
+              <div class="tiles tiles-s">
+                <div class="items row">
+                  {% for gallery in page.gallery %}
+                  <div class="item {% if forloop.index < 3 %} col-md-6 {% else %} col-md-4 {% endif %}">
+                    <figure class="overlay overlay1 rounded">
+                      <a href="{{gallery.img}}" class="lightbox">
+                        <img src="{{gallery.img}}" alt="{{gallery.img}}"></a>
+                      <figcaption>
+                        <h5 class="from-top mb-0">View Larger</h5>
+                      </figcaption>
+                    </figure>
                   </div>
-                  <!--/.items -->
-                </div>
-                <!--/.tiles -->
-              </div>
-              <!--/.post-gallery -->
-              {% endif %}
-              <div class="clearfix"></div>
-              <div class="space40"></div>
-              <div class="space10"></div>
-              <div class="d-lg-flex justify-content-between align-items-center meta-footer">
-                <ul class="list-unstyled tag-list">
-                  {% capture tags %}
-                  {% for tag in page.tags %}
-                  <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
-                    <a class="btn btn-s" href="/tag/{{tag |slugify}}">{{ tag }}</a>
-                  </li>
+                  <!--/.item -->
                   {% endfor %}
-                  {% endcapture %}
-                  {{ tags | split:'</li>' | sort | join:'</li>' }}
-                </ul>
-                <div class="space20 d-lg-none"></div>
-                <div class="d-flex align-items-center">
-                  {% include social_share.html %}
                 </div>
+                <!--/.items -->
+              </div>
+              <!--/.tiles -->
+            </div>
+            <!--/.post-gallery -->
+            {% endif %}
+            <div class="clearfix"></div>
+            <div class="space40"></div>
+            <div class="space10"></div>
+            <div class="d-lg-flex justify-content-between align-items-center meta-footer">
+              <ul class="list-unstyled tag-list">
+                {% capture tags %}
+                {% for tag in page.tags %}
+                <li data-sort="{{ site.posts.size | minus: tag[1].size | prepend: '0000' | slice: -4, 4 }}">
+                  <a class="btn btn-s" href="/tag/{{tag |slugify}}">{{ tag }}</a>
+                </li>
+                {% endfor %}
+                {% endcapture %}
+                {{ tags | split:'</li>' | sort | join:'</li>' }}
+              </ul>
+              <div class="space20 d-lg-none"></div>
+              <div class="d-flex align-items-center">
+                {% include social_share.html %}
               </div>
             </div>
-            <!-- /.post-content -->
           </div>
-          <!-- /.post -->
+          <!-- /.post-content -->
         </div>
-        <!-- /.blog -->
+        <!-- /.post -->
       </div>
-      <!-- /column -->
+      <!-- /.blog -->
     </div>
-    <!-- /.row -->
+    <!-- /column -->
   </div>
-  <!-- /.container -->
+  <!-- /.row -->
+</div>
+<!-- /.container -->
 </div>
 <!-- /.wrapper -->
 
