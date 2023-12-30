@@ -97,26 +97,6 @@ pricing_table:
         - "Weekly <strong>Reports</strong>"
         - "7/24 <strong>Support</strong>"
 
-countdown_area:
-  enable: true
-  title: |
-    Think unique, be unique. <br class="d-none d-lg-block" />Make a difference with Snowlake.
-  projects:
-    - title: "Completed Projects"
-      projects_number: 7518
-      icon: "/assets/images/icons/hs-check.png" 
-
-    - title: "Satisfied Customers"
-      projects_number: 3472
-      icon: "/assets/images/icons/st-handshake.png" 
-
-    - title: "Expert Employees"
-      projects_number: 2184
-      icon: "/assets/images/icons/sm-develop.png"  
-
-    - title: "Awards Won"
-      projects_number: 4523
-      icon: "/assets/images/icons/ms-medal.png" 
 
 big_cover_image:
   enable: true
@@ -184,7 +164,7 @@ faq_area:
       data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
       <h3 class="display-3 mb-0">Let's chat about my services!</h3>
       <div class="space30 d-md-none"></div>
-      <a href="#" class="btn btn-white btn-strong-hover mb-0">Contact Me</a>
+      <a href="/contact" class="btn btn-white btn-strong-hover mb-0">Contact Me</a>
     </div>
   
     <!--/.box -->
@@ -289,40 +269,3 @@ faq_area:
   {% endif %}
 
 
-  <div class="wrapper light-wrapper">
-    {% if page.countdown_area.enable %}
-    <div class="container inner pt-40 pb-0">
-      <h2 class="display-2 text-center">
-        {{page.countdown_area.title}}
-      </h2>
-      <div class="space40"></div>
-      <div class="row">
-        <div class="col-lg-10 offset-lg-1">
-          <div class="row counter">
-            {% for projects in page.countdown_area.projects %}
-            <div class="col-md-3 text-center">
-              {% if projects.icon %}
-               <div class="icon icon-svg mb-20"><img src="{{ projects.icon}}" alt="{{ projects.title}}"/></div>
-              {% endif %}
-              <h3 class="value">{{projects.projects_number}}</h3>
-              <p>{{projects.title}}</p>
-            </div>
-            {% endfor %}
-          </div>
-          <!--/.row -->
-        </div>
-        <!-- /column -->
-      </div>
-      <!-- /.row -->
-    </div>
-    <!-- /.container -->
-    {% endif %}
-    {% if page.big_cover_image.enable %}
-     <figure class="cover">
-       <img src="{{page.big_cover_image.image}}" alt="{{page.big_cover_image.title}}" />
-     </figure>
-    {% endif %}
-  </div>
-  <!-- /.wrapper -->
-</div>
-<!-- /.content-wrapper --> 
