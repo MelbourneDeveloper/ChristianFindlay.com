@@ -5,9 +5,6 @@ main_menu:
 
   - text: "Services"
     url: "/services"    
-  
-  - text: "FAQ"
-    url: "/faq"
 
   - text: "Portfolio"
     url: "/portfolio"
