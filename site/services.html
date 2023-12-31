@@ -43,59 +43,10 @@ video_area:
   description: |
     Flutter is Google's flagship UI toolkit for crafting beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
   features:
-    - "Designed for iOS and Android first"
+    - "Perfect for building native Android apps, and native iOS apps"
     - "Beautiful on Desktop and Web"
     - "Integrates with Firebase for scalable data driven apps"
     - "The future is Flutter"
-
-pricing_table:
-  enable: true
-  title: "Our Pricing"
-  sub_title: |
-    We offer great prices, premium products <br class="d-none d-lg-block" />and quality service for your business.
-  plans:
-    - title: "Basic Pricing"
-      monthly_price: 9
-      yearly_price: 99
-      pricing_url: "#"
-      button_text: "Choose Plan"
-      icon: "/assets/images/icons/ec-mobile.png"
-      features:
-        - "<strong>1</strong> Project"
-        - "<strong>100K</strong> API Access"
-        - "<strong>100MB</strong> Storage"
-        - "Custom <strong>Cloud</strong> Services"
-        - "Weekly <strong>Reports</strong>"
-        - "7/24 <strong>Support</strong>"
-
-    - title: "Premium Plan"
-      monthly_price: 19
-      yearly_price: 199
-      pricing_url: "#"
-      button_text: "Choose Plan"
-      icon: "/assets/images/icons/ec-store.png"
-      features:
-        - "<strong>5</strong> Project"
-        - "<strong>200K</strong> API Access"
-        - "<strong>250MB</strong> Storage"
-        - "Custom <strong>Cloud</strong> Services"
-        - "Weekly <strong>Reports</strong>"
-        - "7/24 <strong>Support</strong>"
-
-    - title: "Corporate Plan"
-      monthly_price: 49
-      yearly_price: 499
-      pricing_url: "#"
-      button_text: "Choose Plan"
-      icon: "/assets/images/icons/ec-online-shop.png"
-      features:
-        - "<strong>49</strong> Project"
-        - "<strong>300K</strong> API Access"
-        - "<strong>500MB</strong> Storage"
-        - "Custom <strong>Cloud</strong> Services"
-        - "Weekly <strong>Reports</strong>"
-        - "7/24 <strong>Support</strong>"
-
 
 big_cover_image:
   enable: true
@@ -126,6 +77,18 @@ faq_area:
     answer: "I charge on a time and materials basis and the daily rate is competitive by Australian standards. Please reach out to get the current rate."
   - question: "Can we do a trial?"
     answer: "Absolutely. Hire me for a day and I can help you work through a problem or clean up an existing app."
+
+testimonials:
+  enable: true
+  image: "assets/images/art/about9.png"
+  feedback:
+
+    - quote: |
+        Christian is a collaborative and supportive consultant, project anxiety was removed from day one. Everyone has room for
+        improvement and he has helped us improve. Definitely will work with Christian again.
+      image: "/assets/images/art/jade.jpg" 
+      name: "Jade Lowe"
+      designation: "Director, Octopus Group"
 ---
 
 <div class="content-wrapper">
@@ -174,6 +137,40 @@ faq_area:
   <!-- /.container -->
 
 
+  {% if page.testimonials.enable %}
+  <div class="wrapper gray-wrapper">
+    <div class="container inner pt-100">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h2 class="title-color color-gray text-center mb-30">{{page.testimonials.title}}</h2>
+          <div class="basic-slider owl-carousel gap-small text-center mb-0" data-margin="30">
+            {% for feedback in page.testimonials.feedback %}
+            <div class="item">
+              <blockquote class="icon larger">
+                <p>"{{feedback.quote}}"</p>
+                <div class="blockquote-details justify-content-center">
+                  <div class="img-blob blob1">
+                    <img src="{{feedback.image}}" alt="{{feedback.name}}" />
+                  </div>
+                  <div class="info">
+                    <h6 class="mb-0">{{feedback.name}}</h6>
+                    <span class="meta mb-0">{{feedback.designation}}</span>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <!-- /column -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.wrapper -->
+  {% endif %}
+
   {% if page.video_area.enable %}
   {% assign video_info = page.video_area %}
   <div class="wrapper gray-wrapper">
@@ -184,7 +181,7 @@ faq_area:
         <div class="col-lg-8">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
   title="YouTube video player" frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
   allowfullscreen></iframe>
         </div>
         <!--/column -->
