@@ -275,11 +275,11 @@ faq_area:
           </div>
           {% endfor %}
         </div>
-        <!--/.row -->
+
       </div>
-      <!-- /.container -->
+
     </div>
-    <!-- /.wrapper -->
+
     {% endif %}
 
 
@@ -293,18 +293,18 @@ faq_area:
         <a href="#contact" class="btn btn-white btn-strong-hover mb-0">Hire Me</a>
       </div>
 
-      <!--/.box -->
+
     </div>
   </section>
 
-  <!--about us wrapper-->
+
   <section id="{{page.about_area.section_id}}">
     {% if page.about_area.enable %}
     <div class="wrapper light-wrapper">
       <div class="container inner">
         {% for service in page.about_area.services %}
         {% assign chck_number = forloop.index | modulo: 2 %}
-        <!--/.row -->
+
         <div class="space120"></div>
         <div class="row align-items-center">
           {% if service.image %}
@@ -323,9 +323,9 @@ faq_area:
             <a href="{{service.button_url}}"
               class="btn {% cycle 'btn-purple','btn-yellow','btn-red' %}">{{service.button_text}}</a>
           </div>
-          <!--/column -->
+
         </div>
-        <!--/.row -->
+
         {% endfor %}
       </div>
     </div>
@@ -346,7 +346,7 @@ faq_area:
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             allowfullscreen></iframe>
         </div>
-        <!--/column -->
+
         <div class="space30 d-none d-md-block d-lg-none"></div>
         <div class="col-lg-4 pl-50 pl-md-15">
           <p>{{video_info.description}}</p>
@@ -360,13 +360,13 @@ faq_area:
           <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
           {% endif %}
         </div>
-        <!--/column -->
+
       </div>
-      <!--/.row -->
+
     </div>
-    <!-- /.container -->
+
   </div>
-  <!-- /.wrapper -->
+
   {% endif %}
 
   {% if page.video_area2.enable %}
@@ -382,7 +382,7 @@ faq_area:
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
             allowfullscreen></iframe>
         </div>
-        <!--/column -->
+
         <div class="space30 d-none d-md-block d-lg-none"></div>
         <div class="col-lg-4 pl-50 pl-md-15">
           <p>{{video_info.description}}</p>
@@ -396,13 +396,13 @@ faq_area:
           <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
           {% endif %}
         </div>
-        <!--/column -->
+
       </div>
-      <!--/.row -->
+
     </div>
-    <!-- /.container -->
+
   </div>
-  <!-- /.wrapper -->
+
   {% endif %}
 
   {% if page.portfolios_area.enable %}
@@ -440,22 +440,22 @@ faq_area:
                     <h2 class="post-title mb-10">{{portfolios.title}}</h2>
                     <div class="meta mb-0">{{portfolios.sub_title}}</div>
                   </div>
-                  <!-- /.item-content -->
+
                 </div>
-                <!-- /.box -->
+
               </div>
-              <!-- /.item -->
+
               {% endfor %}
             </div>
-            <!-- /.row -->
+
           </div>
-          <!-- /.tiles -->
+
         </div>
-        <!-- /.grid -->
+
       </div>
-      <!-- /.container -->
+
     </div>
-    <!-- /.wrapper -->
+
   </section>
   {% endif %}
   {% if page.testimonials.enable %}
@@ -482,14 +482,14 @@ faq_area:
                   </div>
                 </blockquote>
               </div>
-              <!-- /.item -->
+
               {% endfor %}
             </div>
-            <!-- /.owl-carousel -->
+
           </div>
-          <!-- /column -->
+
         </div>
-        <!-- /.row -->
+
       </div>
     </div>
   </section>
@@ -524,7 +524,7 @@ faq_area:
           {% endfor %}
         </div>
       </div>
-      <!--/column -->
+
       <div class="col-lg-6">
         <div id="accordion-2" class="accordion-wrapper">
           {% for faq in page.faq_area.faq limit: "4" offset: "4" %}
@@ -537,23 +537,23 @@ faq_area:
                 </button>
               </h5>
             </div>
-            <!-- /.card-header -->
+
             <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
               aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
               <div class="card-body">
                 <p>{{faq.answer}}</p>
               </div>
-              <!-- /.card-body -->
+
             </div>
-            <!-- /.collapse -->
+
           </div>
           {% endfor %}
         </div>
-        <!-- /.accordion-wrapper -->
+
       </div>
-      <!--/column -->
+
     </div>
-    <!--/.row -->
+
   </section>
   {% endif %}
 
@@ -578,7 +578,6 @@ faq_area:
 
   <div class="space60"></div>
 
-{% include footer_2.html light_logo="true" %}
+  {% include footer_2.html light_logo="true" %}
 
 </div>
-
