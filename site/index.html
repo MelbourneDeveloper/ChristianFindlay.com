@@ -50,6 +50,7 @@ testimonials:
   projects_number: 500
   project_tag: "Happy Customers"
   section_id: "testimonials"
+  title: Testimonials
   feedback:
 
     - quote: |
@@ -306,7 +307,7 @@ faq_area:
   </section>
 
   <section id="{{page.about_area.section_id}}">
-    {% if page.about_area.enable %} 
+    {% if page.about_area.enable %}
     <div class="wrapper gray-wrapper">
       <div class="container inner">
         {% for service in page.about_area.services %}
@@ -464,12 +465,15 @@ faq_area:
 
   </section>
   {% endif %}
+
   {% if page.testimonials.enable %}
   <section id="{{page.testimonials.section_id}}">
     <div class="wrapper bg-opacity-default">
       <div class="container inner">
         <div class="row">
           <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+            <div class="space60"></div>
+            <h3 class="display-3 text-center">{{page.testimonials.title}}</h3>
             <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
               {% for feedback in page.testimonials.feedback %}
               <div class="item">
@@ -495,6 +499,8 @@ faq_area:
           </div>
 
         </div>
+
+        <div class="space60"></div>
 
       </div>
     </div>
@@ -565,7 +571,7 @@ faq_area:
     <div class="space60"></div>
     <div class="space60"></div>
     <div class="space60"></div>
-    
+
   </section>
   {% endif %}
 
@@ -581,20 +587,20 @@ faq_area:
         <p class="lead larger">Let's work together today</p>
       </div>
 
-        <div class="space60"></div>
+      <div class="space60"></div>
 
-    <iframe style="background-color: #f3f4f7"
-      src="https://docs.google.com/forms/d/e/1FAIpQLSdsAHcMIHsbUWz8zgCEGoB_op-KQZVfQqSgrpGFPe8q6QCf3Q/viewform?embedded=true"
-      width="99%" height="1300" frameborder="0" marginheight="16px" marginwidth="16px">Loading…</iframe>
+      <iframe style="background-color: #f3f4f7"
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdsAHcMIHsbUWz8zgCEGoB_op-KQZVfQqSgrpGFPe8q6QCf3Q/viewform?embedded=true"
+        width="99%" height="1300" frameborder="0" marginheight="16px" marginwidth="16px">Loading…</iframe>
 
 
     </div>
 
-    
- 
+
+
   </section>
 
-  
+
   {% include footer_2.html light_logo="true" %}
 
 </div>
