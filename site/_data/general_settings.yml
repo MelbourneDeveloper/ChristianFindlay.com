@@ -1,16 +1,14 @@
 
 title: "Flutter Developer in Melbourne, Australia"
 description: >- 
-  Christian Findlay is an independent Flutter developer working in
-  Melbourne, Australia and working with .NET, Firebase, 
-  Google Cloud, and Microsoft Azure.
+  Christian Findlay is a professional Software Developer and trainer based in Melbourne, Australia. He builds with Flutter, .NET, AI, Firebase/Supabase, Google Cloud, and Microsoft Azure.
 
 twitter:
   username: cfdevelop
   card: summary
 
 address_01: 'Melbourne, Australia'
-copyright_text: "© 2023 Christian Findlay. All rights reserved."
+copyright_text: "© 2024 Christian Findlay. All rights reserved."
 
 #For jekyll-seo-tag
 social:
@@ -41,18 +39,42 @@ social_accounts:
 external_links:
   title: "More"
   links:
-    - text: "Contact"
-      url: "/contact.html"    
+    - text: "Home"
+      url: "/index/#home"
     - text: "Services"
-      url: "/services.html"
-    - text: "FAQ"
-      url: "/FAQ.html"    
+      url: "/index/#services"
+    - text: "About"
+      url: "/index/#about"
     - text: "Portfolio"
-      url: "/portfolio.html"  
+      url: "/index/#portfolio"
+    - text: "Testimonials"
+      url: "/index/#testimonials"
+    - text: "FAQ"
+      url: "/index/#faq"
+    - text: "Contact"
+      url: "/index/#contact"
     - text: "Blog"
       url: "/blog"
       
-
+one_page_nav_settings:
+  links:
+    - text: "Home"
+      url: "/index/#home"
+    - text: "Services"
+      url: "/index/#services"
+    - text: "About"
+      url: "/index/#about"
+    - text: "Portfolio"
+      url: "/index/#portfolio"
+    - text: "Testimonials"
+      url: "/index/#testimonials"
+    - text: "FAQ"
+      url: "/index/#faq"
+    - text: "Contact"
+      url: "/index/#contact"
+    - text: "Blog"
+      url: "/blog"
+      
 author_page_header:
   header_background_image: "assets/images/art/bg31.jpg"
 

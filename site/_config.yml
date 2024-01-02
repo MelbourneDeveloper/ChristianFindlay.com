@@ -10,6 +10,7 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 collections:
   authors:
