@@ -306,8 +306,8 @@ faq_area:
   </section>
 
   <section id="{{page.about_area.section_id}}">
-    {% if page.about_area.enable %}
-    <div class="wrapper light-wrapper">
+    {% if page.about_area.enable %} 
+    <div class="wrapper gray-wrapper">
       <div class="container inner">
         {% for service in page.about_area.services %}
         {% assign chck_number = forloop.index | modulo: 2 %}
@@ -567,7 +567,7 @@ faq_area:
 
   <section id="contact">
 
-    <div class="wrapper light-wrapper" style="padding-bottom: 0px;">
+    <div class="wrapper gray-wrapper" style="padding-bottom: 0px;">
       <div class="container inner" style="padding-bottom: 0px;">
 
         <h2 class="section-title">Get in Touch</h2>
@@ -576,7 +576,7 @@ faq_area:
       </div>
     </div>
 
-    <iframe
+    <iframe style="background-color: #f3f4f7"
       src="https://docs.google.com/forms/d/e/1FAIpQLSdsAHcMIHsbUWz8zgCEGoB_op-KQZVfQqSgrpGFPe8q6QCf3Q/viewform?embedded=true"
       width="99%" height="1300" frameborder="0" marginheight="16px" marginwidth="16px">Loading…</iframe>
 
