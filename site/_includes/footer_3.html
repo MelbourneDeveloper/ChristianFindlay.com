@@ -1,0 +1,46 @@
+<footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
+  <div class="container inner">
+    <div class="row">
+      <div class="col-md-4 col-lg-3">
+        <div class="widget">
+         <a href="{{site.data.general_settings.url}}">
+          ChristianFindlay.com
+         </a>
+          <div class="space40"></div>
+          <p>{{site.data.general_settings.copyright_text}}</p>
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+      <div class="col-md-4 col-lg-3">
+
+      </div>
+      <!-- /column -->
+      <div class="space30 d-none d-md-block d-lg-none"></div>
+      <div class="col-md-12 col-lg-3">
+            {% assign external_links = site.data.general_settings.external_links %}
+            <div class="widget">
+              {% if external_links.title %}
+              <h5 class="widget-title">{{external_links.title}}</h5>
+              {% endif %}
+              <ul class="list-unstyled mb-0">
+                {% for link in external_links.links %}
+                <li><a href="{{link.url}}">{{link.text}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            <!-- /.widget -->
+        </div>
+        <!-- /.widget -->
+      </div>
+      <!-- /column -->
+    </div>
+    <!--/.row -->
+  </div>
+  <!-- /.container -->
+</footer>
