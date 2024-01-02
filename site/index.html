@@ -292,7 +292,6 @@ faq_area:
 
     {% endif %}
 
-
     <div class="container inner" style="padding-top: 0px;padding-bottom: 60px;">
 
       <div
@@ -303,10 +302,8 @@ faq_area:
         <a href="#contact" class="btn btn-white btn-strong-hover mb-0">Hire Me</a>
       </div>
 
-
     </div>
   </section>
-
 
   <section id="{{page.about_area.section_id}}">
     {% if page.about_area.enable %}
@@ -340,78 +337,77 @@ faq_area:
       </div>
     </div>
     {% endif %}
+
+    {% if page.video_area.enable %}
+    {% assign video_info = page.video_area %}
+    <div class="wrapper gray-wrapper">
+      <div class="container inner">
+        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
+        <div class="space40"></div>
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="space30 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-4 pl-50 pl-md-15">
+            <p>{{video_info.description}}</p>
+            <ul class="icon-list bullet-default">
+              {% for features in video_info.features %}
+              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
+              {% endfor %}
+            </ul>
+            <div class="space10"></div>
+            {% if video_info.btn_url %}
+            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
+            {% endif %}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    {% endif %}
+
+    {% if page.video_area2.enable %}
+    {% assign video_info = page.video_area2 %}
+    <div class="wrapper gray-wrapper">
+      <div class="container inner">
+        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
+        <div class="space40"></div>
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3dKugGP0LAc?si=e7tu_sUWVHw9J9Zx"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+              allowfullscreen></iframe>
+          </div>
+
+          <div class="space30 d-none d-md-block d-lg-none"></div>
+          <div class="col-lg-4 pl-50 pl-md-15">
+            <p>{{video_info.description}}</p>
+            <ul class="icon-list bullet-default">
+              {% for features in video_info.features %}
+              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
+              {% endfor %}
+            </ul>
+            <div class="space10"></div>
+            {% if video_info.btn_url %}
+            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
+            {% endif %}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
   </section>
-
-
-  {% if page.video_area.enable %}
-  {% assign video_info = page.video_area %}
-  <div class="wrapper gray-wrapper">
-    <div class="container inner">
-      <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-      <div class="space40"></div>
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-            allowfullscreen></iframe>
-        </div>
-
-        <div class="space30 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-4 pl-50 pl-md-15">
-          <p>{{video_info.description}}</p>
-          <ul class="icon-list bullet-default">
-            {% for features in video_info.features %}
-            <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-            {% endfor %}
-          </ul>
-          <div class="space10"></div>
-          {% if video_info.btn_url %}
-          <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-          {% endif %}
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  {% endif %}
-
-  {% if page.video_area2.enable %}
-  {% assign video_info = page.video_area2 %}
-  <div class="wrapper gray-wrapper">
-    <div class="container inner">
-      <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-      <div class="space40"></div>
-      <div class="row align-items-center">
-        <div class="col-lg-8">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/3dKugGP0LAc?si=e7tu_sUWVHw9J9Zx"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-            allowfullscreen></iframe>
-        </div>
-
-        <div class="space30 d-none d-md-block d-lg-none"></div>
-        <div class="col-lg-4 pl-50 pl-md-15">
-          <p>{{video_info.description}}</p>
-          <ul class="icon-list bullet-default">
-            {% for features in video_info.features %}
-            <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-            {% endfor %}
-          </ul>
-          <div class="space10"></div>
-          {% if video_info.btn_url %}
-          <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-          {% endif %}
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
 
   {% endif %}
 
