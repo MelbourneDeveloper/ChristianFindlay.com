@@ -95,6 +95,10 @@ Very impressive, right? 😲
 
 You're going to notice that it wasn't perfect first time around, but it's a great start. Building a full app requires several iterations.
 
+This is how the app looks on Android
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/android.png){:width="50%"}
+
 ## Step 6: Further Prompting
 
 Take a screenshot of the Flutter app that ChatGPT produced and feed it back to ChatGPT. Give it a prompt with instructions on what to do next. Again, prompting (and context) is the key to getting the most out of ChatGPT
@@ -119,7 +123,13 @@ You can feed larger codebases to ChatGPT, and ChatGPT can directly modify the co
 
 ![ChatGPT](/assets/images/blog/flutterchatgpt/contextnote.gif){:width="100%"}
 
-## FAQs
+## Conclusion
+
+ChatGPT is a powerful coding assistant and Flutter is an amazing platform. There is a lot you can do as a beginner to create stunning apps without any coding experience, so try it out today! 
+
+But, if you find that you've reached the limitations of what it possible with ChatGPT, [reach out](/#contact) to me.
+
+### FAQs
 
 - Do I need programming experience to use Flutter?
 
