@@ -111,6 +111,14 @@ This was the result in my case. Notice that not only did ChatGPT add the text, i
 
 Working with ChatGPT is an iterative process. You have to go through this prompting process again and again. As you learn more about Dart and Flutter, you will get better at this, and you'll be able to get ChatGPT to modify small portions of the screen at a time.
 
+## Step 7: Use Context Note
+
+As you can see, copying and pasting code from the ChatGPT browser interface gets old quickly. More importantly, ChatGPT can't see the latest version of your code without you pasting it into the chat. [Context Note](https://www.contextnote.com/) fixes this issue by exposing your code to ChatGPT.
+
+You can feed larger codebases to ChatGPT, and ChatGPT can directly modify the code instead of doing all the copying and pasting.
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/contextnote.gif){:width="100%"}
+
 ## FAQs
 
 - Do I need programming experience to use Flutter?
