@@ -79,7 +79,21 @@ It should give you some Flutter code and it will look something like this:
 
 Copy the code and paste it over the top of the code in `main.dart` from step 2. You can paste it into Dartpad if you didn't install an IDE.
 
+If you're using Visual Studio code as your IDE, it will look something like this:
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/vscode.png){:width="100%"}
+
+## Step 5: Run The App
+
+Hopefully, ChatGPT gave you a working sample. It doesn't always get this right first time, but in my case, it did. You shouldn't see any red squiggly lines. If you see red squiggly lines, you may need more help from ChatGPT, otherwise, run the app in the same way you ran it in step 2.
+
+This is what ChatGPT produced first time around for me. 
+
+Very impressive, right? 😲
+
 ![ChatGPT](/assets/images/blog/flutterchatgpt/flutterapp1.png){:width="100%"}
+
+You're going to notice that it wasn't perfect first time around, but it's a great start.
 
 ## FAQs
 
@@ -90,6 +104,10 @@ No, basic concepts are straightforward, and resources like ChatGPT can help begi
 - Is Flutter free to use?
 
 Yes, Flutter is an open-source framework and is completely free.
+
+- Are there better tools for building apps with ChatGPT?
+
+Yes, I'm working on [Context Note](https://www.contextnote.com/), which gives you much better control over the conversation, and allows you to send all the Flutter code to ChatGPT. [Reach out](/#contact) if you'd like to beta test the app, and improve your ability to build Flutter apps with ChatGPT.
 
 - Can ChatGPT write my entire app?
 
