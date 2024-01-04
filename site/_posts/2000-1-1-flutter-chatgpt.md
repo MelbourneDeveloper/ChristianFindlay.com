@@ -67,8 +67,19 @@ Choose ChatGPT 4 if you have the full version of ChatGPT, and click the button h
 
 The next important step is prompting ChatGPT. This is the secret sauce. Practicing your prompt engineering is the real key to getting the most from ChatGPT. My app [Context Note](https://www.contextnote.com/) helps you take control of prompting ChatGPT and helps you to build apps with a better user interface than the standard ChatGPT screen.
 
-![ChatGPT](/assets/images/blog/flutterchatgpt/chatgptprompt.png){:width="100%"}
+![ChatGPT Prompt](/assets/images/blog/flutterchatgpt/chatgptprompt.png){:width="100%"}
 
+ChatGPT will think about your request and output something like this
+
+![ChatGPT Response](/assets/images/blog/flutterchatgpt/chatgptanswer.png){:width="100%"}
+
+It should give you some Flutter code and it will look something like this:
+
+![ChatGPT Code](/assets/images/blog/flutterchatgpt/chatgptcode.png){:width="100%"}
+
+Copy the code and paste it over the top of the code in `main.dart` from step 2. You can paste it into Dartpad if you didn't install an IDE.
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/flutterapp1.png){:width="100%"}
 
 ## FAQs
 
