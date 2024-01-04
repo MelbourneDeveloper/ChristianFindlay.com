@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build Your First Flutter App with ChatGPT - A Comprehensive Beginner's Guide"
-date: "2024/01/02 00:00:00 +0000"
+date: "2024/01/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
 image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
