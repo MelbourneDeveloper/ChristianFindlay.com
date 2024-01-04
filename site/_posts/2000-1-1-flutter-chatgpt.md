@@ -93,7 +93,23 @@ Very impressive, right? 😲
 
 ![ChatGPT](/assets/images/blog/flutterchatgpt/flutterapp1.png){:width="100%"}
 
-You're going to notice that it wasn't perfect first time around, but it's a great start.
+You're going to notice that it wasn't perfect first time around, but it's a great start. Building a full app requires several iterations.
+
+## Step 6: Further Prompting
+
+Take a screenshot of the Flutter app that ChatGPT produced and feed it back to ChatGPT. Give it a prompt with instructions on what to do next. Again, prompting (and context) is the key to getting the most out of ChatGPT
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/chatgptprompt2.png){:width="100%"}
+
+ChatGPT can sometimes be unpredictable. It sometimes gets too verbose and tries to explain too much, or it doesn't give you all the code. In my case, it gave me a complete new version of the code. 
+
+Copy ChatGPT's new code, and paste it over the top of `main.dart`, then reload the app or run it again.
+
+This was the result in my case. Notice that not only did ChatGPT add the text, it also fixed up the search bar, although it removed the logo place holder.
+
+![ChatGPT](/assets/images/blog/flutterchatgpt/flutterapp2.png){:width="100%"}
+
+Working with ChatGPT is an iterative process. You have to go through this prompting process again and again. As you learn more about Dart and Flutter, you will get better at this, and you'll be able to get ChatGPT to modify small portions of the screen at a time.
 
 ## FAQs
 
