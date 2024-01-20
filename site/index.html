@@ -117,7 +117,7 @@ about_area:
 portfolios_area:
   enable: true
   title: "Portfolio"
-  sub_title: "Recent Flutter apps that are live in the store right now"
+  sub_title: "This portfolio displays recent Flutter apps that are live in the store right now"
   section_id: "portfolio"
 
   portfolios:
@@ -420,7 +420,15 @@ faq_area:
         <h2 class="section-title mb-20 text-center">{{page.portfolios_area.title}}</h2>
         {% endif %}
         {% if page.portfolios_area.sub_title %}
-        <p class="lead larger text-center">{{page.portfolios_area.sub_title}}</p>
+        <p class="lead text-center">{{page.portfolios_area.sub_title}}</p>
+        <p class="lead larger text-center">Want to see what I'm working on? Interested in funding an AI SaaS product?</p> 
+
+        <div class="row">
+            <div class="col text-center">
+                <a href="https://investinmy.app" class="btn btn-red">invest now</a>
+            </div>
+        </div>
+
         {% endif %}
         <div class="space40"></div>
         <div class="grid grid-view boxed">
