@@ -20,7 +20,7 @@ The answer is yes, and ADTs can help you make your C# code more robust and usefu
 
 Algebraic Data Types are data types composed of other types. They provide a way to create complex data structures by combining simpler ones. ADTs represent data in a way that's both flexible and type-safe. Technically, ADTs include several different categories of data types such as [product](https://en.wikipedia.org/wiki/Product_type) and [sum types](https://en.wikipedia.org/wiki/Tagged_union). These are technical words and are useful for learning FP, but not necessary for illustrating ADTs in C#.
 
-ADTs are very similar to normal inheritance in C#. You have a base class and several subclasses. On a basic level, we can define an ADT as a type that has a fixed number of subtypes so we know at compile time which possible subtypes there are. We call this exhaustiveness. When the app runs, we already know that there are a finite number of possible types that we are dealing with.
+ADTs are very similar to normal inheritance in C#. You have a base class (or record) and several subclasses. On a basic level, we can define an ADT as a type that has a fixed number of subtypes so we know at compile time which possible subtypes there are. We call this exhaustiveness. When the app runs, we already know that there are a finite number of possible types that we are dealing with.
 
 ## Why use ADTs?
 
@@ -28,10 +28,39 @@ Use ADTs when you have a fixed set of types that share a common structure but ha
 
 However, avoid ADTs if your data model is simple or doesn't have a well-defined set of variations. Simpler data structures might be more appropriate for these cases. If you want to allow consumers of your library to create their own subclasses, ADTs are not the right choice.
 
+The key difference between ADTs and normal abstract classes is intent and usage. ADTs define finite set of possible types under a common umbrella. Abstract classes provide a base template for subclasses. Again, the key with ADTs is exhaustiveness. We know how many types we're dealing with at compile time.
+
 ## Implementing ADTs in C#
 
 C# doesn't have any special support for ADTs out of the box. Instead, we need to declare an abstract class with all of the subclasses defined inside the base abstract class. We cannot mark the base class as `sealed`, because this would prevent us from inheriting from the base class in the first place. However, we do need to mark each of the subtypes as `sealed`.
 
 **Base Abstract Class**: This represents the ADT itself. It's abstract because it only defines a contract for the types that will extend it. You can add methods to the base type if you want to, but functional programming encourages separating state from behavior. I.e. we should avoid types where there are both data and methods.
 
-**Subclasses**: These are specific instances of the ADT. Each class represents a different variation of the data you want to model. You need to mark each class with `sealed` so it is impossible for any consumer to pass in a type that the code does not expect.
+**Subclasses**: These are specific instances of the ADT. Each class represents a different variation of the data you want to model. You need to mark each class with `sealed` so it is impossible for any consumer to pass in a type that the code does not expect. C# records are even better for ADTs because they are immutable and more elegant for defining data structures that only have data without behavior.
+
+### `Shape` Example
+
+Shapes are a great way to demonstrate ADTs. Shapes don't necessarily have a lot of fields in common, but we often need to calculate the area based on the type of shape. Some systems may deal with an infinite number of shapes. For example, an app may calculate the area of a land parcel. In this case, ADTs are not appropriate. But, if your app only deals with three types of shapes for example: `Circle`, `Rectangle`, and `Triangle`, ADTs are perfect. Here is an example of a `Shape` ADT with records.
+
+```csharp
+namespace Shapes;
+
+public abstract record Shape
+{
+    /// <summary>
+    /// Private constructor, which means nothing outside this class can inherit from this class
+    /// </summary>
+    private Shape()
+    {
+    }
+
+    public sealed record Circle(double Radius) : Shape;
+    public sealed record Rectangle(double Width, double Height) : Shape;
+    public sealed record Triangle(double Base, double Height) : Shape;
+}
+```
+
+Notice that we don't add a method like `CalculateArea()` to the types. This is because FP separates data from behavior. Instead of putting a method on each type, we create one function that accepts any of the subtypes.
+
+## Pattern Matching with ADTs
+
