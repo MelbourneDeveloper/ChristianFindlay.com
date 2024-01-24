@@ -46,12 +46,19 @@
 
 {% if page.layout == 'category' %}
 
+{% if page.type == 'tag' %}
+<title>Flutter & .NET Blog - Subject: {{ page.title | capitalize }}</title>
+<meta property="og:title" content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}">
+<meta property="twitter:title" content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}">
+{% else %}
 <title>{{ page.title | capitalize }} Blog</title>
 <meta property="og:title" content="{{ page.title | capitalize }} Blog">
+<meta property="twitter:title" content="{{ page.title | capitalize }} Blog">
+{% endif %}
+
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="{{ page.title | capitalize }} Blog">
 
 {% else %}
   {% seo %}
