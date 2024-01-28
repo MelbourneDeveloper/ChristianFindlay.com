@@ -18,7 +18,6 @@
     property="og:title"
     content="{{ page.title | capitalize }} Blog"
   />
-
   <meta
     property="twitter:title"
     content="{{ page.title | capitalize }} Blog"
@@ -29,7 +28,6 @@
     property="og:title"
     content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
   />
-
   <meta
     property="twitter:title"
     content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
@@ -41,18 +39,32 @@
   </title>
   {% endif %}
 
-  <meta property="og:locale" content="en_AU" />
-
   {% if page.layout == 'post' %}
   <meta property="og:type" content="article'" />
   {% else %}
   <meta property="og:type" content="website'" />
   {% endif %}
 
+  {% assign seo_description = "Christian Findlay is your ideal partner for building cutting-edge apps using Flutter and .NET in Melbourne, Australia. Specializing in robust, scalable applications, Christian offers expert .NET and Flutter development services tailored to your needs. Explore his portfolio and gain insights from the comprehensive .NET and Flutter blog. Whether you're a startup or an established business looking to innovate, let Christian transform your app vision into reality. Explore the site to learn more about Christian's services and how he can help you succeed in the digital world." %}
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="twitter:description" content="{{ page.description }}" />
+  {% else %}
+  <meta name="description" content="{{ seo_description }}" />
+  <meta property="og:description" content="{{ seo_description }}" />
+  <meta property="twitter:description" content="{{ seo_description }}" />
+  {% endif %}
+
+  <meta property="og:locale" content="en_AU" /> 
   <meta name="twitter:card" content="summary" />
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  {% if page.canonical_url %}
+  <link rel="canonical" href="{{ page.canonical_url }}">
+  {% endif %}
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
