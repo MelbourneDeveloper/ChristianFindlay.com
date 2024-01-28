@@ -42,11 +42,17 @@
   {% endif %}
 
   <meta property="og:locale" content="en_AU" />
-  <meta property="og:type" content="website" />
-  <meta name="twitter:card" content="summary" />
 
+  {% if page.layout == 'post' %}
+  <meta property="og:type" content="article'" />
+  {% else %}
+  <meta property="og:type" content="website'" />
+  {% endif %}
+
+  <meta name="twitter:card" content="summary" />
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
