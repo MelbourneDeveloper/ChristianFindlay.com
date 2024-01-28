@@ -73,10 +73,16 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta property="og:site_name" content="ChristianFindlay.com" />
+  <meta name="twitter:creator" content="@cfdevelop">
 
   {% if page.canonical_url %}
   <link rel="canonical" href="{{ page.canonical_url }}">
   {% endif %}
+
+  {% if page.post_image %}
+  <meta property="og:image" content="{{ site.url }}{{ page.post_image }}" />
+  {% endif %}
+
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
