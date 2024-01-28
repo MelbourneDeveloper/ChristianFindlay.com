@@ -12,14 +12,42 @@
     gtag('config', 'G-JQWT4QXX6C');
   </script>
 
+  {% if page.type == 'category' %}
+  <title>{{ page.title | capitalize }} Blog</title>
+  <meta
+    property="og:title"
+    content="{{ page.title | capitalize }} Blog"
+  />
+
+  <meta
+    property="twitter:title"
+    content="{{ page.title | capitalize }} Blog"
+  />
+  {% elsif page.type == 'tag' %}
+  <title>Flutter & .NET Blog - Subject: {{ page.title | capitalize }}</title>
+  <meta
+    property="og:title"
+    content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
+  />
+
+  <meta
+    property="twitter:title"
+    content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
+  />
+  {% else %}
+  <title>
+    {% if page.title %} {{ page.title }} {% else %} {{
+    site.data.general_settings.title }}{% endif %}
+  </title>
+  {% endif %}
+
+  <meta property="og:locale" content="en_AU" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
-
-{% if page.layout != 'category' %}
-  <title>{% if page.title %} {{ page.title }} {% else %} {{ site.data.general_settings.title }}{% endif %}</title>
-{% endif %}
-
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/settings.css"/>
@@ -42,40 +70,6 @@
   {% if site.data.general_settings.google_analytics.enable %}
    {% include analytics.html %}
   {% endif %}
-
-
-{% if page.layout == 'blog' %}
-
-<title>Flutter and .NET Blog - Melbourne, Australia</title>
-<meta property="og:title" content="Flutter and .NET Blog - Melbourne, Australia">
-<meta property="og:locale" content="en_AU">
-<meta name="description" content="Flutter and .NET Blog with expert insights from a seasoned independent developer in Melbourne, Australia. I specialize in crafting user-centric apps with a single-source codebase. Contact me to collaborate on your next Flutter project for success!">
-<meta property="og:description" content="Flutter and .NET Blog with expert insights from a seasoned independent developer in Melbourne, Australia. I specialize in crafting user-centric apps with a single-source codebase. Contact me to collaborate on your next Flutter project for success!">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Flutter and .NET Blog - Melbourne, Australia">
-
-{% endif %}
-
-{% if page.layout == 'category' %}
-
-{% if page.type == 'tag' %}
-<title>Flutter & .NET Blog - Subject: {{ page.title | capitalize }}</title>
-<meta property="og:title" content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}">
-<meta property="twitter:title" content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}">
-{% else %}
-<title>{{ page.title | capitalize }} Blog</title>
-<meta property="og:title" content="{{ page.title | capitalize }} Blog">
-<meta property="twitter:title" content="{{ page.title | capitalize }} Blog">
-{% endif %}
-
-<meta property="og:locale" content="en_US">
-<meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-
-{% else %}
-  {% seo %}
-{% endif %}
 
 </head>
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
