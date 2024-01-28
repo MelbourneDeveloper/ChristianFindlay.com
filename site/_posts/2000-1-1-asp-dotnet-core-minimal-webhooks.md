@@ -5,8 +5,8 @@ date: "2023/04/02 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"
 image: "/assets/images/blog/dotnet/logo.svg"
-description: An article about how developers misuse the term anti-pattern.
-tags: csharp 
+description: Master the art of handling webhooks with ASP.NET Core Minimal API in this comprehensive guide by Christian Findlay. Perfect for developers looking to efficiently receive and test incoming webhooks, this article walks you through creating an ASP.NET Core Minimal API application, specifically tailored for webhook POST requests. With detailed steps, from project creation to testing with tools like ngrok, this guide is ideal for those familiar with C# and ASP.NET Core. Enhance your skills in webhook integration and testing with this expertly crafted tutorial, complete with code snippets and practical insights.
+tags: csharp minimal-api
 categories: dotnet
 permalink: /blog/:title
 ---
