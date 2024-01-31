@@ -11,7 +11,7 @@ permalink: /blog/:title
 slider_post: true
 ---
 
-This article is part of a series on testing that I am writing, and this series is part of an e-book on testing that I am compiling. This article doesn't dwell on the value of different testing approaches or try to weigh the pros and cons of different approaches. Let's say it is a given that any system will require a mixture of fine-grained tests, such as unit tests, and coarser tests, like integration tests. The ratio is a question for the broader topic.  
+This article is part of a series on testing that I am writing, and this series is part of an e-book on testing that I am compiling. This article doesn't dwell on the value of different testing approaches or try to weigh the pros and cons of different approaches. Let's say it is a given that any system will require a mixture of fine-grained tests, such as unit tests, and coarser tests, like integration tests. The ratio is a question for the broader topic. Read more on [Test Coverage](/blog/test-coverage).
 
 This article demonstrates how more test isolation results in more test code and less test coverage. More isolation also makes it harder to refactor your code because more tests need to change when you refactor. In short, test isolation is expensive in terms of maintainability. Generally speaking, the higher the level of test isolation, the more test code you will need to cover your app, and the less maintainable your test suite becomes. Furthermore, fine-grained unit tests simply cannot test things like UI or the HTTP pipeline.  
 
