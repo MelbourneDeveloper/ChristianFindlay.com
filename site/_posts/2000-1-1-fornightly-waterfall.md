@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fortnightly Waterfall (AKA Scrum)"
+title: "Fortnightly Waterfall (a.k.a Scrum)"
 date: 2024/02/04 00:00:00 +0000
 categories: [software development]
 tags: scrum waterfall agile
