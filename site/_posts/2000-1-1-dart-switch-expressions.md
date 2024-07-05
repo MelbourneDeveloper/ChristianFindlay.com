@@ -5,13 +5,15 @@ date: "2023/05/11 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dart/dart.png"
 image: "/assets/images/blog/dart/dart.png"
-tags: dart
+tags: dart functional-programming
 categories: flutter
 permalink: /blog/:title
 description: Dive into Dart 3's new switch expression feature and other features like pattern matching that support it. Understand how these enhance functional programming and improve Flutter development. Learn through examples for a comprehensive understanding of Dart 3.
 ---
 
-Dart 3 adds a new feature called [Switch Expressions](https://dart.dev/language/branches#switch-expressions). Dart is a multi-paradigm language that supports both [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming), [imperative](https://en.wikipedia.org/wiki/Imperative_programming), [functional-style](https://en.wikipedia.org/wiki/Functional_programming) and [declarative](https://en.wikipedia.org/wiki/Declarative_programming) programming. Programmers have adopted it worldwide, primarily because of its simplicity, flexibility, and its seamless integration with the Flutter framework. The release of Dart 3 brought several new features and improvements around functional style programming, with the new switch expression being one.
+Dart 3 adds a new feature called [Switch Expressions](https://dart.dev/language/branches#switch-expressions). Dart is a multi-paradigm language that supports both [object-oriented](https://en.wikipedia.org/wiki/Object-oriented_programming), [imperative](https://en.wikipedia.org/wiki/Imperative_programming), [functional-style](https://en.wikipedia.org/wiki/Functional_programming) and [declarative](https://en.wikipedia.org/wiki/Declarative_programming) programming. Programmers have adopted it worldwide, primarily because of its simplicity, flexibility, and because it the main language for the Flutter framework. The release of Dart 3 brought several new features and improvements around functional style programming, with the new switch expression being one. 
+
+If you find Dart's Switch Expression useful, you should also look into [Dart's Algebraic Data Types](https://www.christianfindlay.com/blog/dart-algebraic-data-types). This will bring your Dart code design to a new level and supercharge your use of the switch expression.
 
 ## Expressions Over Statements
 Expressions and statements are two foundational concepts in coding. Expressions evaluate to a value. For example, they include arithmetic like `2 + 2` or more complex functions. Statements, in contrast, perform actions, such as assigning a value to a variable or controlling program flow. Expressions can be part of larger expressions, while statements can only execute an action and can't form part of larger expressions. This is why we consider statements part of imperative programming.
