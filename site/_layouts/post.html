@@ -12,7 +12,10 @@ layout: default
           <div class="post mb-0">
             {% if page.post_image %}
             <figure class="rounded text-center">
-              <img src="{{page.post_image}}" alt="{{page.title}}" {% if page.post_image_size %} style="{{page.post_image_size}}" {% endif %} />
+              <img src="{{ page.post_image }}" alt="{{ page.title }}" 
+              {% if page.post_image_width %}width="{{ page.post_image_width }}" {% endif %} 
+              {% if page.post_image_height %}height="{{ page.post_image_height }}" {% endif %} 
+              {% if page.post_image_size %}style="{{ page.post_image_size }}"{% endif %} />
             </figure>
             {% endif %}
             <div class="space40"></div>

@@ -9,6 +9,7 @@ description: Explore Algebraic Data Types (ADTs) in Dart 3.0+. Learn about sum a
 tags: dart adts functional-programming records fsharp
 categories: flutter
 permalink: /blog/:title
+post_image_width: 1792px
 ---
 Algebraic Data Types (ADTs) are a powerful functional programming concept that allows developers to model complex data structures more elegantly than traditional object-oriented classes. They are composite types, meaning that they combine other types. Dart 3.0 introduced sealed classes and [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching), which made ADTs possible in Dart 3. [Dart Switch Expressions](https://www.christianfindlay.com/blog/dart-switch-expressions) leverage pattern matching well. This article explains the concept of ADTs, how to use them in Dart, and why using them with pattern matching solves so many traditional code-design problems that OOP languages tend to struggle with.
 
@@ -422,30 +423,31 @@ void main() {
 ```
 #### Output
 
+```dart
 Minimal profile: 'Dart lover'. Only interested in programming. Very active.
----
+
 Active coder also interested in philosophy and coffee.
----
+
 Active user with varying interests.
----
+
 Active user without bio, with varying interests.
----
+
 Suspended account (Spam) with multiple interests.
----
+
 Suspended account with no interests.
----
+
 Suspended account with one interest.
----
+
 Deactivated on 2023-12-31 00:00:00.000. Bio: 'Ex-user'. Had 2 interests.
----
+
 Deactivated account without bio or interests.
----
+
 Deactivated account without bio, with one interest.
----
+
 Deactivated account without bio, with two interests.
----
+
 Deactivated account without bio, with multiple interests.
----
+```
 
 Notice that the switch cases allow you to bind variables. For example `lastActive` becomes `date`. Also notice that we don't need to do a null check on `Bio: '$b'` because the match already determined that the value is not null.
 
