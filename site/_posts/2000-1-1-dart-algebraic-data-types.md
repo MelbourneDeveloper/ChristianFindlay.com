@@ -280,12 +280,14 @@ ADTs are a great choice for tree structures in Dart because any element could be
 
 Records are another recent addition to the Dart language and add further expressiveness to ADTs. Here is a simple example of a record type, which is a product type in Dart.
 
+```dart
 typedef Point = (double x, double y);
 
 double distanceFromOrigin((double, double) point) {
   var (x, y) = point;
   return sqrt(x * x + y * y);
 }
+```
 
 ## A Complete Example
 
