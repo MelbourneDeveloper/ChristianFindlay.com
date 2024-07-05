@@ -322,53 +322,127 @@ typedef UserProfile = (
   AccountStatus status
 );
 
-// Function to analyze a user profile using pattern matching
 String analyzeProfile(UserProfile profile) => switch (profile) {
-      // New user with empty profile
- (null, [], Active(lastActive: var date)) =>
+      // New or minimal active profiles
+      (null, [], Active(lastActive: var date)) =>
         "New user, last active on ${date.toLocal()}. Needs to complete profile.",
-
-      // User with minimal profile information
- (String b, [var single], Active()) =>
+      (String b, [var single], Active()) =>
         "Minimal profile: '$b'. Only interested in $single. Very active.",
 
-      // Suspended user with multiple interests
- (_, [_, _, ...], Suspended(reason: var r)) =>
-        "Suspended account ($r) with multiple interests.",
-
-      // Deactivated user profile
- (String b, var ints, Deactivated(deactivationDate: var date)) =>
-        "Deactivated on $date. Bio: '$b'. Had ${ints.length} interests.",
-
-      // Active coder with multiple interests
- (_, ["coding", var second, var third, ...], Active()) =>
+      // Active coder profiles
+      (_, ["coding", var second, var third, ...], Active()) =>
         "Active coder also interested in $second and $third.",
 
-      // Default case for any other profile type
- _ => "Other profile type"
- };
+      // Other active profiles
+      (String(), [], Active()) ||
+      (String(), [_, _], Active()) ||
+      (String(), [_, _, _, ...], Active()) =>
+        "Active user with varying interests.",
+      (null, [_], Active()) ||
+      (null, [_, _], Active()) ||
+      (null, [_, _, _, ...], Active()) =>
+        "Active user without bio, with varying interests.",
+
+      // Suspended profiles
+      (_, [_, _, ...], Suspended(reason: var r)) =>
+        "Suspended account ($r) with multiple interests.",
+      (String() || null, [], Suspended()) =>
+        "Suspended account with no interests.",
+      (String() || null, [_], Suspended()) =>
+        "Suspended account with one interest.",
+
+      // Deactivated profiles
+      (String b, var ints, Deactivated(deactivationDate: var date)) =>
+        "Deactivated on $date. Bio: '$b'. Had ${ints.length} interests.",
+      (null, [], Deactivated()) =>
+        "Deactivated account without bio or interests.",
+      (null, [_], Deactivated()) =>
+        "Deactivated account without bio, with one interest.",
+      (null, [_, _], Deactivated()) =>
+        "Deactivated account without bio, with two interests.",
+      (null, [_, _, _, ...], Deactivated()) =>
+        "Deactivated account without bio, with multiple interests.",
+    };
 
 void main() {
-  // List of example user profiles
-  final profiles = [
- (null, <String>[], Active(DateTime.now())),
- ("Dart lover", ["programming"], Active(DateTime.now())),
- ("Flutter enthusiast", ["mobile", "web", "AI"], Suspended("Spam")),
- (
-      "I code, therefore I am",
- ["coding", "philosophy", "coffee"],
-      Active(DateTime.now())
- ),
- ("Ex-user", ["reading", "writing"], Deactivated(DateTime(2023, 12, 31))),
- ("Mysterious", ["enigma"], Active(DateTime.now())),
- ];
+  final now = DateTime.now();
+  final profiles = <(String?, List<String>, AccountStatus)>[
+    // New active user
+    (null, <String>[], Active(now)),
+
+    // Minimal active profile
+    ("Dart lover", ["programming"], Active(now)),
+
+    // Active coder profile
+    ("I code, therefore I am", ["coding", "philosophy", "coffee"], Active(now)),
+
+    // Active user with varying interests
+    ("Eclectic", ["music", "sports", "cooking", "travel"], Active(now)),
+
+    // Active user without bio, with varying interests
+    (null, ["reading", "writing", "arithmetic"], Active(now)),
+
+    // Suspended profile with multiple interests
+    ("Flutter enthusiast", ["mobile", "web", "AI"], Suspended("Spam")),
+
+    // Suspended profile with no interests
+    ("Oops", [], Suspended("Violation of terms")),
+
+    // Suspended profile with one interest
+    (null, ["trouble"], Suspended("Inappropriate behavior")),
+
+    // Deactivated profile with bio and interests
+    ("Ex-user", ["reading", "writing"], Deactivated(DateTime(2023, 12, 31))),
+
+    // Deactivated profile without bio or interests
+    (null, [], Deactivated(DateTime(2023, 11, 15))),
+
+    // Deactivated profile without bio, with one interest
+    (null, ["gaming"], Deactivated(DateTime(2023, 10, 1))),
+
+    // Deactivated profile without bio, with two interests
+    (null, ["music", "dance"], Deactivated(DateTime(2023, 9, 15))),
+
+    // Deactivated profile without bio, with multiple interests
+    (
+      null,
+      ["art", "science", "history", "literature"],
+      Deactivated(DateTime(2023, 8, 1))
+    ),
+  ];
 
   // Analyze and print results for each profile
   for (final profile in profiles) {
     print(analyzeProfile(profile));
- }
+    print('---'); // Separator for readability
+  }
 }
 ```
+
+> Minimal profile: 'Dart lover'. Only interested in programming. Very active.
+---
+> Active coder also interested in philosophy and coffee.
+---
+> Active user with varying interests.
+---
+> Active user without bio, with varying interests.
+---
+> Suspended account (Spam) with multiple interests.
+---
+> Suspended account with no interests.
+---
+> Suspended account with one interest.
+---
+> Deactivated on 2023-12-31 00:00:00.000. Bio: 'Ex-user'. Had 2 interests.
+---
+> Deactivated account without bio or interests.
+---
+> Deactivated account without bio, with one interest.
+---
+> Deactivated account without bio, with two interests.
+---
+> Deactivated account without bio, with multiple interests.
+---
 
 Notice that the switch cases allow you to bind variables. For example `lastActive` becomes `date`. Also notice that we don't need to do a null check on `Bio: '$b'` because the match already determined that the value is not null.
 
