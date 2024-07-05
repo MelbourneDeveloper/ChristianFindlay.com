@@ -48,6 +48,8 @@ The `Shape` type is a discriminated union, which is F#'s implementation of a sum
 
 The `area` function demonstrates pattern matching. Importantly, there are only three possible shapes, which allows the compiler to know ahead of time what branches the code can travel down. It is a key feature of ADTs. This is called [exhaustiveness checking](https://learn.microsoft.com/en-us/dotnet/fsharp/language-reference/pattern-matching). It uses a single function to calculate the area for any shape, and the compiler ensures all cases are covered. 
 
+If you're interested, you can read the [official Dart specification on this feature](https://github.com/dart-lang/language/blob/main/accepted/3.0/patterns/exhaustiveness.md).
+
 ### Kotlin
 
 Kotlin is a modern, hybrid paradigm language like Dart. Like Dart, Kotlin represents ADTs using sealed classes:
@@ -163,7 +165,7 @@ The example above uses a sealed type, `AuthState,` to declare a fixed set of typ
 
 Exhaustiveness checking forces you to handle all possible states. If you don't, you will get a compilation error. This removes a whole category of potential exceptions from your code. Without exhaustive cases, your code could end up on an unknown branch, and the code would throw an exception. Then, you'd have to handle the exception at a higher level. ADTs allow you to avoid this need. 
 
-Notice that the subtypes use the [final](https://dart.dev/language/class-modifiers#final) class modifier, which is important because otherwise, you could inherit from the class and break the exhaustiveness checking.
+Notice that the subtypes use the [final](https://dart.dev/language/class-modifiers#final) class modifier. This is important if you want to preserve the behavior of the class and prevent other classes from inheriting from this type. Still, not using it doesn't break exhaustiveness checking.
 
 Here is the shape example we saw earlier, but in Dart:
 
@@ -188,9 +190,9 @@ final class Triangle extends Shape {
 }
 
 double area(Shape shape) => switch (shape) {
-      Circle(radius: var r) => 3.14 * r * r,
-      Rectangle(width: var w, height: var h) => w * h,
-      Triangle(base: var b, height: var h) => 0.5 * b * h
+      Circle(radius: final r) => 3.14 * r * r,
+      Rectangle(width: final w, height: final h) => w * h,
+      Triangle(base: final b, height: final h) => 0.5 * b * h
  };
 ```
 
@@ -219,8 +221,8 @@ T match<T, R>(
   T Function(String) onFailure,
 ) =>
     switch (result) {
-      Success(value: var v) => onSuccess(v),
-      Failure(error: var e) => onFailure(e)
+      Success(value: final v) => onSuccess(v),
+      Failure(error: final e) => onFailure(e)
  };
 
 // Usage
@@ -255,13 +257,13 @@ class Node<T> extends Tree<T> {
 }
 
 int sum(Tree<int> tree) => switch (tree) {
-      Leaf(value: var v) => v,
-      Node(left: var l, right: var r) => sum(l) + sum(r)
+      Leaf(value: final v) => v,
+      Node(left: final l, right: final r) => sum(l) + sum(r)
  };
 
 num depth<T>(Tree<T> tree) => switch (tree) {
       Leaf() => 0,
-      Node(left: var l, right: var r) => 1 + max(depth(l), depth(r))
+      Node(left: final l, right: final r) => 1 + max(depth(l), depth(r))
  };
 
 // Usage
@@ -284,7 +286,7 @@ Records are another recent addition to the Dart language and add further express
 typedef Point = (double x, double y);
 
 double distanceFromOrigin((double, double) point) {
-  var (x, y) = point;
+  final (x, y) = point;
   return sqrt(x * x + y * y);
 }
 ```
@@ -324,13 +326,13 @@ typedef UserProfile = (
 
 String analyzeProfile(UserProfile profile) => switch (profile) {
       // New or minimal active profiles
-      (null, [], Active(lastActive: var date)) =>
+      (null, [], Active(lastActive: final date)) =>
         "New user, last active on ${date.toLocal()}. Needs to complete profile.",
-      (String b, [var single], Active()) =>
+      (String b, [final single], Active()) =>
         "Minimal profile: '$b'. Only interested in $single. Very active.",
 
       // Active coder profiles
-      (_, ["coding", var second, var third, ...], Active()) =>
+      (_, ["coding", final second, final third, ...], Active()) =>
         "Active coder also interested in $second and $third.",
 
       // Other active profiles
@@ -344,7 +346,7 @@ String analyzeProfile(UserProfile profile) => switch (profile) {
         "Active user without bio, with varying interests.",
 
       // Suspended profiles
-      (_, [_, _, ...], Suspended(reason: var r)) =>
+      (_, [_, _, ...], Suspended(reason: final r)) =>
         "Suspended account ($r) with multiple interests.",
       (String() || null, [], Suspended()) =>
         "Suspended account with no interests.",
@@ -352,7 +354,7 @@ String analyzeProfile(UserProfile profile) => switch (profile) {
         "Suspended account with one interest.",
 
       // Deactivated profiles
-      (String b, var ints, Deactivated(deactivationDate: var date)) =>
+      (String b, final ints, Deactivated(deactivationDate: final date)) =>
         "Deactivated on $date. Bio: '$b'. Had ${ints.length} interests.",
       (null, [], Deactivated()) =>
         "Deactivated account without bio or interests.",
@@ -419,7 +421,7 @@ void main() {
 }
 ```
 #### Output
-```
+
 Minimal profile: 'Dart lover'. Only interested in programming. Very active.
 ---
 Active coder also interested in philosophy and coffee.
@@ -444,7 +446,6 @@ Deactivated account without bio, with two interests.
 ---
 Deactivated account without bio, with multiple interests.
 ---
-```
 
 Notice that the switch cases allow you to bind variables. For example `lastActive` becomes `date`. Also notice that we don't need to do a null check on `Bio: '$b'` because the match already determined that the value is not null.
 
