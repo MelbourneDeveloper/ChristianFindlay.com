@@ -418,31 +418,33 @@ void main() {
   }
 }
 ```
-
-> Minimal profile: 'Dart lover'. Only interested in programming. Very active.
+#### Output
+```
+Minimal profile: 'Dart lover'. Only interested in programming. Very active.
 ---
-> Active coder also interested in philosophy and coffee.
+Active coder also interested in philosophy and coffee.
 ---
-> Active user with varying interests.
+Active user with varying interests.
 ---
-> Active user without bio, with varying interests.
+Active user without bio, with varying interests.
 ---
-> Suspended account (Spam) with multiple interests.
+Suspended account (Spam) with multiple interests.
 ---
-> Suspended account with no interests.
+Suspended account with no interests.
 ---
-> Suspended account with one interest.
+Suspended account with one interest.
 ---
-> Deactivated on 2023-12-31 00:00:00.000. Bio: 'Ex-user'. Had 2 interests.
+Deactivated on 2023-12-31 00:00:00.000. Bio: 'Ex-user'. Had 2 interests.
 ---
-> Deactivated account without bio or interests.
+Deactivated account without bio or interests.
 ---
-> Deactivated account without bio, with one interest.
+Deactivated account without bio, with one interest.
 ---
-> Deactivated account without bio, with two interests.
+Deactivated account without bio, with two interests.
 ---
-> Deactivated account without bio, with multiple interests.
+Deactivated account without bio, with multiple interests.
 ---
+```
 
 Notice that the switch cases allow you to bind variables. For example `lastActive` becomes `date`. Also notice that we don't need to do a null check on `Bio: '$b'` because the match already determined that the value is not null.
 
