@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/fsharp/logo.svg"
 image: "/assets/images/blog/fsharp/logo.svg"
 post_image_size: width:50%
-tags: fsharp csharp
+tags: fsharp csharp functional-programming
 categories: dotnet
 permalink: /blog/:title
 ---

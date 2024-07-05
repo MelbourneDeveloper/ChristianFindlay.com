@@ -5,7 +5,7 @@ date: "2021/05/27 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
 image: "/assets/images/blog/restclientdotnet/logo.png"
-tags: restclient-net csharp
+tags: restclient-net csharp fsharp functional-programming
 categories: [dotnet]
 permalink: /blog/:title
 ---
