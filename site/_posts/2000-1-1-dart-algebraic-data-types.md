@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Dart: Algebraic Data Types"
-date: "2024/05/05 00:00:00 +0000"
+date: "2024/07/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/adts/ADTs.png"
 image: "/assets/images/blog/adts/ADTs.png"
