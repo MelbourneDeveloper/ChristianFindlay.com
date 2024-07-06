@@ -4,8 +4,8 @@ title: "Why Flutter Is The Best Choice For Startups"
 date: "2023/03/19 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/portfolio/flutter.svg"
+post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
-post_image_size: width:50%
 description: 
 tags: startups apps cross-platform
 categories: [flutter]

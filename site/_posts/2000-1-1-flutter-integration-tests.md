@@ -6,6 +6,7 @@ tags: testing
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/WidgetTestsIntegrationTests.png"
+post_image_height: 300
 image: "/assets/images/blog/testing/WidgetTestsIntegrationTests.png"
 permalink: /blog/:title
 ---

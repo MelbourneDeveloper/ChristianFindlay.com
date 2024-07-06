@@ -4,6 +4,7 @@ title: "Build Your First Flutter App with ChatGPT - A Comprehensive Beginner's G
 date: "2024/01/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
+post_image_height: 300
 image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
 tags: flutter app-development chatgpt ai beginners-guide
 categories: flutter

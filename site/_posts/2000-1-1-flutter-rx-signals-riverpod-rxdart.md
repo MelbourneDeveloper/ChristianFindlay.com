@@ -4,6 +4,7 @@ title: "Reactive Programming in Flutter: Understanding the Power of Observables 
 date: "2023/11/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/reactive/flutterrx.png"
+post_image_width: 400
 image: "/assets/images/blog/reactive/flutterrx.png"
 description: "Explore the dynamic world of Reactive Programming in Flutter with this comprehensive blog post. Delve into the intricacies of Observables and Computed Values, and discover how libraries like Signals, Riverpod, and RxDart simplify state management in Flutter. The expert analysis navigates through the frameworks, emphasizing the unique approaches to reactive computations, dependency tracking, and minimizing unnecessary recomputes. Ideal for both beginners and seasoned Flutter developers, this post illuminates the advantages of integrating reactive patterns in your Flutter applications, ensuring your UI and data stay perfectly in sync. Master the art of reactive Flutter development!"
 tags: reactive dart

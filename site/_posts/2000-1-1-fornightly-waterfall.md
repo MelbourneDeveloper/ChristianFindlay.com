@@ -6,6 +6,7 @@ categories: [software development]
 tags: scrum waterfall agile
 author: "Christian Findlay"
 post_image: "/assets/images/blog/forthnightlywaterfall/header.webp"
+post_image_height: 400
 image: "/assets/images/blog/forthnightlywaterfall/header.webp"
 permalink: /blog/:title
 ---

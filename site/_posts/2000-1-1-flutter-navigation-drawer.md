@@ -4,6 +4,7 @@ title: "How to Build a Flutter Navigation Drawer"
 date: "2021/10/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/navigationdrawer/header.png"
+post_image_width: 600
 image: "/assets/images/blog/navigationdrawer/header.png"
 tags: material-design
 categories: flutter

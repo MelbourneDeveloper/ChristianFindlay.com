@@ -4,8 +4,8 @@ title: "Components of Flutter State Management"
 date: "2023/04/18 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/portfolio/flutter.svg"
+post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
-post_image_size: width:50%
 description: 
 tags: state-management apps cross-platform
 categories: [flutter]
