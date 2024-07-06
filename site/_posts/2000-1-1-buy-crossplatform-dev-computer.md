@@ -8,6 +8,7 @@ image: "/assets/images/blog/computer/header.jpg"
 tags: cross-platform
 categories: [software development]
 permalink: /blog/:title
+redirect_from: /2020/10/23/buy-crossplatform-dev-computer/
 ---
 
 Computers are expensive, and you may need to buy a Mac and a PC as a mobile developer. As a mobile developer, you will spend a large amount of time building and deploying to phones or using emulators. All this can eat time on a slow computer. This article aims at guiding you on the decision-making process of buying a computer, and hopefully, how to save money. I’m a [Xamarin](https://dotnet.microsoft.com/apps/xamarin) developer, but most of this article will help people who develop for [Flutter](https://flutter.dev/), [React Native](https://reactnative.dev/), Blazor, Vue.js, React, Angular, or do cross-platform development in general.

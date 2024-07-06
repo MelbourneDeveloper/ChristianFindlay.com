@@ -8,6 +8,7 @@ image: "/assets/images/blog/reactive/header.jpeg"
 tags: reactive csharp
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2020/10/25/rx-hot-vs-cold/
 ---
 
 The [Observer Pattern](https://en.wikipedia.org/wiki/Observer_pattern) is at the core of [reactive programming](https://en.wikipedia.org/wiki/Reactive_programming), and observables come in two flavors: hot and cold. This is not explicit when you are coding, so this article explains how to tell the difference and switch to a hot observable. The focus is on hot observables. The concepts here are relevant to all languages that support reactive programming, but the examples are in C#. It's critical to understand the distinction before you start doing reactive programming because it will bring you unstuck if you don't.

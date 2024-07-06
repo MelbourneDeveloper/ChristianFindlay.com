@@ -8,6 +8,7 @@ image: "/assets/images/blog/inotify/header.jpeg"
 tags: XAML
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2020/09/11/inotifypropertychanged
 ---
 
 The [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netcore-3.1) changed interface is at the heart of XAML apps and has been a part of the .NET ecosystem since the early days of Windows Forms. The [PropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=netcore-3.1) event notifies the UI that a property in the [binding source](https://docs.microsoft.com/en-us/windows/uwp/data-binding/data-binding-in-depth#binding-source) (usually the ViewModel) has changed. It allows the UI to update accordingly. The interface exists for WPF, Silverlight, UWP, Uno Platform, and Xamarin.Forms (that will become .NET MAUI). This article will give examples for UWP, but it is possible to write code from the ViewModel down that is compatible with all these platforms.

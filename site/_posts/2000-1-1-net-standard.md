@@ -8,6 +8,7 @@ image: "/assets/images/blog/netstandard/header.png"
 tags: dotnet-standard cross-platform
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2020/12/21/net-standard/
 ---
 
 [.NET Standard](https://dotnet.microsoft.com/platform/dotnet-standard) is a .NET formal specification or API contract that is available across many .NET implementations. It exists because there are many .NET implementations on many platforms. Targeting .NET Standard 2.0 gives your library the most extensive reach possible, and enables almost all of the modern .NET features such as C# 9, `IAsyncEnumerable` etc., so all libraries should target this platform where it is not a hindrance to maintaining the library. 

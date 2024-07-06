@@ -8,6 +8,7 @@ image: "/assets/images/blog/ilogger/nothing.jpg"
 tags: ilogger
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2020/09/29/ilogger-nullobject/
 ---
 
 The [Null Object Pattern](https://en.wikipedia.org/wiki/Null_object_pattern) is a pattern that uses objects with null behavior instead of performing null checks throughout the codebase. [ILogger](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.ilogger?view=dotnet-plat-ext-3.1) and [ILoggerFactory](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.logging.iloggerfactory?view=dotnet-plat-ext-3.1) are dependencies that often require a lot of null checking, so they are perfect candidates for the null object pattern. Suppose your classes take `ILogger` or `ILoggerFactory` as a dependency, and you are not using the null object pattern. In that case, you will probably find that your code is either subject to NullReferenceExceptions, or forcing implementors to supply loggers as arguments. Use the null object pattern to avoid both these problems. This article teaches you how in C#.

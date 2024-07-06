@@ -8,6 +8,7 @@ image: "/assets/images/blog/devicenet/logo.png"
 tags: device-net usb hid cross-platform
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2021/01/31/device-net-4
 ---
 
 Device.Net is a cross-platform .NET framework for talking to connected devices such as USB, Serial Port and Hid devices. It aims to make device communication uniform across all platforms and device types. It runs on .NET 5, .NET Framework, UWP, Android, and other platforms. The new version 4.0 brings an array of fixes and features to make device communication more manageable and stable. Star the repo on [GitHub](https://github.com/MelbourneDeveloper/Device.Net) and join the conversation on the [Device.Net Discord Server](https://discord.gg/ZcvXARm).

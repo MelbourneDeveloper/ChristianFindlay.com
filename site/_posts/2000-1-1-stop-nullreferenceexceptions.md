@@ -8,6 +8,7 @@ image: "/assets/images/blog/nrt/header.jpeg"
 tags: csharp
 categories: dotnet
 permalink: /blog/:title
+redirect_from: /2021/03/18/stop-nullreferenceexceptions/
 ---
 
 This article gives you a toolset for stopping NullReferenceExceptions in .NET code. The article centers around [Nullable Reference Types](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) (NRT), a feature that Microsoft added in C# 8. This article mentions five additional tools to ensure that users will never encounter the exception and explains how to implement them in your code.
