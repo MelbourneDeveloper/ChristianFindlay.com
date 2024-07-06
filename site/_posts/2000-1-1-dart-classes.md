@@ -4,6 +4,7 @@ title: "Dart Classes for C# Programmers"
 date: "2021/09/06 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dartformatting/dartformatting.png"
+post_image_height: 300
 image: "/assets/images/blog/dartformatting/dartformatting.png"
 tags: dart
 categories: flutter

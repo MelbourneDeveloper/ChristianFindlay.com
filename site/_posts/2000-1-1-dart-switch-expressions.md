@@ -4,6 +4,7 @@ title: "Dart Switch Expressions"
 date: "2023/05/11 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dart/dart.png"
+post_image_width: 300
 image: "/assets/images/blog/dart/dart.png"
 tags: dart functional-programming
 categories: flutter

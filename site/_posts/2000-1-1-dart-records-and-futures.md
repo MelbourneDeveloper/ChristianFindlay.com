@@ -4,6 +4,7 @@ title: "Dart 3: A Comprehensive Guide to Records and Futures"
 date: "2023/05/15 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dart/dart.png"
+post_image_width: 300
 image: "/assets/images/blog/dart/dart.png"
 tags: dart
 categories: flutter
