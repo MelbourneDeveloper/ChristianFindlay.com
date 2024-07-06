@@ -44,7 +44,6 @@ th,
 .nav-tabs .nav-link,
 .accordion-wrapper .card-header button,
 label:not(.custom-control-label) {
-    font-weight: 600;
 }
 .navbar-nav .nav-link,
 .dropdown-item,
