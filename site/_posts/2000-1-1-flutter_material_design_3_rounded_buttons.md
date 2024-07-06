@@ -4,6 +4,7 @@ title: "Rounded Buttons in Flutter with Material Design 3"
 date: "2023/04/03 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/buttons/header.png"
+post_image_width: 300
 image: "/assets/images/blog/buttons/header.png"
 description: Learn how to create Material Design 3 rounded buttons in Flutter with this simple guide.
 tags: 

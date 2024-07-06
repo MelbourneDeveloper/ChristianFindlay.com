@@ -6,6 +6,7 @@ tags: colors dart
 categories: flutter
 author: "Christian Findlay"
 post_image: "/assets/images/blog/colors/colors.jpg"
+post_image_height: 300
 image: "/assets/images/blog/colors/colors.jpg"
 permalink: /blog/:title
 ---

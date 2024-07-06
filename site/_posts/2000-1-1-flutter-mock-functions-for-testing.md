@@ -6,6 +6,7 @@ tags: mocking testing cross-platform dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/header.jpeg"
+post_image_height: 220
 image: "/assets/images/blog/testing/header.jpeg"
 trending: true
 permalink: /blog/:title

@@ -6,6 +6,7 @@ tags: dart code-quality
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/extensions/header.jpg"
+post_image_height: 300
 image: "/assets/images/blog/extensions/header.jpg"
 permalink: /blog/:title
 description: "Discover how to enhance your Flutter code with Dart extension methods in this comprehensive tutorial. Learn about the power of Dart 2.7 extension methods, how to use Dart extensions for widget composition, and how to create BuildContext shortcuts with Dart extensions. This guide will help you write cleaner, more maintainable Flutter code."
