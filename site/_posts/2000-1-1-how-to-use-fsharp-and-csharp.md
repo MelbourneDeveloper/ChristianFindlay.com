@@ -4,8 +4,8 @@ title: "How to Use F# from C#"
 date: "2020/10/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/fsharp/logo.svg"
+post_image_width: 400
 image: "/assets/images/blog/fsharp/logo.svg"
-post_image_size: width:50%
 tags: fsharp csharp functional-programming
 categories: dotnet
 permalink: /blog/:title
