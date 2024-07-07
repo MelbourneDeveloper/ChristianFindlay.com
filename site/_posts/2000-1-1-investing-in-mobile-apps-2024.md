@@ -6,6 +6,7 @@ categories: [software development]
 tags: saas app-development
 author: "Christian Findlay"
 post_image: "/assets/images/blog/investment/investing.png"
+post_image_height: 400
 image: "assets/images/blog/investment/investing.png"
 permalink: /blog/:title
 canonical_url: https://investinmy.app/investing-in-mobile-apps-2024.html

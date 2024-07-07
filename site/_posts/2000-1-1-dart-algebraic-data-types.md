@@ -4,12 +4,12 @@ title: "Dart: Algebraic Data Types"
 date: "2024/07/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/adts/ADTs.png"
+post_image_width: 1200
 image: "/assets/images/blog/adts/ADTs.png"
 description: Explore Algebraic Data Types (ADTs) in Dart 3.0+. Learn about sum and product types, see examples in F# and Kotlin, and discover powerful pattern matching in Dart with switch expressions. Learn functional programming skills with ADTs.
 tags: dart adts functional-programming records fsharp
 categories: flutter
 permalink: /blog/:title
-post_image_width: 1792px
 ---
 Algebraic Data Types (ADTs) are a powerful functional programming concept that allows developers to model complex data structures more elegantly than traditional object-oriented classes. They are composite types, meaning that they combine other types. Dart 3.0 introduced sealed classes and [pattern matching](https://en.wikipedia.org/wiki/Pattern_matching), which made ADTs possible in Dart 3. [Dart Switch Expressions](https://www.christianfindlay.com/blog/dart-switch-expressions) leverage pattern matching well. This article explains the concept of ADTs, how to use them in Dart, and why using them with pattern matching solves so many traditional code-design problems that OOP languages tend to struggle with.
 
