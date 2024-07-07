@@ -4,6 +4,8 @@ title: "Receive and Test Incoming Webhooks in an ASP.NET Core Minimal API: A Com
 date: "2023/04/02 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"
+post_image_width: 300
+post_image_height: 300
 image: "/assets/images/blog/dotnet/logo.svg"
 description: Master the art of handling webhooks with ASP.NET Core Minimal API in this comprehensive guide by Christian Findlay. Perfect for developers looking to efficiently receive and test incoming webhooks, this article walks you through creating an ASP.NET Core Minimal API application, specifically tailored for webhook POST requests. With detailed steps, from project creation to testing with tools like ngrok, this guide is ideal for those familiar with C# and ASP.NET Core. Enhance your skills in webhook integration and testing with this expertly crafted tutorial, complete with code snippets and practical insights.
 tags: csharp minimal-api
