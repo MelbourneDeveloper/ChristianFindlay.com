@@ -3,8 +3,10 @@ layout: post
 title: "N-tier Architecture Was a Mistake: Long Live Apps That Talk Directly to the Database"
 date: "2023/06/12 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/ntier/tiers.png"
-image: "/assets/images/blog/ntier/tiers.png"
+post_image: "/assets/images/blog/ntier/tiers.webp"
+post_image_height: 662
+post_image_height: 800
+image: "/assets/images/blog/ntier/tiers.webp"
 tags: architecture
 categories: [software development]
 permalink: /blog/:title
