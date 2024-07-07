@@ -3,9 +3,10 @@ layout: post
 title: "Mastering Material Design 3: The Complete Guide to Theming in Flutter"
 date: "2023/05/04 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/materialdesign/logo.png"
+post_image: "/assets/images/blog/materialdesign/logo.webp"
 post_image_height: 300
-image: "/assets/images/blog/materialdesign/logo.png"
+post_image_width: 300
+image: "/assets/images/blog/materialdesign/logo.webp"
 description: Master Material Design 3 Theming in Flutter with this comprehensive guide. Explore custom themes with ThemeData, define color palettes with ColorScheme, and learn how to adhere to Material Design guidelines. Discover how to override colors, customize typography, and automate theme switching in Flutter. Perfect for Flutter developers looking to enhance their UI design skills and create visually stunning, user-friendly applications.
 categories: flutter
 permalink: /blog/:title
