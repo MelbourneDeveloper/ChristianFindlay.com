@@ -28,7 +28,7 @@ Organiser of Flutter Pune,
 
 Public Speaker, Blogger
 
-![Shree](/assets/images/documents/shree.png){:width="100px"}
+![Shree](/assets/images/documents/shree.webp){:width="100px"}
 
 #### What Students Learn
 Students learn the essential techniques and best practices for effectively testing an entire application from the root widget. This holistic approach includes the complete app structure, encompassing all widgets and their composition. Throughout the training, students will gain valuable insights into designing and implementing rigorous test cases that cover various scenarios. By mastering full app Flutter Widget Testing, students learn the skills to develop high-quality, reliable, scalable applications that stand out in the competitive app market.
