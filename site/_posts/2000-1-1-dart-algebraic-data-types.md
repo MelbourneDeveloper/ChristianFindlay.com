@@ -3,9 +3,9 @@ layout: post
 title: "Dart: Algebraic Data Types"
 date: "2024/07/05 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/adts/ADTs.png"
+post_image: "/assets/images/blog/adts/ADTs.webp"
 post_image_width: 1200
-image: "/assets/images/blog/adts/ADTs.png"
+image: "/assets/images/blog/adts/ADTs.webp"
 description: Explore Algebraic Data Types (ADTs) in Dart 3.0+. Learn about sum and product types, see examples in F# and Kotlin, and discover powerful pattern matching in Dart with switch expressions. Learn functional programming skills with ADTs.
 tags: dart adts functional-programming records fsharp
 categories: flutter
