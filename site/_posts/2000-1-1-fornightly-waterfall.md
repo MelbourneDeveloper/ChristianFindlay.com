@@ -5,9 +5,9 @@ date: 2024/02/04 00:00:00 +0000
 categories: [software development]
 tags: scrum waterfall agile
 author: "Christian Findlay"
-post_image: "/assets/images/blog/forthnightlywaterfall/header.webp"
+post_image: "/assets/images/blog/forthnightlywaterfall/header.png"
 post_image_height: 400
-image: "/assets/images/blog/forthnightlywaterfall/header.webp"
+image: "/assets/images/blog/forthnightlywaterfall/header.png"
 permalink: /blog/:title
 ---
 
