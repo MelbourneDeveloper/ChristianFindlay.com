@@ -279,6 +279,61 @@ main() {
 
 ADTs are a great choice for tree structures in Dart because any element could be a `Node` or a `Leaf`.
 
+## Avoid Casting and Unnecessary Assignments
+
+FP encourages the use of expressions. Expressions are generally more concise than imperative statements. Instead of writing code in a step-by-step way, expressions return the value of one or more operations. Pattern matching with constructs like Dart switch expressions allow you to write fluid expressions that don't require unnecessary variable assignments or casting. 
+
+While this point is not strictly about ADTs, it illustrates how a shift towards expressions over statements can generally improve your code. ADTs help you move your code in this direction.
+
+Consider these three functions. 
+
+```dart
+import 'dart:convert';
+
+void main() {
+  final jsonMap = jsonDecode('{ "test": 123 }');
+
+  final one = numberWithCasting(jsonMap as Map<String, dynamic>);
+  final two = numberWithTypePromotion(jsonMap);
+  final three = numberWithSwitch(jsonMap);
+
+  print(one);
+  print(two);
+  print(three);
+}
+
+int numberWithCasting(
+  Map<String, dynamic> jsonMap,
+) {
+  if (jsonMap['test'] is int) {
+    return jsonMap['test'] as int;
+ }
+  return -1;
+}
+
+int numberWithTypePromotion(
+  Map<String, dynamic> jsonMap,
+) {
+  final test = jsonMap['test'];
+  if (test is int) return test;
+  return -1;
+}
+
+int numberWithSwitch(
+  Map<String, dynamic> jsonMap,
+) =>
+    switch (jsonMap['test']) {
+      final int value => value,
+ _ => -1,
+ };
+```
+
+Notice that the first two functions require you to either cast the type to `int` with `as` or make a variable assignment. There is nothing inherently wrong with the extra assignment in `numberWithTypePromotion`, but the naming of the variable can detract from the readability of the function and make the code more verbose. 
+
+On the other hand, casting is generally bad because it can cause exceptions. Avoiding the `as` keyword is generally advisable, even in cases where it obviously does not cause an issue. If someone refactors this code, they may separate the type check from the cast, and then the cast becomes dangerous. 
+
+The third function, `numberWithSwitch,` addresses both issues by eliminating the need for a variable assignment and combining the type check with the switch. The switch only returns the value if the expected type occurs and allows us to safely deal with other cases.
+
 ## Records
 
 Records are another recent addition to the Dart language and add further expressiveness to ADTs. Here is a simple example of a record type, which is a product type in Dart.
