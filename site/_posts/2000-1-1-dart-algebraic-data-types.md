@@ -199,7 +199,7 @@ double area(Shape shape) => switch (shape) {
 
 ## Pattern Matching in Dart
 
-Let's explore some sophisticated [pattern-matching](https://dart.dev/language/patterns) examples in Dart to showcase the power of ADTs. See my library [nadz](https://pub.dev/packages/nadz) for more complete examples of Result objects as ADTs.
+Let's explore some sophisticated [pattern-matching](https://dart.dev/language/patterns) examples in Dart to showcase the power of ADTs. See my library [nadz](https://pub.dev/packages/nadz) for more complete examples of Result objects as ADTs. This library is also loaded with extension methods to make working with ADTs easier.
 
 ```dart
 sealed class Result<T> {
