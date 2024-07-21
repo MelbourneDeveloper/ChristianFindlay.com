@@ -3,9 +3,9 @@ layout: post
 title: "How To Hire Good Software Developers"
 date: "2020/04/04 00:00:00 +0000"
 author: "Christian Findlay"
-post_image: "/assets/images/blog/hiring/header.jpeg"
-image: "/assets/images/blog/hiring/header.jpeg"
-tags: 
+post_image: "/assets/images/blog/hiring/header.webp"
+image: "/assets/images/blog/hiring/header.webp"
+tags: hiring
 categories: [software development]
 permalink: /blog/:title
 ---
