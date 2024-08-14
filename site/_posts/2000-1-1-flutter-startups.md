@@ -10,6 +10,7 @@ description:
 tags: startups apps cross-platform
 categories: [flutter]
 permalink: /blog/:title
+canonical_url: https://www.nimblesite.co/blog/flutter-startups
 ---
 
 As a startup, choosing the right technology stack to build your first app is critical. The technology you choose will significantly impact your product's success and speed of development. One popular option for building mobile apps is [Flutter](https://flutter.dev/), a UI toolkit developed by Google. This article explores why Flutter is an excellent choice for startups building their first app. We'll also compare Flutter with other popular frameworks.
