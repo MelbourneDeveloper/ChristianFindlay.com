@@ -91,3 +91,5 @@ Wrap Up
 -------
 
 Interviewers regularly surround themselves with people who think as they do. This is a horrible feature of the software industry, and I feel as though it is one of the biggest obstacles for diversity. There are plenty of talented people out there that think very differently to you and the people you've surrounded yourself with. Have an open mind when hiring and treat people with respect. It's not just about making them feel good - it's about the impression of the organization that you give them. It's also about finding the diamonds in the rough that can contribute a lot to your organization over the long run.
+
+This [article](https://www.nimblesite.co/blog/how-to-hire-good-software-developers) belongs to [Nimblesite](https://www.nimblesite.co). Read more from their blog [here](https://www.nimblesite.co/blog).
