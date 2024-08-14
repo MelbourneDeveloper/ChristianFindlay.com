@@ -116,3 +116,5 @@ class GradientButton extends StatelessWidget {
 
 ## Conclusion
 It's essential to choose a technology stack that can help you build high-performance apps quickly and efficiently. Flutter is an excellent choice for startups building their first app because it offers customizable UI, a single codebase, high performance, and a development experience that your team will love. With Flutter, you can build visually stunning apps with expressive and flexible designs that are responsive and smooth. Moreover, Flutter's robust testing tools and powerful debugging toolkit make it easier for developers to test and optimize their apps for speed and efficiency. So, if you're a startup looking to build your first app, Flutter is definitely worth considering.
+
+This [article](https://www.nimblesite.co/blog/flutter-startups) belongs to [Nimblesite](https://www.nimblesite.co). Read more from their blog [here](https://www.nimblesite.co/blog).
