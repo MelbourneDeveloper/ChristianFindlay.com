@@ -8,6 +8,7 @@ image: "/assets/images/blog/hiring/header.webp"
 tags: hiring
 categories: [software development]
 permalink: /blog/:title
+canonical_url: https://www.nimblesite.co/blog/how-to-hire-good-software-developers
 ---
 
 If you're reading this, you're probably a development lead or someone else in charge of interviewing or hiring development staff. This article is based on my experience, what has worked for me, and what I've noticed other people doing that doesn't seem to work. I'm not going to pretend that I'm an expert on this topic, but I feel as though I've got some thinking to add to this topic, and hopefully, this will strike a chord with people who are trying to find talented developers. 
