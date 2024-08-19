@@ -10,6 +10,7 @@ tags: flutter app-development chatgpt ai beginners-guide
 categories: flutter
 permalink: /blog/:title
 description: Step into the world of app development with our beginner-friendly guide. Learn how to create stunning Flutter apps with the aid of ChatGPT. No prior experience needed!
+canonical_url: https://www.nimblesite.co/blog/flutter-chatgpt
 ---
 
 [Introduction](#introduction)
@@ -160,4 +161,8 @@ Yes, I'm working on [Context Note](https://www.contextnote.com/), which gives yo
 
 - Can ChatGPT write my entire app?
 
-Yes, but it may require many iterations, and eventually, you will probably hit a point where you need an experienced Flutter developer to maintain the finished product. Reach out to me [here](/#contact).
+Yes, but it may require many iterations, and eventually, you will probably hit a point where you need an experienced Flutter developer to maintain the finished product. 
+
+This article's real home is [here](https://www.nimblesite.co/blog/flutter-chatgpt)
+
+Reach out to us [here](/#contact).
