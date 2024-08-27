@@ -10,13 +10,14 @@ description: Discover the benefits of full app widget testing in Flutter, and le
 tags: testing
 categories: flutter
 permalink: /blog/:title
+canonical_url: https://www.nimblesite.co/blog/flutter_full_app_widget_testing/
 ---
-
-I offer full widget testing training for your team. [Book a session](/contact) to learn how to test your Flutter apps.
 
 Testing is a critical aspect of software development. It ensures the quality and reliability of an app and allows you to make changes over time without the fear of bugs occurring. Flutter has several [types of tests](https://docs.flutter.dev/testing), including unit tests, widget tests, and integration tests. Unit testing focuses on testing the logic of individual components of an application. While this can sometimes be useful for isolating the logic, it does not test the UI, and this is the most important part of a Flutter app. 
 
 This blog post takes a deep dive into the advantages of full app [widget testing](https://docs.flutter.dev/cookbook/testing/widget/introduction) and explains how it's more comprehensive than unit testing for controllers. Full app widget tests test the entire widget tree instead of focusing on a single widget. This allows you to verify that the whole app works as intended This post will also provide code examples, discuss dependency injection, and explore the broader concepts of automated testing and UI behavior.
+
+This article belongs to [Nimblesite](https://www.nimblesite.co). They specialize in widget testing and training. Call them on <a href="tel:1300794205">1300 794 205</a>, send an email at <strong>sales at nimblesite.co</strong>, or fill out the [contact form](https://www.nimblesite.co/#contact)
 
 ## Why Full App Widget Testing?
 
