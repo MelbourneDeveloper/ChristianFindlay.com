@@ -63,6 +63,8 @@ Modularity can support maintainability. In large systems, where different teams 
 Systems that require frequent updates or need to be highly adaptable, modularity can theoretically allow for rapid iteration without the need to overhaul the entire system. In those cases, the benefits of modularity can outweigh the potential downsides of increased complexity.
 
 
+### Modular Code Is Easier To Reason About 
+
 ---
 
 ### Managed Change Doesn't Require Modularity
