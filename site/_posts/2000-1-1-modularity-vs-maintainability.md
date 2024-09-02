@@ -66,6 +66,7 @@ For systems that require frequent updates or need to be highly adaptable, modula
 
 Robert C. Martin's Clean Architecture is an approach to building software with modular components by dividing the app or service into layers [^1]. SOLID is a set of principles that apply to the individual elements of the code themselves. Both approaches produce modular code, and if you follow these approaches in full, it becomes possible to lift almost any component out of the codebase and reuse it externally. Or replace an app component with an external component without affecting the functioning of the system.
 
+
 Clean Architecture proposes a separation of concerns through layers, with dependencies pointing inward. 
 
 > The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity.
