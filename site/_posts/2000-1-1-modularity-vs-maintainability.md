@@ -36,19 +36,19 @@ A key aspect of maintainability is understandability. If developers can easily u
 
 Maintainability also involves minimizing the risk of introducing new bugs when making changes, which requires a well-organized codebase with high-quality automated testing.
 
-### Code As a Liability...
+### Code As a Liability
 
---
+Code itself is a liability. Every line of code written requires maintenance, introduces potential for bugs, and adds complexity to the system. This perspective challenges the notion that more code or more modular code is inherently better.
+
+Developers should strive for simplicity and clarity, aiming to solve problems with as little code as possible. This approach often leads to more maintainable systems, as there's simply less to understand and manage.
 
 ### The Tension Between Modularity and Maintainability
 
 While modularity and maintainability are both desirable, they do not always align. In practice, increasing modularity can sometimes lead to a decrease in maintainability, particularly when developers pursue modularity for its own sake rather than as a response to specific design challenges.
 
-Moreover, the process of modularization can lead to overcomplexity. The system can become more complex than necessary to address the problem at hand. This can result in a codebase that is difficult to navigate and understand, reducing the overall maintainability of the system. In such cases, the effort to make the system more modular leads to a situation where maintaining the system is actually more difficult than it would have been. The original, less modular design may have been better for maintainability.
+Moreover, the process of modularization can lead to overcomplexity. The overcomplexity often comes in the form of layering, abstraction, mapping, and other indirection.  The system can become more complex than necessary to address the problem at hand. This can result in a codebase that is difficult to navigate and understand, reducing the overall maintainability of the system. In such cases, the effort to make the system more modular leads to a situation where maintaining the system is actually more difficult than it would have been. The original, less modular design may have been better for maintainability.
 
-The overcomplexity often comes in the form of layering, abstraction, mapping, and other indirection. 
-
-> The overcomplexity often comes in the form of layering, abstraction, mapping, and other indirection. 
+> The overcomplexity often comes in the form of layering, abstraction, mapping, and other indirection.  
 
 #### Script Example
 
@@ -61,6 +61,12 @@ The once-simple script may now involve multiple files, interfaces, and dependenc
 Modularity can support maintainability. In large systems, where different teams are responsible for different parts of the system, modularity can prevent changes in one part of the system from inadvertently affecting other parts. By enforcing clear boundaries between modules, modularity can make it easier to understand and manage one section of the system. 
 
 For systems that require frequent updates or need to be highly adaptable, modularity can theoretically allow for rapid iteration without the need to overhaul the entire system. In those cases, the benefits of modularity can outweigh the potential downsides of increased complexity.
+
+#### Vscode Extensions
+
+The differene between a simple code editor and a full-fledged IDE is extensibility. Vscode is an example of a code editor that has a rich ecosystem of extensions. Allowing for extensibility requires modularity. The designers understood that each part of system needs to be modifiable and extensible. This is modularity is truly useful.
+
+[EXPAND]
 
 ### Clean Architecture and The SOLID Principles
 
@@ -83,7 +89,7 @@ public record User(int Id, string Name, string Email);
 public static class GetUserUseCase
 {
     public static User Execute(int userId, IUserRepository repository) =>
-        repository.GetUser(userId);
+ repository.GetUser(userId);
 }
 
 // Interface Adapter Layer
@@ -97,7 +103,7 @@ public record UserDto(int Id, string Name, string Email);
 public static class UserPresenter
 {
     public static UserDto ToDto(User user) =>
-        new(user.Id, user.Name, user.Email);
+ new(user.Id, user.Name, user.Email);
 }
 
 // Framework & Drivers Layer
@@ -106,36 +112,36 @@ public class UserController
     private readonly IUserRepository _repository;
 
     public UserController(IUserRepository repository)
-    {
+ {
         _repository = repository;
-    }
+ }
 
     public UserDto GetUser(int userId)
-    {
+ {
         var user = GetUserUseCase.Execute(userId, _repository);
         return UserPresenter.ToDto(user);
-    }
+ }
 }
 
 public class DatabaseUserRepository : IUserRepository
 {
     public User GetUser(int userId)
-    {
-        // Simulating database access
+ {
+ // Simulating database access
         return new User(userId, $"User {userId}", $"user{userId}@example.com");
-    }
+ }
 }
 
 // Client code
 public static class Program
 {
     public static void Main()
-    {
+ {
         var repository = new DatabaseUserRepository();
         var controller = new UserController(repository);
         var userDto = controller.GetUser(1);
-        Console.WriteLine($"User: {userDto.Name}, Email: {userDto.Email}");
-    }
+ Console.WriteLine($"User: {userDto.Name}, Email: {userDto.Email}");
+ }
 }
 ```
 
@@ -160,18 +166,18 @@ public interface IUserRepository
 public class DatabaseUserRepository : IUserRepository
 {
     public async Task<User> GetUserAsync(int userId)
-    {
-        // Simulating async database access
-        await Task.Delay(100); // Simulate network delay
+ {
+ // Simulating async database access
+ await Task.Delay(100); // Simulate network delay
         return new User(userId, $"User {userId}", $"user{userId}@example.com");
-    }
+ }
 }
 
 // Application Logic
 public static class UserService
 {
     public static async Task<User> GetUserAsync(int userId, IUserRepository repository) =>
-        await repository.GetUserAsync(userId);
+ await repository.GetUserAsync(userId);
 
     public static string FormatUserInfo(User user) =>
         $"User: {user.Name}, Email: {user.Email}";
@@ -181,21 +187,21 @@ public static class UserService
 public static class UserPresentation
 {
     public static async Task DisplayUserInfo(int userId, IUserRepository repository)
-    {
+ {
         var user = await UserService.GetUserAsync(userId, repository);
         var formattedInfo = UserService.FormatUserInfo(user);
-        Console.WriteLine(formattedInfo);
-    }
+ Console.WriteLine(formattedInfo);
+ }
 }
 
 // Client code
 public static class Program
 {
     public static async Task Main()
-    {
+ {
         var repository = new DatabaseUserRepository();
-        await UserPresentation.DisplayUserInfo(1, repository);
-    }
+ await UserPresentation.DisplayUserInfo(1, repository);
+ }
 }
 ```
 
@@ -210,28 +216,28 @@ public record User(int Id, string Name, string Email);
 public class UserService
 {
     public virtual async Task<User> GetUserAsync(int userId)
-    {
-        await Task.Delay(100); // Simulate network delay
+ {
+ await Task.Delay(100); // Simulate network delay
         return new User(userId, $"User {userId}", $"user{userId}@example.com");
-    }
+ }
 
     public string FormatUserInfo(User user) =>
         $"User: {user.Name}, Email: {user.Email}";
 
     public async Task DisplayUserInfo(int userId)
-    {
+ {
         var user = await GetUserAsync(userId);
-        Console.WriteLine(FormatUserInfo(user));
-    }
+ Console.WriteLine(FormatUserInfo(user));
+ }
 }
 
 public static class Program
 {
     public static async Task Main()
-    {
+ {
         var service = new UserService();
-        await service.DisplayUserInfo(1);
-    }
+ await service.DisplayUserInfo(1);
+ }
 }
 ```
 
@@ -242,45 +248,91 @@ Notice how this approach results in far less code, is much easier to read and re
 public class MockUserService : UserService
 {
     public override Task<User> GetUserAsync(int userId)
-    {
+ {
         var mockUser = new User(userId, "Mock User", "mock@example.com");
         return Task.FromResult(mockUser);
-    }
+ }
 }
 ```
 
-The SOLID principles, also introduced by Martin, aim to make software designs more understandable, flexible, and maintainable[^2]. However, strict adherence to these principles can lead to unnecessary abstraction and complexity. For instance, the Interface Segregation Principle might result in an explosion of small interfaces. This increases the cognitive load for developers.
+
+[INSERT SOLID EXAMPLES HERE] <- demonstrate how SOLID leads to more code and indirection
 
 While both these approaches do indeed lead to modularity, they often introduce additional complexity and indirection, which makes the system harder to understand and maintain.
 
-A study by Scanniello et al. found that while applying SOLID principles improved some aspects of software quality, it did not significantly improve maintainability[^3]. This suggests that blindly following these principles without considering the specific context of a project may not always lead to the desired outcomes.
+A study by Scanniello et al. found that while applying SOLID principles improved some aspects of software quality, it did not significantly improve maintainability[^3].[INSERT QUOTE ] This suggests that blindly following these principles without considering the specific context of a project may not always lead to the desired outcomes.
 
 ### Automated Testing's Role in Maintainability
 
-Automated testing is indeed crucial for maintainability. It provides a safety net for refactoring and helps catch regressions early. A study by Spadini et al. found that code with tests tends to be more maintainable[^4].
+Automated testing is the single most important factor for maintainability [citation]. It provides a safety net for refactoring and helps catch regressions early. A study by Spadini et al. found that code with tests tends to be more maintainable[^4]. 
 
-However, it's important to note that tests themselves require maintenance. Overly complex or brittle tests can become a burden. Martin Fowler warns against the "test-induced design damage," where the desire for testability leads to designs that are harder to understand and maintain[^5].
+Coarse tests that focus on the user interface and app side effects test the app's behavior without tangling the tests with implementation details. They give you confidence that the app's behavior stays consistent without affecting your ability to refactor.
+
+However, it's important to note that test code also requires maintenance. Overly complex or brittle tests can become a burden. Martin Fowler warns against "test-induced design damage," where the desire for testability leads to designs that are harder to understand and maintain[^5].
+
+If you introduce too much [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive), i.e., low-level unit tests, your test suite will blow out in size and make your app less refactorable. 
+
+Ultimately, how easy your app is to refactor is one of the most important measures of maintainability.
 
 ### Striking the Right Balance
 
-Finding the right balance between modularity and maintainability requires careful consideration of the specific project context. As noted by Bass et al. in their book on software architecture, there's no one-size-fits-all solution in software design[^6].
+Finding the right balance between modularity and maintainability requires careful consideration of the specific project context. As Bass et al. note in their book on software architecture, there's no one-size-fits-all solution in software design[6].
 
-For some systems, a more monolithic approach might be more maintainable. For example, the success of Ruby on Rails in building maintainable web applications with a relatively monolithic structure challenges the notion that high modularity is always necessary[^7].
+For some systems, a more monolithic approach might be more maintainable. For example, Ruby on Rails's success in building maintainable web applications with a relatively monolithic structure challenges the notion that high modularity is always necessary[7].
 
 ### Does My System Need Modularity?
 
-The need for modularity depends on various factors, including system size, expected lifespan, and rate of change. As pointed out by Parnas in his seminal paper on modular programming, modularity is most beneficial when we anticipate changes[^8].
+The need for modularity depends on various factors, including system size, expected lifespan, and rate of change. As Parnas pointed out in his seminal paper on modular programming, modularity is most beneficial when we anticipate changes [8]. [EXPAND WITH QUOTE]
 
-However, premature modularization can be counterproductive. A case study by Sarkar et al. on large-scale software systems found that excessive modularity can lead to increased complexity and reduced maintainability[^9].
+However, premature modularization can be counterproductive. A case study by Sarkar et al. on large-scale software systems found that excessive modularity can lead to increased complexity and reduced maintainability [^9].
 
 ### Managed Change Doesn't Require Modularity
 
-The idea that software systems need to be designed for easy part replacement, like cars, is a misconception. Unlike physical systems, software can be modified in place. Feathers, in his book on working with legacy code, emphasizes the importance of incremental change and refactoring over wholesale replacement[^10].
+We don't need to design software systems like cars. The need to replace components in the way we replace car parts, is a misconception. Unlike physical systems, we can modify software in place. In the book  Working with Legacy Code, Feathers emphasizes the importance of incremental change and refactoring over wholesale replacement[^10]. [INSERT QUOTE]
 
 Version control systems and modern deployment practices allow for gradual, managed changes without requiring high levels of modularity. This approach often leads to more maintainable systems than those designed with excessive modularity from the start.
 
+### The Cost of Abstraction
+
+While abstraction is a powerful tool for managing complexity, it comes with a cost. Each layer of abstraction introduces cognitive overhead and the potential for misunderstanding. As noted by Joel Spolsky in his "Law of Leaky Abstractions," all non-trivial abstractions are leaky to some degree[^11]. [INSERT QUOTE]
+
+This means that developers often need to understand not just the abstraction but also what's happening underneath it. In many cases, a more direct approach with fewer abstractions can lead to code that's easier to understand and maintain.
+
 ### Conclusion
 
-While modularity and maintainability are important attributes of software systems, they are not synonymous, and increasing one doesn't necessarily improve the other. Developers must carefully assess the trade-offs involved in increasing modularity and strive for a balance that supports both the system's flexibility and maintainability.
+Modularity and maintainability are both important aspects of software design, but they are not always aligned. While modularity can contribute to maintainability in large, complex systems, excessive modularity can actually hinder maintainability by introducing unnecessary complexity and indirection.
 
-The key is to avoid dogmatic adherence to principles and instead focus on creating systems that are sustainable and easy to manage over time. This often involves a pragmatic approach that considers the specific needs of the project and team, rather than blindly following architectural trends or patterns.
+The key to creating maintainable software lies in striking the right balance for each specific project. You should:
+
+1. Prioritize simplicity and clarity over unnecessary abstraction
+2. Focus on the core logic rather than technical patterns
+3. Use automated testing judiciously to support maintainability
+4. Recognize that code itself is a liability and strive to solve problems with less code
+5. Embrace incremental change and refactor instead of designing for wholesale replacement
+
+Ultimately, the goal should be to create systems that are easy to understand, modify, and extend over time. This often means resisting the urge to over-engineer or prematurely optimize for modularity and instead focusing on writing clear, concise code that directly addresses the problem at hand.
+
+[^1]: Martin, [missing]
+https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/0134494164
+
+[^2]: Martin, R. C. (2000). Design Principles and Design Patterns. Object Mentor. http://www.cvc.uab.es/shared/teach/a21291/temes/object_oriented_design/materials_adicionals/principles_and_patterns.pdf
+
+[^3]: Scanniello, G., et al. (2019). "On the impact of SOLID principles on software changeability: a preliminary investigation." Empirical Software Engineering, 24(5), 3139-3176. https://link.springer.com/article/10.1007/s10664-018-9670-1
+
+[^4]: Spadini, D., et al. (2018). "On the Relation of Test Smells to Software Code Quality." 2018 IEEE International Conference on Software Maintenance and Evolution (ICSME). https://ieeexplore.ieee.org/document/8530039
+
+[^5]: Fowler, M. (2011). "Test Induced Design Damage." Martin Fowler's Blog. https://martinfowler.com/articles/is-tdd-dead/test-induced-design-damage.html
+
+[^6]: Bass, L., Clements, P., & Kazman, R. (2012). Software Architecture in Practice (3rd ed.). Addison-Wesley Professional. https://www.amazon.com/Software-Architecture-Practice-3rd-Engineering/dp/0321815734
+
+[^7]: Hansson, D. H. (2014). "The Majestic Monolith." Signal v. Noise. https://m.signalvnoise.com/the-majestic-monolith/
+
+[^8]: Parnas, D. L. (1972). "On the criteria to be used in decomposing systems into modules." Communications of the ACM, 15(12), 1053-1058. https://dl.acm.org/doi/10.1145/361598.361623
+
+[^9]: Sarkar, S., et al. (2009). "Modularization of a Large-Scale Business Application: A Case Study." IEEE Software, 26(2), 28-35. https://ieeexplore.ieee.org/document/4786942
+
+[^10]: Feathers, M. (2004). Working Effectively with Legacy Code. Prentice Hall. https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052
+
+[^11]: Spolsky, J. (2002). "The Law of Leaky Abstractions." Joel on Software. https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/
+
+[^12]: Evans, E. (2003). Domain-Driven Design: Tackling Complexity in the Heart of Software. Addison-Wesley Professional. https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215
