@@ -64,9 +64,15 @@ For systems that require frequent updates or need to be highly adaptable, modula
 
 #### Vscode Extensions
 
-The differene between a simple code editor and a full-fledged IDE is extensibility. Vscode is an example of a code editor that has a rich ecosystem of extensions. Allowing for extensibility requires modularity. The designers understood that each part of system needs to be modifiable and extensible. This is modularity is truly useful.
+The difference between a simple code editor and a full-fledged IDE is extensibility. Vscode is an example of a code editor that has a rich ecosystem of extensions. This allows for extensibility and requires modularity. The designers understood that each part of system needs to be modifiable and extensible. This type of modularity is truly useful.
 
-[EXPAND]
+The extensibility of VSCode through its rich ecosystem of extensions is a prime example of how modularity can support maintainability. This modular architecture allows developers to enhance the editor's functionality without modifying its core codebase. 
+
+For example, the VSCode Extension API provides clear interfaces for extension developers to hook into various parts of the editor. This modularity enables rapid innovation and customization while maintaining the stability of the core application. As stated in the [VSCode Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace):
+
+> VS Code's rich extensibility model lets extension authors plug directly into the VS Code UI and contribute functionality through the same APIs used by VS Code
+
+This approach demonstrates how well-designed modularity can enhance both flexibility and maintainability in large, complex systems.
 
 ### Clean Architecture and The SOLID Principles
 
@@ -74,9 +80,11 @@ Robert C. Martin's Clean Architecture is an approach to building software with m
 
 Clean Architecture proposes a separation of concerns through layers, with dependencies pointing inward. Martin states:
 
-> The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity.
+> The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity. 
+>
+> ~[Robert C. Martin - Clean Coder](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-[Clean Coder](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
+
 
 While elegant in theory, in practice, this approach often leads to excessive mapping, abstractions, and layers of similar calls. Consider this typical example in C# .NET:
 
