@@ -273,6 +273,8 @@ While both these approaches do indeed lead to modularity, they often introduce a
 
 A study by Scanniello et al. found that while applying SOLID principles improved some aspects of software quality, it did not significantly improve maintainability[^3].[INSERT QUOTE ] This suggests that blindly following these principles without considering the specific context of a project may not always lead to the desired outcomes.
 
+So, we see how the ostensive goal of increasing maintainability through modularity can actually lead to the opposite effect. We need to be careful about following patterns and principles that increase modularity at the expense of maintainability.
+
 ### Automated Testing's Role in Maintainability
 
 Automated testing is the single most important factor for maintainability [citation]. It provides a safety net for refactoring and helps catch regressions early. A study by Spadini et al. found that code with tests tends to be more maintainable[^4]. 
