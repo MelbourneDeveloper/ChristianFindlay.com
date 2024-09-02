@@ -281,9 +281,13 @@ Automated testing is the single most important factor for maintainability [citat
 
 Coarse tests that focus on the user interface and app side effects test the app's behavior without tangling the tests with implementation details. They give you confidence that the app's behavior stays consistent without affecting your ability to refactor.
 
-However, it's important to note that test code also requires maintenance. Overly complex or brittle tests can become a burden. Martin Fowler warns against "test-induced design damage," where the desire for testability leads to designs that are harder to understand and maintain[^5].
+However, it's important to note that test code also requires maintenance. Overly complex or brittle tests can become a burden. David Heinemeier Hansson warns against "test-induced design damage," where the desire for testability leads to designs that are harder to understand and maintain
 
-If you introduce too much [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive), i.e., low-level unit tests, your test suite will blow out in size and make your app less refactorable. 
+> Such damage is defined as changes to your code that either facilitates a) easier test-first, b) speedy tests, or c) unit tests, but does so by harming the clarity of the code through — usually through needless indirection and conceptual overhead.
+> 
+> ~ [David Heinemeier Hansson](https://dhh.dk/2014/test-induced-design-damage.html)
+
+In other words, if you shoot for modularity for the purpose of [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive), i.e., low-level unit tests, it will add indirection to your code, your test suite will blow out in size and make your app less refactorable. 
 
 Ultimately, how easy your app is to refactor is one of the most important measures of maintainability.
 
