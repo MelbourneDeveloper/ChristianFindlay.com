@@ -70,16 +70,15 @@ The differene between a simple code editor and a full-fledged IDE is extensibili
 
 ### Clean Architecture and The SOLID Principles
 
-Robert C. Martin's Clean Architecture is an approach to building software with modular components by dividing the app or service into layers [^1]. SOLID is a set of principles that apply to the individual elements of the code themselves. Both approaches produce modular code, and if you follow these approaches in full, it becomes possible to lift almost any component out of the codebase and reuse it externally. Or replace an app component with an external component without affecting the functioning of the system.
+Robert C. Martin's Clean Architecture is an approach to building software with modular components by dividing the app or service into layers [^1]. SOLID is a set of principles that apply to the individual elements of the code themselves. Both approaches produce modular code and aim to make components reusable and replaceable without affecting the overall functioning of the system.
 
-
-Clean Architecture proposes a separation of concerns through layers, with dependencies pointing inward. 
+Clean Architecture proposes a separation of concerns through layers, with dependencies pointing inward. Martin states:
 
 > The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity.
 
-https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
+[Clean Coder](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
-The principle seems elegant, but in practice, it leads to mapping, abstractions, and, quite often, layers of calls that basically do the same thing. Let's take an example, which is very typical of what I see in C# .NET codebases.
+While elegant in theory, in practice, this approach often leads to excessive mapping, abstractions, and layers of similar calls. Consider this typical example in C# .NET:
 
 ```csharp
 // Domain Layer
