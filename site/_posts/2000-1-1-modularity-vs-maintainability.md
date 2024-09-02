@@ -78,13 +78,17 @@ This approach demonstrates how well-designed modularity can enhance both flexibi
 
 Robert C. Martin's Clean Architecture is an approach to building software with modular components by dividing the app or service into layers [^1]. SOLID is a set of principles that apply to the individual elements of the code themselves. Both approaches produce modular code and aim to make components reusable and replaceable without affecting the overall functioning of the system.
 
+Martin emphasizes the importance of architecture in minimizing maintenance costs:
+
+> The goal of software architecture is to minimize the human resources required to build and maintain the required system
+>
+> ― [Robert C. Martin, Clean Architecture](https://www.goodreads.com/quotes/9527738-the-goal-of-software-architecture-is-to-minimize-the-human) 
+
 Clean Architecture proposes a separation of concerns through layers, with dependencies pointing inward. Martin states:
 
 > The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity. 
 >
-> ~[Robert C. Martin - Clean Coder](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
-
-
+> ~[Robert C. Martin - The Clean Architecture - Clean Coder](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)
 
 While elegant in theory, in practice, this approach often leads to excessive mapping, abstractions, and layers of similar calls. Consider this typical example in C# .NET:
 
