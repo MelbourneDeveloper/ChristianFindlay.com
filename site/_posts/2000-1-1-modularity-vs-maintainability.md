@@ -64,9 +64,9 @@ For systems that require frequent updates or need to be highly adaptable, modula
 
 #### Vscode Extensions
 
-The difference between a simple code editor and a full-fledged IDE is extensibility. Vscode is an example of a code editor that has a rich ecosystem of extensions. This allows for extensibility and requires modularity. The designers understood that each part of system needs to be modifiable and extensible. This type of modularity is truly useful.
+The difference between a simple code editor and a full-fledged IDE is extensibility. Vscode is an example of a code editor that has a rich ecosystem of extensions. This allows for extensibility and requires modularity. The designers understood that each part of the system needs to be adaptable and extensible. This type of modularity is truly useful.
 
-The extensibility of VSCode through its rich ecosystem of extensions is a prime example of how modularity can support maintainability. This modular architecture allows developers to enhance the editor's functionality without modifying its core codebase. 
+VSCode's extensibility through its rich ecosystem of extensions is a prime example of how modularity can support maintainability. This modular architecture allows developers to enhance the editor's functionality without modifying its core codebase. 
 
 For example, the VSCode Extension API provides clear interfaces for extension developers to hook into various parts of the editor. This modularity enables rapid innovation and customization while maintaining the stability of the core application. As stated in the [VSCode Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-marketplace):
 
@@ -179,11 +179,11 @@ public interface IUserRepository
 public class DatabaseUserRepository : IUserRepository
 {
     public async Task<User> GetUserAsync(int userId)
-    {
-        // Simulating async database access
-        await Task.Delay(100); // Simulate network delay
+ {
+ // Simulating async database access
+ await Task.Delay(100); // Simulate network delay
         return new User(userId, $"User {userId}", $"user{userId}@example.com");
-    }
+ }
 }
 
 // Application Logic
@@ -277,49 +277,49 @@ The SOLID principles also aim to improve code quality and maintainability. But, 
 public class OrderProcessor
 {
     public void ProcessOrder(Order order)
-    {
-        // Validate order
+ {
+ // Validate order
         if (order.Items.Count == 0)
-        {
+ {
             throw new InvalidOperationException("Order must have at least one item.");
-        }
-        // Calculate total
+ }
+ // Calculate total
         decimal total = order.Items.Sum(item => item.Price * item.Quantity);
-        // Apply discount
+ // Apply discount
         if (order.Customer.IsPreferred)
-        {
+ {
             total *= 0.9m; // 10% discount for preferred customers
-        }
-        // Save order
+ }
+ // Save order
         SaveOrderToDatabase(order, total);
-        // Send confirmation email
+ // Send confirmation email
         SendConfirmationEmail(order.Customer.Email, order.Id, total);
-    }
+ }
 
     protected virtual void SaveOrderToDatabase(Order order, decimal total)
-    {
+ {
         using var connection = new SqlConnection(connectionString);
-        connection.Open();
+ connection.Open();
         using var command = new SqlCommand(
             "INSERT INTO Orders (OrderId, CustomerId, TotalAmount) VALUES (@OrderId, @CustomerId, @Total)",
             connection);
-        command.Parameters.AddWithValue("@OrderId", order.Id);
-        command.Parameters.AddWithValue("@CustomerId", order.Customer.Id);
-        command.Parameters.AddWithValue("@Total", total);
-        command.ExecuteNonQuery();
-    }
+ command.Parameters.AddWithValue("@OrderId", order.Id);
+ command.Parameters.AddWithValue("@CustomerId", order.Customer.Id);
+ command.Parameters.AddWithValue("@Total", total);
+ command.ExecuteNonQuery();
+ }
 
     protected virtual void SendConfirmationEmail(string email, int orderId, decimal total)
-    {
+ {
         using var client = new SmtpClient("smtp.example.com");
         var message = new MailMessage(
-            from: "orders@example.com",
-            to: email,
-            subject: $"Order {orderId} Confirmation",
-            body: $"Thank you for your order. Your total is ${total:F2}."
-        );
-        client.Send(message);
-    }
+ from: "orders@example.com",
+ to: email,
+ subject: $"Order {orderId} Confirmation",
+ body: $"Thank you for your order. Your total is ${total:F2}."
+ );
+ client.Send(message);
+ }
 }
 ```
 
@@ -329,14 +329,14 @@ Notice how all the code is in one place and we don't need to go looking for the 
 public class MockOrderProcessor : OrderProcessor
 {
     protected override void SaveOrderToDatabase(Order order, decimal total)
-    {
-        Console.WriteLine($"Mocked SaveOrderToDatabase for Order ID: {order.Id}, Total: {total}");
-    }
+ {
+ Console.WriteLine($"Mocked SaveOrderToDatabase for Order ID: {order.Id}, Total: {total}");
+ }
 
     protected override void SendConfirmationEmail(string email, int orderId, decimal total)
-    {
-        Console.WriteLine($"Mocked SendConfirmationEmail to {email} for Order ID: {orderId}, Total: {total}");
-    }
+ {
+ Console.WriteLine($"Mocked SendConfirmationEmail to {email} for Order ID: {orderId}, Total: {total}");
+ }
 }
 ```
 
@@ -381,25 +381,25 @@ public class OrderProcessor
         IDiscountApplier discountApplier,
         IOrderRepository repository,
         IEmailService emailService)
-    {
+ {
         this.validator = validator;
         this.calculator = calculator;
         this.discountApplier = discountApplier;
         this.repository = repository;
         this.emailService = emailService;
-    }
+ }
 
     public void ProcessOrder(Order order)
-    {
+ {
         if (!validator.Validate(order))
-        {
+ {
             throw new InvalidOperationException("Invalid order.");
-        }
+ }
         decimal total = calculator.Calculate(order);
         total = discountApplier.ApplyDiscount(total, order.Customer);
-        repository.Save(order, total);
-        emailService.SendConfirmationEmail(order.Customer.Email, order.Id, total);
-    }
+ repository.Save(order, total);
+ emailService.SendConfirmationEmail(order.Customer.Email, order.Id, total);
+ }
 }
 ```
 Notice how we have to go looking for the implementation of each method, and the class's constructor is full of dependencies. While these principles aim to improve code quality, their rigid application can lead to increased indirection. That's not to say that the first design is better than the second, but rather that it's not a given that modularity leads to maintainability.
@@ -418,7 +418,7 @@ However, it's important to note that test code also requires maintenance. Overly
 > 
 > ~ [David Heinemeier Hansson](https://dhh.dk/2014/test-induced-design-damage.html)
 
-In other words, if you shoot for modularity for the purpose of [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive), i.e., low-level unit tests, it will add indirection to your code, your test suite will blow out in size and make your app less refactorable. 
+In other words, if you shoot for modularity for [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive), i.e., low-level unit tests, you will add indirection to your code, your test suite will expand in size, and your app will be less refactorable. 
 
 Ultimately, how easy your app is to refactor is one of the most important measures of maintainability.
 
@@ -436,10 +436,9 @@ The need for modularity depends on various factors. These include system size, e
 > 
 > ~ [D.L. Parnas](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
 
-This is where abstractions can be useful. When we know that we will need to change something in future, we can create an abstraction to make that easier. 
+This is where abstractions can be useful. When we know that we will need to change something in the future, we can create an abstraction to make that easier. 
 
 However, premature modularization can be counterproductive. [QUOTE TO SUPPORT]
-
 
 ### Managed Change Doesn't Require Modularity
 
