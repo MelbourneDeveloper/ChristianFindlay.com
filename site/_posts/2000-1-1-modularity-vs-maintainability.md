@@ -76,6 +76,8 @@ This approach demonstrates how well-designed modularity can enhance both flexibi
 
 ### Clean Architecture and The SOLID Principles
 
+#### Clean Architecture
+
 Robert C. Martin's Clean Architecture is an approach to building software with modular components by dividing the app or service into layers [^1]. SOLID is a set of principles that apply to the individual elements of the code themselves. Both approaches produce modular code and aim to make components reusable and replaceable without affecting the overall functioning of the system.
 
 Martin emphasizes the importance of architecture in minimizing maintenance costs:
@@ -266,13 +268,128 @@ public class MockUserService : UserService
 }
 ```
 
-[INSERT SOLID EXAMPLES HERE] <- demonstrate how SOLID leads to more code and indirection
+#### SOLID Principles
 
-While both these approaches do indeed lead to modularity, they often introduce additional complexity and indirection, which makes the system harder to understand and maintain.
+The SOLID principles also aim to improve code quality and maintainability. But, again they can sometimes lead to increased complexity and indirection. Let's take a look at an example.
 
-A study by Scanniello et al. found that while applying SOLID principles improved some aspects of software quality, it did not significantly improve maintainability[^3].[INSERT QUOTE ] This suggests that blindly following these principles without considering the specific context of a project may not always lead to the desired outcomes.
+**Before applying SOLID principles**
+```csharp
+public class OrderProcessor
+{
+    public void ProcessOrder(Order order)
+    {
+        // Validate order
+        if (order.Items.Count == 0)
+        {
+            throw new InvalidOperationException("Order must have at least one item.");
+        }
+        // Calculate total
+        decimal total = order.Items.Sum(item => item.Price * item.Quantity);
+        // Apply discount
+        if (order.Customer.IsPreferred)
+        {
+            total *= 0.9m; // 10% discount for preferred customers
+        }
+        // Save order
+        SaveOrderToDatabase(order, total);
+        // Send confirmation email
+        SendConfirmationEmail(order.Customer.Email, order.Id, total);
+    }
 
-So, we see how the ostensive goal of increasing maintainability through modularity can actually lead to the opposite effect. We need to be careful about following patterns and principles that increase modularity at the expense of maintainability.
+    protected virtual void SaveOrderToDatabase(Order order, decimal total)
+    {
+        // Simple database save operation
+        using var connection = new SqlConnection(connectionString);
+        connection.Open();
+        using var command = new SqlCommand(
+            "INSERT INTO Orders (OrderId, CustomerId, TotalAmount) VALUES (@OrderId, @CustomerId, @Total)",
+            connection);
+        command.Parameters.AddWithValue("@OrderId", order.Id);
+        command.Parameters.AddWithValue("@CustomerId", order.Customer.Id);
+        command.Parameters.AddWithValue("@Total", total);
+        command.ExecuteNonQuery();
+    }
+
+    protected virtual void SendConfirmationEmail(string email, int orderId, decimal total)
+    {
+        using var client = new SmtpClient("smtp.example.com");
+        var message = new MailMessage(
+            from: "orders@example.com",
+            to: email,
+            subject: $"Order {orderId} Confirmation",
+            body: $"Thank you for your order. Your total is ${total:F2}."
+        );
+        client.Send(message);
+    }
+}
+```
+
+Notice how all the code is in one place 
+
+**After applying SOLID principles**
+```csharp
+public interface IOrderValidator
+{
+    bool Validate(Order order);
+}
+
+public interface ITotalCalculator
+{
+    decimal Calculate(Order order);
+}
+
+public interface IDiscountApplier
+{
+    decimal ApplyDiscount(decimal total, Customer customer);
+}
+
+public interface IOrderRepository
+{
+    void Save(Order order, decimal total);
+}
+
+public interface IEmailService
+{
+    void SendConfirmationEmail(string email, int orderId, decimal total);
+}
+
+public class OrderProcessor
+{
+    private readonly IOrderValidator validator;
+    private readonly ITotalCalculator calculator;
+    private readonly IDiscountApplier discountApplier;
+    private readonly IOrderRepository repository;
+    private readonly IEmailService emailService;
+
+    public OrderProcessor(
+        IOrderValidator validator,
+        ITotalCalculator calculator,
+        IDiscountApplier discountApplier,
+        IOrderRepository repository,
+        IEmailService emailService)
+    {
+        this.validator = validator;
+        this.calculator = calculator;
+        this.discountApplier = discountApplier;
+        this.repository = repository;
+        this.emailService = emailService;
+    }
+
+    public void ProcessOrder(Order order)
+    {
+        if (!validator.Validate(order))
+        {
+            throw new InvalidOperationException("Invalid order.");
+        }
+        decimal total = calculator.Calculate(order);
+        total = discountApplier.ApplyDiscount(total, order.Customer);
+        repository.Save(order, total);
+        emailService.SendConfirmationEmail(order.Customer.Email, order.Id, total);
+    }
+}
+```
+
+While these principles aim to improve code quality, their rigid application can lead to increased complexity, and reduced maintainability. It's critical to apply these principles judiciously, considering the specific context and requirements of each project.
 
 ### Automated Testing's Role in Maintainability
 
@@ -319,7 +436,7 @@ Version control systems and modern deployment practices allow for gradual, manag
 
 While abstraction is a powerful tool for managing complexity, it comes with a cost. Each layer of abstraction introduces cognitive overhead and the potential for misunderstanding. As noted by Joel Spolsky in his "Law of Leaky Abstractions," all non-trivial abstractions are leaky to some degree[^11]:
 
-> All non-trivial abstractions, to some degree, are leaky. Abstractions fail. Sometimes a little, sometimes a lot. There’s leakage. Things go wrong. It happens all over the place when you have abstractions. Here are some examples.
+> All non-trivial abstractions, to some degree, are leaky. Abstractions fail. Sometimes a little, sometimes a lot. There's leakage. Things go wrong. It happens all over the place when you have abstractions. Here are some examples.
 >
 > ~ [Joel Spolsky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)
 
