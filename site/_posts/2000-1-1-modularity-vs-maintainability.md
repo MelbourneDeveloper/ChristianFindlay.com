@@ -318,7 +318,11 @@ Version control systems and modern deployment practices allow for gradual, manag
 
 ### The Cost of Abstraction
 
-While abstraction is a powerful tool for managing complexity, it comes with a cost. Each layer of abstraction introduces cognitive overhead and the potential for misunderstanding. As noted by Joel Spolsky in his "Law of Leaky Abstractions," all non-trivial abstractions are leaky to some degree[^11]. [INSERT QUOTE]
+While abstraction is a powerful tool for managing complexity, it comes with a cost. Each layer of abstraction introduces cognitive overhead and the potential for misunderstanding. As noted by Joel Spolsky in his "Law of Leaky Abstractions," all non-trivial abstractions are leaky to some degree[^11]:
+
+> All non-trivial abstractions, to some degree, are leaky. Abstractions fail. Sometimes a little, sometimes a lot. There’s leakage. Things go wrong. It happens all over the place when you have abstractions. Here are some examples.
+>
+> ~ [Joel Spolsky](https://www.joelonsoftware.com/2002/11/11/the-law-of-leaky-abstractions/)
 
 This means that developers often need to understand not just the abstraction but also what's happening underneath it. In many cases, a more direct approach with fewer abstractions can lead to code that's easier to understand and maintain.
 
