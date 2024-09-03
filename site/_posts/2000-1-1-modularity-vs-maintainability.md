@@ -177,11 +177,11 @@ public interface IUserRepository
 public class DatabaseUserRepository : IUserRepository
 {
     public async Task<User> GetUserAsync(int userId)
- {
- // Simulating async database access
- await Task.Delay(100); // Simulate network delay
+    {
+        // Simulating async database access
+        await Task.Delay(100); // Simulate network delay
         return new User(userId, $"User {userId}", $"user{userId}@example.com");
- }
+    }
 }
 
 // Application Logic
@@ -252,7 +252,7 @@ public static class Program
 }
 ```
 
-Notice how this approach results in far less code, is much easier to read and reason about, and still maintains the ability for mocked data access with the `virtual` keyword.
+Notice how this approach results in far less code, is much easier to read and reason about, and still maintains the ability for mocked data access with the `virtual` keyword. 
 
 ```csharp
 // Example of how to create a mock for testing
@@ -265,7 +265,6 @@ public class MockUserService : UserService
  }
 }
 ```
-
 
 [INSERT SOLID EXAMPLES HERE] <- demonstrate how SOLID leads to more code and indirection
 
@@ -312,7 +311,7 @@ However, premature modularization can be counterproductive. [QUOTE TO SUPPORT]
 
 ### Managed Change Doesn't Require Modularity
 
-We don't need to design software systems like cars. The need to replace components in the way we replace car parts, is a misconception. Unlike physical systems, we can modify software in place. In the book  Working with Legacy Code, Feathers emphasizes the importance of incremental change and refactoring over wholesale replacement[^10]. [INSERT QUOTE]
+We don't need to design software systems like cars. The need to replace components in the way we replace car parts, is a misconception. Unlike physical systems, we can modify software in place. 
 
 Version control systems and modern deployment practices allow for gradual, managed changes without requiring high levels of modularity. This approach often leads to more maintainable systems than those designed with excessive modularity from the start.
 
@@ -356,8 +355,6 @@ https://www.amazon.com/Clean-Architecture-Craftsmans-Software-Structure/dp/01344
 [^7]: Hansson, D. H. (2014). "The Majestic Monolith." Signal v. Noise. https://m.signalvnoise.com/the-majestic-monolith/
 
 [^8]: Parnas, D. L. (1972). "On the criteria to be used in decomposing systems into modules." Communications of the ACM, 15(12), 1053-1058. https://dl.acm.org/doi/10.1145/361598.361623
-
-[^9]: Sarkar, S., et al. (2009). "Modularization of a Large-Scale Business Application: A Case Study." IEEE Software, 26(2), 28-35. https://ieeexplore.ieee.org/document/4786942
 
 [^10]: Feathers, M. (2004). Working Effectively with Legacy Code. Prentice Hall. https://www.amazon.com/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052
 
