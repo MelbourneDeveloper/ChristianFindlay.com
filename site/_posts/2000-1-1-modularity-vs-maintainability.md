@@ -299,9 +299,16 @@ For some systems, a more monolithic approach might be more maintainable. For exa
 
 ### Does My System Need Modularity?
 
-The need for modularity depends on various factors, including system size, expected lifespan, and rate of change. As Parnas pointed out in his seminal paper on modular programming, modularity is most beneficial when we anticipate changes [8]. [EXPAND WITH QUOTE]
+The need for modularity depends on various factors. These include system size, expected lifespan, and rate of change. As Parnas pointed out in his seminal paper on modular programming, modularity is most beneficial when we anticipate changes [8]:
 
-However, premature modularization can be counterproductive. A case study by Sarkar et al. on large-scale software systems found that excessive modularity can lead to increased complexity and reduced maintainability [^9].
+> We propose instead that one begins with a list of difficult design decisions or design decisions which are likely to change. Each module is then designed to hide such a decision from the others.
+> 
+> ~ [D.L. Parnas](https://www.win.tue.nl/~wstomv/edu/2ip30/references/criteria_for_modularization.pdf)
+
+This is where abstractions can be useful. When we know that we will need to change something in future, we can create an abstraction to make that easier. 
+
+However, premature modularization can be counterproductive. [QUOTE TO SUPPORT]
+
 
 ### Managed Change Doesn't Require Modularity
 
