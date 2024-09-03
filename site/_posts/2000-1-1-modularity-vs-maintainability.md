@@ -298,7 +298,6 @@ public class OrderProcessor
 
     protected virtual void SaveOrderToDatabase(Order order, decimal total)
     {
-        // Simple database save operation
         using var connection = new SqlConnection(connectionString);
         connection.Open();
         using var command = new SqlCommand(
@@ -324,7 +323,22 @@ public class OrderProcessor
 }
 ```
 
-Notice how all the code is in one place 
+Notice how all the code is in one place and we don't need to go looking for the implementation. All of the related logic is in one class, but we could also move repeated code out into extension methods or other helpers so that classes don't repeat logic. Furthermore, we can mock the individual class for testing purposes like this
+
+```csharp
+public class MockOrderProcessor : OrderProcessor
+{
+    protected override void SaveOrderToDatabase(Order order, decimal total)
+    {
+        Console.WriteLine($"Mocked SaveOrderToDatabase for Order ID: {order.Id}, Total: {total}");
+    }
+
+    protected override void SendConfirmationEmail(string email, int orderId, decimal total)
+    {
+        Console.WriteLine($"Mocked SendConfirmationEmail to {email} for Order ID: {orderId}, Total: {total}");
+    }
+}
+```
 
 **After applying SOLID principles**
 ```csharp
@@ -388,6 +402,7 @@ public class OrderProcessor
     }
 }
 ```
+Notice how we have to go looking for the implementation of each method, and the class's constructor is full of dependencies. 
 
 While these principles aim to improve code quality, their rigid application can lead to increased complexity, and reduced maintainability. It's critical to apply these principles judiciously, considering the specific context and requirements of each project.
 
