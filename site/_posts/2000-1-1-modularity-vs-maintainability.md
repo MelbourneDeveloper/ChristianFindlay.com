@@ -402,9 +402,9 @@ public class OrderProcessor
     }
 }
 ```
-Notice how we have to go looking for the implementation of each method, and the class's constructor is full of dependencies. 
+Notice how we have to go looking for the implementation of each method, and the class's constructor is full of dependencies. While these principles aim to improve code quality, their rigid application can lead to increased indirection. That's not to say that the first design is better than the second, but rather that it's not a given that modularity leads to maintainability.
 
-While these principles aim to improve code quality, their rigid application can lead to increased complexity, and reduced maintainability. It's critical to apply these principles judiciously, considering the specific context and requirements of each project.
+It's critical to apply the principles judiciously, considering the specific context and requirements of each project.
 
 ### Automated Testing's Role in Maintainability
 
