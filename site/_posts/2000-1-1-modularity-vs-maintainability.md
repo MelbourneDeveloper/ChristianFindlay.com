@@ -454,7 +454,11 @@ However, premature modularization can be counterproductive. [QUOTE TO SUPPORT]
 
 ### Managed Change Doesn't Require Modularity
 
-We don't need to design software systems like cars. The need to replace components in the way we replace car parts, is a misconception. Unlike physical systems, we can modify software in place. 
+Code is not cement. We can change code at any time. As mentioned earlier, automated testing is the tool thay allows us to refactor with confidence. If you have good quality testing in place, you shouldn't be afraid to change code. 
+
+Of course, the exception is when consumers of the code expect stability. If you are changing code in a library that many people depend on, you need to negotiate this change with the people who consume it, and that probably means deprecating old code and giving people time to update.
+
+We also don't need to design software systems like cars. Unlike physical systems, we can modify software in place. The need to replace components in the way we replace car parts is a misunderstanding. This is why the idea of replacing an implementation is not as necessary as it may seem.
 
 Version control systems and modern deployment practices allow for gradual, managed changes without requiring high levels of modularity. This approach often leads to more maintainable systems than those designed with excessive modularity from the start.
 
