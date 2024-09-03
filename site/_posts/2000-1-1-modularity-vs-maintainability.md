@@ -12,9 +12,21 @@ categories: [software development]
 permalink: /blog/:title
 ---
 
-Developers understand that modularity and maintainability are fundamental to code design. These concepts are related. However, it's important to understand that they are not synonyms, and an increase in one does not necessarily lead to an increase in the other. Actually, an increase in modularity can reduce maintainability, particularly through the introduction of unnecessary complexity and indirection. 
+### Table of Contents
+- [Modularity](#modularity)
+- [Maintainability](#maintainability)
+- [Code As a Liability](#code-as-a-liability)
+- [The Tension Between Modularity and Maintainability](#the-tension-between-modularity-and-maintainability)
+- [When Modularity Supports Maintainability](#when-modularity-supports-maintainability)
+- [Clean Architecture and The SOLID Principles](#clean-architecture-and-the-solid-principles)
+- [Automated Testing's Role in Maintainability](#automated-testings-role-in-maintainability)
+- [Striking the Right Balance](#striking-the-right-balance)
+- [Does My System Need Modularity?](#does-my-system-need-modularity)
+- [Managed Change Doesn't Require Modularity](#managed-change-doesnt-require-modularity)
+- [The Cost of Abstraction](#the-cost-of-abstraction)
+- [Conclusion](#conclusion)
 
-Understanding the difference is critical for architects and developers who aim to create systems that are both well-organized and sustainable over time. Both are necessary for long-term success, but you must balance them carefully to build a robust system that a team can reasonably maintain.
+Developers understand that modularity and maintainability are fundamental to code design. These concepts are related. However, it's important to understand that they are not synonyms, and an increase in one does not necessarily lead to an increase in the other. Actually, an increase in modularity can reduce maintainability, particularly through the introduction of unnecessary complexity and indirection. 
 
 ### Modularity
 
