@@ -5,7 +5,7 @@ sub_title: "About the Author"
 image: "/assets/images/art/ChristianFindlay.webp"
 primary_author: true
 bio: |
-  Based in Melbourne, I'm a skilled Flutter and .NET developer, well-versed in Google Cloud Platform, Azure, and Firebase. Crafting user-centric apps with a unified codebase, I'm eager to collaborate on your Flutter project. Reach out via the contact link or social icons to connect!
+  Christian is the Director of <a href="https://www.nimblesite.co/" style="color:white;text-decoration: underline;">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. He has been developing software for over 20 years and has been developing with Flutter since the early days. He is passionate Mobile Apps and developers. Nimblesite can help you hire the right Flutter developer for your project. 
 
 social_accounts:
   - icon: "jam jam-linkedin"
