@@ -8,6 +8,8 @@ image: "/assets/images/blog/protobuf/header.png"
 tags: grpc csharp
 categories: dotnet
 permalink: /blog/:title
+description: "Learn how to implement Google Protocol Buffers (protobuf) in C# Web API for efficient serialization. Discover the advantages of protobuf over JSON, and how to create and consume protobuf services using ASP.NET Core and RestClient.Net"
+keywords: [Protocol Buffers, protobuf, C# Web API, ASP.NET Core, RestClient.Net, binary serialization, gRPC, .proto files, JSON alternative, efficient data transfer, cross-platform serialization, Google Protocol Buffers, C# serialization, Web API performance, REST API optimization, protobuf serialization, .NET protobuf implementation, binary data transfer, protobuf advantages, C# service development]
 ---
 
 Using [Google Protocol Buffers](https://developers.google.com/protocol-buffers) (protobuf) for serialization over a Web API (or REST API) is simple. Most developers use JSON as the go-to transfer protocol for services even though it is needlessly verbose, slow to serialize, and lacks the kind of functionality that Google added to protobuf. This article briefly talks about the advantages of services with protobuf, when to use them, and how to create and consume them with ASP.NET Core and [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net).

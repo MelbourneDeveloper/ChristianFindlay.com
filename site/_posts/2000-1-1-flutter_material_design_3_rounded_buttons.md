@@ -10,6 +10,8 @@ description: Learn how to create Material Design 3 rounded buttons in Flutter wi
 tags: 
 categories: flutter
 permalink: /blog/:title
+keywords: [Flutter buttons, Material Design 3, rounded buttons Flutter, ElevatedButton customization, Flutter UI design, Material 3 theming, Flutter button styling, useMaterial3 flag, Flutter BorderRadius, Flutter button colors, Flutter padding, Material Design buttons, Flutter app development, Material 3 Flutter implementation, custom button design Flutter]
+description: "Learn to create and customize rounded buttons in Flutter using Material Design 3. This guide covers enabling Material 3, basic and advanced button styling, and live examples for immediate practice."
 ---
 
 Rounded buttons in Material Design 3 is even simpler than before. Google's latest design language offers the ability to enable rounded buttons by default with a single flag in the theme configuration. This blog post will walk you through the process of creating rounded buttons in Flutter using Material Design 3. It will demonstrate how to enable the [`useMaterial3`](https://api.flutter.dev/flutter/material/ThemeData/useMaterial3.html) flag in [`ThemeData`](https://api.flutter.dev/flutter/material/ThemeData-class.html) and showcase four different button configurations.

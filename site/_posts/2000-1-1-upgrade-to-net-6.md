@@ -8,6 +8,8 @@ image: "/assets/images/blog/upgradedotnet/header.jpg"
 tags: visual-studio dotnet-standard
 categories: [dotnet]
 permalink: /blog/:title
+description: "Learn how to upgrade your legacy .NET Framework codebase to .NET 6 with this comprehensive guide. Discover strategies for refactoring, multi-targeting, and handling dependencies to modernize your ASP.NET applications efficiently."
+keywords: [.NET Framework upgrade, .NET 6 migration, ASP.NET Core migration, legacy code modernization, multi-targeting .NET, csproj upgrade, SDK-style projects, .NET dependency management, ASP.NET to ASP.NET Core, Entity Framework migration, .NET code refactoring, Visual Studio upgrade assistant, .NET Standard compatibility, cross-platform .NET development, .NET performance optimization, WebAPI upgrade, .NET testing strategies, database code migration, .NET project structure, continuous integration for .NET]
 ---
 
 You're probably here because your business has a legacy codebase, and you need to upgrade it. You're not alone, and almost every business goes through a similar thing at some stage. This post is part guide and part food for thought. Here, the focus is on upgrading a back-end from ASP.NET to ASP .NET Core, but you will find this helpful if you need to upgrade any code from Framework to .NET 6. You may want to break your architecture up into Microservices, or you may want to consolidate microservices back into a single service. You may want to upgrade your WPF app to WPF on .NET 6. Whatever your goal is, the process for upgrading to .NET 6 is going to be more or less the same.
