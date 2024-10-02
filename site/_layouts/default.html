@@ -65,6 +65,13 @@
   <meta name="description" content="{{ seo_description }}" />
   <meta property="og:description" content="{{ seo_description }}" />
   <meta property="twitter:description" content="{{ seo_description }}" />
+  {% endif %}
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords | join: ', ' }}">
+  {% elsif page.type == 'category' %}
+  <meta name="keywords"
+    content="Flutter Blog Melbourne, .NET Blog, Flutter Development Tips, .NET Programming Insights, Melbourne Tech Blog, Flutter Tutorials, .NET Best Practices, Software Development Blog, Melbourne Flutter Experts, .NET and Flutter Resources">
+  {% else %}
   <meta name="keywords" content="Flutter Developer Melbourne, .NET App Development, Hire Flutter Developer, Melbourne App Developers, .NET Developer Melbourne, Flutter App Development, Custom Software Development Australia, Mobile App Development Melbourne, .NET Programming Services, Flutter Expert Melbourne">
   {% endif %}
 

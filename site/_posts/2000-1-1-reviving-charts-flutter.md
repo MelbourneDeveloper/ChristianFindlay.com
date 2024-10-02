@@ -10,6 +10,7 @@ description: "Introducing nimble_charts, a revitalized Flutter charting library 
 tags: [web, wasm]
 categories: [flutter]
 permalink: /blog/:title
+keywords: [charts_flutter, Flutter charts, nimble_charts, data visualization, web dashboards, WebAssembly, WASM, Flutter WASM, interactive charts, data analytics, business intelligence, open source charting library, Flutter web development, charting solution, Google charts alternative]
 canonical_url: https://www.nimblesite.co/blog/reviving-charts-flutter/
 ---
 
