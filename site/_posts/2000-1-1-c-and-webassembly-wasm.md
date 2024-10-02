@@ -3,7 +3,7 @@ layout: post
 title: "C# and WebAssembly (Wasm)"
 date: 2019/06/29 00:00:00 +0000
 categories: [dotnet]
-tags: wasm blazor uno-platform avaloniaui
+tags: wasm blazor uno-platform avaloniaui xaml
 author: "Christian Findlay"
 post_image: "/assets/images/blog/wasm/header.png"
 image: "/assets/images/blog/wasm/header.png"

@@ -5,7 +5,7 @@ date: "2020/06/24 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat2/header.jpeg"
 image: "/assets/images/blog/xplat2/header.jpeg"
-tags: csharp cross-platform avaloniaui uno-platform maui blazor
+tags: csharp cross-platform avaloniaui uno-platform maui blazor xaml
 categories: [dotnet]
 permalink: /blog/:title
 ---

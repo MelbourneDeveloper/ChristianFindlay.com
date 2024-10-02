@@ -6,7 +6,7 @@ date: "Apr 24, 2022"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"
 image: "/assets/images/blog/coderules/rules.jpg"
-tags: csharp
+tags: csharp visual-studio
 categories: dotnet
 permalink: /blog/:title
 ---

@@ -9,6 +9,28 @@ description: Learn to create a search bar in Flutter with this concise guide, co
 tags: search testing
 categories: [flutter]
 permalink: /blog/:title
+keywords: [
+  "Flutter search bar",
+  "AppBar search Flutter",
+  "TextEditingController Flutter",
+  "Flutter ListView.builder",
+  "Flutter search functionality",
+  "Flutter UI components",
+  "StatefulWidget Flutter",
+  "Flutter data filtering",
+  "Flutter app development",
+  "Flutter widget testing",
+  "CircularProgressIndicator Flutter",
+  "Flutter TextField",
+  "Flutter search results display",
+  "Flutter user input handling",
+  "Material Design Flutter",
+  "Flutter app testing",
+  "Flutter search implementation",
+  "Flutter state management",
+  "Flutter UI design",
+  "Flutter performance testing"
+]
 ---
 
 Search bars are often an essential UI component in a Flutter app. This blog post walks you through creating a search bar in Flutter and provides you with an example app to get started. We create a basic [`StatefulWidget`](https://api.flutter.dev/flutter/widgets/StatefulWidget-class.html) to manage the state, but you can use the same approach with a controller to [separate the UI from the business logic](https://www.christianfindlay.com/blog/separate-business-logic-and-presentation).

@@ -9,7 +9,30 @@ post_image_width: 300
 image: "/assets/images/blog/materialdesign/logo.webp"
 description: Master Material Design 3 Theming in Flutter with this comprehensive guide. Explore custom themes with ThemeData, define color palettes with ColorScheme, and learn how to adhere to Material Design guidelines. Discover how to override colors, customize typography, and automate theme switching in Flutter. Perfect for Flutter developers looking to enhance their UI design skills and create visually stunning, user-friendly applications.
 categories: flutter
+tags: material-design
 permalink: /blog/:title
+keywords: [
+  "Flutter theming",
+  "Material Design 3",
+  "ThemeData Flutter",
+  "Flutter custom themes",
+  "ColorScheme in Flutter",
+  "Dark mode Flutter",
+  "Flutter typography customization",
+  "Material Design 3 colors",
+  "Flutter UI design",
+  "Flutter theme switching",
+  "Material Design guidelines",
+  "Flutter widget theming",
+  "Flutter app development",
+  "Material 3 shape theming",
+  "Flutter theme best practices",
+  "Material Design color system",
+  "Flutter theme debugging",
+  "Material 3 in Flutter",
+  "Flutter theme customization",
+  "Material Design 3 typography"
+]
 ---
 
 One of the most common questions developers ask when working with Flutter is how to efficiently manage themes to create visually appealing and consistent UIs across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/). This article details how to create, customize, and apply themes in your Flutter applications.

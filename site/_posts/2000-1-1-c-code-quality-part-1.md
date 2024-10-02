@@ -3,7 +3,7 @@ layout: post
 title: "C# Code Quality - Part 1"
 date: 2019/11/09 00:00:00 +0000
 categories: [dotnet]
-tags: code-quality
+tags: code-quality visual-studio
 author: "Christian Findlay"
 post_image: "/assets/images/blog/quality/header.jpg"
 image: "/assets/images/blog/quality/header.jpg"

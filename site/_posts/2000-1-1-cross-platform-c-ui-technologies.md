@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat1/header.jpg"
 image: "/assets/images/blog/xplat1/header.jpg"
 categories: [dotnet]
-tags: cross-platform csharp avaloniaui uno-platform
+tags: cross-platform csharp avaloniaui uno-platform xaml
 permalink: /blog/:title
 ---
 

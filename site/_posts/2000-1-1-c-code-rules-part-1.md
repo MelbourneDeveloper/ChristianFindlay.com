@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"
 image: "/assets/images/blog/coderules/rules.jpg"
 categories: [dotnet]
-tags: code-quality csharp
+tags: code-quality csharp visual-studio
 permalink: /blog/:title
 ---
 
