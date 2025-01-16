@@ -38,7 +38,7 @@ The language should stop changing anything about the object at runtime, but it s
 
 ### Immutable Collections
 
-This includes modifying collections. See this article on [Dart Immutable Collections](https://www.christianfindlay.com/dart-immutable-collections). The language needs specialized types for immutable lists. Interfaces are not enough because they do not specify behavior. The type must prevent mutation. Again, runtime safety is not enough. Collections must have compile time safety. An immutable collection with no compile-time safety may be more dangerous than a mutable collection because the compiler won't stop errors before they appear in your app.  
+This includes modifying collections. See this article on [Dart Immutable Collections](https://www.christianfindlay.com/blog/dart-immutable-collections). The language needs specialized types for immutable lists. Interfaces are not enough because they do not specify behavior. The type must prevent mutation. Again, runtime safety is not enough. Collections must have compile time safety. An immutable collection with no compile-time safety may be more dangerous than a mutable collection because the compiler won't stop errors before they appear in your app.  
 
 ### Structural Equality
 
