@@ -37,7 +37,7 @@ It is possible to create a gRPC service on ASP.Net Core. Here is an earlier [ar
 
 ![NUGETS](/assets/images/blog/protobuf/nugets.png){:width="100%"}
 
-These NuGets allow defining message types with proto files. Just add a .proto file and change the properties of the file as below. It is possible to put the .proto file in a project that is shared between client and server. This is not always possible, but it's recommended. Otherwise, the outputted C# code can be copied and pasted into the client-side project. [This article](/back-end-front-end-versioning/) may be useful for managing versions between the back-end and front-end.
+These NuGets allow defining message types with proto files. Just add a .proto file and change the properties of the file as below. It is possible to put the .proto file in a project that is shared between client and server. This is not always possible, but it's recommended. Otherwise, the outputted C# code can be copied and pasted into the client-side project. [This article](https://www.christianfindlay.com/blog/back-end-front-end-versioning) may be useful for managing versions between the back-end and front-end.
 
 ![Proto](/assets/images/blog/protobuf/proto.png){:width="100%"}
 

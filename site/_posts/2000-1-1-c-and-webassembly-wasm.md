@@ -52,4 +52,4 @@ It is highly likely that Wasm platforms for building apps outside the browser ([
 ## Conclusion
 It's time to start experimenting with Wasm and feeling out what can be built with C#. Wasm is likely to change the web development landscape and compiled languages like C# are likely to be at the forefront. C# may once again look like an attractive technology for front end web development. This may well be the next phase of web development that C# developers have been waiting for.
 
-See [this article](/restclient-net-on-webassembly-c/) for an Uno Platform sample app.
+See [this article](https://www.christianfindlay.com/blog/restclient-net-on-webassembly-c) for an Uno Platform sample app.
