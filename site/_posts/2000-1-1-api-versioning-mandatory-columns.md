@@ -13,7 +13,7 @@ permalink: /blog/:title
 
 There are some difficulties with versioning APIs. One such difficulty is dealing with mandatory columns. If a back-end API upgrade is taking place, and we think that a new mandatory column is needed, we may create a problem for front-ends that don't supply the column. At first, this may seem like an insurmountable problem, but actually, it's not as big a problem as you might think. It may be time to rethink making the column mandatory at all. As programmers, this may seem counter intuitive because the database is the fundamental place for stopping data integrity issues from happening, and mandatory columns guarantee that there will be at least something in the database so that there is no need for checking the value after the record is loaded. However, it may be useful to reorient our thinking about _mandatory_ columns as _seemingly mandatory_ instead.
 
-Please see this article on [Back-end / Front-End Versioning](/back-end-front-end-versioning/).
+Please see this article on [Back-end / Front-End Versioning](back-end-front-end-versioning).
 
 Data Quality
 ------------
