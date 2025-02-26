@@ -63,7 +63,7 @@ This article details how to create, customize, and apply themes in your Flutter 
 
 [Identifying How Widgets Get Their Default Color](#identifying-how-widgets-get-their-default-color)
 
-[Override Default Colors](#override-default-colors)
+[Override Default Colors](#override-default-colors-for-widgets)
 
 [Complete Example](#complete-example)
 
