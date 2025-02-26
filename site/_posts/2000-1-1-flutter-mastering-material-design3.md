@@ -35,7 +35,7 @@ keywords: [
 ]
 ---
 
-One of the most common questions developers ask when working with Flutter is how to efficiently manage themes to create visually appealing and consistent UIs across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/) (M3). 
+One of the most common questions developers ask when working with Flutter is how to manage themes to create consistent UI styles across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/) (M3) in Flutter. 
 
 > **Note**: As of Flutter 3.16, Material Design 3 is enabled by default for new apps. While you can still explicitly set `useMaterial3: true` in your `ThemeData` for clarity, it's no longer required. This article assumes you're using Flutter 3.16 or later.
 
@@ -92,6 +92,8 @@ The `ThemeData` class encapsulates a Material Design theme's colors, typography,
 Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. M3 is now the default design system in Flutter so you don't need to configure anything, but you can still explicitly set `useMaterial3` to true if you want to make your intentions clear.
 
 ```dart
+import 'package:flutter/material.dart';
+
 ThemeData lightTheme = ThemeData(
   useMaterial3: true, // This is not necessary or recommended anymore.
   colorScheme: ColorScheme.fromSeed(
@@ -234,7 +236,7 @@ ColorScheme defines the complete set of colors used by M3. Using `ColorScheme`s 
 
 The primary purpose of a `ColorScheme` is to provide a cohesive set of colors that work together. Components automatically use the appropriate colors from your `ColorScheme` in M3. This makes it easier to create a consistent color palette while adhering to Material Design guidelines.
 
-You can create a `ThemeData` with a custom secondary color in the `ColorScheme` like the code below. However, this is not recommended because it can break the color harmony of the app. If you do specify a secondary color, you will need to work out if it harmonizes with the other default colors. 
+You can create a `ThemeData` with a custom secondary color in the `ColorScheme` like the code below. However, you should exercise caution because it can break the color harmony of the app. If you do specify a secondary color, you will need to work out if it harmonizes with the other default colors. 
 
 ```dart
 ThemeData(
@@ -482,7 +484,7 @@ void main() => runApp(
     );
 ```
 
-‍![Not Red Button](/assets/images/blog/materialdesign/notredbutton.png){:width="100%"}
+‍![Not Red Button](/assets/images/blog/materialdesign/buttons.png){:width="100%"}
 
 ## Complete Example
 
