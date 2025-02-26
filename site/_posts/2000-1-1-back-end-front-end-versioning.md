@@ -39,7 +39,7 @@ Weaknesses
 
 Using the API Versioning pattern, a team can kill two birds with one stone. A public facing API can be created that can also serve as the back-end that can be consumed by the front-end. However, unless you're a big tech company like Google, Microsoft, Facebook, or so on, the resources required to get this right could be a stretch. Whatever the case may be, if your team decides to implement this pattern, the crucial thing is to make sure that your code, and [version methodology](https://octopus.com/docs/deployment-process/releases/release-versioning) are set up to handle this in the first place. Furthermore it is important that you deprecate often and communicate to your consumers when deprecation is going to be. Ideally, you would support as few versions of your API as possible.
 
-See [this article](/app-store-deployment-back-end-first/) for how this pattern can be used as part of App Store Deployment.
+See [this article](app-store-deployment-back-end-first) for how this pattern can be used as part of App Store Deployment.
 
 Back-ends For Front-ends (BFF)
 ------------------------------

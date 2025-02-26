@@ -137,4 +137,4 @@ Wrap-Up
 
 Add code rules to every new project you work on, and try to bring existing code up to scratch by applying code rules. Some people will find the process jarring, and I will admit that the configuration system is pretty messy, but it will be worth it in the long term. Code analysis does improve your code quality, and you will improve your coding habits. You will also improve the coding habits of your team and have fewer fights over small details on pull requests. If there are people in your team who resist, make some concessions by turning off rules that they find particularly offensive.  
 
-Please also see [this article](/stop-nullreferenceexceptions/) that talks about using code rules to stop NullReferenceExceptions.
+Please also see [this article](stop-nullreferenceexceptions) that talks about using code rules to stop NullReferenceExceptions.

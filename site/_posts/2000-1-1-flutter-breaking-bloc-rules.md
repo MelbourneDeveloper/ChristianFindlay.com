@@ -52,7 +52,7 @@ As I write elsewhere, this article assumes that you write mostly widget tests. I
 
 ### Use Mutable State
 
-Immutability is a good thing, but it takes work. I've written extensively about it in [Dart](/dart-immutable-collections) and other languages. However, implementing it in a lax way is a recipe for disaster. Records and other immutability features for Dart are on their way. Still, getting [Immutability with structural equality right is challenging](/immutability-dart-vs-fsharp). Immutability has benefits, but be prepared to work for them. 
+Immutability is a good thing, but it takes work. I've written extensively about it in [Dart](/dart-immutable-collections) and other languages. However, implementing it in a lax way is a recipe for disaster. Records and other immutability features for Dart are on their way. Still, getting [Immutability with structural equality right is challenging](immutability-dart-vs-fsharp). Immutability has benefits, but be prepared to work for them. 
 
 The BloC pattern works fine with mutable types. However, the BloC library [expects structural equality](https://pub.dev/packages/flutter_bloc#blocselector). You can work around this, but bloobit works with mutable or immutable state. You can also use mutable state without StatelessWidgets.
 

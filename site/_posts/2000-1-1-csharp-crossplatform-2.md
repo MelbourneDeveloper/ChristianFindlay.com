@@ -10,7 +10,7 @@ categories: [dotnet]
 permalink: /blog/:title
 ---
 
-The options for building cross-platform phone, desktop, and web-apps with C# are expanding. I previously [wrote about](/cross-platform-c-ui-technologies/) Uno Platform, Xamarin.Forms, and Avalonia UI. The recent Microsoft Build conference mentioned [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor), [Uno Platform](https://platform.uno/) and [MAUI](https://visualstudiomagazine.com/articles/2020/05/19/maui.aspx). MAUI is an evolution of [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms) that targets .NET 5/6. Whether or not Blazor can be considered a genuinely cross-platform technology is complicated. This article compares the technologies and some others and attempts to clarify some confusion around the future of C# cross-platform development.
+The options for building cross-platform phone, desktop, and web-apps with C# are expanding. I previously [wrote about](cross-platform-c-ui-technologies) Uno Platform, Xamarin.Forms, and Avalonia UI. The recent Microsoft Build conference mentioned [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor), [Uno Platform](https://platform.uno/) and [MAUI](https://visualstudiomagazine.com/articles/2020/05/19/maui.aspx). MAUI is an evolution of [Xamarin.Forms](https://dotnet.microsoft.com/apps/xamarin/xamarin-forms) that targets .NET 5/6. Whether or not Blazor can be considered a genuinely cross-platform technology is complicated. This article compares the technologies and some others and attempts to clarify some confusion around the future of C# cross-platform development.
 
 ![Table](/assets/images/blog/xplat2/table.png){:width="100%"}
 

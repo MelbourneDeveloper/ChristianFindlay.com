@@ -10,9 +10,9 @@ tags: code-quality visual-studio
 permalink: /blog/:title
 ---
 
-*Edit: There is a [new article](/code-rules) that replaces these two articles and uses the more modern editor config format. These two articles are still useful for .NET framework and teams using the older configuration. It's also worth reading about my thoughts on code rules in general. You can read the first part [here](/c-code-rules-part-1/)*
+*Edit: There is a [new article](/code-rules) that replaces these two articles and uses the more modern editor config format. These two articles are still useful for .NET framework and teams using the older configuration. It's also worth reading about my thoughts on code rules in general. You can read the first part [here](c-code-rules-part-1)*
 
-If you haven't read the [first part](/c-code-rules-part-1/) of this series, you might want to have a read. It is an intro to why code rules are a good thing. This part is a How to Guide for people who want to jump straight in, and follow the steps to turn on code rules and configure them. This article is mostly aimed at Visual Studio 2017. Some features will be slightly changed in Visual Studio 2019, and I will write another article with changes fairly soon.
+If you haven't read the [first part](c-code-rules-part-1) of this series, you might want to have a read. It is an intro to why code rules are a good thing. This part is a How to Guide for people who want to jump straight in, and follow the steps to turn on code rules and configure them. This article is mostly aimed at Visual Studio 2017. Some features will be slightly changed in Visual Studio 2019, and I will write another article with changes fairly soon.
 
 ## Step One - Install Fx NuGet Package
 I already covered this in the first part but here it is again for completeness sake. This step assumes you are not working on a .NET Framework project. This may work for .NET Framework, but code analysis works a little differently to .NET Core, .NET Standard, UWP and so on.
