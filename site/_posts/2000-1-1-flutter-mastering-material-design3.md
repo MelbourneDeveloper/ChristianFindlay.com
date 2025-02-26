@@ -584,4 +584,4 @@ This is a complete example. The first card uses the default shape, and the secon
 ## Conclusion
 Grasping Flutter's M3 themes is key for modern application design, so spend some time on the [Material Design website](https://m3.material.io/) to learn more about the system and how to use it in your apps. Refer back to this guide when you need an overview but remember to take the time to read the official documentation. Also, experiment with themes in Dartpad. This will save you a lot of time. Lastly, remember than you may need to check the actual Flutter code of the widgets to find out where they are getting their default theme values from.
 
-<sub>This article has had some minor corrections, particularly around generating the ColorScheme. You can view the document history [here](https://github.com/MelbourneDeveloper/ChristianFindlay.com/blob/main/site/_posts/2000-1-1-flutter-mastering-material-design3.md)</sub>
+<sub>Updated Feburary 2025. Previous versions, such as 2024/01/04 are available on [GitHub as markdown](https://github.com/MelbourneDeveloper/ChristianFindlay.com/blob/main/site/_posts/2000-1-1-flutter-mastering-material-design3.md). </sub>
