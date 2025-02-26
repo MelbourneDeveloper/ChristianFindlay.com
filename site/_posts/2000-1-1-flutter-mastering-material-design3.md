@@ -35,11 +35,7 @@ keywords: [
 ]
 ---
 
-One of the most common questions developers ask when working with Flutter is how to manage themes to create consistent UI styles across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/) (M3) in Flutter. 
-
-> **Note**: As of Flutter 3.16, Material Design 3 is enabled by default for new apps. While you can still explicitly set `useMaterial3: true` in your `ThemeData` for clarity, it's no longer required. This article assumes you're using Flutter 3.16 or later.
-
-This article details how to create, customize, and apply themes in your Flutter applications.
+One of the most common questions developers ask when working with Flutter is how to manage themes to create consistent UI styles across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/) (M3) in Flutter. This article details how to create, customize, and apply themes in your Flutter applications.
 
 ## Theming
 
