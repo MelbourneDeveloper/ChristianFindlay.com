@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mastering Material Design 3: The Complete Guide to Theming in Flutter"
-date: "2024/01/04 00:00:00 +0000"
+date: "2025/02/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/materialdesign/logo.webp"
 post_image_height: 300
