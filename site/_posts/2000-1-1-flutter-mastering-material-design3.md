@@ -232,6 +232,11 @@ ColorScheme defines the complete set of colors used by M3. Using `ColorScheme`s 
 - [Error colors](https://m3.material.io/styles/color/roles#47a25970-8a80-43be-8307-c12e0f7a2b43): Used for error states
 - [Surface colors](https://m3.material.io/styles/color/roles#89f972b1-e372-494c-aabc-69aea34ed591): 
 
+
+**Try our new Seed Color Picker**, which allows you to see how the seed color affects common widgets in your app.
+load hfref in new tab
+<a href ="https://melbournedeveloper.github.io/seed_color_picker/"   >‍![Seed Color Picker](/assets/images/blog/materialdesign/seed-color-picker.png){:width="100%"}</a>
+
 #### Default colors in Material Design 3
 
 The primary purpose of a `ColorScheme` is to provide a cohesive set of colors that work together. Components automatically use the appropriate colors from your `ColorScheme` in M3. This makes it easier to create a consistent color palette while adhering to Material Design guidelines.
