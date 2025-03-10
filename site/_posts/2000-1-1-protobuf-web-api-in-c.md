@@ -33,7 +33,7 @@ Protobuf may not be appropriate when the audience reach is the most critical fac
 Creating the Service
 --------------------
 
-It is possible to create a gRPC service on ASP.Net Core. Here is an earlier [article](/c-and-grpc-part-one/) I wrote on this. But, developers may want to implement a standard ASP.NET Core Web API with protobuf serialization. Firstly, create a Web API project and add the gRPC NuGet packages. The samples can be cloned from this [repo](https://github.com/MelbourneDeveloper/RestClient.Net).
+It is possible to create a gRPC service on ASP.Net Core. Here is an earlier [article](c-and-grpc-part-one/) I wrote on this. But, developers may want to implement a standard ASP.NET Core Web API with protobuf serialization. Firstly, create a Web API project and add the gRPC NuGet packages. The samples can be cloned from this [repo](https://github.com/MelbourneDeveloper/RestClient.Net).
 
 ![NUGETS](/assets/images/blog/protobuf/nugets.png){:width="100%"}
 

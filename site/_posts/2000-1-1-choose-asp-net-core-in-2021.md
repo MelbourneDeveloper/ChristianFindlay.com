@@ -89,7 +89,7 @@ Explore [Telerik UI for ASP.NET Core](https://www.telerik.com/aspnet-core-ui?utm
 
 ### Blazor
 
-Blazor is a [game-changer](/blazor-vs-traditional-web-apps/) for ASP.NET Core web apps. Blazor allows you to build web front-end end SPA apps with C# instead of JavaScript. Blazor is a part of the ASP.NET Core ecosystem and shares the page rendering razor syntax with MVC. When your application requires a full SPA experience, you can write the view with Blazor. This modern framework competes with the likes of React and Angular.
+Blazor is a [game-changer](blazor-vs-traditional-web-apps/) for ASP.NET Core web apps. Blazor allows you to build web front-end end SPA apps with C# instead of JavaScript. Blazor is a part of the ASP.NET Core ecosystem and shares the page rendering razor syntax with MVC. When your application requires a full SPA experience, you can write the view with Blazor. This modern framework competes with the likes of React and Angular.
 
 ### Wrap-up
 
