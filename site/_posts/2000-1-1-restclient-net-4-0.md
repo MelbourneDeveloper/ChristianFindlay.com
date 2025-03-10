@@ -19,7 +19,7 @@ This is the Github [release notes page](https://github.com/MelbourneDeveloper/R
 
 Mocking has been [made simpler](https://github.com/MelbourneDeveloper/RestClient.Net/issues/60) by adding setters on all properties of requests and responses. This means that unit testing is more accessible.
 
-Factories are now [injected as delegates instead of interfaces](https://github.com/MelbourneDeveloper/RestClient.Net/issues/69). This is a breaking change This reduces boilerplate code. Check out [this article](/c-delegates-with-ioc-containers-and-dependency-injection/) about the approach.
+Factories are now [injected as delegates instead of interfaces](https://github.com/MelbourneDeveloper/RestClient.Net/issues/69). This is a breaking change This reduces boilerplate code. Check out [this article](c-delegates-with-ioc-containers-and-dependency-injection/) about the approach.
 
 All platforms now use System.Json.Text [by default](https://github.com/MelbourneDeveloper/RestClient.Net/issues/62). This means that it is not necessary to create a serialization adapter unless you explicitly need to use Newtonsoft.
 
