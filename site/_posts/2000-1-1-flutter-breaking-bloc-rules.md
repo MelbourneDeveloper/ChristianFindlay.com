@@ -18,7 +18,7 @@ This article discusses BloC rules and when it may be appropriate to bend or brea
 
 ### Overview
 
-The first thing to understand here is that I will refer to the [bloobit](https://pub.dev/packages/bloobit/score) library in some cases. I wrote this library as an alternative to BloC. BloC inspires Bloobit and closely resembles [ChangeNotifier](https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html), [Cubit](https://pub.dev/documentation/bloc/latest/bloc/Cubit-class.html), and other similar classes. The core concept it shares with BloC is that it separates [UI and business logic](/flutter-business-logic-presentation). 
+The first thing to understand here is that I will refer to the [bloobit](https://pub.dev/packages/bloobit/score) library in some cases. I wrote this library as an alternative to BloC. BloC inspires Bloobit and closely resembles [ChangeNotifier](https://api.flutter.dev/flutter/foundation/ChangeNotifier-class.html), [Cubit](https://pub.dev/documentation/bloc/latest/bloc/Cubit-class.html), and other similar classes. The core concept it shares with BloC is that it separates [UI and business logic](flutter-business-logic-presentation). 
 
 Any concepts I write about here should be compatible with BloC implementations. However, if you use the [BloC library](https://pub.dev/packages/flutter_bloc), the documentation will come with some rules, and I'm not recommending you break those. bloobit doesn't come with any rules, and I permit you to do whatever you want.
 
@@ -52,7 +52,7 @@ As I write elsewhere, this article assumes that you write mostly widget tests. I
 
 ### Use Mutable State
 
-Immutability is a good thing, but it takes work. I've written extensively about it in [Dart](/dart-immutable-collections) and other languages. However, implementing it in a lax way is a recipe for disaster. Records and other immutability features for Dart are on their way. Still, getting [Immutability with structural equality right is challenging](immutability-dart-vs-fsharp). Immutability has benefits, but be prepared to work for them. 
+Immutability is a good thing, but it takes work. I've written extensively about it in [Dart](dart-immutable-collections) and other languages. However, implementing it in a lax way is a recipe for disaster. Records and other immutability features for Dart are on their way. Still, getting [Immutability with structural equality right is challenging](immutability-dart-vs-fsharp). Immutability has benefits, but be prepared to work for them. 
 
 The BloC pattern works fine with mutable types. However, the BloC library [expects structural equality](https://pub.dev/packages/flutter_bloc#blocselector). You can work around this, but bloobit works with mutable or immutable state. You can also use mutable state without StatelessWidgets.
 
