@@ -3064,3 +3064,241 @@ section:not(#home) {
   gap: 1rem;
   margin-top: 1.5rem;
 }
+
+/* Project card styles for About section */
+.project-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.project-icon {
+  margin-right: 15px;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+.project-icon img, 
+.project-icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.project-info {
+  flex-grow: 1;
+}
+
+.project-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.project-info p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--gray-500);
+}
+
+.project-stats {
+  margin-top: 8px;
+  display: flex;
+  gap: 15px;
+}
+
+.project-stats span {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: var(--gray-400);
+}
+
+.project-stats i {
+  margin-right: 4px;
+  font-size: 14px;
+  color: var(--primary);
+}
+
+/* Social buttons for About section */
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  margin-right: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  border: none;
+}
+
+.social-button.github {
+  background: #24292e;
+  color: white;
+}
+
+.social-button.github:hover {
+  background: #2c3137;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-button.x {
+  background: #000000;
+  color: white;
+}
+
+.social-button.x:hover {
+  background: #333333;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.social-button svg {
+  margin-right: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Section heading for About */
+.section-heading {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 3px;
+}
+
+.section-heading.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Border primary class for section headings */
+.border-primary {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.border-primary::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--primary);
+  border-radius: 3px;
+}
+
+/* Darker background for cards */
+.bg-darker {
+  background-color: rgba(13, 18, 30, 0.6);
+  transition: all 0.3s ease;
+}
+
+.bg-darker:hover {
+  background-color: rgba(13, 18, 30, 0.8);
+}
+
+/* Space utilities */
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.mr-3 {
+  margin-right: 1rem;
+}
+
+.mr-4 {
+  margin-right: 1.5rem;
+}
+
+.mr-5 {
+  margin-right: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.p-4 {
+  padding: 1.5rem !important;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Utility classes for About section */
+.z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+/* Override for social links */
+#about a {
+  text-decoration: none;
+}
+
+#about a:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+}
+
+#about a:hover div {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
