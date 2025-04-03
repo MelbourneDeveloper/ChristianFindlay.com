@@ -128,7 +128,7 @@ faq_area:
 <section id="about" class="py-5">
   <div class="wrapper bg-opacity-default">
     <div class="container inner">
-      <div class="row justify-content-center">
+      <div class="row justify-content-start">
         <div class="col-lg-10">
           <h2 class="display-4 text-white mb-2">Christian Findlay</h2>
           <p class="lead text-white-50 mb-5">20+ Years of Software Engineering Experience</p>
@@ -138,71 +138,93 @@ faq_area:
               I'm the Director of Nimblesite, a Melbourne-based software development agency. With over 20 years of experience in software development, I specialize in Flutter, .NET, and cloud architecture. As an experienced developer, trainer, and open-source contributor, I help businesses transform ideas into robust digital products.
             </p>
             
-            <ul class="list-unstyled d-flex flex-wrap mb-0">
-              <li class="mr-5 py-1"><span class="text-white">•</span> <span class="text-white-50 ml-2">Flutter and mobile development expert</span></li>
-              <li class="mr-5 py-1"><span class="text-white">•</span> <span class="text-white-50 ml-2">Two decades of .NET experience</span></li>
-              <li class="mr-5 py-1"><span class="text-white">•</span> <span class="text-white-50 ml-2">Cloud architecture specialist (Azure, GCP, AWS)</span></li>
-              <li class="py-1"><span class="text-white">•</span> <span class="text-white-50 ml-2">Open source contributor with multiple libraries</span></li>
-            </ul>
+            <div class="skills-list mb-4">
+              <span class="text-white">•</span> <span class="text-white-50">Flutter and mobile development expert</span>
+              <span class="text-white ml-4">•</span> <span class="text-white-50">Two decades of .NET experience</span>
+              <span class="text-white ml-4">•</span> <span class="text-white-50">Cloud architecture specialist (Azure, GCP, AWS)</span>
+              <div class="mt-1">
+                <span class="text-white">•</span> <span class="text-white-50">Open source contributor with multiple libraries</span>
+              </div>
+            </div>
           </div>
           
           <h3 class="text-white border-primary mb-4">Open Source Projects</h3>
           
-          <div class="bg-darker p-4 rounded mb-4">
-            <div class="d-flex align-items-center mb-2">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mr-3" style="width: 40px; height: 40px; padding: 8px;">
-                <img src="/assets/images/icons/tech/device-net.svg" alt="Device.Net icon" class="w-100">
+          <div class="project-card bg-dark-blue mb-3 p-4 rounded">
+            <div class="project-info">
+              <div class="project-left">
+                <div class="d-flex align-items-center">
+                  <div class="project-icon bg-blue rounded mr-3 p-2">
+                    <img src="/assets/images/icons/tech/device-net.svg" alt="Device.Net" class="w-100">
+                  </div>
+                  <div>
+                    <p class="text-white-50 mb-1">C# cross platform connected device framework</p>
+                    <div class="project-stats">
+                      <span class="text-white-50 mr-3">650+ stars</span>
+                      <span class="text-white-50">120+ forks</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 class="mb-0"><a href="https://github.com/MelbourneDeveloper/Device.Net" target="_blank" class="text-white">Device.Net</a></h4>
-            </div>
-            <p class="text-white-50 mb-2">C# cross platform connected device framework</p>
-            <div class="d-flex">
-              <div class="text-white-50 mr-4"><small>650+ stars</small></div>
-              <div class="text-white-50"><small>120+ forks</small></div>
+              <div class="project-right">
+                <h4 class="text-white mb-0">Device.Net</h4>
+              </div>
             </div>
           </div>
           
-          <div class="bg-darker p-4 rounded mb-4">
-            <div class="d-flex align-items-center mb-2">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mr-3" style="width: 40px; height: 40px; padding: 8px;">
-                <img src="/assets/images/icons/tech/rest-client.svg" alt="RestClient.Net icon" class="w-100">
+          <div class="project-card bg-dark-blue mb-3 p-4 rounded">
+            <div class="project-info">
+              <div class="project-left">
+                <div class="d-flex align-items-center">
+                  <div class="project-icon bg-blue rounded mr-3 p-2">
+                    <img src="/assets/images/icons/tech/rest-client.svg" alt="RestClient.Net" class="w-100">
+                  </div>
+                  <div>
+                    <p class="text-white-50 mb-1">.NET REST Client Framework for all platforms</p>
+                    <div class="project-stats">
+                      <span class="text-white-50 mr-3">360+ stars</span>
+                      <span class="text-white-50">40+ forks</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 class="mb-0"><a href="https://github.com/MelbourneDeveloper/RestClient.Net" target="_blank" class="text-white">RestClient.Net</a></h4>
-            </div>
-            <p class="text-white-50 mb-2">.NET REST Client Framework for all platforms</p>
-            <div class="d-flex">
-              <div class="text-white-50 mr-4"><small>360+ stars</small></div>
-              <div class="text-white-50"><small>40+ forks</small></div>
+              <div class="project-right">
+                <h4 class="text-white mb-0">RestClient.Net</h4>
+              </div>
             </div>
           </div>
           
-          <div class="bg-darker p-4 rounded mb-5">
-            <div class="d-flex align-items-center mb-2">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center mr-3" style="width: 40px; height: 40px; padding: 8px;">
-                <img src="/assets/images/icons/tech/ioc-container.svg" alt="ioc_container icon" class="w-100">
+          <div class="project-card bg-dark-blue mb-5 p-4 rounded">
+            <div class="project-info">
+              <div class="project-left">
+                <div class="d-flex align-items-center">
+                  <div class="project-icon bg-blue rounded mr-3 p-2">
+                    <img src="/assets/images/icons/tech/ioc-container.svg" alt="ioc_container" class="w-100">
+                  </div>
+                  <div>
+                    <p class="text-white-50 mb-1">Lightweight dependency injection library for Dart/Flutter</p>
+                    <div class="project-stats">
+                      <span class="text-white-50 mr-3">60+ stars</span>
+                      <span class="text-white-50">3+ forks</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h4 class="mb-0"><a href="https://github.com/MelbourneDeveloper/ioc_container" target="_blank" class="text-white">ioc_container</a></h4>
-            </div>
-            <p class="text-white-50 mb-2">Lightweight dependency injection library for Dart/Flutter</p>
-            <div class="d-flex">
-              <div class="text-white-50 mr-4"><small>60+ stars</small></div>
-              <div class="text-white-50"><small>3+ forks</small></div>
+              <div class="project-right">
+                <h4 class="text-white mb-0">ioc_container</h4>
+              </div>
             </div>
           </div>
           
           <h3 class="text-white border-primary mb-4">Featured Apps</h3>
           <p class="text-white-50 mb-5">Check out <a href="https://storytowns.com.au" target="_blank" class="text-primary">Storytowns</a> - Discover unique stories from regional towns through this Flutter-powered mobile app.</p>
           
-          <div class="d-flex">
-            <a href="https://github.com/MelbourneDeveloper" class="mr-3">
-              <div class="bg-primary rounded d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; padding: 8px;">
-                <img src="/assets/images/icons/social/github.svg" alt="GitHub" class="w-100">
-              </div>
+          <div class="social-links">
+            <a href="https://github.com/MelbourneDeveloper" target="_blank" class="social-link">
+              <img src="/assets/images/icons/social/github.svg" alt="GitHub">
             </a>
-            <a href="https://twitter.com/cfdevelop" class="mr-3">
-              <div class="bg-dark rounded d-flex align-items-center justify-content-center" style="width: 40px; height: 40px; padding: 8px;">
-                <img src="/assets/images/icons/social/x.svg" alt="X (Twitter)" class="w-100">
-              </div>
+            <a href="https://twitter.com/cfdevelop" target="_blank" class="social-link">
+              <img src="/assets/images/icons/social/x.svg" alt="X (Twitter)">
             </a>
           </div>
         </div>
