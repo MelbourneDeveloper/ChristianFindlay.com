@@ -3658,52 +3658,52 @@ section:not(#home) {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
-.app-icon-container {
-  height: 120px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.app-image {
+  height: 200px;
+  overflow: hidden;
+  position: relative;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
 }
 
-.app-icon-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: radial-gradient(circle at center, rgba(52, 152, 219, 0.2), transparent 70%);
-  opacity: 0;
-  transition: opacity 0.5s ease;
+.app-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
 }
 
-.featured-app-card:hover .app-icon-container::before {
-  opacity: 1;
+.featured-app-card:hover .app-image img {
+  transform: scale(1.05);
 }
 
-.app-icon {
-  width: 80px;
-  height: 80px;
-  background: linear-gradient(135deg, #3498db, #2980b9);
-  border-radius: 20px;
+.app-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(145deg, #1e2a4a 0%, #0d1526 100%);
 }
 
-.app-icon i {
-  font-size: 40px;
+.app-placeholder i {
+  font-size: 50px;
+  color: #3498db;
+  margin-bottom: 15px;
+}
+
+.app-placeholder span {
   color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-.featured-app-card:hover .app-icon {
-  transform: scale(1.1) rotate(5deg);
+.store-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .app-content {
