@@ -1,47 +1,68 @@
-<footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
-  <div class="container inner">
-    <div class="row">
-      <div class="col-md-12 col-lg-3 text-center text-lg-left">
-        <div class="widget"> 
-          ChristianFindlay.com
-          {% if site.data.general_settings.description %}
-          <div class="space20"></div>
-          <p>{{site.data.general_settings.description}}</p>
-          {% endif %}
+<footer class="modern-footer">
+  <div class="footer-content">
+    <div class="footer-section brand-section">
+      <h2>ChristianFindlay.com</h2>
+      <p>Director of <a href="https://www.nimblesite.co/">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. Building high-performance mobile apps and web solutions with Flutter, .NET and AI.</p>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-phone-alt"></i>
+          <a href="tel:1300794205">1300 794 205</a>
         </div>
-        <!-- /.widget -->
-      </div>
-      <!-- /column -->
-      <div class="space30 d-lg-none d-xl-none"></div>
-      <div class="col-6 col-md-3 col-lg-2 offset-lg-1"></div>
-      <div class="col-6 col-md-3 col-lg-2 offset-lg-1"></div>
-      <!-- /column -->
-      <div class="col-6 col-md-3 col-lg-2">
-        {% assign external_links = site.data.general_settings.external_links %}
-        <div class="widget">
-          {% if external_links.title %}
-           <h5 class="widget-title">{{external_links.title}}</h5>
-          {% endif %}
-          <ul class="list-unstyled mb-0">
-            {% for links in external_links.links %}
-            <li><a href="{{links.url}}">{{links.text}}</a></li>
-            {% endfor %}
-          </ul>
+        <div class="contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Melbourne, Australia</span>
         </div>
-        <!-- /.widget -->
       </div>
-     
-
     </div>
-    <!-- /.row -->
+
+    <div class="footer-section">
+      <h3>Navigation</h3>
+      <ul class="footer-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Resources</h3>
+      <ul class="footer-links">
+        <li><a href="/testimonials">Testimonials</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/blog">Blog</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h3>Connect With Me</h3>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/christian-findlay/" aria-label="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/CFDevelop" aria-label="Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/cfdevelop/" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw" aria-label="YouTube">
+          <i class="fab fa-youtube"></i>
+        </a>
+      </div>
+      <p>Get the latest updates on Flutter and mobile development:</p>
+      <a href="/blog" class="blog-button">Visit the Blog</a>
+    </div>
   </div>
-  <!-- /.container -->
-  <div class="container inner pt-0 pb-40 d-flex align-items-center">
-    <p class="mb-0 mr-auto">{{site.data.general_settings.copyright_text}}</p>
-    <ul class="social social-mute social-s ml-auto">
-      {% for social_links in site.data.general_settings.social_accounts.links %}
-       <li><a href="{{social_links.url}}"><i class="{{social_links.icon}}"></i></a></li>
-      {% endfor %}
-    </ul>
+
+  <div class="footer-bottom">
+    <div class="copyright">
+      <p>© 2024 Christian Findlay. All rights reserved.</p>
+    </div>
+    <div class="legal-links">
+      <a href="/privacy-policy">Privacy Policy</a>
+      <a href="/terms-of-service">Terms of Service</a>
+    </div>
   </div>
 </footer>

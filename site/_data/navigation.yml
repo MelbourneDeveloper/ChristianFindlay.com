@@ -8,9 +8,6 @@ main_menu:
   
   - text: "FAQ"
     url: "/faq"
-
-  - text: "Portfolio"
-    url: "/portfolio"
  
   - text: "Blog"
     url: "/blog"

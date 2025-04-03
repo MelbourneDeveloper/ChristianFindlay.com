@@ -48,7 +48,7 @@
   <meta property="og:type" content="website'" />
   {% endif %}
 
-  {% assign seo_description = "Christian Findlay, Melbourne’s expert in Flutter and .NET development, offers tailored solutions for building high-performance apps. Book a session today to turn your ideas into reality with expert guidance on mobile, web, and scalable backend development." %}
+  {% assign seo_description = "Christian Findlay, Melbourne's expert in Flutter and .NET development, offers tailored solutions for building high-performance apps. Book a session today to turn your ideas into reality with expert guidance on mobile, web, and scalable backend development." %}
 
   {% assign seo_blog_description = "Discover the latest insights and trends in the world of app development with Christian Findlay's Flutter and dotnet blog. This blog is a treasure trove of information for both beginners and seasoned developers, featuring in-depth articles, tutorials, and tips on Flutter and .NET technologies. Whether you're looking to enhance your coding skills, stay updated with the latest developments, or find practical solutions to complex programming challenges, our blog is your ultimate resource. Join the community of passionate developers and start elevating your Flutter and .NET expertise today!" %}
 
@@ -92,13 +92,17 @@
   {% endif %}
 
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/plugins.css"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/settings.css"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/layers.css"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/revolution/css/navigation.css"/>
-  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/type/type.css"/>
+  
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  
+  <!-- Custom modern CSS -->
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/syntax.css"/>
+  
   <!--page wise css-->
   {% if page.custom_css -%}
     {%- for stylesheet in page.custom_css -%}
@@ -111,32 +115,18 @@
     {% endfor %}
   {% endif %}
   <!--/.page wise css-->
+  
+
   {% if site.data.general_settings.google_analytics.enable %}
    {% include analytics.html %}
   {% endif %}
 
 </head>
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
-  <div class="content-wrapper">
-    {{ content }}
-  </div>
-  <script src="{{relative_url}}/assets/js/jquery.min.js"></script>
-  <script src="{{relative_url}}/assets/js/popper.min.js"></script>
-  <script src="{{relative_url}}/assets/js/bootstrap.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.tools.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/jquery.themepunch.revolution.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.actions.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.migration.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
-  <script src="{{relative_url}}/assets/revolution/js/extensions/revolution.extension.video.min.js"></script>
-  <script src="{{relative_url}}/assets/js/plugins.js"></script>
-  <script src="{{relative_url}}/assets/js/simple-jekyll-search.min.js"></script>
-  <script src="{{relative_url}}/assets/js/scripts.js"></script>
+  {{ content }}
+ 
+  <!-- Custom modern JavaScript -->
+  <script src="{{relative_url}}/assets/js/main.js"></script>
 </body>
 
 </html>

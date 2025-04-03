@@ -7,7 +7,7 @@ custom_font: font2
 hero_area:
   enable: true
   title: "Hi, I'm Christian Findlay"
-  sub_title: "I’m the Director of <a href=\"https://www.nimblesite.co/\">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI"
+  sub_title: "I'm the Director of <a href=\"https://www.nimblesite.co/\">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI"
   button_text: "Book a Consultation"
   button_url: "#contact"
   image: "/assets/images/art/ChristianFindlay.webp"
@@ -113,38 +113,6 @@ about_area:
       button_text: "let's chat about ai"
       button_url: "#contact"
 
-portfolios_area:
-  enable: true
-  title: "Portfolio"
-  sub_title: "This portfolio displays recent Flutter apps that are live in the store right now"
-  section_id: "portfolio"
-
-  portfolios:
-
-    - title: "Legacy 100th Torch Relay"
-      sub_title: "Phone App"
-      sm_img: "/assets/images/portfolio/legacy-home.webp"
-      big_img: "/assets/images/portfolio/legacy-route.webp"
-      url: "https://apps.apple.com/au/app/legacy-100th-torch-relay/id1618154550"
-      filters:
-        - apps
-
-    - title: "Octopus Members Portal 2"
-      sub_title: "Phone App"
-      sm_img: "/assets/images/art/og.jpg"
-      big_img: "/assets/images/art/ognotices.jpg"
-      url: "https://play.google.com/store/apps/details?id=au.com.octopusgroup.membersportalv2&hl=en_AU&gl=US"
-      filters:
-        - apps
-
-    - title: "Flutter Pulse"
-      sub_title: "Get the latest Flutter news and tutorials"
-      sm_img: "/assets/images/art/flutterpulse1.webp"
-      big_img: "/assets/images/art/flutterpulse2.webp"
-      url: "https://play.google.com/store/apps/details?id=com.christianfindlay.flutterpulse&hl=en_US&gl=NL"
-      filters:
-        - apps
-
 faq_area:
   section_id: "faq"
   enable: true
@@ -174,271 +142,244 @@ faq_area:
 
 ---
 
-<div class="content-wrapper">
-  {% include one_page_nav.html %}
-  {% if page.hero_area.enable %}
-  <section id="{{page.hero_area.section_id}}">
-    <div class="wrapper bg-opacity-default">
-      <div class="rev_slider_wrapper fullwidth-container dark-spinner">
-        <div id="slider6" class="rev_slider fullwidthbanner" data-version="5.4.7">
-          <ul>
-            <li data-transition="fade" data-thumb="">
-              <img src="/assets/images/dummy.png" style="background:transparent" alt="{{page.hero_area.title}}" />
-              <div class="tp-caption font-weight-600 color-dark" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['-100','-120','280','280']" data-fontsize="['40','40','40','32']"
-                data-lineheight="['50','50','50','42']" data-width="['460','380','650','340']"
-                data-textAlign="['left','left','center','center']"
-                data-whitespace="['normal','normal','normal','normal']"
-                data-frames='[{"delay":1100,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.title}}
-              </div>
-              <div class="tp-caption font-weight-400 color-dark" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['30','30','150','140']" data-fontsize="['26','26','26','20']"
-                data-lineheight="['38','38','38','32']" data-width="['460','380','650','340']"
-                data-textAlign="['left','left','center','center']"
-                data-whitespace="['normal','normal','normal','normal']"
-                data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.sub_title}}
-              </div>
-              <a class="tp-caption btn btn-l scroll" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['175','190','60','60']" data-width="['auto','auto','auto','auto']"
-                data-frames='[{"delay":1900,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"
-                href="{{page.hero_area.button_url}}"> {{page.hero_area.button_text}}
-              </a>
-              {% if page.hero_area.image %}
-              <div class="tp-caption img-blob blob8" data-x="['right','right','center','center']"
-                data-y="['middle','middle','top','top']" data-hoffset="['60','30','10','10']"
-                data-voffset="['25','25','100','100']"
-                data-frames='[{"delay":700,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-visibility="['on','on','on','on']" data-width="none" data-height="none" data-type="image"
-                data-responsive="on" data-responsive_offset="on" style="z-index: 5;">
-                <img data-lazyload="" src="{{page.hero_area.image}}" data-ww="['550','500','400','300']" data-hh="auto"
-                  alt="{{page.hero_area.title}}" />
-              </div>
-              {% endif %}
-            </li>
+{% include one_page_nav.html %}
+
+<section id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Hi, I'm Christian Findlay</h1>
+      <p class="subtitle">I'm the Director of <a href="https://www.nimblesite.co/">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI</p>
+      <a href="#contact" class="hero-cta">Book a Consultation</a>
+    </div>
+    <div class="hero-image">
+      <img src="/assets/images/art/ChristianFindlay.webp" alt="Christian Findlay - Flutter Developer">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Hire Us For</h2>
+      <p class="section-subtitle">We specialize in single-source mobile apps with Flutter, and .NET backend solutions. We also build websites and web apps.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/ec-ecommerce-1.png" alt="Flutter Apps">
+        </div>
+        <h3 class="service-title">Flutter Apps</h3>
+        <p class="service-description">Build a new app with us, or review and breathe new life into your existing app</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/of-pie-chart.png" alt="Firebase or Supabase">
+        </div>
+        <h3 class="service-title">Firebase or Supabase</h3>
+        <p class="service-description">Implement an all in one Backend Solution. Simple auth, analytics, database and seamless scaling</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/hs-support-5.png" alt="AI Integration">
+        </div>
+        <h3 class="service-title">AI Integration</h3>
+        <p class="service-description">Add ChatGPT chat to your app or website and engage your users with AI, or use AI to build</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/sm-training-1.png" alt="Flutter Testing Training">
+        </div>
+        <h3 class="service-title">Flutter Testing Training</h3>
+        <p class="service-description">Online Flutter Integration and Widget Testing training to help your team bring the quality level up</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/ms-cloud-computing.png" alt="Cloud">
+        </div>
+        <h3 class="service-title">Cloud</h3>
+        <p class="service-description">Build and maintain reliable, high-performance solutions with .NET, Azure and Google Cloud</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="/assets/images/icons/st-web-development.png" alt="Web">
+        </div>
+        <h3 class="service-title">Web</h3>
+        <p class="service-description">We extend Flutter apps to the web, and leverage React when you need the best web experience</p>
+      </div>
+    </div>
+    
+    <div class="cta-box">
+      <div class="cta-content">
+        <h3 class="cta-title">Let's chat about my services!</h3>
+        <p class="cta-description">Schedule a consultation to discuss your project requirements.</p>
+      </div>
+      <a href="#contact" class="cta-button">Hire Me</a>
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+<section id="{{page.about_area.section_id}}">
+  {% if page.about_area.enable %}
+  <div class="wrapper gray-wrapper">
+    <div class="container inner">
+      {% for service in page.about_area.services %}
+      {% assign chck_number = forloop.index | modulo: 2 %}
+
+      <div class="space120"></div>
+      <div class="row align-items-center">
+        {% if service.image %}
+        <div class="col-lg-6 order-lg-{{chck_number}}">
+          <div class="img-blob blob15">
+            <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}" />
+          </div>
+        </div>
+        {% endif %}
+        <div class="space30 d-none d-md-block d-lg-none"></div>
+        <div class="col-lg-6 pr-60 pr-md-15">
+          <h3>{{service.title}}</h3>
+          <div class="space10"></div>
+          <p>{{service.description}}</p>
+          <div class="space10"></div>
+          <a href="{{service.button_url}}"
+            class="btn {% cycle 'btn-purple','btn-yellow','btn-red' %}">{{service.button_text}}</a>
+        </div>
+
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.video_area.enable %}
+  {% assign video_info = page.video_area %}
+  <div class="wrapper gray-wrapper">
+    <div class="container inner">
+      <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
+      <div class="space40"></div>
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <iframe  src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+            allowfullscreen></iframe>
+        </div>
+
+        <div class="space30 d-none d-md-block d-lg-none"></div>
+        <div class="col-lg-4 pl-50 pl-md-15">
+          <p>{{video_info.description}}</p>
+          <ul class="icon-list bullet-default">
+            {% for features in video_info.features %}
+            <li><i class="jam jam-arrow-right"></i>{{features}}</li>
+            {% endfor %}
           </ul>
-          <div class="tp-bannertimer tp-bottom"></div>
-        </div>
-        <!-- /.rev_slider -->
-      </div>
-      <!-- /.rev_slider_wrapper -->
-    </div>
-    <!-- /.wrapper -->
-  </section>
-  {% endif %}
-
-  {% if page.services_area.enable %}
-  <section id="{{page.services_area.section_id}}">
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="wrapper overflow-top">
-
-      <div class="container inner" style="padding-bottom: 60px;">
-
-        {% if page.services_area.title %}
-        <h2 class="section-title mb-20 text-center">{{page.services_area.title}}</h2>
-        {% endif %}
-
-        <div class="row text-center">
-
-          {% for service in page.services_area.services %}
-          <div class="col-md-6 col-lg-4 mb-4">
-
-            <div class="box bg-white shadow">
-              {% if service.icon %}
-              <div class="icon icon-svg mb-20">
-                <img src="{{service.icon}}" alt="{{service.title}}" />
-              </div>
-              {% endif %}
-              <h5>{{service.title}}</h5>
-              <p>{{service.sub_title}}</p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-
-      </div>
-
-    </div>
-
-    {% endif %}
-
-    <div class="container inner" style="padding-top: 0px;padding-bottom: 60px;">
-
-      <div
-        class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
-        data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
-        <h3 class="display-3 mb-0">Let's chat about my services!</h3>
-        <div class="space30 d-md-none"></div>
-        <a href="#contact" class="btn btn-white btn-strong-hover mb-0">Hire Me</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="{{page.about_area.section_id}}">
-    {% if page.about_area.enable %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        {% for service in page.about_area.services %}
-        {% assign chck_number = forloop.index | modulo: 2 %}
-
-        <div class="space120"></div>
-        <div class="row align-items-center">
-          {% if service.image %}
-          <div class="col-lg-6 order-lg-{{chck_number}}">
-            <div class="img-blob blob15">
-              <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}" />
-            </div>
-          </div>
+          <div class="space10"></div>
+          {% if video_info.btn_url %}
+          <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
           {% endif %}
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-6 pr-60 pr-md-15">
-            <h3>{{service.title}}</h3>
-            <div class="space10"></div>
-            <p>{{service.description}}</p>
-            <div class="space10"></div>
-            <a href="{{service.button_url}}"
-              class="btn {% cycle 'btn-purple','btn-yellow','btn-red' %}">{{service.button_text}}</a>
-          </div>
-
-        </div>
-
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-    {% if page.video_area.enable %}
-    {% assign video_info = page.video_area %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-        <div class="space40"></div>
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <iframe  src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen></iframe>
-          </div>
-
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-4 pl-50 pl-md-15">
-            <p>{{video_info.description}}</p>
-            <ul class="icon-list bullet-default">
-              {% for features in video_info.features %}
-              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-              {% endfor %}
-            </ul>
-            <div class="space10"></div>
-            {% if video_info.btn_url %}
-            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-            {% endif %}
-          </div>
-
         </div>
 
       </div>
 
     </div>
 
-    {% endif %}
-
-    {% if page.video_area2.enable %}
-    {% assign video_info = page.video_area2 %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-        <div class="space40"></div>
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <iframe  src="https://www.youtube.com/embed/3dKugGP0LAc?si=e7tu_sUWVHw9J9Zx"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen></iframe>
-          </div>
-
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-4 pl-50 pl-md-15">
-            <p>{{video_info.description}}</p>
-            <ul class="icon-list bullet-default">
-              {% for features in video_info.features %}
-              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-              {% endfor %}
-            </ul>
-            <div class="space10"></div>
-            {% if video_info.btn_url %}
-            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-            {% endif %}
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
+  </div>
 
   {% endif %}
 
-  {% if page.portfolios_area.enable %}
-  <section id="{{page.portfolios_area.section_id}}">
-    <div class="wrapper light-wrapper">
-      <div class="container inner">
-        {% if page.portfolios_area.title %}
-        <h2 class="section-title mb-20 text-center">{{page.portfolios_area.title}}</h2>
-        {% endif %}
-        {% if page.portfolios_area.sub_title %}
-        <p class="lead text-center">{{page.portfolios_area.sub_title}}</p>
-        <p class="lead larger text-center">Want to see what I'm working on? Interested in funding an AI SaaS product?</p> 
-
-        <div class="row">
-            <div class="col text-center">
-                <a href="https://investinmy.app" class="btn btn-red">invest now</a>
-            </div>
+  {% if page.video_area2.enable %}
+  {% assign video_info = page.video_area2 %}
+  <div class="wrapper gray-wrapper">
+    <div class="container inner">
+      <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
+      <div class="space40"></div>
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <iframe  src="https://www.youtube.com/embed/3dKugGP0LAc?si=e7tu_sUWVHw9J9Zx"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+            allowfullscreen></iframe>
         </div>
 
-        {% endif %}
-        <div class="space40"></div>
-        <div class="grid grid-view boxed">
-          <div class="tiles">
-            <div class="row isotope light-gallery-wrapper">
-              {% for portfolios in page.portfolios_area.portfolios %}
-              <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
-                <div class="box bg-white shadow p-30">
-                  <figure class="main rounded mb-30">
-                    <div class="item-detailed-image">
-                      {% if portfolios.sm_img %}
-                      <img src="{{portfolios.sm_img}}" alt="{{portfolios.title}}" />
-                      {% endif %}
-                      {% if portfolios.big_img %}
-                      <img src="{{portfolios.big_img}}" alt="{{portfolios.title}}" />
-                      {% endif %}
-                    </div>
-                    <a href="{{portfolios.big_img}}" class="hover-icon-first lightbox" data-tip="Enlarge image"><i
-                        class="jam jam-qr-code"></i></a>
-                    <a href="{{portfolios.url}}" class="hover-icon-second" data-tip="Go to link"><i
-                        class="jam jam-link"></i></a>
-                  </figure>
-                  <div class="item-content">
-                    <h2 class="post-title mb-10">{{portfolios.title}}</h2>
-                    <div class="meta mb-0">{{portfolios.sub_title}}</div>
-                  </div>
+        <div class="space30 d-none d-md-block d-lg-none"></div>
+        <div class="col-lg-4 pl-50 pl-md-15">
+          <p>{{video_info.description}}</p>
+          <ul class="icon-list bullet-default">
+            {% for features in video_info.features %}
+            <li><i class="jam jam-arrow-right"></i>{{features}}</li>
+            {% endfor %}
+          </ul>
+          <div class="space10"></div>
+          {% if video_info.btn_url %}
+          <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
+          {% endif %}
+        </div>
 
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{% endif %}
+
+{% if page.portfolios_area.enable %}
+<section id="{{page.portfolios_area.section_id}}">
+  <div class="wrapper light-wrapper">
+    <div class="container inner">
+      {% if page.portfolios_area.title %}
+      <h2 class="section-title mb-20 text-center">{{page.portfolios_area.title}}</h2>
+      {% endif %}
+      {% if page.portfolios_area.sub_title %}
+      <p class="lead text-center">{{page.portfolios_area.sub_title}}</p>
+      <p class="lead larger text-center">Want to see what I'm working on? Interested in funding an AI SaaS product?</p> 
+
+      <div class="row">
+          <div class="col text-center">
+              <a href="https://investinmy.app" class="btn btn-red">invest now</a>
+          </div>
+      </div>
+
+      {% endif %}
+      <div class="space40"></div>
+      <div class="grid grid-view boxed">
+        <div class="tiles">
+          <div class="row isotope light-gallery-wrapper">
+            {% for portfolios in page.portfolios_area.portfolios %}
+            <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
+              <div class="box bg-white shadow p-30">
+                <figure class="main rounded mb-30">
+                  <div class="item-detailed-image">
+                    {% if portfolios.sm_img %}
+                    <img src="{{portfolios.sm_img}}" alt="{{portfolios.title}}" />
+                    {% endif %}
+                    {% if portfolios.big_img %}
+                    <img src="{{portfolios.big_img}}" alt="{{portfolios.title}}" />
+                    {% endif %}
+                  </div>
+                  <a href="{{portfolios.big_img}}" class="hover-icon-first lightbox" data-tip="Enlarge image"><i
+                      class="jam jam-qr-code"></i></a>
+                  <a href="{{portfolios.url}}" class="hover-icon-second" data-tip="Go to link"><i
+                      class="jam jam-link"></i></a>
+                </figure>
+                <div class="item-content">
+                  <h2 class="post-title mb-10">{{portfolios.title}}</h2>
+                  <div class="meta mb-0">{{portfolios.sub_title}}</div>
                 </div>
 
               </div>
 
-              {% endfor %}
             </div>
 
+            {% endfor %}
           </div>
 
         </div>
@@ -447,143 +388,140 @@ faq_area:
 
     </div>
 
-  </section>
-  {% endif %}
+  </div>
 
-  {% if page.testimonials.enable %}
-  <section id="{{page.testimonials.section_id}}">
-    <div class="wrapper bg-opacity-default">
-      <div class="container inner">
-        <div class="row">
-          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div class="space60"></div>
-            <h3 class="section-title mb-20 text-center">{{page.testimonials.title}}</h3>
-            <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
-              {% for feedback in page.testimonials.feedback %}
-              <div class="item">
-                <blockquote class="icon larger">
-                  <p>"{{feedback.quote}}"</p>
-                  <div class="blockquote-details justify-content-center">
-                    {% if feedback.image %}
-                    <div class="img-blob blob1">
-                      <img src="{{feedback.image}}" alt="{{feedback.name}}" />
-                    </div>
-                    {% endif %}
-                    <div class="info">
-                      <h6 class="mb-0">{{feedback.name}}</h6>
-                      <span class="meta mb-0">{{feedback.designation}}</span>
-                    </div>
+</section>
+{% endif %}
+
+{% if page.testimonials.enable %}
+<section id="{{page.testimonials.section_id}}">
+  <div class="wrapper bg-opacity-default">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="space60"></div>
+          <h3 class="section-title mb-20 text-center">{{page.testimonials.title}}</h3>
+          <div class="basic-slider owl-carousel gap-small" data-margin="20" data-dots="true" data-autoplay="true">
+            {% for feedback in page.testimonials.feedback %}
+            <div class="item">
+              <blockquote class="icon larger">
+                <p>"{{feedback.quote}}"</p>
+                <div class="blockquote-details justify-content-center">
+                  {% if feedback.image %}
+                  <div class="img-blob">
+                    <img src="{{feedback.image}}" alt="{{feedback.name}}" loading="eager" />
                   </div>
-                </blockquote>
-              </div>
+                  {% endif %}
+                  <div class="info">
+                    <h6 class="mb-0">{{feedback.name}}</h6>
+                    <span class="meta mb-0">{{feedback.designation}}</span>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="space60"></div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
-              {% endfor %}
+{% if page.faq_area.enable %}
+<section id="{{page.faq_area.section_id}}">
+  <div class="space60"></div>
+  <div class="space60"></div>
+  <div class="space60"></div>
+  <h3 class="display-3 text-center">{{page.faq_area.title}}</h3>
+  <div class="space20"></div>
+  <h5 class="text-center">{{page.faq_area.sub_title}}</h5>
+  <div class="row">
+    <div class="col-lg-6 mb-0">
+      <div id="accordion-1" class="accordion-wrapper">
+        {% for faq in page.faq_area.faq limit: "4" %}
+        <div class="card">
+          <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
+            <h5>
+              <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-1-{{forloop.index}}"
+                aria-expanded="false" aria-controls="accordion-collapse-1-{{forloop.index}}">
+                {{faq.question}}
+              </button>
+            </h5>
+          </div>
+          <div id="accordion-collapse-1-{{forloop.index}}" class="collapse"
+            aria-labelledby="accordion-heading-1-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
+            <div class="card-body">
+              <p>{{faq.answer}}</p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div id="accordion-2" class="accordion-wrapper">
+        {% for faq in page.faq_area.faq limit: "4" offset: "4" %}
+        <div class="card shadow">
+          <div class="card-header" id="accordion-heading-2-1">
+            <h5>
+              <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
+                aria-expanded="false" aria-controls="accordion-collapse-2-{{forloop.index}}">
+                {{faq.question}}
+              </button>
+            </h5>
+          </div>
+
+          <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
+            aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
+            <div class="card-body">
+              <p>{{faq.answer}}</p>
             </div>
 
           </div>
 
         </div>
-
-        <div class="space60"></div>
-
-      </div>
-    </div>
-  </section>
-  {% endif %}
-
-  {% if page.faq_area.enable %}
-  <section id="{{page.faq_area.section_id}}">
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <h3 class="display-3 text-center">{{page.faq_area.title}}</h3>
-    <div class="space20"></div>
-    <h5 class="text-center">{{page.faq_area.sub_title}}</h5>
-    <div class="row">
-      <div class="col-lg-6 mb-0">
-        <div id="accordion-1" class="accordion-wrapper">
-          {% for faq in page.faq_area.faq limit: "4" %}
-          <div class="card">
-            <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
-              <h5>
-                <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-1-{{forloop.index}}"
-                  aria-expanded="false" aria-controls="accordion-collapse-1-{{forloop.index}}">
-                  {{faq.question}}
-                </button>
-              </h5>
-            </div>
-            <div id="accordion-collapse-1-{{forloop.index}}" class="collapse"
-              aria-labelledby="accordion-heading-1-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
-              <div class="card-body">
-                <p>{{faq.answer}}</p>
-              </div>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div id="accordion-2" class="accordion-wrapper">
-          {% for faq in page.faq_area.faq limit: "4" offset: "4" %}
-          <div class="card shadow">
-            <div class="card-header" id="accordion-heading-2-1">
-              <h5>
-                <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                  aria-expanded="false" aria-controls="accordion-collapse-2-{{forloop.index}}">
-                  {{faq.question}}
-                </button>
-              </h5>
-            </div>
-
-            <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-              aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
-              <div class="card-body">
-                <p>{{faq.answer}}</p>
-              </div>
-
-            </div>
-
-          </div>
-          {% endfor %}
-        </div>
-
+        {% endfor %}
       </div>
 
     </div>
 
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
+  </div>
 
-  </section>
-  {% endif %}
+  <div class="space60"></div>
+  <div class="space60"></div>
+  <div class="space60"></div>
+
+</section>
+{% endif %}
 
 
 
-  <section id="contact">
+<section id="contact">
 
-    <div class="wrapper gray-wrapper" style="padding-bottom: 0px;">
-      <div class="container inner" style="padding-bottom: 0px;">
+  <div class="wrapper gray-wrapper" style="padding-bottom: 0px;">
+    <div class="container inner" style="padding-bottom: 0px;">
 
-        <h2 class="section-title mb-20 text-center">Book a Consultation</h2>
+      <h2 class="section-title mb-20 text-center">Book a Consultation</h2>
 
-        <!-- Calendly inline widget begin -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min" style="min-width:320px;height:700px;"></div>
-        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        <!-- Calendly inline widget end -->
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
 
-        <p class="lead larger text-center">Call <a href="https://www.nimblesite.co/">Nimblesite</a> on <a href="tel:1300794205">1300 794 205</a></p>
-        <p class="lead larger text-center">Email <strong>sales at nimblesite.co</strong></p>
-        <p class="lead larger text-center">Or, send Nimblesite a <a href="https://www.nimblesite.co/#contact">message</a> </p>
-
-      </div>
+      <p class="lead larger text-center">Call <a href="https://www.nimblesite.co/">Nimblesite</a> on <a href="tel:1300794205">1300 794 205</a></p>
+      <p class="lead larger text-center">Email <strong>sales at nimblesite.co</strong></p>
+      <p class="lead larger text-center">Or, send Nimblesite a <a href="https://www.nimblesite.co/#contact">message</a> </p>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  {% include footer_2.html light_logo="true" %}
+{% include footer_2.html light_logo="true" %}
 
 </div>
