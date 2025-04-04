@@ -340,7 +340,7 @@ about_area:
           <img src="assets/images/icons/services/ai-icon.svg" alt="AI Integration">
         </div>
         <h3 class="service-title">AI Integration</h3>
-        <p class="service-description">Leverage my expertise in AI to enhance your apps with ChatGPT, or improve your team's productivity with AI-assisted development</p>
+        <p class="service-description">Leverage my expertise in AI to enhance your apps with ChatGPT, or improve your team's productivity with AI Agent assisted development</p>
       </div>
       
       <div class="service-card">
@@ -421,7 +421,7 @@ about_area:
 
 <section id="contact">
   <div class="container">
-    <div class="section-header mb-4">
+    <div class="section-header mb-3">
       <h2 class="section-title">Get in Touch</h2>
     </div>
     
@@ -430,14 +430,14 @@ about_area:
       <div class="contact-card">
         <h3 class="card-title">Book a Free Consultation</h3>
         <!-- Calendly inline widget -->
-        <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min" style="min-width:320px;height:430px;"></div>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min"></div>
         <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
       
       <!-- Contact form card -->
       <div class="contact-card">
         <h3 class="card-title">Send a Message</h3>
-        <form id="contactForm" class="contact-form text-center" name="Contact">
+        <form id="contactForm" class="contact-form" name="Contact">
           <input type="hidden" name="form_name" value="Contact">
           
           <div class="form-group">
@@ -449,14 +449,11 @@ about_area:
           </div>
           
           <div class="form-group">
-            <textarea name="message" id="message" cols="30" rows="4" class="form-control" 
+            <textarea name="message" id="message" cols="30" rows="3" class="form-control" 
               placeholder="Tell me about your project" required></textarea>
           </div>
           
           <button id="submitButton" type="submit" class="button-enhanced" form="contactForm">
-            <svg class="spinner-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-            </svg>
             <span class="button-text">Send Message</span>
           </button>
           
@@ -464,7 +461,7 @@ about_area:
             Thanks! I'll get back to you within 24 hours
           </div>
           <div id="error" class="mt-2">
-            Oops! Something went wrong. Please try again, or reach out directly.
+            Oops! Something went wrong. Please try again.
           </div>
         </form>
       </div>
