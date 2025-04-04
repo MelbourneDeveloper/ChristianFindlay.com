@@ -4402,8 +4402,8 @@ section:not(#home) {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background-color: var(--dark);
   border-radius: 50%;
   color: var(--gray-300);
