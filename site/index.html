@@ -434,72 +434,61 @@ about_area:
       <p class="section-subtitle">Get in touch to discuss your project or schedule a consultation</p>
     </div>
     
-    <div class="row">
-      <!-- First column - Calendly widget -->
-      <div class="col-lg-6">
-        <div class="service-card">
-          <h3 class="service-title">Schedule a Meeting</h3>
-          <!-- Calendly inline widget -->
-          <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min" style="min-width:320px;height:500px;"></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        </div>
+    <div class="contact-grid">
+      <!-- Calendly widget card -->
+      <div class="contact-card">
+        <h3 class="card-title">Schedule a Meeting</h3>
+        <!-- Calendly inline widget -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min" style="min-width:320px;height:500px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
       
-      <!-- Second column - Contact form and contact info -->
-      <div class="col-lg-6">
-        <div class="row">
-          <!-- Contact form card -->
-          <div class="col-12 mb-4">
-            <div class="service-card">
-              <h3 class="service-title">Let's Chat</h3>
-              <form id="contactForm" class="contact-form" name="Contact">
-                <input type="hidden" name="form_name" value="Contact">
-                
-                <div class="form-group">
-                  <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                  <input type="tel" id="phone" name="phone" placeholder="Phone (optional)" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                  <textarea name="message" id="message" cols="30" rows="5" class="form-control" 
-                    placeholder="Message" required style="font-family: var(--font-sans);"></textarea>
-                </div>
-                
-                <button id="submitButton" type="submit" class="button-enhanced" form="contactForm">
-                  <svg class="spinner-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
-                  </svg>
-                  <span class="button-text">Submit Message</span>
-                </button>
-                
-                <div id="success" class="mt-3">
-                  Thanks! Someone from Nimblesite will get back to you soon
-                </div>
-                <div id="error" class="mt-3">
-                  Oops! Something went wrong. Please try again, or reach out on our socials.
-                </div>
-              </form>
-            </div>
+      <!-- Contact form card -->
+      <div class="contact-card">
+        <h3 class="card-title">Let's Chat</h3>
+        <form id="contactForm" class="contact-form" name="Contact">
+          <input type="hidden" name="form_name" value="Contact">
+          
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Email" class="form-control" required>
           </div>
           
-          <!-- Contact info card -->
-          <div class="col-12">
-            <div class="service-card contact-info-card">
-              <h3 class="service-title">Contact Information</h3>
-              <div class="contact-info">
-                <div class="contact-item">
-                  <i class="fa fa-phone"></i>
-                  <span>Call <a href="tel:1300794205">1300 794 205</a></span>
-                </div>
-                <div class="contact-item">
-                  <i class="fa fa-envelope"></i>
-                  <span>Email <a href="mailto:sales@nimblesite.co">sales@nimblesite.co</a></span>
-                </div>
-              </div>
-            </div>
+          <div class="form-group">
+            <input type="tel" id="phone" name="phone" placeholder="Phone (optional)" class="form-control">
+          </div>
+          
+          <div class="form-group">
+            <textarea name="message" id="message" cols="30" rows="5" class="form-control" 
+              placeholder="Message" required></textarea>
+          </div>
+          
+          <button id="submitButton" type="submit" class="button-enhanced" form="contactForm">
+            <svg class="spinner-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle>
+            </svg>
+            <span class="button-text">Submit Message</span>
+          </button>
+          
+          <div id="success" class="mt-3">
+            Thanks! Someone from Nimblesite will get back to you soon
+          </div>
+          <div id="error" class="mt-3">
+            Oops! Something went wrong. Please try again, or reach out on our socials.
+          </div>
+        </form>
+      </div>
+      
+      <!-- Contact info card -->
+      <div class="contact-card contact-info-card">
+        <h3 class="card-title">Contact Information</h3>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fa fa-phone"></i>
+            <span>Call <a href="https://www.nimblesite.co/">Nimblesite</a> on <a href="tel:1300794205">1300 794 205</a></span>
+          </div>
+          <div class="contact-item">
+            <i class="fa fa-envelope"></i>
+            <span>Email <a href="mailto:sales@nimblesite.co">sales@nimblesite.co</a></span>
           </div>
         </div>
       </div>
