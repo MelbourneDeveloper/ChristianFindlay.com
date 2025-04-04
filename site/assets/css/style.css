@@ -1516,9 +1516,10 @@ section:not(#home) {
 }
 
 #services .service-icon img {
-  width: auto;
+  width: 36px;
   height: 36px;
   transition: all 0.3s ease;
+  object-fit: contain;
 }
 
 #services .service-card:hover .service-icon img {
