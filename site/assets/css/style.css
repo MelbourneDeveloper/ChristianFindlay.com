@@ -3938,7 +3938,14 @@ section:not(#home) {
 }
 
 #contact .contact-info {
-  margin-top: 30px;
+  margin-top: 0;
+}
+
+#contact .contact-info-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #contact .contact-item {
@@ -3946,12 +3953,19 @@ section:not(#home) {
   align-items: center;
   margin-bottom: 15px;
   color: var(--gray-500);
+  padding: 12px 0;
+}
+
+#contact .contact-item:last-child {
+  margin-bottom: 0;
 }
 
 #contact .contact-item i {
   color: var(--primary);
-  margin-right: 10px;
-  font-size: 1.1rem;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  width: 24px;
+  text-align: center;
 }
 
 #contact .contact-item a {
@@ -3964,6 +3978,13 @@ section:not(#home) {
 #contact .contact-item a:hover {
   color: var(--primary-light);
   text-decoration: underline;
+}
+
+#contact textarea.form-control {
+  font-family: var(--font-sans) !important;
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
 }
 
 @media (max-width: 991px) {
