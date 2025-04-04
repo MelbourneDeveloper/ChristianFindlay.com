@@ -4297,6 +4297,17 @@ section:not(#home) {
   transition: all 0.3s ease;
 }
 
+#contact .social-icons a img {
+  width: 18px;
+  height: 18px;
+  filter: brightness(0.8);
+  transition: all 0.3s ease;
+}
+
+#contact .social-icons a:hover img {
+  filter: brightness(1);
+}
+
 #contact .social-icons a:hover {
   background-color: var(--primary);
   color: white;
