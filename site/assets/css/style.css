@@ -3809,11 +3809,40 @@ section:not(#home) {
 }
 
 #contact .contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
   margin-top: 20px;
+  height: 100%;
 }
 
 #contact .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+#contact textarea.form-control {
+  min-height: 120px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+#contact .button-enhanced {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+#contact #success, 
+#contact #error {
+  margin-top: 15px;
+}
+
+#contact .contact-item {
+  margin-bottom: 25px;
+}
+
+#contact .contact-item:last-child {
+  margin-bottom: 0;
 }
 
 #contact .form-control {
@@ -3834,9 +3863,41 @@ section:not(#home) {
   outline: none;
 }
 
+#contact .calendly-inline-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 500px;
+}
+
+#contact .card-title {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+#contact .contact-social {
+  margin-top: auto;
+}
+
+#contact .contact-info {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#contact .form-control::placeholder {
+  color: var(--gray-500);
+}
+
 #contact textarea.form-control {
-  min-height: 120px;
+  font-family: var(--font-sans) !important;
   resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
 }
 
 #contact .button-enhanced {
@@ -3975,6 +4036,7 @@ section:not(#home) {
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 30px;
   width: 100%;
+  align-items: stretch;
 }
 
 /* Contact Card Styling */
@@ -3988,6 +4050,7 @@ section:not(#home) {
   height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 #contact .contact-card:hover {
@@ -4023,6 +4086,7 @@ section:not(#home) {
   text-align: center;
   position: relative;
   padding-bottom: 15px;
+  flex-shrink: 0;
 }
 
 #contact .card-title::after {
@@ -4043,7 +4107,7 @@ section:not(#home) {
 }
 
 #contact .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 #contact .form-control {
