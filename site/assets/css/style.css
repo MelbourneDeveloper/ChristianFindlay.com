@@ -4123,6 +4123,7 @@ section:not(#home) {
 /* Contact Info Styling */
 #contact .contact-info {
   margin-top: 0;
+  text-align: center;
 }
 
 #contact .contact-info-card {
@@ -4175,6 +4176,68 @@ section:not(#home) {
 #contact .contact-item a:hover {
   color: var(--primary);
   text-decoration: underline;
+}
+
+/* Social Icons in Contact Section */
+#contact .contact-social {
+  margin-top: 30px;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+#contact .contact-social:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+#contact .social-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--gray-300);
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#contact .social-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+#contact .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#contact .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  color: var(--gray-300);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+#contact .social-icons a:hover {
+  background-color: var(--primary);
+  color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
 }
 
 /* Success and Error Messages */
