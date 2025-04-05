@@ -11,10 +11,12 @@ layout: default
       <p class="blog-subtitle">Expert insights on Flutter, Dart, and .NET development</p>
     </div>
 
-    <div class="blog grid">
-      {% for post in paginator.posts %}
-        {% include post_loop.html %}
-      {% endfor %}
+    <div class="blog-container">
+      <div class="blog grid">
+        {% for post in paginator.posts %}
+          {% include post_loop.html %}
+        {% endfor %}
+      </div>
     </div>
     
     <div class="pagination-wrapper">

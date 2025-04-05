@@ -69,21 +69,46 @@
 /*****************************************
  * BLOG GRID - LISTING PAGE
  *****************************************/
-/* Blog grid container */
-.blog.grid {
+/* Blog container */
+.blog-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-8) var(--spacing-4);
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--spacing-6);
+  padding: var(--spacing-4) 0;
+  position: relative;
+}
+
+/* Blog grid container */
+.blog.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: var(--spacing-8);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-4) 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Add subtle background effect */
+.blog-container::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.03), transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.03), transparent 25%);
+  z-index: 0;
+  pointer-events: none;
 }
 
 /* Post card wrapper for sizing and spacing */
 .post-card-wrapper {
-  margin-bottom: var(--spacing-6);
+  margin-bottom: 0;
+  height: 100%;
 }
 
 /* Post card container */
@@ -92,18 +117,38 @@
   background-color: var(--dark);
   border-radius: var(--rounded-xl);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   margin-bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
-  width: 500px;
-  height: auto;
-  height: 320px;
+  height: 100%;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .post-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  border-color: rgba(110, 140, 255, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: rgba(110, 140, 255, 0.15);
+}
+
+.post-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.post-card:hover::before {
+  transform: scaleX(1);
 }
 
 .post-card-inner {
@@ -137,7 +182,7 @@
   padding: var(--spacing-5);
   display: flex;
   flex-direction: column;
-  flex: none;
+  flex: 1;
 }
 
 /* Categories styling */
@@ -207,6 +252,7 @@
   margin-bottom: var(--spacing-3);
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   flex-grow: 1;
 }
@@ -218,14 +264,40 @@
   color: var(--primary);
   text-decoration: none;
   margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
 }
 
 .post-card-read-more:hover {
   color: var(--primary-light);
+  transform: translateX(3px);
+}
+
+.post-card-read-more::after {
+  content: '→';
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+.post-card-read-more:hover::after {
+  transform: translateX(3px);
 }
 
 /* Responsive adjustments */
+@media (max-width: 992px) {
+  .blog.grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: var(--spacing-6);
+  }
+}
+
 @media (max-width: 768px) {
+  .blog.grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
   .post-card-inner {
     flex-direction: column-reverse;
   }
@@ -235,6 +307,10 @@
     height: 200px;
   }
   
+  .post-card-content {
+    width: 100%;
+  }
+  
   .post-card-title {
     font-size: 1.25rem;
     margin-top: var(--spacing-3);
@@ -242,21 +318,6 @@
   
   .post-card-excerpt {
     -webkit-line-clamp: 3;
-  }
-}
-
-/* Media query for tablet */
-@media (max-width: 992px) {
-  .post-card-wrapper {
-    width: 45%;
-  }
-}
-
-/* Media query for mobile */
-@media (max-width: 640px) {
-  .post-card-wrapper {
-    width: 100%;
-    max-width: 500px;
   }
   
   .blog-header {
@@ -269,6 +330,21 @@
   
   .blog-subtitle {
     font-size: 1rem;
+  }
+}
+
+/* Media query for small mobile */
+@media (max-width: 480px) {
+  .post-card {
+    min-height: auto;
+  }
+  
+  .post-card-image {
+    height: 180px;
+  }
+  
+  .post-card-excerpt {
+    -webkit-line-clamp: 2;
   }
 }
 
