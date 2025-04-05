@@ -2,9 +2,9 @@
 layout: default
 title: Tag Page
 pagination:
-  enabled: true
-  per_page: 6
-  permalink: "/page:num/"
+enabled: true
+per_page: 6
+permalink: "/page:num/"
 ---
 
 {% include one_page_nav.html %}
@@ -14,8 +14,10 @@ pagination:
     <div class="blog-header-wrapper">
       <div class="blog-header">
         {% assign tag_name = page.pagination.tag | default: page.tag %}
-        {% assign clean_tag = tag_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: ' page 9', '' | replace: ' page 10', '' %}
-        
+        {% assign clean_tag = tag_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' |
+        replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: '
+        page 9', '' | replace: ' page 10', '' %}
+
         {% if clean_tag == "dotnet" %}
         <h1>.NET Articles</h1>
         {% else %}
@@ -31,26 +33,24 @@ pagination:
     </div>
 
     <div class="blog-container">
-      <div class="row">
-        <div class="col-lg-8">
-          <div class="blog grid">
-            {% for post in paginator.posts %}
-              {% include post_loop.html %}
-            {% endfor %}
-          </div>
-          
-          <div class="pagination-wrapper">
-            {% include pagination.html %}
-          </div>
-        </div>
-        
-        <div class="col-lg-4">
-          <div class="blog-sidebar">
-            {% include categories_tags.html %}
-          </div>
-        </div>
+
+      <div class="blog grid">
+        {% for post in paginator.posts %}
+        {% include post_loop.html %}
+        {% endfor %}
+      </div>
+
+      <div class="pagination-wrapper">
+        {% include pagination.html %}
       </div>
     </div>
+
+    <div class="col-lg-4">
+      <div class="blog-sidebar">
+        {% include categories_tags.html %}
+      </div>
+    </div>
+
   </div>
 </div>
 
