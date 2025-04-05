@@ -4432,3 +4432,222 @@ section:not(#home) {
 .connect-icon:hover img {
   filter: brightness(1);
 }
+
+/* 
+ * POST CARDS - NEW IMPLEMENTATION
+ * Complete redesign of post cards with modern styling
+ */
+.post-card {
+  position: relative;
+  background-color: var(--light);
+  border-radius: var(--rounded-xl);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(110, 140, 255, 0.2);
+}
+
+.post-card-inner {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+/* Post card image styling */
+.post-card-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  background-color: var(--dark);
+}
+
+.post-card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+.post-card:hover .post-card-image img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.post-card-image::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: linear-gradient(to top, var(--light), transparent);
+  z-index: 2;
+  opacity: 0.8;
+}
+
+/* Post card content styling */
+.post-card-content {
+  padding: var(--spacing-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Categories styling */
+.post-card-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.post-card-category {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary);
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.post-card-category:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* Post title styling */
+.post-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: var(--spacing-3);
+  transition: color 0.2s ease;
+}
+
+.post-card-title a {
+  color: var(--gray-700);
+  text-decoration: none;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.2s ease;
+}
+
+.post-card-title a:hover {
+  color: var(--primary);
+}
+
+/* Post meta information */
+.post-card-meta {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+  font-size: 0.8rem;
+  color: var(--gray-500);
+}
+
+.post-card-date {
+  display: inline-flex;
+  align-items: center;
+}
+
+.post-card-date::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Post excerpt styling */
+.post-card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--gray-500);
+  margin-bottom: var(--spacing-5);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+/* Read more link styling */
+.post-card-read-more {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: none;
+  margin-top: auto;
+  transition: all 0.2s ease;
+}
+
+.post-card-read-more:hover {
+  color: var(--primary-dark);
+}
+
+.post-card-read-more .arrow-icon {
+  margin-left: 4px;
+  transition: transform 0.2s ease;
+}
+
+.post-card-read-more:hover .arrow-icon {
+  transform: translateX(4px);
+}
+
+/* Responsive adjustments for the blog grid with new cards */
+.blog.grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--spacing-6);
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: var(--spacing-8) 0;
+}
+
+@media (min-width: 600px) {
+  .blog.grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-6);
+  }
+}
+
+@media (min-width: 992px) {
+  .blog.grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8);
+  }
+}
+
+/* Dark mode adjustments for better contrast */
+@media (prefers-color-scheme: dark) {
+  .post-card-title a {
+    color: var(--gray-200);
+  }
+  
+  .post-card-excerpt {
+    color: var(--gray-400);
+  }
+}

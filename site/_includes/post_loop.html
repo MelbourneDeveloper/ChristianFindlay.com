@@ -1,30 +1,37 @@
-{% if post.image %}
-<div class="post-image">
-	<a href="{{ post.url | relative_url }}">
-		<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" />
-	</a>
-</div>
-{% endif %}
-<div class="post-content">
-	{% if post.categories.size > 0 %}
-	<div class="post-category">
-		{% for category in post.categories %}
-		<a href="/category/{{ category | slugify }}">{{ category }}</a>
-		{% endfor %}
+<article class="post-card">
+	<div class="post-card-inner">
+		{% if post.image %}
+		<div class="post-card-image">
+			<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+				<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+			</a>
+		</div>
+		{% endif %}
+		<div class="post-card-content">
+			{% if post.categories.size > 0 %}
+			<div class="post-card-categories">
+				{% for category in post.categories %}
+				<a href="/category/{{ category | slugify }}" class="post-card-category">{{ category }}</a>
+				{% endfor %}
+			</div>
+			{% endif %}
+			
+			<h2 class="post-card-title">
+				<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+			</h2>
+			
+			<div class="post-card-meta">
+				<span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+			</div>
+			
+			<div class="post-card-excerpt">
+				{{ post.excerpt | strip_html | truncatewords: 15 }}
+			</div>
+			
+			<a href="{{ post.url | relative_url }}" class="post-card-read-more">
+				<span>Read More</span>
+				<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+			</a>
+		</div>
 	</div>
-	{% endif %}
-	
-	<h2 class="post-title">
-		<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-	</h2>
-	
-	<div class="post-meta">
-		<span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-	</div>
-	
-	<div class="post-excerpt">
-		{{ post.excerpt | strip_html | truncatewords: 15 }}
-	</div>
-	
-	<a href="{{ post.url | relative_url }}" class="more">Read More</a>
-</div>
+</article>
