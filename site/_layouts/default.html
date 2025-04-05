@@ -14,66 +14,66 @@
 
   {% if page.type == 'category' %}
   {% if page.title == 'dotnet' %}
-  <title>.NET Blog - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}.NET Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Blog - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content=".NET Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}.NET Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Blog - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content=".NET Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}.NET Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Blog - ChristianFindlay.com{% endif %}"
   />
   {% elsif page.title == 'flutter' %}
-  <title>Flutter Blog - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}Flutter Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Flutter Blog - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content="Flutter Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}Flutter Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Flutter Blog - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content="Flutter Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}Flutter Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Flutter Blog - ChristianFindlay.com{% endif %}"
   />
   {% elsif page.title == 'software-development' %}
-  <title>Mobile App Development Blog - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}Software Development Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Software Development Blog - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content="Mobile App Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}Software Development Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Software Development Blog - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content="Mobile App Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}Software Development Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}Software Development Blog - ChristianFindlay.com{% endif %}"
   />
   {% else %}
-  <title>{{ page.title | capitalize }} Blog - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Blog - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content="{{ page.title | capitalize }} Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Blog - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content="{{ page.title | capitalize }} Blog - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Blog - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Blog - ChristianFindlay.com{% endif %}"
   />
   {% endif %}
   {% elsif page.type == 'tag' %}
   {% if page.title == 'dotnet' %}
-  <title>.NET Articles - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}.NET Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Articles - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content=".NET Articles - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}.NET Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Articles - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content=".NET Articles - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}.NET Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}.NET Articles - ChristianFindlay.com{% endif %}"
   />
   {% else %}
-  <title>{{ page.title | capitalize }} - ChristianFindlay.com</title>
+  <title>{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Articles - ChristianFindlay.com{% endif %}</title>
   <meta
     property="og:title"
-    content="{{ page.title | capitalize }} - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Articles - ChristianFindlay.com{% endif %}"
   />
   <meta
     property="twitter:title"
-    content="{{ page.title | capitalize }} - ChristianFindlay.com"
+    content="{% if paginator.page > 1 %}{{ page.title | capitalize | replace: "-", " " }} Articles - Page {{ paginator.page }} - ChristianFindlay.com{% else %}{{ page.title | capitalize | replace: "-", " " }} Articles - ChristianFindlay.com{% endif %}"
   />
   {% endif %}
   {% else %}

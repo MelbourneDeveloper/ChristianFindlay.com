@@ -13,16 +13,19 @@ pagination:
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        {% if page.tag == "dotnet" %}
-        <h1>.NET - ChristianFindlay.com</h1>
+        {% assign tag_name = page.pagination.tag | default: page.tag %}
+        {% assign clean_tag = tag_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: ' page 9', '' | replace: ' page 10', '' %}
+        
+        {% if clean_tag == "dotnet" %}
+        <h1>.NET Articles</h1>
         {% else %}
-        <h1>{{ page.tag | capitalize }} - ChristianFindlay.com</h1>
+        <h1>{{ clean_tag | capitalize | replace: "-", " " }} Articles</h1>
         {% endif %}
         <div class="header-divider"></div>
-        {% if page.tag == "dotnet" %}
+        {% if clean_tag == "dotnet" %}
         <p class="blog-subtitle">Articles related to .NET development</p>
         {% else %}
-        <p class="blog-subtitle">Articles related to {{ page.tag | capitalize }}</p>
+        <p class="blog-subtitle">Articles related to {{ clean_tag | capitalize | replace: "-", " " }}</p>
         {% endif %}
       </div>
     </div>

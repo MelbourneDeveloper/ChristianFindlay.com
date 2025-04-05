@@ -12,22 +12,25 @@ pagination:
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        {% if page.title == "flutter" %}
+        {% assign category_name = page.pagination.category | default: page.title %}
+        {% assign clean_category = category_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: ' page 9', '' | replace: ' page 10', '' %}
+        
+        {% if clean_category == "flutter" %}
         <h1>Flutter Blog</h1>
         <div class="header-divider"></div>
         <p class="blog-subtitle">Expert insights on Flutter and Dart development</p>
-        {% elsif page.title == "dotnet" %}
+        {% elsif clean_category == "dotnet" %}
         <h1>.NET Blog</h1>
         <div class="header-divider"></div>
         <p class="blog-subtitle">Professional .NET development tips and best practices</p>
-        {% elsif page.title == "software-development" %}
+        {% elsif clean_category == "software-development" %}
         <h1>Software Development Blog</h1>
         <div class="header-divider"></div>
         <p class="blog-subtitle">Insights on building high-performance mobile applications and backends</p>
         {% else %}
-        <h1>{{ page.title | capitalize }} Blog - ChristianFindlay.com</h1>
+        <h1>{{ clean_category | capitalize | replace: "-", " " }} Blog</h1>
         <div class="header-divider"></div>
-        <p class="blog-subtitle">Expert insights on {{ page.title | capitalize }} development</p>
+        <p class="blog-subtitle">Expert insights on {{ clean_category | capitalize | replace: "-", " " }} development</p>
         {% endif %}
       </div>
     </div>
