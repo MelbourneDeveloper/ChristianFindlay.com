@@ -7,7 +7,9 @@ post_image: "/assets/images/blog/dotnet/record.jpg"
 image: "/assets/images/blog/dotnet/record.jpg"
 tags: records csharp
 categories: [dotnet]
-permalink: /blog/:title
+permalink: /blog/change-behavior-of-record-constructor
+redirect_from:
+  - /blog/hange-behavior-of-record-constructor
 ---
 
 [Records](https://docs.microsoft.com/en-us/dotnet/csharp/whats-new/tutorials/records) are a new feature in C# 9. Records are special classes that borrow from [Structs](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/struct) in that they have _value-based equality_. You could look at them as a hybrid between the two categories of types. They are more or less immutable by default and have syntax sugar to make declaration easier and more concise. However, the syntax sugar can obscure more standard tasks like changing the behavior of the default constructor. You will probably need to do this for validation in some cases. This article shows you how to achieve this.
@@ -142,12 +144,12 @@ namespace Urls
 
 We ensure that we decode the query value when storing it, and then we encode it when we use it as part of a Url.
 
-You could ask the question: why not make everything a record? It seems that there would be pitfalls associated with this, but we are venturing into new territory, and we are yet to map out best-practice for records in the C# context. 
+You could ask the question: why not make everything a record? It seems that there would be pitfalls associated with this, but we are venturing into new territory, and we are yet to map out best-practice for records in the C# context. 
 
 Wrap-Up
 -------
 
-It will take a few years for developers to come to terms with records and lay the ground rules for using them. You currently have a blank slate, and you and are free to experiment until the "experts" start telling you otherwise. My advice is only to use records to represent fixed data and minimal logic. Use the syntax sugar where you can. However, there are apparent scenarios where minimal validation in the constructor may be practical. Use your judgment, discuss with your team, and weigh up the pros and cons. 
+It will take a few years for developers to come to terms with records and lay the ground rules for using them. You currently have a blank slate, and you and are free to experiment until the "experts" start telling you otherwise. My advice is only to use records to represent fixed data and minimal logic. Use the syntax sugar where you can. However, there are apparent scenarios where minimal validation in the constructor may be practical. Use your judgment, discuss with your team, and weigh up the pros and cons. 
 
 _Edit: this tweet was edited and corrected thanks to this tweet_
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This will bypass the validation. I think we&#39;ve been discussing this. If you intend to use &#39;With&#39; then probably u should implement full props and place validations there. <a href="https://t.co/kwXhoY75nO">pic.twitter.com/kwXhoY75nO</a></p>&mdash; Fati Iseni (@fiseni) <a href="https://twitter.com/fiseni/status/1387543409213181954?ref_src=twsrc%5Etfw">April 28, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 

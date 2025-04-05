@@ -11,6 +11,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-redirect-from
 
+# Configure redirect-from plugin
+redirect_from:
+  enabled: true
+  json: false
+
 collections:
   authors:
     output: true
@@ -85,17 +90,17 @@ pagination:
 
 ############################################################
 
-tag_page_layout: tag_page
-tag_page_dir: tag
-tag_permalink_style: pretty
-
+# Configure jekyll-archives as the single source of truth for tags and categories
 jekyll-archives:
   enabled: 
     - categories
+    - tags
   layouts: 
     category: 'category'
+    tag: 'tag_page'
   permalinks:
     category: '/category/:name/'
+    tag: '/tag/:name/'
 
 feed:
   collections:
