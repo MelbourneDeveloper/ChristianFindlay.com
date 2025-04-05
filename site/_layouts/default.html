@@ -105,6 +105,8 @@
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/post.css"/>
   <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/syntax.css"/>
   
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
   <!--page wise css-->
   {% if page.custom_css -%}
     {%- for stylesheet in page.custom_css -%}
@@ -127,8 +129,10 @@
 <body {% if page.overflow %} class="overflow-hidden" {% endif %}>
   {{ content }}
  
-  <!-- Custom modern JavaScript -->
+
   <script src="{{relative_url}}/assets/js/main.js"></script>
+  <script src="{{relative_url}}/assets/js/form.js" defer></script>
+ 
 </body>
 
 </html>
