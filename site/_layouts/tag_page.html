@@ -8,7 +8,7 @@ layout: default
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        {% assign tag_name = page.tag %}
+        {% assign tag_name = page.title %}
         {% assign clean_tag = tag_name | downcase %}
 
         <h1>{{ tag_name | capitalize | replace: "-", " " }} Articles</h1>
@@ -19,12 +19,8 @@ layout: default
 
     <div class="blog-container">
       <div class="blog grid">
-        {% assign tag_lower = page.tag | downcase %}
-        {% for post in site.posts %}
-          {% assign post_tags_downcase = post.tags | map: "downcase" %}
-          {% if post_tags_downcase contains tag_lower or post.tags contains page.tag %}
-            {% include post_loop.html %}
-          {% endif %}
+        {% for post in page.posts %}
+          {% include post_loop.html %}
         {% endfor %}
       </div>
     </div>
