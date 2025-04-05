@@ -37,44 +37,6 @@ keywords: [
 
 One of the most common questions developers ask when working with Flutter is how to manage themes to create consistent UI styles across their apps. Themes are part of the design system we use. Flutter apps usually use Material Design or Cupertino, but this article focuses on theming with [Material Design 3](https://m3.material.io/) (M3) in Flutter. This article details how to create, customize, and apply themes in your Flutter applications.
 
-## Theming
-
-[Understanding Flutter Material Design Themes](#understanding-flutter-material-design-themes)
-
-[ThemeData](#themedata)
-
-[Creating a Custom Theme](#creating-a-custom-theme)
-
-[Applying the ThemeData Instance](#applying-the-themedata-instance)
-
-[Using the Theme Properties](#using-the-theme-properties)
-
-[Dark and Light Themes](#dark-and-light-themes)
-
-[Applying Dark ThemeData Instance](#applying-dark-themedata-instance)
-
-## Colors
-
-[The Importance of ColorScheme in Material Design 3](#the-importance-of-colorscheme-in-material-design-3)
-
-[Identifying How Widgets Get Their Default Color](#identifying-how-widgets-get-their-default-color)
-
-[Override Default Colors](#override-default-colors-for-widgets)
-
-[Complete Example](#complete-example)
-
-[Staying Up To Date](#staying-up-to-date)
-
-## Typography
-
-[Modifying Typography with TextStyles](#modifying-typography-with-textstyles)
-
-## Shapes
-
-[Theme Shapes](#theme-shapes)
-
-[Conclusion](#conclusion)
-
 ## Understanding Flutter Material Design Themes
 
 M3 is Google's latest design system for building apps and websites. Before looking into theming, you should read up about the [design system](https://m3.material.io/). A theme in Flutter is a collection of property-value pairs that dictate the appearance of the app's widgets. [`ThemeData`](https://api.flutter.dev/flutter/material/ThemeData-class.html) is the class responsible for holding these properties. Let's first understand the significance of `ThemeData` and how it helps in theming.
