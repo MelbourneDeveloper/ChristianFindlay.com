@@ -65,31 +65,51 @@ body {
 .article-meta {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--spacing-4);
-  font-size: 0.9rem;
-  color: var(--gray-400);
   margin-bottom: var(--spacing-6);
+  font-size: 0.85rem;
+  color: var(--gray-400);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.author {
+.post-card-author {
   font-weight: 500;
-}
-
-.date, .reading-time {
+  color: var(--gray-300);
+  display: flex;
+  align-items: center;
   position: relative;
-  padding-left: var(--spacing-4);
+  background: linear-gradient(to right, rgba(var(--primary-rgb), 0.1), transparent);
+  padding: 0.2rem 0.8rem 0.2rem 0.4rem;
+  border-radius: 100px;
 }
 
-.date::before, .reading-time::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background-color: var(--gray-500);
+.post-card-author::before {
+  content: '👤';
+  margin-right: var(--spacing-2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.post-card-date, .post-card-read-time {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.post-card-date::before {
+  content: '📅';
+  margin-right: var(--spacing-2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.post-card-read-time::before {
+  content: '⏱️';
+  margin-right: var(--spacing-2);
+  font-size: 0.9rem;
+  opacity: 0.8;
 }
 
 /* Featured image */
@@ -418,14 +438,6 @@ h2.post-title,
   color: #9ca3af;
   font-size: 0.875rem;
   align-items: center;
-}
-
-.meta span,
-.meta .date,
-.meta .author {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .meta i,
