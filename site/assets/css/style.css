@@ -436,13 +436,20 @@ body > .content-wrapper {
  *****************************************/
 /* Blog grid container */
 .blog.grid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: var(--spacing-6);
   width: 100%;
+  max-width: 900px;
   margin: 0 auto;
-  max-width: 1280px;
-  padding: var(--spacing-8) 0;
+  padding: var(--spacing-8) var(--spacing-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Post card wrapper for centering */
+.post-card-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 /* Responsive grid layouts */
