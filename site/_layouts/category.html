@@ -9,9 +9,23 @@ layout: default
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        <h1>{{ page.title }}</h1>
+        {% if page.title == "flutter" %}
+        <h1>Flutter Blog</h1>
         <div class="header-divider"></div>
-        <p class="blog-subtitle">Expert insights on Flutter, Dart, and .NET development</p>
+        <p class="blog-subtitle">Expert insights on Flutter and Dart development</p>
+        {% elsif page.title == "dotnet" %}
+        <h1>.NET Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Professional .NET development tips and best practices</p>
+        {% elsif page.title == "software development" %}
+        <h1>Software Development Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Insights on building high-performance mobile applications and backends</p>
+        {% else %}
+        <h1>{{ page.title | capitalize }} Blog - ChristianFindlay.com</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Expert insights on {{ page.title | capitalize }} development</p>
+        {% endif %}
       </div>
     </div>
 

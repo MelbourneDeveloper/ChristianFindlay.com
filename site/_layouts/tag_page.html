@@ -9,9 +9,17 @@ title: Tag Page
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        <h1>{{ page.tag }}</h1>
+        {% if page.tag == "dotnet" %}
+        <h1>.NET - ChristianFindlay.com</h1>
+        {% else %}
+        <h1>{{ page.tag | capitalize }} - ChristianFindlay.com</h1>
+        {% endif %}
         <div class="header-divider"></div>
-        <p class="blog-subtitle">Expert insights on Flutter, Dart, and .NET development</p>
+        {% if page.tag == "dotnet" %}
+        <p class="blog-subtitle">Articles related to .NET development</p>
+        {% else %}
+        <p class="blog-subtitle">Articles related to {{ page.tag | capitalize }}</p>
+        {% endif %}
       </div>
     </div>
 

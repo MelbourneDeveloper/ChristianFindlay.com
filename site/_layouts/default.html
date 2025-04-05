@@ -13,25 +13,69 @@
   </script>
 
   {% if page.type == 'category' %}
-  <title>{{ page.title | capitalize }} Blog</title>
+  {% if page.title == 'dotnet' %}
+  <title>.NET Blog - ChristianFindlay.com</title>
   <meta
     property="og:title"
-    content="{{ page.title | capitalize }} Blog"
+    content=".NET Blog - ChristianFindlay.com"
   />
   <meta
     property="twitter:title"
-    content="{{ page.title | capitalize }} Blog"
+    content=".NET Blog - ChristianFindlay.com"
   />
+  {% elsif page.title == 'flutter' %}
+  <title>Flutter Blog - ChristianFindlay.com</title>
+  <meta
+    property="og:title"
+    content="Flutter Blog - ChristianFindlay.com"
+  />
+  <meta
+    property="twitter:title"
+    content="Flutter Blog - ChristianFindlay.com"
+  />
+  {% elsif page.title == 'software-development' %}
+  <title>Mobile App Development Blog - ChristianFindlay.com</title>
+  <meta
+    property="og:title"
+    content="Mobile App Blog - ChristianFindlay.com"
+  />
+  <meta
+    property="twitter:title"
+    content="Mobile App Blog - ChristianFindlay.com"
+  />
+  {% else %}
+  <title>{{ page.title | capitalize }} Blog - ChristianFindlay.com</title>
+  <meta
+    property="og:title"
+    content="{{ page.title | capitalize }} Blog - ChristianFindlay.com"
+  />
+  <meta
+    property="twitter:title"
+    content="{{ page.title | capitalize }} Blog - ChristianFindlay.com"
+  />
+  {% endif %}
   {% elsif page.type == 'tag' %}
-  <title>Flutter & .NET Blog - Subject: {{ page.title | capitalize }}</title>
+  {% if page.title == 'dotnet' %}
+  <title>.NET Articles - ChristianFindlay.com</title>
   <meta
     property="og:title"
-    content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
+    content=".NET Articles - ChristianFindlay.com"
   />
   <meta
     property="twitter:title"
-    content="Flutter & .NET Blog - Subject: {{ page.title | capitalize }}"
+    content=".NET Articles - ChristianFindlay.com"
   />
+  {% else %}
+  <title>{{ page.title | capitalize }} - ChristianFindlay.com</title>
+  <meta
+    property="og:title"
+    content="{{ page.title | capitalize }} - ChristianFindlay.com"
+  />
+  <meta
+    property="twitter:title"
+    content="{{ page.title | capitalize }} - ChristianFindlay.com"
+  />
+  {% endif %}
   {% else %}
   <title>
     {% if page.title %} {{ page.title }} {% else %} {{
