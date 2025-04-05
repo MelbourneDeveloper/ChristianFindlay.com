@@ -469,6 +469,7 @@ body > .content-wrapper {
   display: flex;
   flex-direction: column;
   height: auto;
+  width: 600px;
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
