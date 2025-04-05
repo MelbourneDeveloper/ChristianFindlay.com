@@ -1,15 +1,10 @@
 /* Syntax Highlighting - Modern Style */
 .highlight {
-  background: var(--code-bg);
-  color: #e4e4e7;
-  border-radius: var(--rounded-lg);
-  margin: var(--spacing-6) 0;
   position: relative;
   overflow: hidden;
 }
 
 .highlight pre {
-  padding: var(--spacing-4) var(--spacing-6);
   overflow-x: auto;
   margin: 0;
   line-height: 1.6;
@@ -27,6 +22,7 @@
 
 /* Code Language Label */
 .highlight:before {
+  visibility: hidden;
   content: attr(data-language);
   position: absolute;
   top: 0;
