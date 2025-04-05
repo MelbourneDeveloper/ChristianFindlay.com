@@ -25,7 +25,7 @@
             </li>
           {% else %}
             <li class="page-item">
-              <a class="page-link" href="{% if page == 1 %}{{ site.baseurl }}/blog/{% else %}{{ site.baseurl }}/blog/page{{ page }}/{% endif %}">{{ page }}</a>
+              <a class="page-link" href="{{ paginator.paginate_path | replace: ':num', page | prepend: site.baseurl }}">{{ page }}</a>
             </li>
           {% endif %}
         {% endfor %}

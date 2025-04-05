@@ -1,6 +1,10 @@
 ---
 layout: default
 title: Tag Page
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: "/page:num/"
 ---
 
 {% include one_page_nav.html %}
@@ -25,10 +29,14 @@ title: Tag Page
 
     <div class="blog-container">
       <div class="blog grid">
-        {% for post in page.posts %}
+        {% for post in paginator.posts %}
           {% include post_loop.html %}
         {% endfor %}
       </div>
+    </div>
+    
+    <div class="pagination-wrapper">
+      {% include pagination.html %}
     </div>
   </div>
 </div>
