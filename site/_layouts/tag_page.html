@@ -31,15 +31,25 @@ pagination:
     </div>
 
     <div class="blog-container">
-      <div class="blog grid">
-        {% for post in paginator.posts %}
-          {% include post_loop.html %}
-        {% endfor %}
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="blog grid">
+            {% for post in paginator.posts %}
+              {% include post_loop.html %}
+            {% endfor %}
+          </div>
+          
+          <div class="pagination-wrapper">
+            {% include pagination.html %}
+          </div>
+        </div>
+        
+        <div class="col-lg-4">
+          <div class="blog-sidebar">
+            {% include categories_tags.html %}
+          </div>
+        </div>
       </div>
-    </div>
-    
-    <div class="pagination-wrapper">
-      {% include pagination.html %}
     </div>
   </div>
 </div>
