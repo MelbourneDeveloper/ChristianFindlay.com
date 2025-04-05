@@ -8,24 +8,24 @@
 				{% endfor %}
 			</div>
 			{% endif %}
-			
-			<h2 class="post-card-title">
+
+			<h3 class="post-card-title">
 				<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-			</h2>
-			
+			</h3>
+
 			<div class="post-card-meta">
 				<span class="post-card-date">• {{ post.date | date: "%b %d, %Y" }}</span>
 			</div>
-			
+
 			<div class="post-card-excerpt">
 				{{ post.excerpt | strip_html | truncatewords: 15 }}
 			</div>
-			
+
 			<a href="{{ post.url | relative_url }}" class="post-card-read-more">
 				Read More →
 			</a>
 		</div>
-		
+
 		{% if post.image %}
 		<div class="post-card-image">
 			<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
