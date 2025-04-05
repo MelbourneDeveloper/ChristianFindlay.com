@@ -83,24 +83,30 @@ pagination:
   # Without file extension
   indexpage: 'index'
 
-  # Old jekyll-paginate pagination logic
-#paginate: 3
-#paginate_path: "/legacy/page:num/"
+# Configure autopages for tag pagination
+autopages:
+  enabled: true
+  categories:
+    enabled: false
+  collections:
+    enabled: false
+  tags:
+    layouts: 
+      - 'tag_page'
+    title: ':tag'
+    permalink: '/tag/:tag'
+    slugify:
+      mode: 'default'
+      case: true
 
-
-############################################################
-
-# Configure jekyll-archives as the single source of truth for tags and categories
+# Configure jekyll-archives for categories
 jekyll-archives:
   enabled: 
     - categories
-    - tags
   layouts: 
     category: 'category'
-    tag: 'tag_page'
   permalinks:
     category: '/category/:name/'
-    tag: '/tag/:name/'
 
 feed:
   collections:

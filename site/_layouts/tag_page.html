@@ -1,5 +1,9 @@
 ---
 layout: default
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: "/page:num/"
 ---
 
 {% include one_page_nav.html %}
@@ -8,21 +12,37 @@ layout: default
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        {% assign tag_name = page.title %}
+        {% assign tag_name = page.title | default: page.tag %}
+        {% if page.autopages %}
+          {% assign tag_name = page.autopages.display_name %}
+        {% endif %}
         {% assign clean_tag = tag_name | downcase %}
+        {% assign clean_tag = clean_tag | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: ' page 9', '' | replace: ' page 10', '' %}
 
-        <h1>{{ tag_name | capitalize | replace: "-", " " }} Articles</h1>
+        <h1>{{ clean_tag | capitalize | replace: "-", " " }} Articles</h1>
         <div class="header-divider"></div>
-        <p class="blog-subtitle">Articles related to {{ tag_name | capitalize | replace: "-", " " }}</p>
+        <p class="blog-subtitle">Articles related to {{ clean_tag | capitalize | replace: "-", " " }}</p>
       </div>
     </div>
 
     <div class="blog-container">
       <div class="blog grid">
-        {% for post in page.posts %}
-          {% include post_loop.html %}
-        {% endfor %}
+        {% if paginator.posts %}
+          {% for post in paginator.posts %}
+            {% include post_loop.html %}
+          {% endfor %}
+        {% else %}
+          {% for post in page.posts %}
+            {% include post_loop.html %}
+          {% endfor %}
+        {% endif %}
       </div>
+
+      {% if paginator.posts %}
+      <div class="pagination-wrapper">
+        {% include pagination.html %}
+      </div>
+      {% endif %}
     </div>
 
     <div class="col-lg-4">
