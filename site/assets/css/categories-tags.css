@@ -178,6 +178,18 @@
   box-shadow: 0 3px 8px rgba(var(--primary-rgb), 0.2);
 }
 
+.tags .tag-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--gray-400);
+  transition: all 0.3s ease;
+  margin-left: 0.25rem;
+}
+
+.tags .tag-link:hover .tag-count {
+  color: white;
+}
+
 /* Animate tags on page load */
 @keyframes fadeInUp {
   from {

@@ -22,16 +22,39 @@
 <div class="sidebar-widget tags">
   <h4>Tags</h4>
   <div class="tag-cloud">
-    {% assign tags = site.tags | sort %}
-    {% for tag in tags %}
+    {% assign tags_array = "" | split: "" %}
+    {% for tag in site.tags %}
       {% assign tag_name = tag[0] %}
+      {% assign tag_count = tag[1].size %}
+      
+      {% comment %}Pad count with leading zeros for string sort{% endcomment %}
+      {% if tag_count < 10 %}
+        {% assign count_string = "00" | append: tag_count %}
+      {% elsif tag_count < 100 %}
+        {% assign count_string = "0" | append: tag_count %}
+      {% else %}
+        {% assign count_string = tag_count %}
+      {% endif %}
+      
+      {% assign tag_item = count_string | append: '_' | append: tag_name %}
+      {% assign tags_array = tags_array | push: tag_item %}
+    {% endfor %}
+    
+    {% assign sorted_tags = tags_array | sort | reverse %}
+    
+    {% for tag_item in sorted_tags %}
+      {% assign tag_parts = tag_item | split: '_' %}
+      {% assign tag_count = tag_parts[0] | remove_first: "00" | remove_first: "0" %}
+      {% assign tag_name = tag_parts[1] %}
       {% assign tag_slug = tag_name | slugify %}
+      
       <a href="{{ site.baseurl }}/tag/{{ tag_slug }}/" class="tag-link">
         {% if tag_name == "dotnet" %}
         .NET
         {% else %}
         {{ tag_name | capitalize | replace: "-", " " }}
         {% endif %}
+        <span class="tag-count">({{ tag_count }})</span>
       </a>
     {% endfor %}
   </div>
