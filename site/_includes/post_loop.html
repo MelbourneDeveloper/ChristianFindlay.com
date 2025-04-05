@@ -1,37 +1,39 @@
-<article class="post-card">
-	<div class="post-card-inner">
-		<div class="post-card-content">
-			{% if post.categories.size > 0 %}
-			<div class="post-card-categories">
-				{% for category in post.categories %}
-				<a href="/category/{{ category | slugify }}" class="post-card-category">{{ category }}</a>
-				{% endfor %}
+<div class="post-card-wrapper">
+	<article class="post-card">
+		<div class="post-card-inner">
+			<div class="post-card-content">
+				{% if post.categories.size > 0 %}
+				<div class="post-card-categories">
+					{% for category in post.categories %}
+					<a href="/category/{{ category | slugify }}" class="post-card-category">{{ category }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				<h3 class="post-card-title">
+					<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+				</h3>
+
+				<div class="post-card-meta">
+					<span class="post-card-date">• {{ post.date | date: "%b %d, %Y" }}</span>
+				</div>
+
+				<div class="post-card-excerpt">
+					{{ post.excerpt | strip_html | truncatewords: 15 }}
+				</div>
+
+				<a href="{{ post.url | relative_url }}" class="post-card-read-more">
+					Read More →
+				</a>
+			</div>
+
+			{% if post.image %}
+			<div class="post-card-image">
+				<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+					<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+				</a>
 			</div>
 			{% endif %}
-
-			<h3 class="post-card-title">
-				<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-			</h3>
-
-			<div class="post-card-meta">
-				<span class="post-card-date">• {{ post.date | date: "%b %d, %Y" }}</span>
-			</div>
-
-			<div class="post-card-excerpt">
-				{{ post.excerpt | strip_html | truncatewords: 15 }}
-			</div>
-
-			<a href="{{ post.url | relative_url }}" class="post-card-read-more">
-				Read More →
-			</a>
 		</div>
-
-		{% if post.image %}
-		<div class="post-card-image">
-			<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-				<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
-			</a>
-		</div>
-		{% endif %}
-	</div>
-</article>
+	</article>
+</div>

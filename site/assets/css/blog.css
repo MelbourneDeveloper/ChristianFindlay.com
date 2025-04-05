@@ -12,29 +12,17 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-8) var(--spacing-4);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--spacing-6);
 }
 
-/* Media query for tablet */
-@media (max-width: 992px) {
-  .blog.grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+/* Post card wrapper for sizing and spacing */
+.post-card-wrapper {
+  margin-bottom: var(--spacing-6);
 }
 
-/* Media query for mobile */
-@media (max-width: 640px) {
-  .blog.grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/*****************************************
- * POST CARDS - NEW IMPLEMENTATION
- * Modern card with image on right
- *****************************************/
 /* Post card container */
 .post-card {
   position: relative;
@@ -42,10 +30,11 @@
   border-radius: var(--rounded-xl);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-bottom: var(--spacing-6);
+  margin-bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
   width: 500px;
-  height: 300px;
+  height: auto;
+  height: 320px;
 }
 
 .post-card:hover {
@@ -190,6 +179,21 @@
   
   .post-card-excerpt {
     -webkit-line-clamp: 3;
+  }
+}
+
+/* Media query for tablet */
+@media (max-width: 992px) {
+  .post-card-wrapper {
+    width: 45%;
+  }
+}
+
+/* Media query for mobile */
+@media (max-width: 640px) {
+  .post-card-wrapper {
+    width: 100%;
+    max-width: 500px;
   }
 }
 
