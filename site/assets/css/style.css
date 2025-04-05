@@ -4,9 +4,11 @@
 :root {
   /* Colors - Modern Tech Theme */
   --primary: #2563eb;
+  --primary-rgb: 37, 99, 235;
   --primary-dark: #1d4ed8;
   --primary-light: #60a5fa;
   --secondary: #10b981;
+  --secondary-rgb: 16, 185, 129;
   --secondary-dark: #059669;
   --dark: #0f172a;
   --darker: #020617;

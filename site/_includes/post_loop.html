@@ -1,6 +1,14 @@
 <div class="post-card-wrapper">
 	<article class="post-card">
 		<div class="post-card-inner">
+			{% if post.image %}
+			<div class="post-card-image">
+				<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+					<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+				</a>
+			</div>
+			{% endif %}
+			
 			<div class="post-card-content">
 				{% if post.categories.size > 0 %}
 				<div class="post-card-categories">
@@ -41,14 +49,6 @@
 					Read Article
 				</a>
 			</div>
-
-			{% if post.image %}
-			<div class="post-card-image">
-				<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
-					<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
-				</a>
-			</div>
-			{% endif %}
 		</div>
 	</article>
 </div>
