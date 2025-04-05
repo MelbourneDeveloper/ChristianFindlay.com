@@ -1,10 +1,5 @@
 ---
 layout: default
-title: Tag Page
-pagination:
-enabled: true
-per_page: 6
-permalink: "/page:num/"
 ---
 
 {% include one_page_nav.html %}
@@ -13,35 +8,24 @@ permalink: "/page:num/"
   <div class="container inner">
     <div class="blog-header-wrapper">
       <div class="blog-header">
-        {% assign tag_name = page.pagination.tag | default: page.tag %}
-        {% assign clean_tag = tag_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4', '' |
-        replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' | replace: '
-        page 9', '' | replace: ' page 10', '' %}
+        {% assign tag_name = page.tag %}
+        {% assign clean_tag = tag_name | downcase %}
 
-        {% if clean_tag == "dotnet" %}
-        <h1>.NET Articles</h1>
-        {% else %}
-        <h1>{{ clean_tag | capitalize | replace: "-", " " }} Articles</h1>
-        {% endif %}
+        <h1>{{ tag_name | capitalize | replace: "-", " " }} Articles</h1>
         <div class="header-divider"></div>
-        {% if clean_tag == "dotnet" %}
-        <p class="blog-subtitle">Articles related to .NET development</p>
-        {% else %}
-        <p class="blog-subtitle">Articles related to {{ clean_tag | capitalize | replace: "-", " " }}</p>
-        {% endif %}
+        <p class="blog-subtitle">Articles related to {{ tag_name | capitalize | replace: "-", " " }}</p>
       </div>
     </div>
 
     <div class="blog-container">
-
       <div class="blog grid">
-        {% for post in paginator.posts %}
-        {% include post_loop.html %}
+        {% assign tag_lower = page.tag | downcase %}
+        {% for post in site.posts %}
+          {% assign post_tags_downcase = post.tags | map: "downcase" %}
+          {% if post_tags_downcase contains tag_lower or post.tags contains page.tag %}
+            {% include post_loop.html %}
+          {% endif %}
         {% endfor %}
-      </div>
-
-      <div class="pagination-wrapper">
-        {% include pagination.html %}
       </div>
     </div>
 
@@ -54,4 +38,4 @@ permalink: "/page:num/"
   </div>
 </div>
 
-{% include footer_2.html light_logo="true" %}
+{% include footer_2.html light_logo="true" %} 

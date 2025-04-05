@@ -90,8 +90,10 @@ tag_page_dir: tag
 tag_permalink_style: pretty
 
 jekyll-archives:
-  enabled: all
-  layout: category
+  enabled: 
+    - categories
+  layouts: 
+    category: 'category'
   permalinks:
     category: '/category/:name/'
 
