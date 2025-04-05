@@ -8,9 +8,7 @@ layout: default
   <div class="container inner">
     <div class="blog grid">
       {% for post in paginator.posts %}
-      <article class="post">
         {% include post_loop.html %}
-      </article>
       {% endfor %}
     </div>
     
