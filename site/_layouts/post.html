@@ -7,61 +7,23 @@ layout: default
 <main class="post-content">
   <div class="container">
     <article class="article">
-      <header class="article-header">
-        <div class="category-tags">
-          {% for category in page.categories %}
-            <a href="/category/{{ category | slugify }}" class="category">{{ category }}</a>
-          {% endfor %}
-          
-          {% if page.tags.size > 0 %}
-            <div class="tags">
-              {% for tag in page.tags %}
-                <a href="/tag/{{ tag | slugify }}" class="tag">#{{ tag }}</a>
-              {% endfor %}
-            </div>
-          {% endif %}
+      <h1 class="article-title">{{ page.title }}</h1>
+      
+      <div class="article-meta">
+        <span class="author">By {{ page.author }}</span>
+        <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
+        <span class="reading-time">{{ content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
+      </div>
+      
+      {% if page.post_image %}
+        <div class="featured-image">
+          <img src="{{ page.post_image }}" alt="{{ page.title }}" {% if page.post_image_height %}style="max-height: {{ page.post_image_height }}px; width: auto;"{% endif %}>
         </div>
-        
-        <h1 class="article-title">{{ page.title }}</h1>
-        
-        <div class="article-meta">
-          {% if page.author %}
-            <span class="author">By {{ page.author }}</span>
-          {% endif %}
-          <span class="date">{{ page.date | date: "%B %d, %Y" }}</span>
-          <span class="reading-time">{{ content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
-        </div>
-        
-        {% if page.post_image %}
-          <div class="featured-image">
-            <img src="{{ page.post_image }}" alt="{{ page.title }}" {% if page.post_image_height %}style="max-height: {{ page.post_image_height }}px; width: auto;"{% endif %}>
-          </div>
-        {% endif %}
-      </header>
+      {% endif %}
       
       <div class="article-content">
         {{ content }}
       </div>
-      
-      <footer class="article-footer">
-        <div class="share-article">
-          <h4>Share this article</h4>
-          {% include social_share.html %}
-        </div>
-        
-        <div class="author-bio">
-          <img src="/assets/images/christian-findlay.jpg" alt="{{ page.author }}" class="author-avatar">
-          <div class="author-info">
-            <h4>{{ page.author }}</h4>
-            <p>Flutter and .NET developer based in Melbourne, Australia specializing in cross-platform mobile app development and scalable backend solutions.</p>
-            <div class="author-links">
-              <a href="https://github.com/christianfindlay" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-              <a href="https://twitter.com/cfdevelop" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              <a href="https://www.linkedin.com/in/christian-findlay/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-      </footer>
     </article>
     
     <aside class="post-sidebar">
@@ -90,9 +52,6 @@ layout: default
             {% if sameTagCount >= minCommonTags and maxRelatedCounter < maxRelated %}
               <li>
                 <a href="{{ post.url | relative_url }}">
-                  {% if post.image %}
-                    <img src="{{ post.image }}" alt="{{ post.title }}">
-                  {% endif %}
                   <span>{{ post.title }}</span>
                 </a>
               </li>
