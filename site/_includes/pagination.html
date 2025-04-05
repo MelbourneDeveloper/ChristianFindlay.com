@@ -1,22 +1,45 @@
 <div class="space30 d-block d-md-none"></div>
-<div class="pagination text-center">
+<div class="pagination-wrapper">
+  <div class="pagination">
     {% if paginator.total_pages > 1 %}
-    <ul>
+    <ul class="pagination">
       {% if paginator.previous_page %}
-      <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
           <i class="jam jam-arrow-left"></i> Previous
         </a>
       </li>
       {% endif %}
+      
+      {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li class="page-item {% if page.url == trail.path %}active{% endif %}">
+            <a class="page-link" href="{{ trail.path | prepend: site.baseurl }}">{{ trail.num }}</a>
+          </li>
+        {% endfor %}
+      {% else %}
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <li class="page-item active">
+              <a class="page-link">{{ page }}</a>
+            </li>
+          {% else %}
+            <li class="page-item">
+              <a class="page-link" href="{% if page == 1 %}{{ site.baseurl }}/blog/{% else %}{{ site.baseurl }}/blog/page{{ page }}/{% endif %}">{{ page }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
       {% if paginator.next_page %}
-      <li>
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">
-         Next <i class="jam jam-arrow-right"></i>
+      <li class="page-item">
+        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}">
+          Next <i class="jam jam-arrow-right"></i>
         </a>
       </li>
       {% endif %}
     </ul>
     {% endif %}
+  </div>
 </div>
 <!-- /.pagination -->
