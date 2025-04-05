@@ -3,12 +3,12 @@ layout: post
 title: "Visual Studio - Break On All Exceptions"
 date: 2019/07/14 00:00:00 +0000
 categories: [dotnet]
-tags: debugging visual-studio csharp
+tags: visual-studio csharp
 author: "Christian Findlay"
 post_image: "/assets/images/blog/exceptionbreak/header.jpg"
 image: "/assets/images/blog/exceptionbreak/header.jpg"
 permalink: /blog/:title
-description: "Learn how to use Visual Studio's 'Break on All Exceptions' feature for efficient C# debugging. Discover how to activate this powerful tool, understand its benefits, and improve your exception handling practices in .NET development."
+description: "Learn how to use Visual Studio's 'Break on All Exceptions' feature for efficient C# debugging and understand its benefits to improve your exception handling practices in .NET development."
 keywords: [Visual Studio debugging, Break on All Exceptions, C# exception handling, .NET debugging techniques, Visual Studio exception settings, debugging best practices, CLR exceptions, fail-fast principle, C# development tools, exception stack trace, Visual Studio for Windows, Visual Studio for Mac, Just My Code debugging, exception breakpoints, .NET exception management, Visual Studio productivity tips, C# error handling, debugger configuration, software development debugging, Visual Studio features]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Flutter: How To Mock Functions For Testing"
 date: 2022-12-17 20:37:13 +0600
-tags: mocking testing cross-platform dart
+tags: testing cross-platform dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/header.jpeg"

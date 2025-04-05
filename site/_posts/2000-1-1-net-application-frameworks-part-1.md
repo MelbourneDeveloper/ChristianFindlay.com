@@ -2,7 +2,7 @@
 layout: post
 title: ".NET Application Frameworks - Part 1"
 date: 2019/12/19 00:00:00 +0000
-tags: frameworks
+tags: csharp
 categories: [dotnet]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/appframework/header.png"
