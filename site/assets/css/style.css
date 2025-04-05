@@ -3823,6 +3823,7 @@ section:not(#home) {
   resize: vertical;
   min-height: 120px;
   line-height: 1.5;
+  color: var(--dark);
 }
 
 #contact .button-enhanced {

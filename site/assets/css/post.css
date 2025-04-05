@@ -3,6 +3,10 @@
  * Styles for individual blog post pages
  *****************************************/
 
+body {
+  padding-top: 80px !important;
+}
+
 /* Post content container */
 .post-content {
   padding: var(--spacing-12) 0;
