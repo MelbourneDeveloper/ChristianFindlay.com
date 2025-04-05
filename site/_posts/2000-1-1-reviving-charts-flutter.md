@@ -7,7 +7,7 @@ post_image: "/assets/images/blog/nimble_charts/charts.gif"
 post_image_height: 400
 image: "/assets/images/blog/nimble_charts/charts.gif"
 description: "Introducing nimble_charts, a revitalized Flutter charting library that brings new life to the discontinued charts_flutter package. With improved type safety, extensive testing, and WebAssembly support, nimble_charts empowers companies to create stunning, interactive web dashboards for data visualization."
-tags: [web, wasm]
+tags: web cross-platform
 categories: [flutter]
 permalink: /blog/:title
 keywords: [charts_flutter, Flutter charts, nimble_charts, data visualization, web dashboards, WebAssembly, WASM, Flutter WASM, interactive charts, data analytics, business intelligence, open source charting library, Flutter web development, charting solution, Google charts alternative]

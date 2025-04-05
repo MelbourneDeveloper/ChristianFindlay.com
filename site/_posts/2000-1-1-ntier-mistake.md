@@ -7,7 +7,7 @@ post_image: "/assets/images/blog/ntier/tiers.webp"
 post_image_height: 662
 post_image_height: 800
 image: "/assets/images/blog/ntier/tiers.webp"
-tags: architecture
+tags: csharp
 categories: [software development]
 permalink: /blog/:title
 ---

@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
 post_image_height: 300
 image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
-tags: flutter app-development chatgpt ai beginners-guide
+tags: flutter app-development dart
 categories: flutter
 permalink: /blog/:title
 description: Step into the world of app development with our beginner-friendly guide. Learn how to create stunning Flutter apps with the aid of ChatGPT. No prior experience needed!
