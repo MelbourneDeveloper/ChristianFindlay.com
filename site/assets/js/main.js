@@ -10,10 +10,54 @@ document.addEventListener('DOMContentLoaded', function() {
   initOwlCarousel();
   optimizeContentWrappers();
   initTestimonials(); // Add specific testimonials initialization
+  initPageTransitions(); // Fixed transitions that don't break nav menu
   
   //TODO: REMOVE THIS SHIT!! 
   //The dumbass LLM ignored the core problem and just 
   //patched it up like this FFS.
+
+  // Initialize page transitions
+  function initPageTransitions() {
+    // Create transition overlay if it doesn't exist
+    if (!document.querySelector('.page-transition-overlay')) {
+      const overlay = document.createElement('div');
+      overlay.className = 'page-transition-overlay';
+      document.body.appendChild(overlay);
+    }
+
+    // Only add transitions to non-nav, non-navbar links that navigate within the site
+    const blogLinks = document.querySelectorAll('.post-card-read-more, .pagination a');
+    
+    blogLinks.forEach(function(link) {
+      link.addEventListener('click', function(e) {
+        if (link.href && 
+            link.href.indexOf(window.location.hostname) !== -1 && 
+            !link.getAttribute('target') &&
+            !link.getAttribute('download') &&
+            !link.href.startsWith('mailto:') &&
+            !link.href.startsWith('tel:') &&
+            !link.href.startsWith('#')) {
+              
+          // Prevent default only for blog/pagination links
+          e.preventDefault();
+          
+          // Get the href
+          const href = link.getAttribute('href');
+          
+          // Show transition overlay
+          const overlay = document.querySelector('.page-transition-overlay');
+          if (overlay) {
+            overlay.classList.add('active');
+          }
+          
+          // Navigate after transition
+          setTimeout(function() {
+            window.location.href = href;
+          }, 300);
+        }
+      });
+    });
+  }
 
   // Remove duplicate elements and clean DOM
   function cleanupDOM() {
