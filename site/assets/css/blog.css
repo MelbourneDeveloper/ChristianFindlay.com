@@ -4,6 +4,31 @@
  *****************************************/
 
 /*****************************************
+ * BLOG HEADER
+ *****************************************/
+.blog-header {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  padding-top: var(--spacing-8);
+  position: relative;
+}
+
+.blog-header h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: var(--spacing-3);
+}
+
+.blog-subtitle {
+  color: var(--gray-400);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/*****************************************
  * BLOG GRID - LISTING PAGE
  *****************************************/
 /* Blog grid container */
@@ -194,6 +219,18 @@
   .post-card-wrapper {
     width: 100%;
     max-width: 500px;
+  }
+  
+  .blog-header {
+    padding-top: var(--spacing-6);
+  }
+  
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-subtitle {
+    font-size: 1rem;
   }
 }
 
