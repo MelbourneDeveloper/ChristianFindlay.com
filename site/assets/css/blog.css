@@ -259,13 +259,32 @@
 .post-card-meta {
   display: flex;
   align-items: center;
+  gap: var(--spacing-3);
   margin-bottom: var(--spacing-3);
   font-size: 0.85rem;
   color: var(--gray-400);
 }
 
-.post-card-date {
-  color: var(--gray-400);
+.post-card-author {
+  font-weight: 500;
+  color: var(--gray-300);
+}
+
+.post-card-date, .post-card-read-time {
+  position: relative;
+  padding-left: var(--spacing-3);
+}
+
+.post-card-date::before, .post-card-read-time::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--gray-500);
 }
 
 /* Post title styling */
@@ -327,6 +346,33 @@
 
 .post-card-read-more:hover::after {
   transform: translateX(3px);
+}
+
+/* Post tags */
+.post-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.post-card-tag {
+  font-size: 0.75rem;
+  color: var(--gray-400);
+  transition: color 0.2s ease;
+}
+
+.post-card-tag:hover {
+  color: var(--primary-light);
+}
+
+.post-card-tag-more {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.1rem 0.3rem;
+  border-radius: var(--rounded-sm);
 }
 
 /* Responsive adjustments */
