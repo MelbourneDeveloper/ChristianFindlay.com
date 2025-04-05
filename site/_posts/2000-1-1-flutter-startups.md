@@ -7,7 +7,7 @@ post_image: "/assets/images/portfolio/flutter.svg"
 post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
 description: 
-tags: cross-platform apps dart
+tags: cross-platform dart
 categories: [flutter]
 permalink: /blog/:title
 canonical_url: https://www.nimblesite.co/blog/flutter-startups

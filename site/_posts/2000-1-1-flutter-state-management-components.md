@@ -7,7 +7,7 @@ post_image: "/assets/images/portfolio/flutter.svg"
 post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
 description: 
-tags: state-management apps cross-platform
+tags: state-management cross-platform
 categories: [flutter]
 permalink: /blog/:title
 ---
