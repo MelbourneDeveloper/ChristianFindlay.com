@@ -2,3 +2,27 @@
 layout: default
 title: Tag Page
 ---
+
+{% include one_page_nav.html %}
+
+<div class="wrapper light-wrapper">
+  <div class="container inner">
+    <div class="blog-header-wrapper">
+      <div class="blog-header">
+        <h1>{{ page.tag }}</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Expert insights on Flutter, Dart, and .NET development</p>
+      </div>
+    </div>
+
+    <div class="blog-container">
+      <div class="blog grid">
+        {% for post in page.posts %}
+          {% include post_loop.html %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% include footer_2.html light_logo="true" %}
