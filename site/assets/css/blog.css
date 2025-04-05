@@ -44,26 +44,72 @@
 /*****************************************
  * BLOG HEADER
  *****************************************/
+.blog-header-wrapper {
+  width: 100%;
+  padding: var(--spacing-16) 0 var(--spacing-12);
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-header-wrapper::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: 
+    radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.05), transparent 25%),
+    radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.05), transparent 25%);
+  z-index: 0;
+  pointer-events: none;
+}
+
 .blog-header {
   text-align: center;
-  margin-bottom: var(--spacing-8);
-  padding-top: var(--spacing-8);
   position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .blog-header h1 {
   color: var(--primary);
-  font-size: 2.5rem;
-  font-weight: 700;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: var(--spacing-3);
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--spacing-6);
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-divider {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  margin: 0 auto var(--spacing-6);
+  border-radius: 2px;
 }
 
 .blog-subtitle {
   color: var(--gray-400);
-  font-size: 1.1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
   max-width: 600px;
   margin: 0 auto;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .blog-header-wrapper {
+    padding: var(--spacing-12) 0 var(--spacing-8);
+  }
+  
+  .blog-header h1 {
+    font-size: 2.5rem;
+  }
 }
 
 /*****************************************
@@ -74,18 +120,17 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-4) 0;
+  padding: 0 0 var(--spacing-12);
   position: relative;
 }
 
 /* Blog grid container */
 .blog.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-  gap: var(--spacing-8);
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: var(--spacing-10);
   width: 100%;
   margin: 0 auto;
-  padding: var(--spacing-4) 0;
   position: relative;
   z-index: 1;
 }
@@ -121,10 +166,10 @@
   margin-bottom: 0;
   border: 1px solid rgba(255, 255, 255, 0.05);
   height: 100%;
-  min-height: 320px;
+  min-height: 360px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .post-card:hover {
@@ -179,7 +224,7 @@
 /* Post card content styling - LEFT SIDE */
 .post-card-content {
   width: 60%; /* 60% of card width */
-  padding: var(--spacing-5);
+  padding: var(--spacing-6);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -225,10 +270,10 @@
 
 /* Post title styling */
 .post-card-title {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.2;
-  margin-bottom: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
 }
 
 .post-card-title a {
@@ -285,17 +330,24 @@
 }
 
 /* Responsive adjustments */
+@media (max-width: 1200px) {
+  .blog.grid {
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: var(--spacing-8);
+  }
+}
+
 @media (max-width: 992px) {
   .blog.grid {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: var(--spacing-6);
+    gap: var(--spacing-8);
   }
 }
 
 @media (max-width: 768px) {
   .blog.grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-6);
+    gap: var(--spacing-8);
   }
   
   .post-card-inner {
@@ -304,31 +356,21 @@
   
   .post-card-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
   }
   
   .post-card-content {
     width: 100%;
+    padding: var(--spacing-6);
   }
   
   .post-card-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     margin-top: var(--spacing-3);
   }
   
   .post-card-excerpt {
     -webkit-line-clamp: 3;
-  }
-  
-  .blog-header {
-    padding-top: var(--spacing-6);
-  }
-  
-  .blog-header h1 {
-    font-size: 2rem;
-  }
-  
-  .blog-subtitle {
     font-size: 1rem;
   }
 }
@@ -546,7 +588,7 @@
  *****************************************/
 .pagination-wrapper {
   width: 100%;
-  margin: var(--spacing-10) 0;
+  margin: var(--spacing-12) 0 var(--spacing-6);
   display: flex;
   justify-content: center;
 }
