@@ -117,12 +117,16 @@ body {
   margin: var(--spacing-6) 0;
   overflow: hidden;
   border-radius: var(--rounded-lg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .featured-image img {
-  width: 100%;
+  width: auto;
+  max-width: 100%;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--rounded-lg);
 }
 
