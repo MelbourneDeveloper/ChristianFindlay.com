@@ -13,26 +13,6 @@ description: Step into the world of app development with our beginner-friendly g
 canonical_url: https://www.nimblesite.co/blog/flutter-chatgpt
 ---
 
-[Introduction](#introduction)
-
-[What is Flutter?](#what-is-flutter)
-
-[What is ChatGPT?](#what-is-chatgpt)
-
-[Step 1 - Setting Up Your Environment](#step-1---setting-up-your-environment)
-
-[Step 2 - Create the Project](#step-2---create-the-project)
-
-[Step 3 - Design Your App](#step-3---design-your-app)
-
-[Step 4 - ChatGPT Writes the App](#step-4---chatgpt-writes-the-app)
-
-[Step 5 - Run The App](#step-5---run-the-app)
-
-[Step 6 - Further Prompting](#step-6---further-prompting)
-
-[Step 7 - Use Context Note](#step-7---use-context-note)
-
 ## Introduction
 
 Building your own mobile app might seem like a daunting task, especially if you're not a tech-savvy person. However, with tools like Flutter and the guidance of AI-powered assistants like ChatGPT, it's more accessible than ever. This beginner-friendly guide will take you through the steps of creating a basic Flutter app with the help of ChatGPT, even if you have little to no technical background.
