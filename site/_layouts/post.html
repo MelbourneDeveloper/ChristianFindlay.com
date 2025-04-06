@@ -9,6 +9,7 @@ layout: default
     <article class="article">
       <h1 class="article-title">{{ page.title }}</h1>
       
+      {% unless page.is_document %}
       <div class="article-meta">
         <span class="post-card-author">{{ page.author }}</span>
         <span class="post-card-date">{{ page.date | date: "%B %d, %Y" }}</span>
@@ -34,6 +35,7 @@ layout: default
         </div>
         {% endif %}
       </div>
+      {% endunless %}
       
       {% if page.post_image %}
         <div class="featured-image">
@@ -52,6 +54,7 @@ layout: default
         <div id="toc"></div>
       </div>
       
+      {% unless page.is_document %}
       {% include categories_tags.html %}
       
       <div class="sidebar-widget related-posts">
@@ -82,6 +85,7 @@ layout: default
           {% endfor %}
         </ul>
       </div>
+      {% endunless %}
       
       <div class="sidebar-widget newsletter">
         <h4>Subscribe to Newsletter</h4>
