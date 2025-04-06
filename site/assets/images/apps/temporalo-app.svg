@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background circle -->
+    <circle cx="256" cy="256" r="240" fill="rgb(255, 248, 247)"/>
+    
+    <!-- Outer ring representing time -->
+    <circle cx="256" cy="256" r="220" stroke="rgb(144, 74, 74)" stroke-width="12" fill="none"/>
+    
+    <!-- Neural network connections -->
+    <path d="M256 100 L156 256 L256 412 L356 256 Z" stroke="rgb(144, 74, 74)" stroke-width="8" fill="none"/>
+    <path d="M156 256 L356 256" stroke="rgb(144, 74, 74)" stroke-width="8" fill="none"/>
+    
+    <!-- Time nodes -->
+    <circle cx="256" cy="100" r="24" fill="rgb(144, 74, 74)"/>
+    <circle cx="156" cy="256" r="24" fill="rgb(144, 74, 74)"/>
+    <circle cx="256" cy="412" r="24" fill="rgb(144, 74, 74)"/>
+    <circle cx="356" cy="256" r="24" fill="rgb(144, 74, 74)"/>
+    
+    <!-- Center node -->
+    <circle cx="256" cy="256" r="32" fill="rgb(144, 74, 74)"/>
+    
+    <!-- Inner time markers -->
+    <circle cx="256" cy="256" r="180" stroke="rgb(144, 74, 74)" stroke-width="4" stroke-dasharray="4 12" fill="none"/>
+    
+    <!-- Animated pulse effect -->
+    <circle cx="256" cy="256" r="160" stroke="rgb(144, 74, 74)" stroke-width="2" fill="none" opacity="0.5">
+        <animate attributeName="r" values="160;180;160" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.5;0;0.5" dur="4s" repeatCount="indefinite"/>
+    </circle>
+</svg> 

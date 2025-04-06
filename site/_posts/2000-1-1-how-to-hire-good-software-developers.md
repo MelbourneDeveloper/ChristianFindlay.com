@@ -5,7 +5,7 @@ date: "2020/04/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/hiring/header.webp"
 image: "/assets/images/blog/hiring/header.webp"
-tags: hiring
+tags: software-quality
 categories: [software development]
 permalink: /blog/:title
 canonical_url: https://www.nimblesite.co/blog/how-to-hire-good-software-developers

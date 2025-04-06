@@ -2,7 +2,7 @@
 layout: post
 title: "Flutter Dependency Injection: ioc_container V1"
 date: 2022-10-24 20:37:13 +0600
-tags: ioc-container cross-platform dart
+tags: cross-platform dart
 categories: [flutter]
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ioc_container/header.jpeg"

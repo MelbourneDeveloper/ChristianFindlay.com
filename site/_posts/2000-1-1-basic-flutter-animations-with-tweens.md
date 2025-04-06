@@ -4,7 +4,7 @@ title: "Basic Flutter Animations With Tweens"
 date: "2023/03/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/animation/clock.gif"
-tags: animation tween
+tags: dart
 categories: flutter
 permalink: /blog/:title
 ---

@@ -5,7 +5,7 @@ date: "2023/01/09 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ai/header.jpg"
 image: "/assets/images/blog/ai/header.jpg"
-tags: [ai]
+tags: app-development
 categories: [software development]
 permalink: /blog/:title
 ---
@@ -61,7 +61,7 @@ It is important for software businesses to be mindful of the ethical implication
 
 There has been some controversy around AI using other people's code verbatim and not referencing the original code license. This is a legitimate concern. AI doesn't give you carte blanche rights to use other people's code. If AI rewrites other peoples' code for you, and that code is under a restrictive license, the author can still take you to court. But services like [GitHub](https://github.com/) are introducing [tools](https://github.blog/2022-11-01-preview-referencing-public-code-in-github-copilot/) to help users recognize where the code comes from. That means you can make educated decisions about what code violates licenses and what code doesn't  
 
-AI still doesn't deal well with complex concepts, logic, and ideas. It can handle routine and repetitive tasks efficiently but struggles with more abstract and creative tasks that require problem-solving and critical thinking. You can see this easily. I asked ChatGPT a simple logic problem. 
+AI still doesn't deal well with complex concepts, logic, and ideas. It can handle routine and repetitive tasks efficiently but struggles with more abstract and creative tasks that require problem-solving and critical thinking. You can see this easily. I asked ChatGPT a simple logic problem.  
 
 ![Sample App](/assets/images/blog/ai/chat.png){:width="100%"}
 
@@ -69,14 +69,14 @@ ChatGPT fails with basic logic
 
 I never specified how many actual birds there were - only how many I could see. It made a huge logical leap. This illustrates how AI often makes mistakes and can even be misleading. Humans will need to guide it, test it, and curate the code for the foreseeable future, which is why AI won't replace humans or take away people's jobs.  
 
-Companies need to be mindful of making copyright violations, but this is not a new concern. Developers already copy and paste code from multiple sources, which could easily result in a lawsuit. Companies need to put processes in place to ensure that team members review the code for possible copyright infringements.   
+Companies need to be mindful of making copyright violations, but this is not a new concern. Developers already copy and paste code from multiple sources, which could easily result in a lawsuit. Companies need to put processes in place to ensure that team members review the code for possible copyright infringements.  
 
 As a business owner, you'd know that efficiencies don't usually make people redundant. Instead, efficiencies usually lead to company growth. That means your employees can focus on quality rather than struggling to keep up.  
 
 Conclusion
 ----------
 
-AI has the potential to revolutionize the way that software businesses build apps. It is a powerful tool for software businesses to build apps more efficiently, but it is not a replacement for human developers. We can look at it as a way to augment and enhance the work of developers, allowing them to focus on more complex and creative tasks while AI handles the more routine and repetitive ones. I've already had great success with it, and I will continue to use it to deliver value to my clients.   
+AI has the potential to revolutionize the way that software businesses build apps. It is a powerful tool for software businesses to build apps more efficiently, but it is not a replacement for human developers. We can look at it as a way to augment and enhance the work of developers, allowing them to focus on more complex and creative tasks while AI handles the more routine and repetitive ones. I've already had great success with it, and I will continue to use it to deliver value to my clients.  
 
 Feel free to get in contact to discuss how AI can help your business or how I can build an app with AI for you.
 

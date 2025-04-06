@@ -3,7 +3,7 @@ layout: post
 title:  "Investing in Mobile App Development: A Lucrative Opportunity for Tech Investors in 2024"
 date: 2024/01/22 00:00:00 +0000
 categories: [software development]
-tags: saas app-development
+tags: app-development
 author: "Christian Findlay"
 post_image: "/assets/images/blog/investment/investing.webp"
 post_image_height: 400

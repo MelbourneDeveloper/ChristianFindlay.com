@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/dart/dart.png"
 post_image_width: 300
 image: "/assets/images/blog/dart/dart.png"
-tags: adts dart functional-programming
+tags: ADTs dart functional-programming
 categories: flutter
 permalink: /blog/:title
 description: Dive into Dart 3's new switch expression feature and other features like pattern matching that support it. Understand how these enhance functional programming and improve Flutter development. Learn through examples for a comprehensive understanding of Dart 3.

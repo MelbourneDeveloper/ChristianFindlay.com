@@ -6,32 +6,12 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
 post_image_height: 300
 image: "/assets/images/blog/flutterchatgpt/flutterchatgpt.png"
-tags: flutter app-development chatgpt ai beginners-guide
+tags: app-development dart
 categories: flutter
 permalink: /blog/:title
 description: Step into the world of app development with our beginner-friendly guide. Learn how to create stunning Flutter apps with the aid of ChatGPT. No prior experience needed!
 canonical_url: https://www.nimblesite.co/blog/flutter-chatgpt
 ---
-
-[Introduction](#introduction)
-
-[What is Flutter?](#what-is-flutter)
-
-[What is ChatGPT?](#what-is-chatgpt)
-
-[Step 1 - Setting Up Your Environment](#step-1---setting-up-your-environment)
-
-[Step 2 - Create the Project](#step-2---create-the-project)
-
-[Step 3 - Design Your App](#step-3---design-your-app)
-
-[Step 4 - ChatGPT Writes the App](#step-4---chatgpt-writes-the-app)
-
-[Step 5 - Run The App](#step-5---run-the-app)
-
-[Step 6 - Further Prompting](#step-6---further-prompting)
-
-[Step 7 - Use Context Note](#step-7---use-context-note)
 
 ## Introduction
 

@@ -2,7 +2,7 @@
 layout: post
 title: "Using Hexadecimal Color Strings in Flutter: A Comprehensive Guide"
 date: "2023/04/03 00:00:00 +0000"
-tags: colors dart
+tags: dart
 categories: flutter
 author: "Christian Findlay"
 post_image: "/assets/images/blog/colors/colors.jpg"

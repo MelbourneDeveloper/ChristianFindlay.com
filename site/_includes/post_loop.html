@@ -1,26 +1,54 @@
-{% if post.post_image %}
-<figure class="overlay overlay1 rounded mb-30">
-	<a href="{{post.url}}"><img class="post-thumb" src="{{post.post_image}}" alt="{{post.title}}" /></a>
-	<figcaption>
-		<h5 class="from-top mb-0">Read More</h5>
-	</figcaption>
-</figure>
-{% endif %}
-{% if post.categories %}
-<div class="category">
-	<a href="/category/{{post.categories[0] | slugify}}"
-		class="badge badge-pill bg-purple">{{post.categories[0]}}</a>
-</div>
-{% endif %}
-<h2 class="post-title"><a href="{{post.url}}">{{post.title}}</a></h2>
-<div class="post-content">
-	<p>{{post.excerpt | strip_html | truncatewords: 25}}</p>
-</div>
-<!-- /.post-content -->
-<div class="meta mb-0">
-	{% if post.date %}
-	<span class="date"><i class="jam jam-clock"></i>{{post.date | date_to_string}}</span>
-	{% endif %}
-	<span class="comments"><i class="jam jam-user"></i><a href="/authors/{{post.author | slugify}}">
-			{{post.author}}</a></span>
+<div class="post-card-wrapper">
+	<article class="post-card">
+		<div class="post-card-inner">
+			{% if post.image %}
+			<div class="post-card-image">
+				<a href="{{ post.url | relative_url }}" aria-label="Read {{ post.title }}">
+					<img src="{{ post.image | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+				</a>
+			</div>
+			{% endif %}
+			
+			<div class="post-card-content">
+				{% if post.categories.size > 0 %}
+				<div class="post-card-categories">
+					{% for category in post.categories %}
+					<a href="/category/{{ category | slugify }}" class="post-card-category">{{ category }}</a>
+					{% endfor %}
+				</div>
+				{% endif %}
+
+				<h3 class="post-card-title">
+					<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+				</h3>
+
+				<div class="post-card-meta">
+					{% if post.author %}
+					<span class="post-card-author">{{ post.author }}</span>
+					{% endif %}
+					<span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
+					<span class="post-card-read-time">{{ post.content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
+				</div>
+
+				<div class="post-card-excerpt">
+					{{ post.excerpt | strip_html | truncatewords: 25 }}
+				</div>
+				
+				{% if post.tags.size > 0 %}
+				<div class="post-card-tags">
+					{% for tag in post.tags limit:3 %}
+					<span class="post-card-tag">#{{ tag }}</span>
+					{% endfor %}
+					{% if post.tags.size > 3 %}
+					<span class="post-card-tag-more">+{{ post.tags.size | minus: 3 }}</span>
+					{% endif %}
+				</div>
+				{% endif %}
+
+				<a href="{{ post.url | relative_url }}" class="post-card-read-more">
+					Read Article
+				</a>
+			</div>
+		</div>
+	</article>
 </div>

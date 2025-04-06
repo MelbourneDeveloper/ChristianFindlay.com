@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/searchbar/search.gif"
 image: "/assets/images/blog/searchbar/search.gif"
 description: Learn to create a search bar in Flutter with this concise guide, covering TextEditingController for user input management, data filtering, and displaying results with ListView.builder. Enhance your app's interactivity and user experience.
-tags: search testing
+tags: testing dart cross-platform
 categories: [flutter]
 permalink: /blog/:title
 keywords: [
