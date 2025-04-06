@@ -6,7 +6,7 @@
       {% assign category_name = category[0] %}
       {% assign category_slug = category_name | slugify %}
       <li>
-        <a href="{{ site.baseurl }}/category/{{ category_slug }}/">
+        <a href="{{ site.baseurl }}/category/{{ category_slug }}/" {% if page.url contains category_slug %} class="active" {% endif %}>
           {% if category_name == "dotnet" %}
           .NET
           {% else %}
