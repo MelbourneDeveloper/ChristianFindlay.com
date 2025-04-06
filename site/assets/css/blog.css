@@ -91,27 +91,14 @@
 /*****************************************
  * BLOG GRID - LISTING PAGE
  *****************************************/
-/* Blog container */
+/* Blog container with sidebar and content */
 .blog-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 0 var(--spacing-12);
+  display: flex;
+  gap: var(--spacing-8);
+  margin-bottom: var(--spacing-12);
   position: relative;
 }
 
-/* Blog grid container */
-.blog.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  gap: var(--spacing-10);
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-/* Add subtle background effect */
 .blog-container::before {
   content: '';
   position: absolute;
@@ -124,6 +111,129 @@
     radial-gradient(circle at 80% 70%, rgba(16, 185, 129, 0.03), transparent 25%);
   z-index: 0;
   pointer-events: none;
+}
+
+/* Blog content area */
+.blog-content {
+  flex: 1;
+}
+
+/* Blog grid container */
+.blog.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: var(--spacing-10);
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Blog sidebar */
+.blog-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+  padding: var(--spacing-6);
+  position: sticky;
+  top: var(--spacing-10);
+  height: fit-content;
+}
+
+/* Sidebar widgets */
+.sidebar-widget {
+  background-color: var(--dark);
+  border-radius: var(--rounded-xl);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  padding: var(--spacing-6);
+  margin-bottom: var(--spacing-8);
+}
+
+.sidebar-widget:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-widget h4 {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-4);
+  color: var(--gray-200);
+  position: relative;
+  padding-bottom: var(--spacing-3);
+}
+
+.sidebar-widget h4::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+  border-radius: 2px;
+}
+
+/* Categories widget */
+.categories ul.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categories ul.category-list li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.categories ul.category-list li:last-child {
+  border-bottom: none;
+}
+
+.categories ul.category-list li a {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-3) 0;
+  color: var(--gray-300);
+  transition: all 0.2s ease;
+}
+
+.categories ul.category-list li a:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.categories ul.category-list li a .count {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+}
+
+/* Tags widget */
+.tags .tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.tags .tag-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.8rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--gray-300);
+  margin-bottom: var(--spacing-2);
+  transition: all 0.2s ease;
+}
+
+.tags .tag-link:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.tags .tag-count {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  margin-left: 0.3rem;
 }
 
 /* Post card wrapper for sizing and spacing */
@@ -372,43 +482,72 @@
   border-radius: var(--rounded-sm);
 }
 
-/* Mobile responsive adjustments */
 @media (max-width: 1200px) {
   .blog.grid {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-    gap: var(--spacing-8);
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-6);
+  }
+  
+  .blog-sidebar {
+    width: 280px;
   }
 }
 
 @media (max-width: 992px) {
   .blog.grid {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    gap: var(--spacing-8);
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
   
   .post-card-image {
-    height: 200px;
+    height: 180px;
+  }
+  
+  .blog-sidebar {
+    width: 260px;
   }
 }
 
 @media (max-width: 768px) {
-  .blog.grid {
-    grid-template-columns: 1fr;
-    gap: var(--spacing-8);
-  }
-  
-  .post-card-inner {
+  .blog-container {
     flex-direction: column;
   }
   
-  .post-card-image {
+  .blog-sidebar {
     width: 100%;
-    height: 220px;
+    margin-top: var(--spacing-10);
+    position: static;
+    padding: 0;
+  }
+  
+  .sidebar-widget {
+    margin-bottom: var(--spacing-6);
+  }
+  
+  .blog.grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-6);
+  }
+  
+  .post-card {
+    min-height: unset;
+  }
+  
+  .post-card-inner {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  
+  .post-card-image {
+    width: 200px;
+    min-width: 200px;
+    height: auto;
+    min-height: 160px;
   }
   
   .post-card-content {
-    width: 100%;
-    padding: var(--spacing-6);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .post-card-title {
@@ -417,38 +556,74 @@
   }
   
   .post-card-excerpt {
-    -webkit-line-clamp: 3;
-    font-size: 1rem;
+    -webkit-line-clamp: 2;
+    margin-bottom: var(--spacing-2);
   }
   
   .post-card-meta {
-    flex-wrap: wrap;
     gap: var(--spacing-3);
+    flex-wrap: wrap;
   }
 }
 
-/* Media query for small mobile */
 @media (max-width: 480px) {
+  .blog-header h1 {
+    font-size: 2rem;
+  }
+  
+  .blog-subtitle {
+    font-size: 1rem;
+  }
+  
   .post-card {
-    min-height: auto;
+    margin-bottom: var(--spacing-4);
+  }
+  
+  .post-card-inner {
+    flex-direction: column;
   }
   
   .post-card-image {
+    width: 100%;
     height: 180px;
+    min-height: auto;
+  }
+  
+  .post-card-content {
+    padding: var(--spacing-4);
   }
   
   .post-card-excerpt {
-    -webkit-line-clamp: 2;
+    display: none;
   }
   
   .post-card-meta {
+    padding-bottom: var(--spacing-2);
     gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
   }
   
-  .post-card-author::before,
-  .post-card-date::before,
-  .post-card-read-time::before {
+  .post-card-author,
+  .post-card-date, 
+  .post-card-read-time {
     font-size: 0.8rem;
+  }
+  
+  .post-card-title {
+    font-size: 1.2rem;
+    margin-bottom: var(--spacing-2);
+  }
+  
+  .post-card-read-more {
+    font-size: 0.8rem;
+  }
+  
+  .sidebar-widget {
+    padding: var(--spacing-4);
+  }
+  
+  .sidebar-widget h4 {
+    font-size: 1.1rem;
   }
 }
 

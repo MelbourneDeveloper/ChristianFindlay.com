@@ -32,32 +32,31 @@ autopages:
     </div>
 
     <div class="blog-container">
-      <div class="blog grid">
-        {% if paginator.posts.size > 0 %}
-          {% for post in paginator.posts %}
-            {% include post_loop.html %}
-          {% endfor %}
-        {% else %}
-          <div class="empty-posts-message">
-            <h3>No articles found</h3>
-            <p>No articles with this tag are currently available.</p>
-          </div>
+      <div class="blog-content">
+        <div class="blog grid">
+          {% if paginator.posts.size > 0 %}
+            {% for post in paginator.posts %}
+              {% include post_loop.html %}
+            {% endfor %}
+          {% else %}
+            <div class="empty-posts-message">
+              <h3>No articles found</h3>
+              <p>No articles with this tag are currently available.</p>
+            </div>
+          {% endif %}
+        </div>
+
+        {% if paginator.total_pages > 1 %}
+        <div class="pagination-wrapper">
+          {% include pagination.html %}
+        </div>
         {% endif %}
       </div>
-
-      {% if paginator.total_pages > 1 %}
-      <div class="pagination-wrapper">
-        {% include pagination.html %}
-      </div>
-      {% endif %}
-    </div>
-
-    <div class="col-lg-4">
+      
       <div class="blog-sidebar">
         {% include categories_tags.html %}
       </div>
     </div>
-
   </div>
 </div>
 
