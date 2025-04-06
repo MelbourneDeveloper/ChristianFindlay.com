@@ -172,69 +172,7 @@
   border-radius: 2px;
 }
 
-/* Categories widget */
-.categories ul.category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.categories ul.category-list li {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.categories ul.category-list li:last-child {
-  border-bottom: none;
-}
-
-.categories ul.category-list li a {
-  display: flex;
-  justify-content: space-between;
-  padding: var(--spacing-3) 0;
-  color: var(--gray-300);
-  transition: all 0.2s ease;
-}
-
-.categories ul.category-list li a:hover {
-  color: var(--primary);
-  transform: translateX(5px);
-}
-
-.categories ul.category-list li a .count {
-  color: var(--gray-500);
-  font-size: 0.9rem;
-}
-
-/* Tags widget */
-.tags .tag-cloud {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-2);
-}
-
-.tags .tag-link {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.8rem;
-  padding: 0.3rem 0.8rem;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.05);
-  color: var(--gray-300);
-  margin-bottom: var(--spacing-2);
-  transition: all 0.2s ease;
-}
-
-.tags .tag-link:hover {
-  background: var(--primary);
-  color: white;
-  transform: translateY(-2px);
-}
-
-.tags .tag-count {
-  font-size: 0.7rem;
-  opacity: 0.7;
-  margin-left: 0.3rem;
-}
+/* Remove conflicting categories and tags styles */
 
 /* Post card wrapper for sizing and spacing */
 .post-card-wrapper {
