@@ -1,0 +1,33 @@
+<form id="contactForm" class="contact-form" name="Contact">
+  
+  <input type="hidden" name="form_name" value="Contact">
+  
+  <div class="form-group">
+    <input type="email" name="email" id="email" placeholder="Your Email" class="form-control" required>
+  </div>
+  
+  <div class="form-group">
+    <input type="tel" id="phone" name="phone" placeholder="Phone (optional)" class="form-control">
+  </div>
+  
+  <div class="form-group">
+    <textarea name="message" id="message" cols="30" rows="3" class="form-control" 
+      placeholder="Tell me about your project" required></textarea>
+  </div>
+  
+  <!-- Cloudflare Turnstile widget -->
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAABD6gT6rIdYnc15I" data-theme="light"></div>
+  
+  <button id="submitButton" type="submit" class="button-enhanced" form="contactForm">
+    <span class="button-text">Send Message</span>
+  </button>
+  
+  <p class="status-message success-message" style="display: none;">
+    Thanks! I'll get back to you soon
+  </p>
+
+  <p class="status-message error-message" style="display: none;">
+    Oops! Something went wrong. Please try again.
+  </p>
+
+</form> 

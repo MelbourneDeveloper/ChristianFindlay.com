@@ -5,7 +5,7 @@ date: "2020/12/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"
 image: "/assets/images/blog/dotnet/logo.svg"
-tags: nuget azure ci-cd
+tags: csharp visual-studio
 categories: dotnet
 permalink: /blog/:title
 ---

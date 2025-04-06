@@ -1,0 +1,24 @@
+<form id="newsletterForm" class="newsletter-form" name="Newsletter">
+  
+  <input type="hidden" name="form_name" value="Newsletter">
+
+  <div class="form-group">
+    <input type="email" name="email" placeholder="Your Email" class="form-control" required>
+  </div>
+  
+  <!-- Cloudflare Turnstile widget -->
+  <div class="cf-turnstile" data-sitekey="0x4AAAAAABD6gT6rIdYnc15I" data-theme="light"></div>
+  
+  <button id="submitButton" type="submit" class="button-enhanced" form="newsletterForm">
+    <span class="button-text">Subscribe</span>
+  </button>
+
+  <p class="status-message success-message" style="display: none;">
+    Thanks! You've been subscribed successfully.
+  </p>
+
+  <p class="status-message error-message" style="display: none;">
+    Oops! Something went wrong. Please try again.
+  </p>
+
+</form> 

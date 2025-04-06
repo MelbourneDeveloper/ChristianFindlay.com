@@ -10,7 +10,7 @@ categories: [software development]
 permalink: /blog/:title
 ---
 
-This article is part of a larger series that I am writing on [App Store Deployment](/app-store-deployment/), but this is not limited to App Store Deployment. Versioning between other front-ends and public APIs have similar issues so the problem is not unique to store deployment. This article is oriented toward any situation where the back-end may go out of sync with the front-end for different reasons. API design patterns are also changing and generally shifting toward looser coupling between client and server. The general trend is for front-end apps to become increasingly decoupled from their back-end counterparts. There are several reasons for this.
+This article is part of a larger series that I am writing on [App Store Deployment](app-store-deployment), but this is not limited to App Store Deployment. Versioning between other front-ends and public APIs have similar issues so the problem is not unique to store deployment. This article is oriented toward any situation where the back-end may go out of sync with the front-end for different reasons. API design patterns are also changing and generally shifting toward looser coupling between client and server. The general trend is for front-end apps to become increasingly decoupled from their back-end counterparts. There are several reasons for this.
 
 I'm not going to go in to the nitty gritty of the difficulties in getting apps in to the Google Play, Apple, and Microsoft stores. Suffice it to say, it can be difficult, and time consuming. A submission can be rejected for any number of reasons, and it can take up to several days for any one submission to reach the store.  On top of this, any user can choose to delay an upgrade, and many users will be on older phones that are not compatible with your current front-ends API version. This leaves leaves a situation where front-end versions may be out of sync with each other, or out of sync with the latest back-end version. Here is a quick look at two patterns that might emerge as a strategy to solve the problem.
 
@@ -39,7 +39,7 @@ Weaknesses
 
 Using the API Versioning pattern, a team can kill two birds with one stone. A public facing API can be created that can also serve as the back-end that can be consumed by the front-end. However, unless you're a big tech company like Google, Microsoft, Facebook, or so on, the resources required to get this right could be a stretch. Whatever the case may be, if your team decides to implement this pattern, the crucial thing is to make sure that your code, and [version methodology](https://octopus.com/docs/deployment-process/releases/release-versioning) are set up to handle this in the first place. Furthermore it is important that you deprecate often and communicate to your consumers when deprecation is going to be. Ideally, you would support as few versions of your API as possible.
 
-See [this article](/app-store-deployment-back-end-first/) for how this pattern can be used as part of App Store Deployment.
+See [this article](app-store-deployment-back-end-first) for how this pattern can be used as part of App Store Deployment.
 
 Back-ends For Front-ends (BFF)
 ------------------------------
@@ -76,4 +76,4 @@ Conclusion
 
 I have looked at two patterns here. The first is shaping up to be the Internet's go to option. Most of us are becoming familiar with the pattern and expect the APIs we work in the same way. However, what I have witnessed is that most development teams are not ready for the kind of discipline that is required for API versioning. This will probably need to change in future, and in your development team, you should be thinking about this problem - especially if you are considering mobile app development, or public API deployment. The BFF pattern might give you a bit of wiggle room when you have a tight deadline, but it's not a very good long term solution. If you're looking at deploying to the app store, you should look at alternative deployment options like [Apple Developer Enterprise Program](https://developer.apple.com/programs/enterprise/), and [Google Play for enterprises](https://developer.android.com/distribute/google-play/work). I will add more on these in subsequent articles.
 
-See this article on [how to detail with mandatory columns](/api-versioning-mandatory-columns/) with API Versioning.
+See this article on [how to detail with mandatory columns](https://www.christianfindlay.com/blog/api-versioning-mandatory-columns) with API Versioning.

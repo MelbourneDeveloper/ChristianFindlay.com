@@ -3,7 +3,7 @@ layout: post
 title: "RestClient.Net on WebAssembly (C#)"
 date: 2019/08/15 00:00:00 +0000
 categories: [dotnet]
-tags: restclient-net csharp
+tags: restclient-net csharp wasm
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
 image: "/assets/images/blog/restclientdotnet/logo.png"

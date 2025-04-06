@@ -9,6 +9,8 @@ tags: csharp
 categories: dotnet
 post_image_size: width:50%
 permalink: /blog/:title
+description: "Learn how to use C# delegates with IoC containers and dependency injection. Discover the advantages over interfaces, how to mock delegates, and implement them in ASP.NET Core. Perfect for C# developers looking to optimize their code."
+keywords: [C# delegates, IoC containers, dependency injection, ASP.NET Core, Moq, interface segregation principle, functional programming, C# development, software design patterns, unit testing, mocking, .NET development, C# best practices, code optimization, Microsoft DI, StructureMap, generic delegates, AutoMapper]
 ---
 
 Developers are usually encouraged to do dependency injection with interfaces. Some developers don't know that they can do dependency injection with delegates, and there are good reasons to do this. Moreover, developers can use delegates with modern IoC containers like ASP.NET Core's IoC container, mock delegates, and verify calls. It is good practice and should be encouraged. Let's have a look at why. All source code for this article can be found in [this repo](https://github.com/MelbourneDeveloper/Samples/tree/master/MockDelegates/MockDelegates).

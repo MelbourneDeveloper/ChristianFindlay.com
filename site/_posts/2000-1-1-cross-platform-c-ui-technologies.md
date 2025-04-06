@@ -6,11 +6,11 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat1/header.jpg"
 image: "/assets/images/blog/xplat1/header.jpg"
 categories: [dotnet]
-tags: cross-platform csharp avaloniaui uno-platform
+tags: cross-platform csharp avaloniaui uno-platform xaml
 permalink: /blog/:title
 ---
 
-*Several UI technologies can be used to build Cross-Platform apps in C# or other .NET based languages such as Visual Basic (VB). This article looks at three technologies and discusses, for which cases developers could use these technologies. This article gives you a baseline understanding of technologies that are available for building front-end applications in C#, and will answers questions like which platforms are available? Can it run in a browser? Will it have a native look and feel? Also, can it be deployed to the app stores?* [Read part 2 of this article](/csharp-crossplatform-2/) or watch this talk on newer technologies (10th August 2020)
+*Several UI technologies can be used to build Cross-Platform apps in C# or other .NET based languages such as Visual Basic (VB). This article looks at three technologies and discusses, for which cases developers could use these technologies. This article gives you a baseline understanding of technologies that are available for building front-end applications in C#, and will answers questions like which platforms are available? Can it run in a browser? Will it have a native look and feel? Also, can it be deployed to the app stores?* [Read part 2 of this article](csharp-crossplatform-2) or watch this talk on newer technologies (10th August 2020)
 
 Background
 ----------

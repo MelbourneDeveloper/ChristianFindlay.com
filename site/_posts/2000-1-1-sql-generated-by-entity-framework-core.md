@@ -5,7 +5,7 @@ date: "2020/07/19 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/SQL/header.jpeg"
 image: "/assets/images/blog/SQL/header.jpeg"
-tags: SQL entity-framework-core
+tags: csharp
 categories: dotnet
 permalink: /blog/:title
 ---

@@ -1,38 +1,61 @@
 ---
 layout: default
-
+pagination:
+enabled: true
+per_page: 6
+permalink: "/page:num/"
 ---
 
 {% include one_page_nav.html %}
 
-<div class="wrapper light-wrapper" >
-  <div class="container  text-center">
-    <div class="row">
-    	<div class="mx-auto">
-              <div class="space90"></div>
-		    <h1 class="page-title text-capitalize">{{page.title}}</h1>
-    	</div>
-    </div>
-  </div>
-  <!-- /.container -->
-</div>
-<!-- /.wrapper -->
 <div class="wrapper light-wrapper">
   <div class="container inner">
-    <div class="blog grid grid-view">
-      <div class="row isotope">
-        {% for post in page.posts %}
-        <div class="item post grid-sizer col-md-6 col-lg-4">
-         {% include post_loop.html %}
-        </div>
-        <!-- /.post -->
-        {% endfor %}
+    <div class="blog-header-wrapper">
+      <div class="blog-header">
+        {% assign category_name = page.pagination.category | default: page.title %}
+        {% assign clean_category = category_name | replace: ' page 2', '' | replace: ' page 3', '' | replace: ' page 4',
+        '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' |
+        replace: ' page 9', '' | replace: ' page 10', '' %}
+
+        {% if clean_category == "flutter" %}
+        <h1>Flutter Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Expert insights on Flutter and Dart development</p>
+        {% elsif clean_category == "dotnet" %}
+        <h1>.NET Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Professional .NET development tips and best practices</p>
+        {% elsif clean_category == "software-development" %}
+        <h1>Software Development Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Insights on building high-performance mobile applications and backends</p>
+        {% else %}
+        <h1>{{ clean_category | capitalize | replace: "-", " " }} Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Expert insights on {{ clean_category | capitalize | replace: "-", " " }} development
+        </p>
+        {% endif %}
       </div>
-      <!-- /.row -->
     </div>
-    <!-- /.blog -->
+
+    <div class="blog-container">
+      <div class="blog-content">
+        <div class="blog grid">
+          {% for post in paginator.posts %}
+          {% include post_loop.html %}
+          {% endfor %}
+        </div>
+
+        <div class="pagination-wrapper">
+          {% include pagination.html %}
+        </div>
+      </div>
+      
+      <div class="blog-sidebar">
+        {% include categories_tags.html %}
+      </div>
+    </div>
   </div>
-  <!-- /.container -->
 </div>
-<!-- /.wrapper -->
+
 {% include footer_2.html light_logo="true" %}

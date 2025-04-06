@@ -8,38 +8,11 @@ post_image_width: 300
 post_image_height: 300
 image: "/assets/images/blog/dotnet/logo.svg"
 description: Master the art of handling webhooks with ASP.NET Core Minimal API in this comprehensive guide by Christian Findlay. Perfect for developers looking to efficiently receive and test incoming webhooks, this article walks you through creating an ASP.NET Core Minimal API application, specifically tailored for webhook POST requests. With detailed steps, from project creation to testing with tools like ngrok, this guide is ideal for those familiar with C# and ASP.NET Core. Enhance your skills in webhook integration and testing with this expertly crafted tutorial, complete with code snippets and practical insights.
-tags: csharp minimal-api
+tags: csharp visual-studio
 categories: dotnet
 permalink: /blog/:title
+keywords: [ASP.NET Core Minimal API, webhook implementation, C# webhook handling, ASP.NET Core webhook, Minimal API testing, webhook integration testing, ASP.NET Core integration tests, ngrok webhook testing, .NET 7 webhook, Minimal API POST request, C# webhook receiver, ASP.NET Core HTTP POST, webhook endpoint creation, ASP.NET Core dependency injection, C# interface-based design, ASP.NET Core test server, webhook payload processing, ASP.NET Core HTTP client, C# asynchronous programming, Web API development .NET]
 ---
-
-[Introduction](#introduction)
-
-[Prerequisites](#prerequisites)
-
-[Building The App](#building-the-app)
-
-[Step 1 - Create the Project](#step-1---create-the-project)
-
-[Step 2 - Create the IReceiveWebhook Interface](#step-2---create-the-ireceivewebhook-interface)
-
-[Step 3 - Create the ConsoleMinimalWebhook Implementation](#step-3---create-the-consoleminimalwebhook-implementation)
-
-[Testing](#testing)
-
-[Overview](#overview)
-
-[Step 1 - Create a Test Project and Install NuGet Packages](#step-1---create-a-test-project-and-install-nuget-packages)
-
-[Step 2 - Create a Fake Implementation of IReceiveWebhook](#step-2---create-a-fake-implementation-of-ireceivewebhook)
-
-[Step 3 - Add This Helper Method](#step-3---add-this-helper-method)
-
-[Step 4 - Add The Test](#step-4---add-the-test)
-
-[Step 5 - Hit The Endpoint](#step-5---hit-the-endpoint)
-
-[Step 6 - End to End Test With ngrok (optional)](#step-6---end-to-end-test-with-ngrok-optional)
 
 ## Introduction
 

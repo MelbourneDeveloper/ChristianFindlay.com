@@ -6,32 +6,32 @@ layout: default
 
 <div class="wrapper light-wrapper">
   <div class="container inner">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="blog grid grid-view">
-          <div class="row isotope">
-            {% for post in paginator.posts %}
-            <div class="item post grid-sizer col-md-6">
-              {% include post_loop.html %}
-            </div>
-            <!-- /.post -->
-            {% endfor %}
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.blog -->
-        {% include pagination.html %}
+    <div class="blog-header-wrapper">
+      <div class="blog-header">
+        <h1>Flutter & .NET Blog</h1>
+        <div class="header-divider"></div>
+        <p class="blog-subtitle">Expert insights on Flutter, Dart, and .NET development</p>
       </div>
-      <!--/column -->
-      <div class="space30 d-none d-md-block d-lg-none"></div>
-      <aside class="col-lg-4 sidebar">
-        {% include sidebar.html %}
-      </aside>
-      <!-- /column .sidebar -->
     </div>
-    <!--/.row -->
+
+    <div class="blog-container">
+      <div class="blog-content">
+        <div class="blog grid">
+          {% for post in paginator.posts %}
+          {% include post_loop.html %}
+          {% endfor %}
+        </div>
+
+        <div class="pagination-wrapper">
+          {% include pagination.html %}
+        </div>
+      </div>
+      
+      <div class="blog-sidebar">
+        {% include categories_tags.html %}
+      </div>
+    </div>
   </div>
-  <!-- /.container -->
 </div>
 
 {% include footer_2.html light_logo="true" %}

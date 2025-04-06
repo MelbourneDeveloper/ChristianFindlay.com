@@ -10,6 +10,7 @@ post_image_height: 300
 image: "/assets/images/blog/extensions/header.jpg"
 permalink: /blog/:title
 description: "Discover how to enhance your Flutter code with Dart extension methods in this comprehensive tutorial. Learn about the power of Dart 2.7 extension methods, how to use Dart extensions for widget composition, and how to create BuildContext shortcuts with Dart extensions. This guide will help you write cleaner, more maintainable Flutter code."
+keywords: [Dart extension methods, Flutter development, widget composition, BuildContext shortcuts, Dart 2.7 features, Flutter code optimization, Dart extensions for Flutter, custom Flutter widgets, Flutter theming, Flutter navigation, Dart programming, Flutter UI development, code readability, Flutter best practices, Dart language features, Flutter widget extensions, BuildContext extensions, Flutter snackbar, Flutter dialogs, Flutter routing]
 ---
 
 Dart has a powerful feature called extensions. This feature can significantly improve the readability and maintainability of your Flutter code. This comprehensive tutorial explores how to use Dart extension methods and properties (members) to enhance your Flutter code, with a particular focus on widget composition.

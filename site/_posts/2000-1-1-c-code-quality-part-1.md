@@ -3,7 +3,7 @@ layout: post
 title: "C# Code Quality - Part 1"
 date: 2019/11/09 00:00:00 +0000
 categories: [dotnet]
-tags: code-quality
+tags: code-quality visual-studio
 author: "Christian Findlay"
 post_image: "/assets/images/blog/quality/header.jpg"
 image: "/assets/images/blog/quality/header.jpg"
@@ -18,7 +18,7 @@ Imagine you are given three hours to clean a small apartment. It doesn't have to
 
 Code analysis and metrics are the starting point for improving a codebase. Code is data, and tools can analyze it like all other kinds of data. Visual Studio Professional has not traditionally come with excellent tooling in this department, so 3rd party tools are necessary. What we need to know is: how much code is there? Is it following our coding standards? Where are the most error-prone areas of the code? Which parts of the code are too complicated? Is it unit testable? And, so on. 
 
-In previous articles, I wrote about [FxCop](https://github.com/dotnet/roslyn-analyzers). It is an excellent free tool that helps to identify problematic code. I recommend using FxCop to stop your codebase from degrading over time. It also comes with excellent tooling for refactoring problematic code in bulk. I strongly recommend reading [C# Code Rules Part 1](/c-code-rules-part-1/) as a supplement to this article, but what FxCop lacks is visual tools for counting and categorizing the types of problems that are most commonly occurring in the codebase, and targeting problem areas. Ultimately, paid tools work best in conjunction with FxCop.
+In previous articles, I wrote about [FxCop](https://github.com/dotnet/roslyn-analyzers). It is an excellent free tool that helps to identify problematic code. I recommend using FxCop to stop your codebase from degrading over time. It also comes with excellent tooling for refactoring problematic code in bulk. I strongly recommend reading [C# Code Rules Part 1](c-code-rules-part-1/) as a supplement to this article, but what FxCop lacks is visual tools for counting and categorizing the types of problems that are most commonly occurring in the codebase, and targeting problem areas. Ultimately, paid tools work best in conjunction with FxCop.
 
 Two paid tools that I've used to analyze code are Resharper / Rider, and NDepend. They both contain an in-depth array of analyzers and visual categorization tools to show you what is wrong with the code and how to target it.
 

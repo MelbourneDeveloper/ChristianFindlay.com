@@ -2,13 +2,15 @@
 layout: post
 title: "Using Hexadecimal Color Strings in Flutter: A Comprehensive Guide"
 date: "2023/04/03 00:00:00 +0000"
-tags: colors dart
+tags: dart
 categories: flutter
 author: "Christian Findlay"
 post_image: "/assets/images/blog/colors/colors.jpg"
 post_image_height: 300
 image: "/assets/images/blog/colors/colors.jpg"
 permalink: /blog/:title
+description: "Master hexadecimal colors in Flutter with our comprehensive guide. Learn to convert, manipulate, and implement hex colors for stunning UI design. Boost your Flutter app development skills now!"
+keywords: [Flutter colors, hexadecimal colors Flutter, Color class Flutter, ARGB colors, RGB to hexadecimal Flutter, color conversion Flutter, Flutter UI design, Dart color handling, Flutter theming, hexadecimal string to Color, Flutter color extensions, Flutter color parsing, CMYK to hex Flutter, HSV colors Flutter, Flutter color representation, Dart color manipulation, Flutter UI customization, color formats Flutter, Flutter color utilities, mobile app color design]
 ---
 
 Color plays a critical role in the Flutter user experience. It can enhance or destroy the look and feel of your app. We can represent colors in various ways, such as [RGB, ARGB](https://en.wikipedia.org/wiki/RGBA_color_model), CMYK, HSV, and HSL. When designers give you colors, they may use any of these variants. RGB and ARGB and very common, and we often use hexadecimal strings to represent these in Flutter. This blog post will explain converting between the various formats and using hexadecimal color strings in Dart and Flutter.

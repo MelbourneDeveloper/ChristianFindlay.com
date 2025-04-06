@@ -8,6 +8,8 @@ image: "/assets/images/blog/protobuf/header.png"
 tags: grpc csharp
 categories: dotnet
 permalink: /blog/:title
+description: "Learn how to implement Google Protocol Buffers (protobuf) in C# Web API for efficient serialization. Discover the advantages of protobuf over JSON, and how to create and consume protobuf services using ASP.NET Core and RestClient.Net"
+keywords: [Protocol Buffers, protobuf, C# Web API, ASP.NET Core, RestClient.Net, binary serialization, gRPC, .proto files, JSON alternative, efficient data transfer, cross-platform serialization, Google Protocol Buffers, C# serialization, Web API performance, REST API optimization, protobuf serialization, .NET protobuf implementation, binary data transfer, protobuf advantages, C# service development]
 ---
 
 Using [Google Protocol Buffers](https://developers.google.com/protocol-buffers) (protobuf) for serialization over a Web API (or REST API) is simple. Most developers use JSON as the go-to transfer protocol for services even though it is needlessly verbose, slow to serialize, and lacks the kind of functionality that Google added to protobuf. This article briefly talks about the advantages of services with protobuf, when to use them, and how to create and consume them with ASP.NET Core and [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net).
@@ -31,11 +33,11 @@ Protobuf may not be appropriate when the audience reach is the most critical fac
 Creating the Service
 --------------------
 
-It is possible to create a gRPC service on ASP.Net Core. Here is an earlier [article](/c-and-grpc-part-one/) I wrote on this. But, developers may want to implement a standard ASP.NET Core Web API with protobuf serialization. Firstly, create a Web API project and add the gRPC NuGet packages. The samples can be cloned from this [repo](https://github.com/MelbourneDeveloper/RestClient.Net).
+It is possible to create a gRPC service on ASP.Net Core. Here is an earlier [article](c-and-grpc-part-one/) I wrote on this. But, developers may want to implement a standard ASP.NET Core Web API with protobuf serialization. Firstly, create a Web API project and add the gRPC NuGet packages. The samples can be cloned from this [repo](https://github.com/MelbourneDeveloper/RestClient.Net).
 
 ![NUGETS](/assets/images/blog/protobuf/nugets.png){:width="100%"}
 
-These NuGets allow defining message types with proto files. Just add a .proto file and change the properties of the file as below. It is possible to put the .proto file in a project that is shared between client and server. This is not always possible, but it's recommended. Otherwise, the outputted C# code can be copied and pasted into the client-side project. [This article](/back-end-front-end-versioning/) may be useful for managing versions between the back-end and front-end.
+These NuGets allow defining message types with proto files. Just add a .proto file and change the properties of the file as below. It is possible to put the .proto file in a project that is shared between client and server. This is not always possible, but it's recommended. Otherwise, the outputted C# code can be copied and pasted into the client-side project. [This article](https://www.christianfindlay.com/blog/back-end-front-end-versioning) may be useful for managing versions between the back-end and front-end.
 
 ![Proto](/assets/images/blog/protobuf/proto.png){:width="100%"}
 

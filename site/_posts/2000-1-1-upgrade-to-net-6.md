@@ -5,9 +5,11 @@ date: "2021/12/12 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/upgradedotnet/header.jpg"
 image: "/assets/images/blog/upgradedotnet/header.jpg"
-tags: 
+tags: visual-studio dotnet-standard
 categories: [dotnet]
 permalink: /blog/:title
+description: "Learn how to upgrade your legacy .NET Framework codebase to .NET 6 with this comprehensive guide. Discover strategies for refactoring, multi-targeting, and handling dependencies to modernize your ASP.NET applications efficiently."
+keywords: [.NET Framework upgrade, .NET 6 migration, ASP.NET Core migration, legacy code modernization, multi-targeting .NET, csproj upgrade, SDK-style projects, .NET dependency management, ASP.NET to ASP.NET Core, Entity Framework migration, .NET code refactoring, Visual Studio upgrade assistant, .NET Standard compatibility, cross-platform .NET development, .NET performance optimization, WebAPI upgrade, .NET testing strategies, database code migration, .NET project structure, continuous integration for .NET]
 ---
 
 You're probably here because your business has a legacy codebase, and you need to upgrade it. You're not alone, and almost every business goes through a similar thing at some stage. This post is part guide and part food for thought. Here, the focus is on upgrading a back-end from ASP.NET to ASP .NET Core, but you will find this helpful if you need to upgrade any code from Framework to .NET 6. You may want to break your architecture up into Microservices, or you may want to consolidate microservices back into a single service. You may want to upgrade your WPF app to WPF on .NET 6. Whatever your goal is, the process for upgrading to .NET 6 is going to be more or less the same.
@@ -72,7 +74,7 @@ Step 3 - Multi-target .NET Framework and .NET Standard or .NET 6
 
 Firstly, you should read through this [documentation](https://docs.microsoft.com/en-us/dotnet/architecture/modernize-desktop/example-migration#migrating-with-a-tool) from Microsoft.
 
-When your projects use the SDK Style project format, you can attempt to compile to .NET 6 or .NET Standard. See this [documentation](https://docs.microsoft.com/en-us/nuget/create-packages/multiple-target-frameworks-project-file#create-a-project-that-supports-multiple-net-framework-versions) on multi-targeting. You should see this [chart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support) if you need to target Xamarin or UWP. There is some further reading [here](1/net-standard/). That might require you to target .NET Framework and .NET Standard 2.0 or 2.1 instead of .NET 6. If that's the case, the library will still run fine on .NET 6. But, if you don't need Xamarin or UWP, you can target .NET Framework and .NET 6.
+When your projects use the SDK Style project format, you can attempt to compile to .NET 6 or .NET Standard. See this [documentation](https://docs.microsoft.com/en-us/nuget/create-packages/multiple-target-frameworks-project-file#create-a-project-that-supports-multiple-net-framework-versions) on multi-targeting. You should see this [chart](https://docs.microsoft.com/en-us/dotnet/standard/net-standard#net-implementation-support) if you need to target Xamarin or UWP. There is some further reading [here](net-standard/). That might require you to target .NET Framework and .NET Standard 2.0 or 2.1 instead of .NET 6. If that's the case, the library will still run fine on .NET 6. But, if you don't need Xamarin or UWP, you can target .NET Framework and .NET 6.
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

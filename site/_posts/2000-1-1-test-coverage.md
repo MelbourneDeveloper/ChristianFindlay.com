@@ -11,7 +11,7 @@ permalink: /blog/:title
 slider_post: true
 ---
 
-This article is part of a series I am writing about testing. It refers to an [article](/blog/test-isolation-expensive) I wrote on test isolation, which is important reading for this topic.   
+This article is part of a series I am writing about testing. It refers to an [article](test-isolation-expensive) I wrote on test isolation, which is important reading for this topic.   
 
 Test coverage measures the actual amount of code your test suite hits. It usually gives you a percentage of the overall lines of code in the system covered and the ability to see which lines of code the tests ran. This allows you to adjust your tests so that they cover more code.   
 

@@ -1,47 +1,16 @@
 ---
 layout: default
-title: Flutter Developer in Melbourne, Australia
-custom_css: meander
-custom_font: font2
+title: Hire a Flutter Expert in Melbourne, Australia
+custom_css: app-cards.css
 
 hero_area:
   enable: true
   title: "Hi, I'm Christian Findlay"
-  sub_title: "I’m the Director of <a href=\"https://www.nimblesite.co/\">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI"
-  button_text: "See My Portfolio"
-  button_url: "#portfolio"
+  sub_title: "I'm the Director of <a href=\"https://www.nimblesite.co/\">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI"
+  button_text: "Book a Consultation"
+  button_url: "#contact"
   image: "/assets/images/art/ChristianFindlay.webp"
   section_id: "home"
-
-services_area:
-  section_id: "services"
-  enable: true
-  title: "Hire Us For"
-  sub_title: "We specialize in single-source mobile apps with Flutter, and .NET backend solutions. We also build websites and web"
-  services: 
-    - title: "Flutter Apps"
-      sub_title: "Build a new app with us, or review and breathe new life into your existing app"
-      icon: "/assets/images/icons/ec-ecommerce-1.png"
-
-    - title: "Firebase or Supabase"
-      sub_title: "Implement an all in one Backend Solution. Simple auth, analytics, database and seamless scaling"
-      icon: "/assets/images/icons/of-pie-chart.png"
-    
-    - title: "AI Integration"
-      sub_title: "Add ChatGPT chat to your app or website and engage your users with AI, or use AI to build"
-      icon: "/assets/images/icons/hs-support-5.png"
-
-    - title: "Flutter Testing Training"
-      sub_title: "Online Flutter Integration and Widget Testing training to help your team bring the quality level up"
-      icon: "/assets/images/icons/sm-training-1.png"
-
-    - title: "Cloud"
-      sub_title: "Build and maintain reliable, high-performance solutions with .NET, Azure and Google Cloud"
-      icon: "/assets/images/icons/ms-cloud-computing.png"
-    
-    - title: "Web"
-      sub_title: "We extend Flutter apps to the web, and leverage React when you need the best web experience"
-      icon: "/assets/images/icons/st-web-development.png"
 
 testimonials:
   enable: true
@@ -113,479 +82,413 @@ about_area:
       button_text: "let's chat about ai"
       button_url: "#contact"
 
-portfolios_area:
-  enable: true
-  title: "Portfolio"
-  sub_title: "This portfolio displays recent Flutter apps that are live in the store right now"
-  section_id: "portfolio"
-
-  portfolios:
-
-    - title: "Legacy 100th Torch Relay"
-      sub_title: "Phone App"
-      sm_img: "/assets/images/portfolio/legacy-home.webp"
-      big_img: "/assets/images/portfolio/legacy-route.webp"
-      url: "https://apps.apple.com/au/app/legacy-100th-torch-relay/id1618154550"
-      filters:
-        - apps
-
-    - title: "Octopus Members Portal 2"
-      sub_title: "Phone App"
-      sm_img: "/assets/images/art/og.jpg"
-      big_img: "/assets/images/art/ognotices.jpg"
-      url: "https://play.google.com/store/apps/details?id=au.com.octopusgroup.membersportalv2&hl=en_AU&gl=US"
-      filters:
-        - apps
-
-    - title: "Flutter Pulse"
-      sub_title: "Get the latest Flutter news and tutorials"
-      sm_img: "/assets/images/art/flutterpulse1.webp"
-      big_img: "/assets/images/art/flutterpulse2.webp"
-      url: "https://play.google.com/store/apps/details?id=com.christianfindlay.flutterpulse&hl=en_US&gl=NL"
-      filters:
-        - apps
-
-faq_area:
-  section_id: "faq"
-  enable: true
-  title: "FAQ" 
-  sub_title: |
-    Feel free to reach out if you don't see an answer here
-  faq:
-  - question: "Do we need to build native for each platform?"
-    answer: "No. Flutter builds beautiful native apps from a single codebase. You can deploy your app to iOS and Android without building it several times."
-  - question: "What if you're booked out or we need more resources?"
-    answer: "I have access to a vast network of designers, artists, software developers, and other skilled people. I can scale up with them as necessary"
-  - question: "Which payment methods do you accept?"
-    answer: "I accept international bank transfers."
-  - question: "Which databases can we use?"
-    answer: "I recommend Supabase (Postgres) for a relational database, or Firebase for Document Db. Both these platforms come with everything you need to build a scalable backend solution."
-  - question: "How do you handle security and privacy?"
-    answer: "I depend on proven solutions, and I won't hand credentials over to 3rd parties. If your clients have sensitive data, I will only work with it if there is a protocol in place to ensure the integrity"
-  - question: "How do you use AI?"
-    answer: "I use ChatGPT and GitHub Copilot heavily to improve productivity. But, I'm also sensitive to privacy concerns and won't use these tools if you prefer not to."
-  - question: "Are there any discounts for charities?"
-    answer: "If you are a registered charity, we can negotiate a lower day rate. Please contact me for more information."
-  - question: "How do you charge?"
-    answer: "I charge on a time and materials basis and the daily rate is competitive by Australian standards. Please reach out to get the current rate."
-  - question: "Can we do a trial?"
-    answer: "Absolutely. Hire me for a day and I can help you work through a problem or clean up an existing app."
-
-
 ---
 
-<div class="content-wrapper">
-  {% include one_page_nav.html %}
-  {% if page.hero_area.enable %}
-  <section id="{{page.hero_area.section_id}}">
-    <div class="wrapper bg-opacity-default">
-      <div class="rev_slider_wrapper fullwidth-container dark-spinner">
-        <div id="slider6" class="rev_slider fullwidthbanner" data-version="5.4.7">
-          <ul>
-            <li data-transition="fade" data-thumb="">
-              <img src="/assets/images/dummy.png" style="background:transparent" alt="{{page.hero_area.title}}" />
-              <div class="tp-caption font-weight-600 color-dark" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['-100','-120','280','280']" data-fontsize="['40','40','40','32']"
-                data-lineheight="['50','50','50','42']" data-width="['460','380','650','340']"
-                data-textAlign="['left','left','center','center']"
-                data-whitespace="['normal','normal','normal','normal']"
-                data-frames='[{"delay":1100,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.title}}
-              </div>
-              <div class="tp-caption font-weight-400 color-dark" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['30','30','150','140']" data-fontsize="['26','26','26','20']"
-                data-lineheight="['38','38','38','32']" data-width="['460','380','650','340']"
-                data-textAlign="['left','left','center','center']"
-                data-whitespace="['normal','normal','normal','normal']"
-                data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.sub_title}}
-              </div>
-              <a class="tp-caption btn btn-l scroll" data-x="['left','left','center','center']"
-                data-y="['middle','middle','bottom','bottom']" data-hoffset="['50','30','0','0']"
-                data-voffset="['175','190','60','60']" data-width="['auto','auto','auto','auto']"
-                data-frames='[{"delay":1900,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-responsive="on" data-responsive_offset="on" style="z-index: 9;"
-                href="{{page.hero_area.button_url}}"> {{page.hero_area.button_text}}
-              </a>
-              {% if page.hero_area.image %}
-              <div class="tp-caption img-blob blob8" data-x="['right','right','center','center']"
-                data-y="['middle','middle','top','top']" data-hoffset="['60','30','10','10']"
-                data-voffset="['25','25','100','100']"
-                data-frames='[{"delay":700,"speed":1500,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                data-visibility="['on','on','on','on']" data-width="none" data-height="none" data-type="image"
-                data-responsive="on" data-responsive_offset="on" style="z-index: 5;">
-                <img data-lazyload="" src="{{page.hero_area.image}}" data-ww="['550','500','400','300']" data-hh="auto"
-                  alt="{{page.hero_area.title}}" />
-              </div>
-              {% endif %}
-            </li>
-          </ul>
-          <div class="tp-bannertimer tp-bottom"></div>
-        </div>
-        <!-- /.rev_slider -->
-      </div>
-      <!-- /.rev_slider_wrapper -->
+{% include one_page_nav.html %}
+
+<section id="home">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Hi, I'm Christian Findlay</h1>
+      <p class="subtitle">I'm the Director of <a href="https://www.nimblesite.co/">Nimblesite</a>, Melbourne's Premiere Flutter Development Agency. We focus on building with Flutter, .NET and AI</p>
+      <a href="#contact" class="hero-cta">Book a Consultation</a>
     </div>
-    <!-- /.wrapper -->
-  </section>
-  {% endif %}
-
-  {% if page.services_area.enable %}
-  <section id="{{page.services_area.section_id}}">
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="wrapper overflow-top">
-
-      <div class="container inner" style="padding-bottom: 60px;">
-
-        {% if page.services_area.title %}
-        <h2 class="section-title mb-20 text-center">{{page.services_area.title}}</h2>
-        {% endif %}
-
-        <div class="row text-center">
-
-          {% for service in page.services_area.services %}
-          <div class="col-md-6 col-lg-4 mb-4">
-
-            <div class="box bg-white shadow">
-              {% if service.icon %}
-              <div class="icon icon-svg mb-20">
-                <img src="{{service.icon}}" alt="{{service.title}}" />
-              </div>
-              {% endif %}
-              <h5>{{service.title}}</h5>
-              <p>{{service.sub_title}}</p>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-
-      </div>
-
+    <div class="hero-image">
+      <img src="assets/images/art/ChristianFindlay.webp" alt="Christian Findlay - Flutter Developer">
     </div>
+  </div>
+</section>
 
-    {% endif %}
-
-    <div class="container inner" style="padding-top: 0px;padding-bottom: 60px;">
-
-      <div
-        class="box shadow p-60 image-wrapper bg-full bg-image inverse-text rounded d-md-flex align-items-md-center justify-content-md-between"
-        data-image-src="{{relative_url}}/assets/images/art/bg5.jpg">
-        <h3 class="display-3 mb-0">Let's chat about my services!</h3>
-        <div class="space30 d-md-none"></div>
-        <a href="#contact" class="btn btn-white btn-strong-hover mb-0">Hire Me</a>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="{{page.about_area.section_id}}">
-    {% if page.about_area.enable %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        {% for service in page.about_area.services %}
-        {% assign chck_number = forloop.index | modulo: 2 %}
-
-        <div class="space120"></div>
-        <div class="row align-items-center">
-          {% if service.image %}
-          <div class="col-lg-6 order-lg-{{chck_number}}">
-            <div class="img-blob blob15">
-              <img src="{{service.image}}" style="width: 30rem" alt="{{service.title}}" />
-            </div>
-          </div>
-          {% endif %}
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-6 pr-60 pr-md-15">
-            <h3>{{service.title}}</h3>
-            <div class="space10"></div>
-            <p>{{service.description}}</p>
-            <div class="space10"></div>
-            <a href="{{service.button_url}}"
-              class="btn {% cycle 'btn-purple','btn-yellow','btn-red' %}">{{service.button_text}}</a>
-          </div>
-
-        </div>
-
-        {% endfor %}
-      </div>
-    </div>
-    {% endif %}
-
-    {% if page.video_area.enable %}
-    {% assign video_info = page.video_area %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-        <div class="space40"></div>
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <iframe  src="https://www.youtube.com/embed/6iZnR5UKpkw?si=zPq-Hi5hMfDukJZ3"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen></iframe>
-          </div>
-
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-4 pl-50 pl-md-15">
-            <p>{{video_info.description}}</p>
-            <ul class="icon-list bullet-default">
-              {% for features in video_info.features %}
-              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-              {% endfor %}
-            </ul>
-            <div class="space10"></div>
-            {% if video_info.btn_url %}
-            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-            {% endif %}
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    {% endif %}
-
-    {% if page.video_area2.enable %}
-    {% assign video_info = page.video_area2 %}
-    <div class="wrapper gray-wrapper">
-      <div class="container inner">
-        <h2 class="display-2 text-center">{{video_info.sub_title}}</h2>
-        <div class="space40"></div>
-        <div class="row align-items-center">
-          <div class="col-lg-8">
-            <iframe  src="https://www.youtube.com/embed/3dKugGP0LAc?si=e7tu_sUWVHw9J9Zx"
-              title="YouTube video player" frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
-              allowfullscreen></iframe>
-          </div>
-
-          <div class="space30 d-none d-md-block d-lg-none"></div>
-          <div class="col-lg-4 pl-50 pl-md-15">
-            <p>{{video_info.description}}</p>
-            <ul class="icon-list bullet-default">
-              {% for features in video_info.features %}
-              <li><i class="jam jam-arrow-right"></i>{{features}}</li>
-              {% endfor %}
-            </ul>
-            <div class="space10"></div>
-            {% if video_info.btn_url %}
-            <a href="{{video_info.btn_url}}" class="btn mb-0">{{video_info.btn_text}}</a>
-            {% endif %}
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  {% endif %}
-
-  {% if page.portfolios_area.enable %}
-  <section id="{{page.portfolios_area.section_id}}">
-    <div class="wrapper light-wrapper">
-      <div class="container inner">
-        {% if page.portfolios_area.title %}
-        <h2 class="section-title mb-20 text-center">{{page.portfolios_area.title}}</h2>
-        {% endif %}
-        {% if page.portfolios_area.sub_title %}
-        <p class="lead text-center">{{page.portfolios_area.sub_title}}</p>
-        <p class="lead larger text-center">Want to see what I'm working on? Interested in funding an AI SaaS product?</p> 
-
-        <div class="row">
-            <div class="col text-center">
-                <a href="https://investinmy.app" class="btn btn-red">invest now</a>
-            </div>
-        </div>
-
-        {% endif %}
-        <div class="space40"></div>
-        <div class="grid grid-view boxed">
-          <div class="tiles">
-            <div class="row isotope light-gallery-wrapper">
-              {% for portfolios in page.portfolios_area.portfolios %}
-              <div class="item item-detailed grid-sizer col-md-6 col-lg-4">
-                <div class="box bg-white shadow p-30">
-                  <figure class="main rounded mb-30">
-                    <div class="item-detailed-image">
-                      {% if portfolios.sm_img %}
-                      <img src="{{portfolios.sm_img}}" alt="{{portfolios.title}}" />
-                      {% endif %}
-                      {% if portfolios.big_img %}
-                      <img src="{{portfolios.big_img}}" alt="{{portfolios.title}}" />
-                      {% endif %}
-                    </div>
-                    <a href="{{portfolios.big_img}}" class="hover-icon-first lightbox" data-tip="Enlarge image"><i
-                        class="jam jam-qr-code"></i></a>
-                    <a href="{{portfolios.url}}" class="hover-icon-second" data-tip="Go to link"><i
-                        class="jam jam-link"></i></a>
-                  </figure>
-                  <div class="item-content">
-                    <h2 class="post-title mb-10">{{portfolios.title}}</h2>
-                    <div class="meta mb-0">{{portfolios.sub_title}}</div>
-                  </div>
-
+<section id="about" class="py-5">
+  <div class="wrapper bg-opacity-default">
+    <div class="container inner">
+      <div class="row justify-content-start">
+        <div class="col-lg-10">
+          <h2 class="display-4 text-white mb-2">Christian Findlay</h2>
+          <p class="lead text-white-50 mb-5">20+ Years of Software Engineering Experience</p>
+          
+          <div class="mb-5">
+            <p class="text-white-50 mb-4">
+              I'm the Director of Nimblesite, a Melbourne-based software development agency. With over 20 years of experience in software development, I specialize in Flutter, .NET, and cloud architecture. As an experienced developer, trainer, and open-source contributor, I help businesses transform ideas into robust digital products.
+            </p>
+            
+            <div class="skills-cards mb-4">
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fa fa-mobile"></i>
                 </div>
-
+                <div class="skill-text">Flutter and mobile development expert</div>
               </div>
-
-              {% endfor %}
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fa fa-code"></i>
+                </div>
+                <div class="skill-text">Two decades of .NET experience</div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fa fa-cloud"></i>
+                </div>
+                <div class="skill-text">Cloud architecture specialist (Azure, GCP, AWS)</div>
+              </div>
+              <div class="skill-card">
+                <div class="skill-icon">
+                  <i class="fa fa-github"></i>
+                </div>
+                <div class="skill-text">Open source contributor with multiple libraries</div>
+              </div>
             </div>
-
           </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-  {% endif %}
-
-  {% if page.testimonials.enable %}
-  <section id="{{page.testimonials.section_id}}">
-    <div class="wrapper bg-opacity-default">
-      <div class="container inner">
-        <div class="row">
-          <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
-            <div class="space60"></div>
-            <h3 class="section-title mb-20 text-center">{{page.testimonials.title}}</h3>
-            <div class="basic-slider owl-carousel gap-small text-center" data-margin="30">
-              {% for feedback in page.testimonials.feedback %}
-              <div class="item">
-                <blockquote class="icon larger">
-                  <p>"{{feedback.quote}}"</p>
-                  <div class="blockquote-details justify-content-center">
-                    {% if feedback.image %}
-                    <div class="img-blob blob1">
-                      <img src="{{feedback.image}}" alt="{{feedback.name}}" />
-                    </div>
-                    {% endif %}
-                    <div class="info">
-                      <h6 class="mb-0">{{feedback.name}}</h6>
-                      <span class="meta mb-0">{{feedback.designation}}</span>
-                    </div>
+          
+          <h3 class="text-white border-primary mb-4">Open Source Projects</h3>
+          
+          <div class="projects-container">
+            <!-- Device.Net -->
+            <div class="project-card mb-4">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <div class="project-icon">
+                    <img src="assets/images/icons/tech/device-net.svg" alt="Device.Net">
                   </div>
-                </blockquote>
+                </div>
+                <h4 class="project-title">Device.Net</h4>
               </div>
-
-              {% endfor %}
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="space60"></div>
-
-      </div>
-    </div>
-  </section>
-  {% endif %}
-
-  {% if page.faq_area.enable %}
-  <section id="{{page.faq_area.section_id}}">
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <h3 class="display-3 text-center">{{page.faq_area.title}}</h3>
-    <div class="space20"></div>
-    <h5 class="text-center">{{page.faq_area.sub_title}}</h5>
-    <div class="row">
-      <div class="col-lg-6 mb-0">
-        <div id="accordion-1" class="accordion-wrapper">
-          {% for faq in page.faq_area.faq limit: "4" %}
-          <div class="card">
-            <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
-              <h5>
-                <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-1-{{forloop.index}}"
-                  aria-expanded="false" aria-controls="accordion-collapse-1-{{forloop.index}}">
-                  {{faq.question}}
-                </button>
-              </h5>
-            </div>
-            <div id="accordion-collapse-1-{{forloop.index}}" class="collapse"
-              aria-labelledby="accordion-heading-1-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
-              <div class="card-body">
-                <p>{{faq.answer}}</p>
+              
+              <div class="project-body">
+                <p class="project-description">C# cross platform connected device framework</p>
+                
+                <div class="project-stats">
+                  <div class="stat">
+                    <i class="fa fa-star"></i>
+                    <span>650+ stars</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fa fa-code-fork"></i>
+                    <span>120+ forks</span>
+                  </div>
+                </div>
+                
+                <a href="https://github.com/MelbourneDeveloper/Device.Net" target="_blank" class="project-link">
+                  View on GitHub <i class="fa fa-external-link"></i>
+                </a>
               </div>
             </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-
-      <div class="col-lg-6">
-        <div id="accordion-2" class="accordion-wrapper">
-          {% for faq in page.faq_area.faq limit: "4" offset: "4" %}
-          <div class="card shadow">
-            <div class="card-header" id="accordion-heading-2-1">
-              <h5>
-                <button class="collapsed" data-toggle="collapse" data-target="#accordion-collapse-2-{{forloop.index}}"
-                  aria-expanded="false" aria-controls="accordion-collapse-2-{{forloop.index}}">
-                  {{faq.question}}
-                </button>
-              </h5>
-            </div>
-
-            <div id="accordion-collapse-2-{{forloop.index}}" class="collapse"
-              aria-labelledby="accordion-heading-2-{{forloop.index}}" data-target="#accordion-{{forloop.index}}">
-              <div class="card-body">
-                <p>{{faq.answer}}</p>
+            
+            <!-- RestClient.Net -->
+            <div class="project-card mb-4">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <div class="project-icon">
+                    <img src="assets/images/icons/tech/rest-client.svg" alt="RestClient.Net">
+                  </div>
+                </div>
+                <h4 class="project-title">RestClient.Net</h4>
               </div>
-
+              
+              <div class="project-body">
+                <p class="project-description">.NET REST Client Framework for all platforms</p>
+                
+                <div class="project-stats">
+                  <div class="stat">
+                    <i class="fa fa-star"></i>
+                    <span>360+ stars</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fa fa-code-fork"></i>
+                    <span>40+ forks</span>
+                  </div>
+                </div>
+                
+                <a href="https://github.com/MelbourneDeveloper/RestClient.Net" target="_blank" class="project-link">
+                  View on GitHub <i class="fa fa-external-link"></i>
+                </a>
+              </div>
             </div>
-
+            
+            <!-- ioc_container -->
+            <div class="project-card mb-5">
+              <div class="project-header">
+                <div class="project-icon-wrapper">
+                  <div class="project-icon">
+                    <img src="assets/images/icons/tech/ioc-container.svg" alt="ioc_container">
+                  </div>
+                </div>
+                <h4 class="project-title">ioc_container</h4>
+              </div>
+              
+              <div class="project-body">
+                <p class="project-description">Lightweight dependency injection library for Dart/Flutter</p>
+                
+                <div class="project-stats">
+                  <div class="stat">
+                    <i class="fa fa-star"></i>
+                    <span>60+ stars</span>
+                  </div>
+                  <div class="stat">
+                    <i class="fa fa-code-fork"></i>
+                    <span>3+ forks</span>
+                  </div>
+                </div>
+                
+                <a href="https://github.com/MelbourneDeveloper/ioc_container" target="_blank" class="project-link">
+                  View on GitHub <i class="fa fa-external-link"></i>
+                </a>
+              </div>
+            </div>
           </div>
-          {% endfor %}
+          
+          <h3 class="text-white border-primary mb-4">Featured Apps</h3>
+          
+          <div class="featured-apps-container">
+            <!-- Storytowns -->
+            <div class="featured-app-card">
+              <div class="app-image">
+                <img src="assets/images/apps/storytowns-app.webp" alt="Storytowns App">
+              </div>
+              <div class="app-content">
+                <h4 class="app-title">Storytowns</h4>
+                <p class="app-description">Discover unique stories from regional towns through this Flutter-powered mobile app.</p>
+                <div class="app-links">
+                  <a href="https://apps.apple.com/au/app/storytowns/id1537296538" target="_blank" class="app-store-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="width: auto; height: 24px;">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="#007AFF"/>
+                    </svg>
+                    <span>App Store</span>
+                  </a>
+                  <a href="https://play.google.com/store/apps/details?id=au.com.storytowns.storytowns" target="_blank" class="app-store-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24" style="width: auto; height: 24px;">
+                      <path fill="#00C1FF" d="M29.5 142.4v227.2l245.7-113.6z"/>
+                      <path fill="#EA4335" d="M29.5 142.4L387.1 32.2 275.2 256z"/>
+                      <path fill="#FFBA00" d="M29.5 369.6L387.1 479.8 275.2 256z"/>
+                      <path fill="#00A94B" d="M387.1 32.2v447.6L482.5 256z"/>
+                    </svg>
+                    <span>Google Play</span>
+                  </a>
+                  <a href="https://storytowns.com.au" target="_blank" class="app-website-link">
+                    <i class="fa fa-globe"></i> Website
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Octopus Group -->
+            <div class="featured-app-card">
+              <div class="app-image">
+                <img src="assets/images/apps/octopus-app.png" alt="Octopus Group Portal App" style="max-width: 100%; height: auto; object-fit: contain;">
+              </div>
+              <div class="app-content">
+                <h4 class="app-title">Octopus Group Portal</h4>
+                <p class="app-description">A comprehensive membership portal app built with Flutter for Octopus Group.</p>
+                <div class="app-links">
+                  <a href="https://play.google.com/store/apps/details?id=au.com.octopusgroup.membersportalv2&hl=en_AU" target="_blank" class="app-store-link" style="display: flex; align-items: center; gap: 8px;">
+                    <img src="assets/images/icons/stores/google-play.svg" alt="Google Play" style="width: 24px; height: 24px;">
+                    <span>Google Play</span>
+                  </a>
+                  
+                </div>
+              </div>
+            </div>
+            
+            <!-- Temporalo -->
+            <div class="featured-app-card">
+              <div class="app-image">
+                <img src="assets/images/apps/temporalo-app.svg" alt="Temporalo App">
+              </div>
+              <div class="app-content">
+                <h4 class="app-title">Temporalo</h4>
+                <p class="app-description">A time tracking and productivity app built with Flutter, Supabase and AI.</p>
+                <div class="app-links">
+                  <a href="https://www.temporalo.com/" target="_blank" class="app-website-link">
+                    <i class="fa fa-globe"></i> Website
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
-
       </div>
-
     </div>
+  </div>
+</section>
 
-    <div class="space60"></div>
-    <div class="space60"></div>
-    <div class="space60"></div>
-
-  </section>
-  {% endif %}
-
-
-
-  <section id="contact">
-
-    <div class="wrapper gray-wrapper" style="padding-bottom: 0px;">
-      <div class="container inner" style="padding-bottom: 0px;">
-
-        <h2 class="section-title mb-20 text-center">Get in Touch</h2>
-
-        <p class="lead larger text-center">Call <a href="https://www.nimblesite.co/">Nimblesite</a> on <a href="tel:1300794205">1300 794 205</a></p>
-        <p class="lead larger text-center">Email <strong>sales at nimblesite.co</strong></p>
-        <p class="lead larger text-center">Send Nimblesite a <a href="https://www.nimblesite.co/#contact">message</a> </p>
-        <p class="lead larger text-center">Or, reach out to Christian directly:</p>
+<section id="services">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Hire Me For</h2>
+      <p class="section-subtitle">I build single-source mobile apps with Flutter, and .NET backend solutions. I also build websites and web apps.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/flutter-icon.svg" alt="Flutter Apps">
+        </div>
+        <h3 class="service-title">Flutter Apps</h3>
+        <p class="service-description">I've built and shipped multiple Flutter apps. Let me build your next app or improve your existing one with my deep mobile development expertise</p>
       </div>
-
-      <iframe style="background-color: #f3f4f7"
-        src="https://docs.google.com/forms/d/e/1FAIpQLSdsAHcMIHsbUWz8zgCEGoB_op-KQZVfQqSgrpGFPe8q6QCf3Q/viewform?embedded=true"
-        width="99%" height="1300" frameborder="0" marginheight="16px" marginwidth="16px">Loading…</iframe>
-
-
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/dotnet-icon.svg" alt=".NET Development">
+        </div>
+        <h3 class="service-title">.NET Development</h3>
+        <p class="service-description">Two decades of .NET experience. From legacy migrations to modern cloud-native solutions with .NET 8, I can architect and build robust backends</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/ai-icon.svg" alt="AI Integration">
+        </div>
+        <h3 class="service-title">AI Integration</h3>
+        <p class="service-description">Leverage my expertise in AI to enhance your apps with ChatGPT, or improve your team's productivity with AI Agent assisted development</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/testing-icon.svg" alt="Flutter Testing">
+        </div>
+        <h3 class="service-title">Flutter Testing/Training</h3>
+        <p class="service-description">Learn from my extensive testing experience. I'll teach your team effective Widget and Integration testing strategies</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/cloud-icon.svg" alt="Cloud Architecture">
+        </div>
+        <h3 class="service-title">Cloud Architecture</h3>
+        <p class="service-description">Let me design and implement your cloud infrastructure using Azure, Google Cloud or AWS with modern best practices</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon">
+          <img src="assets/images/icons/services/code-review-icon.svg" alt="Code Reviews">
+        </div>
+        <h3 class="service-title">Code Reviews</h3>
+        <p class="service-description">Get an expert review of your Flutter or .NET codebase. I'll help identify issues and suggest improvements based on decades of experience</p>
+      </div>
     </div>
+    
+    <div class="cta-box">
+      <div class="cta-content">
+        <h3 class="cta-title">Let's Build Something Great Together</h3>
+        <p class="cta-description">With 20 years of experience in software development, I can help bring your ideas to life.</p>
+      </div>
+      <a href="#contact" class="cta-button">Contact</a>
+    </div>
+  </div>
+</section>
+
+{{ content }}
+
+
+{% if page.testimonials.enable %}
+<section id="{{page.testimonials.section_id}}">
+  <div class="wrapper bg-opacity-default">
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="space60"></div>
+          <h3 class="section-title mb-20 text-center">{{page.testimonials.title}}</h3>
+          <div class="basic-slider owl-carousel gap-small" data-margin="20" data-dots="true" data-autoplay="true">
+            {% for feedback in page.testimonials.feedback %}
+            <div class="item">
+              <blockquote class="icon larger">
+                <p>"{{feedback.quote}}"</p>
+                <div class="blockquote-details justify-content-center">
+                  {% if feedback.image %}
+                  <div class="img-blob">
+                    <img src="{{feedback.image}}" alt="{{feedback.name}}" loading="eager" />
+                  </div>
+                  {% endif %}
+                  <div class="info">
+                    <h6 class="mb-0">{{feedback.name}}</h6>
+                    <span class="meta mb-0">{{feedback.designation}}</span>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="space60"></div>
+    </div>
+  </div>
+</section>
+{% endif %}
 
 
 
-  </section>
+<section id="contact">
+  <div class="container">
+    <div class="section-header mb-3">
+      <h2 class="section-title">Get in Touch</h2>
+    </div>
+    
+    <div class="contact-grid">
+      <!-- Calendly widget card -->
+      <div class="contact-card">
+        <h3 class="card-title">Book a Free Consultation</h3>
+        <!-- Calendly inline widget -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/nimblesite/30min"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      </div>
+      
+      <!-- Contact form card -->
+      <div class="contact-card">
+        <h3 class="card-title">Send a Message</h3>
+        {% include contact_form.html %}
+      </div>
+      
+      <!-- Contact info card -->
+      <div class="contact-card contact-info-card">
+        
+        <h3 class="card-title">Direct Contact</h3>
+        <br/>
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>Call <a href="tel:1300794205">1300 794 205</a></span>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Melbourne, Australia</span>
+          </div>
+        </div>
+        
+        <!-- Connect With Me Section -->
+        <div class="connect-section">
+          <h2 class="connect-title">Socials</h2>
+          <div class="connect-icons">
+            <a href="https://www.linkedin.com/in/christianfindlay/" class="connect-icon" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.tiktok.com/@cfdevelop" class="connect-icon" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://bsky.app/profile/cfdevelop.bsky.social" class="connect-icon" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/icons/social/bluesky.svg" alt="Bluesky">
+            </a>
+            <a href="https://x.com/CFDevelop" class="connect-icon" target="_blank" aria-label="Twitter">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.facebook.com/cfdevelop/" class="connect-icon" target="_blank" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw" class="connect-icon" target="_blank" aria-label="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://github.com/melbournedeveloper" class="connect-icon" target="_blank" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-  {% include footer_2.html light_logo="true" %}
+{% include footer_2.html light_logo="true" %}
 
 </div>

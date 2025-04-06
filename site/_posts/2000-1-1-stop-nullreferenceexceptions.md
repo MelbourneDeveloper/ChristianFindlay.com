@@ -172,7 +172,7 @@ There is no need for null checking. Null checking is error-prone and makes code 
 
 You can also use the same pattern for delegate types like Funcs and Actions. Check out [this example](https://github.com/MelbourneDeveloper/Device.Net/blob/4ebf7d7df15b12d4d652c2e39b069f0faa15c3f3/src/Device.Net/Observer.cs#L22) in Device.Net. Lastly, this same principle applies to static methods and extension methods.
 
-**Note**: Null object refers to null behavior – not a null object reference. See my article [ILogger and Null Object Pattern](/ilogger-nullobject/). You will encounter ILogger and ILoggerFactory often.
+**Note**: Null object refers to null behavior – not a null object reference. See my article [ILogger and Null Object Pattern](ilogger-nullobject). You will encounter ILogger and ILoggerFactory often.
 
 ### Unit Testing
 

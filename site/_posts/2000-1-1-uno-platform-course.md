@@ -5,7 +5,7 @@ date: "2020/08/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/uno/uno.gif"
 image: "/assets/images/blog/uno/uno.gif"
-tags: uno-platform cross-platform
+tags: uno-platform cross-platform xaml
 categories: [dotnet]
 permalink: /blog/:title
 ---

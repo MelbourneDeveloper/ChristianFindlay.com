@@ -2,12 +2,12 @@
 layout: post
 title: "Dart Immutable Collections"
 date: "2022-09-29 00:00:00 +0000"
-tags: immutability dart
+tags: dart functional-programming
 categories: [flutter]
 author: "Christian Findlay"
-post_image: "/assets/images/blog/immutability/header.jpeg"
+post_image: "/assets/images/blog/Immutability/header.png"
 post_image_width: 300
-image: "/assets/images/blog/immutability/header.jpeg"
+image: "/assets/images/blog/Immutability/header.png"
 permalink: /blog/:title
 ---
 

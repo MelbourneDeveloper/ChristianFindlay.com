@@ -1,0 +1,298 @@
+/* Syntax Highlighting - Modern Style */
+.highlight {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+.highlight pre {
+  overflow-x: auto;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.highlight code {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
+/* Code Language Label */
+.highlight:before {
+  visibility: hidden;
+  content: attr(data-language);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(228, 228, 231, 0.7);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom-left-radius: var(--rounded);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Line Numbers */
+.highlight .lineno {
+  color: rgba(228, 228, 231, 0.4);
+  display: inline-block;
+  padding: 0 0.5rem 0 0;
+  margin-right: 0.5rem;
+  border-right: 1px solid rgba(228, 228, 231, 0.2);
+  user-select: none;
+}
+
+/* Inline Code */
+code:not(.highlight code) {
+  background-color: rgba(74, 108, 247, 0.08);
+  color: var(--primary);
+  padding: 0.2em 0.4em;
+  border-radius: var(--rounded);
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+/* Token colors */
+.highlight .c, .highlight .ch, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .sd {
+  /* Comment */
+  color: #a0aec0;
+  font-style: italic;
+}
+
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt {
+  /* Keyword */
+  color: #c678dd;
+  font-weight: 500;
+}
+
+.highlight .nb, .highlight .bp {
+  /* Built-in Name */
+  color: #56b6c2;
+}
+
+.highlight .o, .highlight .ow {
+  /* Operator */
+  color: #81a1c1;
+}
+
+.highlight .n, .highlight .nf, .highlight .nc, .highlight .nn, .highlight .no, .highlight .na {
+  /* Name (function, class, namespace) */
+  color: #61afef;
+}
+
+.highlight .nf, .highlight .nx {
+  /* Function */
+  color: #e5c07b;
+}
+
+.highlight .p {
+  /* Punctuation */
+  color: #abb2bf;
+}
+
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .s1, .highlight .s2, .highlight .dl {
+  /* String */
+  color: #98c379;
+}
+
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo {
+  /* Number */
+  color: #f56565;
+}
+
+.highlight .nt {
+  /* Tag */
+  color: #ff79c6;
+}
+
+/* Copy Button */
+.highlight-header {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.copy-button {
+  background: transparent;
+  border: none;
+  color: rgba(228, 228, 231, 0.6);
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color var(--transition-fast);
+}
+
+.copy-button:hover {
+  color: rgba(228, 228, 231, 0.9);
+}
+
+.copy-button svg {
+  width: 0.85rem;
+  height: 0.85rem;
+}
+
+.copy-button.copied {
+  color: var(--success);
+}
+
+/* Line Highlight */
+.highlight .hll {
+  background-color: rgba(74, 108, 247, 0.2);
+  display: block;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+/* Filename */
+.code-filename {
+  background-color: rgba(74, 108, 247, 0.1);
+  color: var(--primary);
+  border-top-left-radius: var(--rounded-lg);
+  border-top-right-radius: var(--rounded-lg);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  border-bottom: 1px solid rgba(74, 108, 247, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.code-filename svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+/* With filename, adjust border radius */
+.code-filename + .highlight {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+/* Different language themes */
+.language-js .highlight:before,
+.language-javascript .highlight:before {
+  content: "JavaScript";
+}
+
+.language-ts .highlight:before,
+.language-typescript .highlight:before {
+  content: "TypeScript";
+}
+
+.language-py .highlight:before,
+.language-python .highlight:before {
+  content: "Python";
+}
+
+.language-rb .highlight:before,
+.language-ruby .highlight:before {
+  content: "Ruby";
+}
+
+.language-java .highlight:before {
+  content: "Java";
+}
+
+.language-cs .highlight:before,
+.language-csharp .highlight:before {
+  content: "C#";
+}
+
+.language-cpp .highlight:before {
+  content: "C++";
+}
+
+.language-c .highlight:before {
+  content: "C";
+}
+
+.language-php .highlight:before {
+  content: "PHP";
+}
+
+.language-go .highlight:before {
+  content: "Go";
+}
+
+.language-html .highlight:before {
+  content: "HTML";
+}
+
+.language-css .highlight:before {
+  content: "CSS";
+}
+
+.language-scss .highlight:before,
+.language-sass .highlight:before {
+  content: "SCSS";
+}
+
+.language-sh .highlight:before,
+.language-bash .highlight:before {
+  content: "Shell";
+}
+
+.language-yaml .highlight:before,
+.language-yml .highlight:before {
+  content: "YAML";
+}
+
+.language-json .highlight:before {
+  content: "JSON";
+}
+
+.language-md .highlight:before,
+.language-markdown .highlight:before {
+  content: "Markdown";
+}
+
+.language-sql .highlight:before {
+  content: "SQL";
+}
+
+.language-xml .highlight:before {
+  content: "XML";
+}
+
+.language-dart .highlight:before {
+  content: "Dart";
+}
+
+.language-swift .highlight:before {
+  content: "Swift";
+}
+
+.language-kotlin .highlight:before {
+  content: "Kotlin";
+}
+
+/* Dark Mode Variant */
+@media (prefers-color-scheme: dark) {
+  code:not(.highlight code) {
+    background-color: rgba(74, 108, 247, 0.15);
+  }
+  
+  .code-filename {
+    background-color: rgba(74, 108, 247, 0.15);
+  }
+} 

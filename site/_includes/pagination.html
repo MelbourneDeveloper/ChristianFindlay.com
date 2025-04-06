@@ -1,22 +1,65 @@
 <div class="space30 d-block d-md-none"></div>
-<div class="pagination text-center">
+<div class="pagination-wrapper">
+  <div class="pagination">
     {% if paginator.total_pages > 1 %}
-    <ul>
-      {% if paginator.previous_page %}
-      <li>
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">
-          <i class="jam jam-arrow-left"></i> Previous
+    <ul class="pagination pagination-animated">
+      <!-- First page link -->
+      {% if paginator.page != 1 %}
+      <li class="page-item first-page" style="--index: 1;">
+        <a class="page-link" href="{{ paginator.first_page_path | default: site.paginate_path | replace: ':num', '1' | prepend: site.baseurl }}" aria-label="First page">
+          <i class="fas fa-angle-double-left"></i>
         </a>
       </li>
       {% endif %}
+      
+      <!-- Previous page link -->
+      {% if paginator.previous_page %}
+      <li class="page-item prev-page" style="--index: 2;">
+        <a class="page-link" href="{{ paginator.previous_page_path | prepend: site.baseurl }}" aria-label="Previous page">
+          <i class="fas fa-angle-left"></i>
+        </a>
+      </li>
+      {% endif %}
+      
+      {% if paginator.page_trail %}
+        {% for trail in paginator.page_trail %}
+          <li class="page-item number-page {% if page.url == trail.path %}active{% endif %}" style="--index: {{ forloop.index | plus: 2 }}">
+            <a class="page-link" href="{{ trail.path | prepend: site.baseurl }}">{{ trail.num }}</a>
+          </li>
+        {% endfor %}
+      {% else %}
+        {% for page in (1..paginator.total_pages) %}
+          {% if page == paginator.page %}
+            <li class="page-item number-page active" style="--index: {{ forloop.index | plus: 2 }}">
+              <a class="page-link">{{ page }}</a>
+            </li>
+          {% else %}
+            <li class="page-item number-page" style="--index: {{ forloop.index | plus: 2 }}">
+              <a class="page-link" href="{{ paginator.paginate_path | replace: ':num', page | prepend: site.baseurl }}">{{ page }}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+      
+      <!-- Next page link -->
       {% if paginator.next_page %}
-      <li>
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">
-         Next <i class="jam jam-arrow-right"></i>
+      <li class="page-item next-page" style="--index: {{ paginator.total_pages | plus: 3 }}">
+        <a class="page-link" href="{{ paginator.next_page_path | prepend: site.baseurl }}" aria-label="Next page">
+          <i class="fas fa-angle-right"></i>
+        </a>
+      </li>
+      {% endif %}
+      
+      <!-- Last page link -->
+      {% if paginator.page != paginator.total_pages %}
+      <li class="page-item last-page" style="--index: {{ paginator.total_pages | plus: 4 }}">
+        <a class="page-link" href="{{ paginator.last_page_path | default: paginator.paginate_path | replace: ':num', paginator.total_pages | prepend: site.baseurl }}" aria-label="Last page">
+          <i class="fas fa-angle-double-right"></i>
         </a>
       </li>
       {% endif %}
     </ul>
     {% endif %}
+  </div>
 </div>
 <!-- /.pagination -->

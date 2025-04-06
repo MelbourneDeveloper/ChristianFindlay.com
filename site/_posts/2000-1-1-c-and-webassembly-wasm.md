@@ -3,7 +3,7 @@ layout: post
 title: "C# and WebAssembly (Wasm)"
 date: 2019/06/29 00:00:00 +0000
 categories: [dotnet]
-tags: wasm blazor uno-platform avaloniaui
+tags: web blazor xaml csharp
 author: "Christian Findlay"
 post_image: "/assets/images/blog/wasm/header.png"
 image: "/assets/images/blog/wasm/header.png"
@@ -42,7 +42,7 @@ In short, these platforms allow C# developers to jump straight in and build web 
 
 Avalonia is a UI API based on Microsoft's WPF UI API. It doesn't yet support Wasm. However, this technology stands out as a [strong candidate](https://github.com/AvaloniaUI/Avalonia/issues/1387) for a UI library that would allow for non HTML DOM rendering inside the browser. This technology may once again allow line of business apps to be built and deployed inside the browser with pixel perfect rendering. The result should be very similar to Microsoft Silverlight.
 
-[This article](/cross-platform-c-ui-technologies/) talks about cross platform C# UI technologies in some depth.
+[This article](cross-platform-c-ui-technologies) talks about cross platform C# UI technologies in some depth.
 
 ## Back end and App Development
 While browser based front end development is the obvious use case for C# developers, Wasm will not stop there. As mentioned on the website, Wasm is also aimed at "deployment on the web for client and server applications". This has big implications for C# developers. Wasm is now being deployed to nearly every device in circulation. All new devices will have the Wasm runtime as part of their browser deployment. Even phones such as iPhones and Android phones will have Wasm installed. This means that Wasm is probably already installed on more devices than technologies like [Mono](https://www.mono-project.com/). This cannot be said for .NET Core.
@@ -52,4 +52,4 @@ It is highly likely that Wasm platforms for building apps outside the browser ([
 ## Conclusion
 It's time to start experimenting with Wasm and feeling out what can be built with C#. Wasm is likely to change the web development landscape and compiled languages like C# are likely to be at the forefront. C# may once again look like an attractive technology for front end web development. This may well be the next phase of web development that C# developers have been waiting for.
 
-See [this article](/restclient-net-on-webassembly-c/) for an Uno Platform sample app.
+See [this article](https://www.christianfindlay.com/blog/restclient-net-on-webassembly-c) for an Uno Platform sample app.

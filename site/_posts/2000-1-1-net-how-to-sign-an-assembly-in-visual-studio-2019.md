@@ -5,7 +5,7 @@ date: "2020/01/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/sign/header.jpeg"
 image: "/assets/images/blog/sign/header.jpeg"
-tags: security csharp
+tags: csharp visual-studio
 categories: [dotnet]
 permalink: /blog/:title
 ---
