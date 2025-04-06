@@ -25,6 +25,8 @@
   padding: var(--spacing-16) 0 var(--spacing-12);
   position: relative;
   overflow: hidden;
+  padding-top: 24px;
+  margin-top: 0px;
 }
 
 .blog-header-wrapper::before {
