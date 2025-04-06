@@ -15,6 +15,26 @@ layout: default
         <span class="post-card-read-time">{{ content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
       </div>
       
+      <div class="post-taxonomy">
+        {% if page.categories.size > 0 %}
+        <div class="post-categories">
+          <span>Category:</span>
+          {% for category in page.categories %}
+            <a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+        
+        {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          <span>Tags:</span>
+          {% for tag in page.tags %}
+            <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/">{{ tag }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+      
       {% if page.post_image %}
         <div class="featured-image">
           <img src="{{ page.post_image }}" alt="{{ page.title }}" {% if page.post_image_height %}style="max-height: {{ page.post_image_height }}px; width: auto;"{% endif %}>

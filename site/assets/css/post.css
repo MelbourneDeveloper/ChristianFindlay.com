@@ -112,6 +112,62 @@ body {
   opacity: 0.8;
 }
 
+/* Post taxonomy (categories and tags) */
+.post-taxonomy {
+  margin-bottom: var(--spacing-6);
+  font-size: 0.9rem;
+  color: var(--gray-400);
+}
+
+.post-categories, .post-tags {
+  margin-bottom: var(--spacing-3);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.post-categories span, .post-tags span {
+  font-weight: 500;
+  color: var(--gray-300);
+  margin-right: var(--spacing-2);
+}
+
+.post-categories a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  background-color: #6e8cff;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.post-categories a:hover {
+  background-color: #526ed9;
+}
+
+.post-tags a {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: rgba(110, 140, 255, 0.1);
+  color: #6e8cff;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.post-tags a:hover {
+  background-color: rgba(110, 140, 255, 0.2);
+  color: #6e8cff;
+}
+
 /* Featured image */
 .featured-image {
   margin: var(--spacing-6) 0;
