@@ -97,12 +97,14 @@ autopages:
   tags:
     enabled: true
     layouts: 
-      - 'tag_page'
-    title: ':tag Articles'
+      - 'tag_page.html'
+    title: ':tag'
     permalink: '/tag/:tag/'
     slugify:
       mode: 'default'
       case: true
+    optional_front_matter:
+      extension: 'html'
 
 # Configure jekyll-archives for categories only
 jekyll-archives:
