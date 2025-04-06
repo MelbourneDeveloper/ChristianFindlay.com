@@ -83,23 +83,28 @@ pagination:
   # Without file extension
   indexpage: 'index'
 
-# Configure autopages for tag pagination
+############################################################
+# AutoPages Configuration (Standard way for handling tags)
 autopages:
   enabled: true
+  
   categories:
     enabled: false
+  
   collections:
     enabled: false
+  
   tags:
+    enabled: true
     layouts: 
       - 'tag_page'
-    title: ':tag'
-    permalink: '/tag/:tag'
+    title: ':tag Articles'
+    permalink: '/tag/:tag/'
     slugify:
       mode: 'default'
       case: true
 
-# Configure jekyll-archives for categories
+# Configure jekyll-archives for categories only
 jekyll-archives:
   enabled: 
     - categories
