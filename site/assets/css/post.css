@@ -119,6 +119,63 @@ body {
   color: var(--gray-400);
 }
 
+/* Edit on GitHub button */
+.github-edit-wrapper {
+  position: relative;
+  margin-left: auto;
+}
+
+.edit-on-github {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 0.85rem;
+  color: var(--gray-100);
+  text-decoration: none;
+  padding: 0.2rem 0.8rem;
+  border-radius: 100px;
+  border: 1px solid rgba(110, 140, 255, 0.4);
+  background-color: rgba(13, 18, 30, 0.8);
+  transition: all 0.2s ease;
+}
+
+.edit-on-github:hover {
+  background-color: rgba(110, 140, 255, 0.2);
+  border-color: rgba(110, 140, 255, 0.6);
+  color: var(--gray-100);
+}
+
+.edit-on-github svg {
+  width: 14px;
+  height: 14px;
+}
+
+.edit-tooltip {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 280px;
+  padding: var(--spacing-3);
+  background-color: rgba(13, 18, 30, 0.95);
+  border: 1px solid rgba(110, 140, 255, 0.5);
+  border-radius: var(--rounded-md);
+  font-size: 0.85rem;
+  color: var(--gray-100);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.github-edit-wrapper:hover .edit-tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(5px);
+}
+
 .post-categories, .post-tags {
   margin-bottom: var(--spacing-3);
   display: flex;
@@ -803,18 +860,17 @@ img[alt="Christian Findlay"] {
 
 @media (max-width: 768px) {
   .post-content {
-    padding: var(--spacing-8) 0;
+    padding: var(--spacing-6) 0;
   }
   
   .post-content .container {
+    grid-template-columns: 1fr;
     padding: 0 var(--spacing-4);
-    width: 100%;
-    box-sizing: border-box;
+    gap: var(--spacing-6);
   }
   
   .article-header, .article-content, .article-footer {
-    padding: var(--spacing-6) 0;
-    width: 100%;
+    padding: 0;
   }
   
   .article-title {
@@ -822,8 +878,20 @@ img[alt="Christian Findlay"] {
   }
   
   .article-meta {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
     gap: var(--spacing-2);
+  }
+  
+  .github-edit-wrapper {
+    margin-left: 0;
+    margin-top: var(--spacing-2);
+  }
+  
+  .edit-tooltip {
+    left: 0;
+    right: auto;
+    width: 220px;
   }
   
   .article-content h2 {
