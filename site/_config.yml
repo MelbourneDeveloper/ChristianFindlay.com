@@ -98,7 +98,7 @@ autopages:
     enabled: true
     layouts: 
       - 'tag_page.html'
-    title: ':tag'
+    title: 'Flutter and .NET Blog - :tag Articles'
     permalink: '/tag/:tag/'
     slugify:
       mode: 'default'
