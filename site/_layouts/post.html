@@ -11,7 +11,7 @@ layout: default
       
       {% unless page.is_document %}
       <div class="article-meta">
-        <span class="post-card-author">{{ page.author }}</span>
+        {% include author_display.html author=page.author %}
         <span class="post-card-date">{{ page.date | date: "%B %d, %Y" }}</span>
         <span class="post-card-read-time">{{ content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
         <div class="github-edit-wrapper">

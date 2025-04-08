@@ -24,7 +24,7 @@
 
 				<div class="post-card-meta">
 					{% if post.author %}
-					<span class="post-card-author">{{ post.author }}</span>
+					{% include author_display.html author=post.author %}
 					{% endif %}
 					<span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
 					<span class="post-card-read-time">{{ post.content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
