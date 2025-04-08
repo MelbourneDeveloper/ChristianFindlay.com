@@ -1,0 +1,15 @@
+{% if include.categories.size > 0 or include.tags.size > 0 %}
+<div class="taxonomy-chips">
+  {% if include.categories.size > 0 %}
+    {% for category in include.categories %}
+      <a href="{{ site.baseurl }}/category/{{ category | slugify }}/" class="taxonomy-chip category-chip">{{ category }}</a>
+    {% endfor %}
+  {% endif %}
+
+  {% if include.tags.size > 0 %}
+    {% for tag in include.tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag | slugify }}/" class="taxonomy-chip tag-chip">{{ tag }}</a>
+    {% endfor %}
+  {% endif %}
+</div>
+{% endif %} 

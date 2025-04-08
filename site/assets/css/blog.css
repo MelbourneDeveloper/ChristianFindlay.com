@@ -258,29 +258,54 @@
   flex: 1;
 }
 
-/* Categories styling */
-.post-card-categories {
+/* Post card taxonomy using shared components */
+.post-card .post-card-taxonomy {
+  margin-bottom: var(--spacing-3);
+}
+
+.post-card .taxonomy-chips {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-2);
   margin-bottom: var(--spacing-3);
 }
 
-.post-card-category {
-  font-size: 0.7rem;
-  font-weight: 600;
-  padding: 0.2rem 0.6rem;
+.post-card .taxonomy-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.6rem;
   border-radius: 100px;
-  background-color: rgba(37, 99, 235, 0.1);
-  color: var(--primary);
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-decoration: none;
   transition: all 0.2s ease;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
-.post-card-category:hover {
-  background-color: var(--primary);
+.post-card .category-chip {
+  background-color: #6e8cff;
   color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post-card .category-chip:hover {
+  background-color: #526ed9;
+  box-shadow: 0 2px 4px rgba(110, 140, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.post-card .tag-chip {
+  background-color: rgba(110, 140, 255, 0.1);
+  color: #6e8cff;
+  border: 1px solid rgba(110, 140, 255, 0.3);
+  text-transform: capitalize;
+}
+
+.post-card .tag-chip:hover {
+  background-color: rgba(110, 140, 255, 0.2);
+  border-color: rgba(110, 140, 255, 0.5);
+  box-shadow: 0 2px 4px rgba(110, 140, 255, 0.15);
+  transform: translateY(-1px);
 }
 
 /* Post meta information */
@@ -805,3 +830,5 @@
     box-shadow: 0 0 0 0 rgba(66, 133, 244, 0);
   }
 }
+
+/* Post card author */
