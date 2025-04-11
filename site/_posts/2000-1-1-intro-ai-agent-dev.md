@@ -10,10 +10,10 @@ categories: software-development
 permalink: /blog/:title
 ---
 
-AI agents are powerful tools that can significantly enhance developer productivity. They are transforming how we approach coding, testing, and deployment tasks. This article introduces you to the various tooling available right now, talks a little about the theory and mentions how development-based AI agents might evolve over the next few years.
+AI agents are new LLM (AI) based tools tools that can really enhance your productivity. They are transforming how we approach coding, testing, and deployment tasks. This article introduces you to the various tooling available right now, talks a little about the theory and mentions how development-based AI agents might evolve over the next few years.
 
 ## What Are AI Agents?
-AI agents are virtual assistants designed to take action to achieve specific goals on your behalf. [According to Oracle](https://www.oracle.com/au/artificial-intelligence/ai-agents/),
+AI agents are virtual assistants that can take action to achieve specific goals on your behalf. [According to Oracle](https://www.oracle.com/au/artificial-intelligence/ai-agents/),
 
 > AI agents are software entities that can be assigned tasks, examine their environments, take actions as prescribed by their roles, and adjust based on their experiences.
 
@@ -27,13 +27,13 @@ The term "agentic AI" refers to systems that actively pursue goals and objective
 
 ## What are Software Development AI Agents or Coding Agents?
 
-Most agents perform specific types of tasks. Coding agents specifically perform software development tasks like writing or refactoring code, writing tests, or performing other software development activities. They have access to your code and can run CLI tools to perform tasks on your computer.
+Most agents perform specific types of tasks. Coding agents perform software development tasks like writing or refactoring code, writing tests, or performing other software development activities. They have access to your code and can run CLI tools to perform tasks on your computer.
 
 ## Types of Coding Agents
 
 ### IDE-Based Agents
 
-IDE-based AI agents integrate directly into your development environment. They offer real-time assistance as you code. These tools provide intelligent code completion and automated refactoring and can respond to natural language. They usually have a chat interface, much like ChatGPT. Most importantly, the built-in agents have access to your code and can edit it directly as you work.
+IDE-based AI agents are built into your development environment. They offer real-time assistance as you code. These tools provide code completion with AI and automated refactoring and can respond to natural language. They usually have a chat interface, much like ChatGPT. Most importantly, the have built-in AI agents that have access to your code and can edit it directly as you work.
 
 **Examples:**
 
@@ -95,7 +95,7 @@ When working with AI agent frameworks like LangChain, Python's type hinting syst
 
 ## Conclusion
 
-AI agents represent a paradigm shift in software development. Whether integrated into your IDE, accessible via the command line, or powered by cloud resources, these tools will dramatically increase productivity.
+AI agents absolutely will change software development. Whether integrated into your IDE, accessible via the command line, or powered by cloud resources, these tools will dramatically increase productivity.
 
 The landscape is rapidly evolving. The competition between established players and newcomers, particularly from China's tech ecosystem, promises to drive innovation and accessibility in the coming years. There are tonnes of AI agents floating around and they are getting better and better all the time.
 
