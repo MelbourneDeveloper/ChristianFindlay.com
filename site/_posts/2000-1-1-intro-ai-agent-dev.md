@@ -6,7 +6,7 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/ai-agent/header.webp"
 image: "/assets/images/blog/ai-agent/header.webp"
 tags: ai
-categories: software-development
+categories: [software development]
 permalink: /blog/:title
 ---
 
