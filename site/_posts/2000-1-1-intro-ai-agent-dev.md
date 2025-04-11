@@ -39,7 +39,7 @@ IDE-based AI agents are built into your development environment. They offer real
 
 - [**Cursor:**](https://www.cursor.com) A popular AI-powered code editor based on a fork of Vscode that offers features like intelligent code completion and real-time assistance[5].
 
-<video controls src="[/assets/images/blog/nimble_charts/iosdemo.mp4](https://assets.basehub.com/191e7e6d/2c99e8a087f981290dc74d2b621a7192/current-best-for-two-mp4.mp4)" title="Cursor"  width="100%" height="360" style="border-radius: 6px;align-items: center;" alt="Cursor Demo"></video>
+<!-- <video controls src="[/assets/images/blog/nimble_charts/iosdemo.mp4](https://assets.basehub.com/191e7e6d/2c99e8a087f981290dc74d2b621a7192/current-best-for-two-mp4.mp4)" title="Cursor"  width="100%" height="360" style="border-radius: 6px;align-items: center;" alt="Cursor Demo"></video> -->
 
 - [**GitHub Copilot:**](https://github.com/features/copilot) GitHub's flagship AI integration product. This VSCode extension recently gained an AI agent.
 
