@@ -5,7 +5,7 @@ date: "2023/01/09 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ai/header.jpg"
 image: "/assets/images/blog/ai/header.jpg"
-tags: app-development
+tags: app-development ai
 categories: [software development]
 permalink: /blog/:title
 ---
