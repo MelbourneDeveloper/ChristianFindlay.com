@@ -10,7 +10,7 @@ categories: [software development]
 permalink: /blog/:title
 ---
 
-This follows on from my article about [App Store Deployment](app-store-deployment). Here I am going to offer a strategy for dealing with App Store Deployment where you have one or more customers who have their own back-end service or services. This article will assume that you are going to implement [API Versioning](/back-end-front-end-versioning/#api-versioning). The advantage of this pattern is that the back-end can be deployed at any time without having to wait for the front-end. A public API can be published independently of the App Store front-end
+This follows on from my article about [App Store Deployment](app-store-deployment). Here I am going to offer a strategy for dealing with App Store Deployment where you have one or more customers who have their own back-end service or services. This article will assume that you are going to implement [API Versioning](back-end-front-end-versioning/#api-versioning). The advantage of this pattern is that the back-end can be deployed at any time without having to wait for the front-end. A public API can be published independently of the App Store front-end
 
 API Versioning
 --------------
