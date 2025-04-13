@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-It excels at automating reactive computations with simplicity. Lastly, Signals has a [Watch](https://rodydavis.github.io/signals.dart/reference/watch/) widget, which is similar to Riverpod's `ConsumerWidget`. It automatically disposes the signals when necessary.
+It excels at automating reactive computations with simplicity. Lastly, Signals has a [Watch](https://pub.dev/documentation/signals/latest/signals_flutter/Watch-class.html) widget, which is similar to Riverpod's `ConsumerWidget`. It automatically disposes the signals when necessary.
 
 ## Conclusion
 
