@@ -20,7 +20,7 @@ The Toolset
 *   [Treat NRT warnings as errors](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings): enforce the NRT rules to ensure that variables cannot enter a null/not-null state at the wrong time. Treat NRT warnings as errors so code will not compile if it breaks the NRT rules.
 *   [Immutability](https:/.ndepend.com/c-sharp-immutable-types-understanding-attraction/): reduce the risk of NullReferenceException by only setting the reference once
 *   [ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=net-5.0): An oldy but a goody. Stop code execution early in cases where the consuming code does not treat NRT warnings as errors.
-*   [Unit testing](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2019): pass nulls into your code to make sure the appropriate result occurs. [Mutation testing](https://stryker-mutator.io/docs/stryker-net/Introduction/) can help you achieve a higher level of certainty in your tests.
+*   [Unit testing](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2019): pass nulls into your code to make sure the appropriate result occurs. [Mutation testing](https://stryker-mutator.io/docs/stryker-net/technical-reference/introduction/) can help you achieve a higher level of certainty in your tests.
 
 **Note**: This article talks about libraries and consumers of those libraries. This might sound like it’s about open-source libraries, and it is, but it’s also about maintaining libraries in your team. If you publish libraries, someone will be consuming them, and that might even be you.
 
@@ -178,7 +178,7 @@ You can also use the same pattern for delegate types like Funcs and Actions. Che
 
 Lastly, Unit Testing is your friend. Unit testing is a whole topic by itself, but people sometimes overlook it. The important thing is to pass nulls into your methods and constructors as input permutations. This ensures that your code does the right thing when it receives a null. If you are using non-nullable variables, you can [supress](https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/suppress-warnings) code rules off in certain parts of your code to force the compiler to allow exceptions. This can be useful for testing scenarios where users do not treat NRT warnings as errors.
 
-Lastly, I strongly recommend learning about Mutation Testing. Unit tests test your code, but mutation testing tests your tests. It ensures that you have high-quality tests with a lot of assertions. Check out [Stryker.NET](https://stryker-mutator.io/docs/stryker-net/Introduction/).
+Lastly, I strongly recommend learning about Mutation Testing. Unit tests test your code, but mutation testing tests your tests. It ensures that you have high-quality tests with a lot of assertions. Check out [Stryker.NET](https://stryker-mutator.io/docs/stryker-net/technical-reference/introduction/).
 
 ### Something To Think About
 
