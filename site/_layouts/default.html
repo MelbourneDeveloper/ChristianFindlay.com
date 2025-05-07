@@ -66,6 +66,10 @@
 
   {% if page.canonical_url %}
   <link rel="canonical" href="{{ page.canonical_url }}">
+  {% elsif page.url contains '/blog/page/' and page.url contains '/index.html' %}
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  {% else %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
   {% endif %}
 
   {% if page.post_image %}

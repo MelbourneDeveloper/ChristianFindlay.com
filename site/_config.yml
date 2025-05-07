@@ -16,6 +16,15 @@ redirect_from:
   enabled: true
   json: false
 
+# Jekyll sitemap configuration
+url: "https://www.christianfindlay.com"
+defaults:
+  -
+    scope:
+      path: "blog/page/*/index.html"
+    values:
+      sitemap: false
+
 collections:
   authors:
     output: true
