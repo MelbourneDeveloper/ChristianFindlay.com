@@ -51,6 +51,14 @@ CLI agents allow developers to interact with the terminal using natural language
 
 **Examples:**
 
+- [**Nimble agent:**](https://github.com/Nimblesite/nimble_agent) This my own open source porject. It's not complete, but I am looking for contributors. It's a LangChain, CLI based AI coding assistant and library aimed at fixing common issues that exist in other AI agents. 
+
+
+<video controls width="100%" height="360" poster="/assets/images/blog/ai-agent/moviethumbnail.png" style="border-radius: 6px; max-width: 100%; display: block; margin: 20px auto;" title="Nimble Agent Demo">
+  <source src="/assets/images/blog/ai-agent/nimble_agent.mov" type="video/quicktime">
+  Your browser does not support the video tag. You can <a href="/assets/images/blog/ai-agent/video/nimble_agent.mov" download>download the video</a> instead.
+</video>
+
 - [**Claude code:**](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code/overview) This is a very popular agent from Anthropic, the maker of the Claude model. This has a pay-as-you-go model and uses the Claude model.
 
 - [**Aider**](https://github.com/Aider-AI/aider) This has emerged as a very popular and stable open-source tool and allows you to BYO API key.
