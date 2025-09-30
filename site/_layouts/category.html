@@ -20,6 +20,7 @@ permalink: "/page:num/"
         '' | replace: ' page 5', '' | replace: ' page 6', '' | replace: ' page 7', '' | replace: ' page 8', '' |
         replace: ' page 9', '' | replace: ' page 10', '' %}
 
+        {% unless content and content != "" %}
         {% if clean_category == "flutter" %}
         <div class="header-divider"></div>
         <p class="blog-subtitle">Expert insights on Flutter and Dart development</p>
@@ -34,8 +35,17 @@ permalink: "/page:num/"
         <p class="blog-subtitle">Expert insights on {{ clean_category | capitalize | replace: "-", " " }} development
         </p>
         {% endif %}
+        {% endunless %}
       </div>
     </div>
+
+    {% if content and content != "" %}
+    <div class="container inner">
+      <div class="blog-subtitle">
+        {{ content | markdownify }}
+      </div>
+    </div>
+    {% endif %}
 
     <div class="blog-container">
       <div class="blog-content">
