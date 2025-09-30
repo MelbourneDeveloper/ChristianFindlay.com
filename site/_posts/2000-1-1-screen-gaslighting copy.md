@@ -15,6 +15,20 @@ Parents receive endless judgment about their kids' screen time. Apparently, they
 
 A [comprehensive systematic review of 107 studies across 29 countries](https://ijbnpa.biomedcentral.com/articles/10.1186/s12966-021-01097-9) found that **screen time didn't even reach statistical significance as a predictor of outdoor play in most studies examined**. Meanwhile, economic and environmental factors were the real drivers. We've dismantled everything that made outdoor play possible. Then, various parties dared to blame parents for the mess we created.
 
+#### Australian Government Social Media Ban
+
+The Australian government is in the [process of banning social social media for children under sixteen](https://apo.org.au/node/328608). This article is part of a series I am writing about this topic. I encourage you to read this [open letter](https://apo.org.au/node/328608), and write to the relevant people who can make changes to this process. 
+
+* **Anika Wells MP** — [Anika.Wells.MP@aph.gov.au](mailto:Anika.Wells.MP@aph.gov.au) ([aph.gov.au][1])
+* **Minister Wells (Communications Office)** — [Minister.Wells@mo.communications.gov.au](mailto:Minister.Wells@mo.communications.gov.au) ([anikawells.com.au][2])
+* **Michelle Rowland MP** — via contact form (Attorney-General) on ministers.ag.gov.au ([ministers.ag.gov.au][3])
+* **Minister Rowland (Communications)** — [Minister.rowland@mo.communications.gov.au](mailto:Minister.rowland@mo.communications.gov.au) ([Infrastructure Ministers Australia][4])
+
+[1]: https://www.aph.gov.au/Senators_and_Members/Parliamentarian?MPID=264121&lang=en&utm_source=chatgpt.com "Hon Anika Wells MP - Parliament of Australia"
+[2]: https://www.anikawells.com.au/contact/?utm_source=chatgpt.com "Contact - Anika Wells"
+[3]: https://ministers.ag.gov.au/hon-michelle-rowland-mp/contact?utm_source=chatgpt.com "The Hon Michelle Rowland MP − Contact | Our ministers – Attorney ..."
+[4]: https://minister.infrastructure.gov.au/rowland/contact?utm_source=chatgpt.com "The Hon Michelle Rowland MP contact details | Ministers for the ..."
+
 ## When Yards Become Luxury Goods
 
 The [NET-Works longitudinal study](https://pmc.ncbi.nlm.nih.gov/articles/PMC7306417/) followed 531 children over three years using objective measurements. It made a critical finding: each additional hectare of yard space increased children's physical activity by 12.72 minutes per week. This isn't a wishy-washy correlation. It's proven causation, with rigorous methodology controlling for previous activity levels and confounders. Yet, housing affordability has reached crisis levels. The Economic Policy Institute [found that 29% of working families with children can't afford basic necessities](https://www.epi.org/publication/press_releases_hardships/), including adequate housing. When housing costs consume family budgets, kids' enrichment activities, including outdoor play, often get jettisoned.
