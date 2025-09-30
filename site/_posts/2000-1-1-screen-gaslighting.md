@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Screen Time Gaslighting: Devices Are Not To Blame"
+title: "Screen Time Gaslighting: Devices Are Not To Blame For Declining Play"
 date: "2025/09/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/screens/header.png"
