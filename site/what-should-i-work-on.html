@@ -13,18 +13,69 @@ react_script: /assets/js/repos.js
 
 <script>
 (function() {
+  var isShuffling = false;
+
+  function randomBetween(min, max) {
+    return Math.random() * (max - min) + min;
+  }
+
+  function triggerShuffle() {
+    if (isShuffling) return;
+    isShuffling = true;
+
+    var cards = document.querySelectorAll('.post-card-wrapper');
+    if (cards.length === 0) {
+      isShuffling = false;
+      return;
+    }
+
+    // Scatter and return in one smooth motion per card
+    cards.forEach(function(card, i) {
+      var x = randomBetween(-350, 350);
+      var y = randomBetween(-250, 250);
+      var rotation = randomBetween(-35, 35);
+      var scale = randomBetween(0.4, 0.7);
+
+      var delay = i * 25;
+
+      // Scatter out
+      setTimeout(function() {
+        card.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s ease';
+        card.style.opacity = '0.3';
+        card.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + scale + ') rotate(' + rotation + 'deg)';
+
+        // Immediately start returning
+        setTimeout(function() {
+          card.style.transition = 'transform 0.5s cubic-bezier(0, 0, 0.2, 1), opacity 0.3s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translate(0, 0) scale(1) rotate(0deg)';
+        }, 250);
+      }, delay);
+    });
+
+    // Cleanup
+    setTimeout(function() {
+      cards.forEach(function(card) {
+        card.style.transition = '';
+        card.style.transform = '';
+        card.style.opacity = '';
+      });
+      isShuffling = false;
+    }, cards.length * 25 + 800);
+  }
+
+  // Trigger on resize (debounced)
   var resizeTimeout;
   window.addEventListener('resize', function() {
     clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(function() {
-      var cards = document.querySelectorAll('.post-card-wrapper');
-      cards.forEach(function(card, i) {
-        card.style.animation = 'none';
-        card.offsetHeight;
-        card.style.animation = '';
-        card.style.animationDelay = (i * 50) + 'ms';
-      });
-    }, 150);
+    resizeTimeout = setTimeout(triggerShuffle, 200);
+  });
+
+  // Trigger on sort button clicks
+  document.addEventListener('click', function(e) {
+    if (e.target.matches('.sort-controls button, .taxonomy-chip')) {
+      setTimeout(triggerShuffle, 50);
+    }
   });
 })();
 </script>

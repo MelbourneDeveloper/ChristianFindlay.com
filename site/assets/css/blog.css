@@ -895,19 +895,20 @@
 }
 
 .post-card-wrapper {
-  transition: transform 0.6s ease, opacity 0.6s ease;
-  animation: shuffleIn 0.8s ease forwards;
+  transition: none;
 }
 
-@keyframes shuffleIn {
-  0% {
-    opacity: 0;
-    transform: scale(0.85) translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
+.post-card-wrapper.scatter-out {
+  transition: transform 0.5s cubic-bezier(0.6, 0, 0.4, 1),
+              opacity 0.3s ease;
+  opacity: 0.2;
+}
+
+.post-card-wrapper.scatter-back {
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1),
+              opacity 0.4s ease;
+  transform: translate(0, 0) scale(1) rotate(0deg) !important;
+  opacity: 1;
 }
 
 /* Post card author */
