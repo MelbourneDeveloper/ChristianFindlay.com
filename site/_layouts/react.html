@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MGSBGKD');</script>
+  <!-- End Google Tag Manager -->
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-JQWT4QXX6C');
+  </script>
+
+  <title>{{ page.title }}</title>
+
+  <meta property="og:type" content="website'" />
+
+  {% if page.description %}
+  <meta name="description" content="{{ page.description }}" />
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="twitter:description" content="{{ page.description }}" />
+  {% endif %}
+
+  <meta property="og:locale" content="en_AU" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta property="og:site_name" content="ChristianFindlay.com" />
+  <meta name="twitter:creator" content="@cfdevelop">
+
+  <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Jam Icons for Pagination -->
+  <link rel="stylesheet" href="https://unpkg.com/jam-icons@2.0.0/css/jam.min.css">
+
+  <!-- Custom modern CSS -->
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/form.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/blog.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/post.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/syntax.css"/>
+  <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/categories-tags.css"/>
+
+  <!-- React 18 CDN - loaded in head -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGSBGKD"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {{ content }}
+
+  <script src="{{relative_url}}/assets/js/main.js"></script>
+
+  <!-- React App Script - loaded after DOM -->
+  {% if page.react_script %}
+  <script src="{{ page.react_script | relative_url }}"></script>
+  {% endif %}
+
+</body>
+</html>

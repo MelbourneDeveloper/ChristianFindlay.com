@@ -1,2 +1,9 @@
-
 .DS_Store
+
+# Dart build artifacts
+site/assets/js/repos.js
+site/assets/js/repos.js.deps
+site/assets/js/repos.js.map
+site/assets/js/repos/.dart_tool/
+# Jekyll build
+_site/

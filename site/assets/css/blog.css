@@ -831,4 +831,56 @@
   }
 }
 
+/*****************************************
+ * STAR BUTTON
+ *****************************************/
+.star-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  margin-top: 16px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.3);
+  transition: all 0.3s ease;
+}
+
+.star-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(var(--primary-rgb), 0.5);
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+  color: white;
+}
+
+.star-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.4);
+}
+
+/*****************************************
+ * REPO STATS
+ *****************************************/
+.repo-stats {
+  display: flex;
+  gap: var(--spacing-4);
+  flex-wrap: wrap;
+}
+
+.repo-stat {
+  display: flex;
+  align-items: center;
+  color: var(--gray-300);
+  font-size: 0.9rem;
+}
+
+.repo-stat::before {
+  display: none;
+}
+
 /* Post card author */

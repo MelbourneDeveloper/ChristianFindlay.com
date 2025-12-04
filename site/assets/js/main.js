@@ -669,9 +669,12 @@ function initSmoothScrolling() {
  * Initialize Owl Carousel for the "You Might Also Like" section
  */
 function initOwlCarousel() {
-  if (typeof $.fn === 'undefined' || typeof $.fn.owlCarousel === 'undefined') {
-    console.warn('Owl Carousel plugin not found');
-    
+  // Only init if there's actually a carousel on the page
+  if (!document.querySelector('.owl-carousel')) {
+    return;
+  }
+
+  if (typeof $ === 'undefined' || typeof $.fn === 'undefined' || typeof $.fn.owlCarousel === 'undefined') {
     // Load jQuery if not available
     if (typeof $ === 'undefined') {
       const script = document.createElement('script');

@@ -32,22 +32,33 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # Build Dart React app
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - name: Build Dart React App
+        run: |
+          cd site/assets/js/repos
+          dart pub get
+          dart compile js web/app.dart -o ../repos.js -O2
+
+      # Build Jekyll
       - name: Setup Ruby
         uses: ruby/setup-ruby@ee2113536afb7f793eed4ce60e8d3b26db912da4 # v1.127.0
         with:
-          ruby-version: '3.1' # Updated from 3.0 to be compatible with sass-embedded
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: '3.1'
+          bundler-cache: true
+          cache-version: 0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: cd site && bundle install && bundle exec jekyll build --destination ../_site/ --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job

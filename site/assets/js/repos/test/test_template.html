@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{testName}}</title>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <style>
+    :root {
+      --bg-primary: #0a0a0f;
+      --bg-secondary: #12121a;
+      --bg-card: #1a1a24;
+      --bg-hover: #242430;
+      --accent-primary: #6366f1;
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius-md: 12px;
+    }
+    body { font-family: sans-serif; background: var(--bg-primary); color: var(--text-primary); }
+    .content-wrapper { padding: 20px; }
+    .blog-header-wrapper { margin-bottom: 20px; }
+    .blog-header { text-align: center; }
+    .header-divider { height: 2px; background: var(--accent-primary); margin: 10px 0; }
+    .blog-subtitle { color: var(--text-secondary); }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .sort-controls { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 20px; }
+    .taxonomy-chip { padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; }
+    .category-chip { background: var(--accent-primary); color: white; }
+    .tag-chip { background: var(--bg-secondary); color: var(--text-secondary); }
+    .blog.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
+    .post-card-wrapper { animation: fadeIn 0.3s ease; }
+    .post-card { background: var(--bg-card); border-radius: var(--radius-md); overflow: hidden; }
+    .post-card-inner { padding: 16px; }
+    .post-card-content { display: flex; flex-direction: column; gap: 8px; }
+    .post-card-taxonomy { margin-bottom: 8px; }
+    .taxonomy-chips { display: flex; gap: 4px; }
+    .post-card-title { margin: 0; font-size: 1.1rem; }
+    .post-card-title a { color: var(--text-primary); text-decoration: none; }
+    .post-card-meta { display: flex; gap: 12px; color: var(--text-secondary); font-size: 0.85rem; }
+    .post-card-excerpt { color: var(--text-secondary); font-size: 0.9rem; }
+    .post-card-read-more { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-primary); text-decoration: none; margin-top: 12px; }
+    .loading-state, .error-state, .empty-state { text-align: center; padding: 48px; }
+    .error-state { color: #ef4444; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+  <script>
+    window.dartCallback = function(dartFn) {
+      return function() { return dartFn.apply(null, arguments); };
+    };
+  </script>
+  <script src="packages/test/dart.js"></script>
+  {{testScript}}
+</head>
+<body></body>
+</html>
