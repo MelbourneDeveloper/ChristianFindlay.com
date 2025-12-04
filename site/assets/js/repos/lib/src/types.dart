@@ -25,13 +25,13 @@ typedef SortOption = ({String id, String label});
 
 /// Available sort options
 const sortOptions = <SortOption>[
+  (id: 'active', label: 'Most Active (Last Year)'),
   (id: 'popular', label: 'Most Popular'),
   (id: 'stars', label: 'Most Stars'),
   (id: 'forks', label: 'Most Forks'),
   (id: 'updated', label: 'Recently Updated'),
   (id: 'created', label: 'Newest'),
   (id: 'oldest', label: 'Oldest'),
-  (id: 'active', label: 'Most Active (Last Year)'),
 ];
 
 /// Calculate popularity score for a repo (weighted composite)

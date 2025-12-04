@@ -85,7 +85,7 @@ void main() {
       final result = render(App(fetchFn: successFetch(repos)));
 
       await waitForText(result, 'issues-repo');
-      expect(result.container.textContent, contains('🐛 7'));
+      expect(result.container.textContent, contains('📋 7'));
 
       result.unmount();
     });

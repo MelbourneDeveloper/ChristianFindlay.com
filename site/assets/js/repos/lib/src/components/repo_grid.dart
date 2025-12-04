@@ -6,11 +6,10 @@ import 'package:repos/src/components/repo_tile.dart';
 import 'package:repos/src/types.dart';
 
 /// Build the repo grid using existing blog grid CSS
-DivElement buildRepoGrid(List<Repo> repos) => div(
+/// The sortKey parameter triggers animation replay when sort changes
+DivElement buildRepoGrid(List<Repo> repos, {String sortKey = ''}) => div(
   className: 'blog grid',
-  style: {
-    'transition': 'all 0.4s ease',
-  },
+  props: {'key': 'grid-$sortKey'},
   children: [
     for (var i = 0; i < repos.length; i++) buildRepoTile(repos[i], i),
   ],

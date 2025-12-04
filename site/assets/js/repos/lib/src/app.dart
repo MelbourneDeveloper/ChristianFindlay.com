@@ -24,7 +24,7 @@ void resetCachedRepos() => _cachedRepos = [];
 // ignore: non_constant_identifier_names
 ReactElement App({FetchReposFn? fetchFn}) => createElement(
   ((JSAny props) {
-    final sortState = useState('popular');
+    final sortState = useState('active');
     final loadingState = useState(true);
     final errorState = useStateJS(null);
 
@@ -46,8 +46,10 @@ ReactElement App({FetchReposFn? fetchFn}) => createElement(
       return null;
     }, []);
 
+
     // Sort repos when sort option changes
     final sortedRepos = sortRepos(_cachedRepos, sortState.value);
+    final gridKey = sortState.value;
 
     return div(
       className: 'content-wrapper',
@@ -84,7 +86,7 @@ ReactElement App({FetchReposFn? fetchFn}) => createElement(
             else if (sortedRepos.isEmpty)
               buildEmptyState()
             else
-              buildRepoGrid(sortedRepos),
+              buildRepoGrid(sortedRepos, sortKey: gridKey),
           ],
         ),
       ],

@@ -883,4 +883,31 @@
   display: none;
 }
 
+.star-icon {
+  color: #ffd700;
+}
+
+/*****************************************
+ * REPO TILE OVERRIDES
+ *****************************************/
+.post-card .post-card-excerpt {
+  color: var(--gray-200);
+}
+
+.post-card-wrapper {
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  animation: shuffleIn 0.8s ease forwards;
+}
+
+@keyframes shuffleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.85) translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 /* Post card author */

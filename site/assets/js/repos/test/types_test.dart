@@ -245,7 +245,7 @@ void main() {
           ),
           createMockRepo(
             name: 'somewhat-active',
-            pushedAt: DateTime(2024, 1, 1), // ~6 months ago
+            pushedAt: DateTime(2024), // ~6 months ago
             openIssues: 5,
             forks: 10,
             stars: 16,

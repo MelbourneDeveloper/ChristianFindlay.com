@@ -66,10 +66,19 @@ DivElement buildRepoTile(Repo repo, int index) {
                 div(
                   className: 'post-card-meta repo-stats',
                   children: [
-                    span('\u2605 ${repo.stars}', className: 'repo-stat'),
-                    span('\u{1F374} ${repo.forks}', className: 'repo-stat'),
+                    div(
+                      className: 'repo-stat',
+                      children: [
+                        span('\u2605', className: 'star-icon'),
+                        span(' ${repo.stars}'),
+                      ],
+                    ),
                     span(
-                      '\u{1F41B} ${repo.openIssues}',
+                      '\u{1F374} ${repo.forks}',
+                      className: 'repo-stat',
+                    ),
+                    span(
+                      '\u{1F4CB} ${repo.openIssues}',
                       className: 'repo-stat',
                     ),
                   ],

@@ -11,4 +11,22 @@ react_script: /assets/js/repos.js
 <!-- React App Mount Point -->
 <div id="repos-root"></div>
 
+<script>
+(function() {
+  var resizeTimeout;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function() {
+      var cards = document.querySelectorAll('.post-card-wrapper');
+      cards.forEach(function(card, i) {
+        card.style.animation = 'none';
+        card.offsetHeight;
+        card.style.animation = '';
+        card.style.animationDelay = (i * 50) + 'ms';
+      });
+    }, 150);
+  });
+})();
+</script>
+
 {% include footer_2.html %}
