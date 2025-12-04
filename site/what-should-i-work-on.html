@@ -29,39 +29,61 @@ react_script: /assets/js/repos.js
       return;
     }
 
-    // Scatter and return in one smooth motion per card
-    cards.forEach(function(card, i) {
-      var x = randomBetween(-350, 350);
-      var y = randomBetween(-250, 250);
-      var rotation = randomBetween(-35, 35);
-      var scale = randomBetween(0.4, 0.7);
+    // Use CSS transform only - no position changes
+    // This avoids all the viewport coordinate issues
+    var cardData = [];
 
-      var delay = i * 25;
+    cards.forEach(function(card) {
+      var rect = card.getBoundingClientRect();
 
-      // Scatter out
-      setTimeout(function() {
-        card.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 1, 1), opacity 0.2s ease';
-        card.style.opacity = '0.3';
-        card.style.transform = 'translate(' + x + 'px, ' + y + 'px) scale(' + scale + ') rotate(' + rotation + 'deg)';
+      // Random offset from current position - scatter around center area
+      // Use smaller range to keep on screen
+      var offsetX = randomBetween(-300, 300);
+      var offsetY = randomBetween(-200, 200);
+      var rotation = randomBetween(-30, 30);
 
-        // Immediately start returning
-        setTimeout(function() {
-          card.style.transition = 'transform 0.5s cubic-bezier(0, 0, 0.2, 1), opacity 0.3s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translate(0, 0) scale(1) rotate(0deg)';
-        }, 250);
-      }, delay);
+      cardData.push({
+        card: card,
+        offsetX: offsetX,
+        offsetY: offsetY,
+        rotation: rotation
+      });
+    });
+
+    // Scatter phase
+    requestAnimationFrame(function() {
+      cardData.forEach(function(data) {
+        var card = data.card;
+        card.style.transition = 'transform 0.4s cubic-bezier(0.4, 0, 0.6, 1)';
+        card.style.transform = 'translate(' + data.offsetX + 'px, ' + data.offsetY + 'px) rotate(' + data.rotation + 'deg) scale(0.4)';
+        card.style.zIndex = '1000';
+      });
+    });
+
+    // Return phase - triggered by transitionend
+    var returnStarted = false;
+    cards[0].addEventListener('transitionend', function onEnd(e) {
+      if (e.propertyName !== 'transform' || returnStarted) return;
+      returnStarted = true;
+      cards[0].removeEventListener('transitionend', onEnd);
+
+      cardData.forEach(function(data) {
+        var card = data.card;
+        card.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+        card.style.transform = 'translate(0, 0) rotate(0deg) scale(1)';
+      });
     });
 
     // Cleanup
     setTimeout(function() {
-      cards.forEach(function(card) {
+      cardData.forEach(function(data) {
+        var card = data.card;
         card.style.transition = '';
         card.style.transform = '';
-        card.style.opacity = '';
+        card.style.zIndex = '';
       });
       isShuffling = false;
-    }, cards.length * 25 + 800);
+    }, 1000);
   }
 
   // Trigger on resize (debounced)
