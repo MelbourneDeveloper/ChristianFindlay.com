@@ -1,59 +1,97 @@
 # Christian Findlay - Flutter & .NET Developer
 
-> Christian Findlay is a software developer with 20+ years of experience specializing in Flutter, Dart, and .NET development. He is the Director of Nimblesite, Melbourne's premiere Flutter development agency. This site contains his blog with technical articles, open source projects, and professional services.
+> Christian Findlay is a software developer with 20+ years of experience specializing in Flutter, Dart, and .NET development. He is the Director of Nimblesite, Melbourne's premiere Flutter development agency. Based in Melbourne, Australia, he builds open source tools and provides consulting services worldwide.
 
 ## About
 
-Christian builds open source tools for the Dart and Flutter ecosystem. He has extensive experience in mobile app development, cloud architecture (Azure, GCP, AWS), and AI integration. He offers consulting, training, and development services.
+Christian builds open source tools for the Dart and Flutter ecosystem. He has shipped 5+ Flutter apps to the App Store and Google Play, and created 10+ open source libraries. He specializes in mobile app development, cloud architecture (Azure, GCP, AWS), and AI integration.
 
 ## Services
 
-- Flutter mobile app development
-- .NET backend development
-- Flutter testing training and mentorship
-- AI integration consulting
-- Cloud architecture design
-- Code reviews and audits
+- **Flutter App Development**: Custom mobile apps for iOS and Android, shipped to App Store and Google Play
+- **Flutter Testing Training**: Widget testing and integration testing mentorship for teams
+- **.NET Backend Development**: Legacy migrations, microservices, cloud-native solutions with .NET 8
+- **AI Integration**: ChatGPT integration, AI-assisted development training
+- **Cloud Architecture**: Azure, Google Cloud, AWS infrastructure design
+- **Code Reviews**: Expert review of Flutter and .NET codebases
 
 ## Open Source Projects
 
+- [ioc_container](https://pub.dev/packages/ioc_container): Lightweight dependency injection container for Dart/Flutter with compile-time safety
 - [Osprey](https://www.ospreylang.dev): A modern functional programming language designed for elegance, safety, and performance
 - [dart_node](https://dartnode.org): Write React, React Native, and Express apps entirely in Dart with runtime type safety
 - [dart_mutant](https://dartmutant.dev): Mutation testing for Dart - inject bugs to expose weak tests, powered by Rust
-- [DataProvider](https://dataprovider.tech): .NET toolkit for type-safe, source-generated SQL access
-- [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net): Type-safe REST client for .NET with Result types
-- [flutter_vst3](https://github.com/MelbourneDeveloper/flutter_vst3): Build VST3 audio plugins with Flutter UIs
+- [DataProvider](https://dataprovider.tech): .NET toolkit for type-safe, source-generated SQL access with Lambda Query Language
+- [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net): Type-safe REST client for .NET with Result types and exhaustiveness checking
+- [flutter_vst3](https://github.com/MelbourneDeveloper/flutter_vst3): Build professional VST3 audio plugins with Flutter UIs
+- [Device.Net](https://github.com/MelbourneDeveloper/Device.Net): Cross-platform C# library for USB and HID device communication
 
-## Blog - Flutter & Dart
+## Blog - Flutter Testing (Specialty Area)
 
-- [Full App Widget Testing](/blog/flutter_full_app_widget_testing): Comprehensive guide to testing entire Flutter apps with widget tests
-- [Run Widget Tests as Integration Tests](/blog/flutter-integration-tests): How to reuse widget tests for integration testing
-- [Flutter Mock Functions for Testing](/blog/flutter-mock-functions-for-testing): Effective mocking strategies for Flutter tests
-- [Dart Switch Expressions](/blog/dart-switch-expressions): Pattern matching and switch expressions in Dart 3
-- [Dart Records and Futures](/blog/dart-records-and-futures): Using records with async Dart code
-- [Dart Algebraic Data Types](/blog/dart-algebraic-data-types): Sealed classes and pattern matching in Dart
-- [Flutter State Management](/blog/flutter-state-management-components): Comparing state management approaches
-- [Flutter Material Design 3](/blog/flutter-mastering-material-design3): Implementing Material 3 in Flutter apps
+- [Full App Widget Testing](/blog/flutter_full_app_widget_testing): Why testing the entire widget tree is better than unit testing controllers. Covers dependency injection, fake clocks, and comprehensive coverage strategies
+- [Run Widget Tests as Integration Tests](/blog/flutter-integration-tests): Step-by-step guide to share test code between widget and integration tests, run on real devices, and set up GitHub Actions
+- [Flutter Mock Functions for Testing](/blog/flutter-mock-functions-for-testing): How to mock top-level functions like url_launcher's launchUrl using typedef and DI without wrapper classes
+- [Test Isolation is Expensive](/blog/test-isolation-expensive): Why isolating tests too much increases maintenance cost and reduces coverage
+- [Test Coverage](/blog/test-coverage): Understanding code coverage metrics and how to achieve meaningful coverage
 
-## Blog - .NET
+## Blog - Flutter State Management & Architecture
 
-- [RestClient.Net](/blog/restclient-net): Cross-platform REST client for .NET
-- [Stop NullReferenceExceptions](/blog/stop-nullreferenceexceptions): Eliminating null reference errors in C#
-- [Upgrade to .NET 6](/blog/upgrade-to-net-6): Migration guide for .NET Framework to .NET 6+
+- [Components of Flutter State Management](/blog/flutter-state-management-components): The 4 core components (Builder, Controller, State, Dependency Manager) that all state management solutions share
+- [Reactive Programming in Flutter](/blog/flutter-rx-signals-riverpod-rxdart): Deep comparison of Signals, Riverpod, RxDart, and ValueNotifier for reactive state
+- [Breaking BLoC Rules](/blog/flutter-breaking-bloc-rules): When and why to break conventional BLoC patterns
+- [Flutter Dart Extensions](/blog/flutter-dart-extensions): Using extension methods for cleaner Flutter code
+
+## Blog - Dart Language Features
+
+- [Dart Switch Expressions](/blog/dart-switch-expressions): Pattern matching and exhaustiveness checking in Dart 3 with practical examples
+- [Dart Algebraic Data Types](/blog/dart-algebraic-data-types): How sealed classes enable sum types and pattern matching in Dart 3
+- [Dart Records and Futures](/blog/dart-records-and-futures): Using Dart 3 records with async code for multiple return values
+- [Dart Immutable Collections](/blog/dart-immutable-collections): Working with immutable data structures in Dart
+- [Dart Classes](/blog/dart-classes): Understanding Dart's class system for developers from other languages
+
+## Blog - Flutter UI
+
+- [Flutter Material Design 3](/blog/flutter-mastering-material-design3): Complete guide to implementing Material 3 theming, color schemes, and components
+- [Flutter Material Design 3 Rounded Buttons](/blog/flutter_material_design_3_rounded_buttons): Creating modern rounded buttons with Material 3
+- [Flutter Search Bar](/blog/flutter-search-bar): Building search functionality with Flutter's SearchBar widget
+- [Flutter Navigation Drawer](/blog/flutter-navigation-drawer): Implementing navigation drawer patterns
+- [Flutter Hexadecimal Colors](/blog/flutter-hexadecimal-colors): Working with hex color values in Flutter
+- [Basic Flutter Animations with Tweens](/blog/basic-flutter-animations-with-tweens): Getting started with implicit and explicit animations
+
+## Blog - .NET Development
+
+- [RestClient.Net](/blog/restclient-net): Type-safe REST client for .NET with comprehensive error handling
+- [Stop NullReferenceExceptions](/blog/stop-nullreferenceexceptions): Complete toolset for eliminating null reference errors using NRT, null object pattern, and warnings as errors
+- [Upgrade to .NET 6](/blog/upgrade-to-net-6): Migration guide from .NET Framework to modern .NET
 - [ASP.NET Core Minimal Webhooks](/blog/asp-dotnet-core-minimal-webhooks): Building webhooks with minimal APIs
-- [Entity Framework Core SQL](/blog/sql-generated-by-entity-framework-core): Understanding EF Core generated queries
+- [Entity Framework Core SQL](/blog/sql-generated-by-entity-framework-core): Understanding and optimizing EF Core generated queries
+- [C# Delegates with IoC Containers](/blog/c-delegates-with-ioc-containers-and-dependency-injection): Using delegates for dependency injection
+- [System.Text.Json REST Client](/blog/system-text-json-rest-client): Using System.Text.Json for REST API calls
+- [Protobuf Web API in C#](/blog/protobuf-web-api-in-c): Building Protocol Buffer APIs with ASP.NET Core
 
-## Blog - Software Development
+## Blog - AI & Software Development
 
-- [Mutation Testing](/blog/mutation-testing): Using mutation testing to improve test quality
-- [Test Coverage](/blog/test-coverage): Understanding and improving code coverage
-- [AI Agent Development](/blog/intro-ai-agent-dev): Introduction to building AI agents
-- [How to Hire Good Developers](/blog/how-to-hire-good-software-developers): Guide for hiring software engineers
+- [Introduction to AI Coding Agents](/blog/intro-ai-agent-dev): Overview of IDE-based (Cursor, Copilot), CLI-based (Claude Code, Aider), and cloud-based (Devin) AI agents, plus frameworks like LangChain
+- [Leveraging AI to Build Apps](/blog/leveraging-ai-to-build-apps): Practical strategies for using AI assistants in development
+- [Flutter ChatGPT](/blog/flutter-chatgpt): Integrating ChatGPT into Flutter applications
+- [Mutation Testing](/blog/mutation-testing): Using mutation testing to measure and improve test quality
+- [How to Hire Good Developers](/blog/how-to-hire-good-software-developers): Practical guide for evaluating software engineering candidates
+- [Cross Platform vs Native](/blog/cross-platform-vs-native): Analysis of when to choose cross-platform frameworks vs native development
+
+## Blog - Cloud & Architecture
+
+- [Google Cloud Run](/blog/google-cloud-run): Deploying containerized applications to Cloud Run
+- [Choose ASP.NET Core in 2021](/blog/choose-asp-net-core-in-2021): Why ASP.NET Core remains a strong backend choice
+- [Performance vs Scalability](/blog/performance-vs-scalability): Understanding the difference and when each matters
+- [Blazor vs Traditional Web Apps](/blog/blazor-vs-traditional-web-apps): Comparing Blazor to JavaScript frameworks
+- [Blazor vs React, Angular, Vue](/blog/blazor-vs-react-angular-vue-js): Detailed framework comparison
 
 ## Contact
 
 - Website: https://christianfindlay.com
-- Company: [Nimblesite](https://www.nimblesite.co)
+- Company: [Nimblesite](https://www.nimblesite.co) - Melbourne's Premiere Flutter Development Agency
 - GitHub: [MelbourneDeveloper](https://github.com/MelbourneDeveloper)
 - LinkedIn: [christian-findlay](https://www.linkedin.com/in/christian-findlay/)
-- Location: Melbourne, Australia
+- YouTube: [Christian Findlay](https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw)
+- Location: Melbourne, Victoria, Australia
+- Available for: Remote consulting worldwide

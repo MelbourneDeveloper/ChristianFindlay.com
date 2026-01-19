@@ -9,6 +9,8 @@ post_image: "/assets/images/blog/testing/WidgetTestsIntegrationTests.png"
 post_image_height: 300
 image: "/assets/images/blog/testing/WidgetTestsIntegrationTests.png"
 permalink: /blog/:title
+description: "Step-by-step guide to running Flutter widget tests as integration tests. Learn how to share test code between widget and integration tests, run tests on real devices, and set up testing in GitHub Actions pipelines."
+keywords: [Flutter integration tests, Flutter widget tests, Flutter testing, automated testing Flutter, Flutter test sharing, integration_test package]
 ---
 
 Automated testing in flutter is easy. The flutter team built it into the framework from the ground up. They call it [integration testing](https://docs.flutter.dev/cookbook/testing/integration/introduction), but non-flutter developers would refer to it as automated testing. You can run integration tests on several platforms and in pipelines such as GitHub Actions. You might already be familiar with widget testing. Widget testing is the headless version of integration tests and gives you the same toolset, but without being able to see the actual UI. This article steps you through the process of running widget tests as integration tests. Take some time to read about [Flutter Testing](https://docs.flutter.dev/cookbook/testing) - particularly [Widget Testing](https://docs.flutter.dev/cookbook/testing/widget/introduction), before you step through this guide.

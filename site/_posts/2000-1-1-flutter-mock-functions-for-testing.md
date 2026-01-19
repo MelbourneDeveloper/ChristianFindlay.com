@@ -10,6 +10,8 @@ post_image_height: 220
 image: "/assets/images/blog/testing/header.jpeg"
 trending: true
 permalink: /blog/:title
+description: "Learn how to mock top-level functions in Flutter widget tests using typedef and dependency injection. Covers mocking url_launcher's launchUrl and other library functions without creating wrapper classes."
+keywords: [Flutter mocking, Flutter testing, mock functions Dart, typedef mocking, url_launcher testing, widget test mocking, dependency injection Flutter]
 ---
 
 The Dart language allows us to implement and mock any class. That's because Dart has [implicit interfaces](https://dart.dev/guides/language/language-tour#implicit-interfaces), which is great for testing. However, some libraries give us functions that don't belong to a class. That means we must do some work to mock or fake these functions for tests. This article explains how to do that.

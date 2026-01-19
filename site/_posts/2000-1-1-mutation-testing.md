@@ -8,6 +8,8 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/mutant.jpg"
 image: "/assets/images/blog/testing/mutant.jpg"
 permalink: /blog/:title
+description: "Learn mutation testing for Dart and Flutter - a technique to measure test quality by introducing bugs (mutants) and checking if tests catch them. Includes manual mutation testing examples since Dart lacks automated tools."
+keywords: [mutation testing, Dart testing, Flutter testing, test quality, mutant testing, code coverage, test effectiveness]
 ---
 
 Mutation testing is a technique for measuring the quality of your tests.

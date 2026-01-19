@@ -6,7 +6,8 @@ author: "Christian Findlay"
 post_image: "/assets/images/portfolio/flutter.svg"
 post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
-description: 
+description: "Understand the 4 core components of Flutter state management: Builder, Controller, State, and Dependency Manager. Learn how all state management solutions (BLoC, Riverpod, Provider) are built on the same foundation."
+keywords: [Flutter state management, BLoC, Riverpod, Provider, ChangeNotifier, ValueNotifier, Flutter architecture, state management comparison]
 tags: state-management cross-platform
 categories: [flutter]
 permalink: /blog/:title

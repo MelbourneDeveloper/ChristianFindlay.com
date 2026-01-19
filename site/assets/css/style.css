@@ -3338,13 +3338,15 @@ section:not(#home) {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-description {
   color: rgba(255, 255, 255, 0.7);
-  margin-bottom: 20px;
+  margin-bottom: 0;
   font-size: 1rem;
   line-height: 1.5;
+  flex-grow: 1;
 }
 
 .project-stats {
@@ -3428,15 +3430,33 @@ section:not(#home) {
   color: #fff;
 }
 
-.social-proof-btn.pubdev-like {
-  background: linear-gradient(135deg, #0175C2, #02569B);
+/* GitHub Follow CTA */
+.github-follow-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: #24292e;
   color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 2px solid #444;
+  margin-top: 20px;
 }
 
-.social-proof-btn.pubdev-like:hover {
-  background: linear-gradient(135deg, #02569B, #013B6E);
+.github-follow-cta:hover {
+  background: #2f363d;
+  border-color: #666;
   transform: translateY(-2px);
   color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.github-follow-cta i {
+  font-size: 1.3rem;
 }
 
 /* Project Actions */
@@ -3446,6 +3466,7 @@ section:not(#home) {
   gap: 10px;
   align-items: center;
   margin-top: auto;
+  padding-top: 15px;
 }
 
 .action-btn {
