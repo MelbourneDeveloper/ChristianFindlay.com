@@ -3389,9 +3389,132 @@ section:not(#home) {
   font-size: 0.9em;
 }
 
+/* Social Proof Buttons */
+.social-proof-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: flex-start;
+}
+
+.social-proof-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.social-proof-btn .btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.social-proof-btn.github-follow {
+  background: #24292e;
+  color: #fff;
+  border-color: #444;
+}
+
+.social-proof-btn.github-follow:hover {
+  background: #2f363d;
+  border-color: #666;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.social-proof-btn.pubdev-like {
+  background: linear-gradient(135deg, #0175C2, #02569B);
+  color: #fff;
+}
+
+.social-proof-btn.pubdev-like:hover {
+  background: linear-gradient(135deg, #02569B, #013B6E);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* Project Actions */
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: auto;
+}
+
+.action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.action-btn.star-btn {
+  background: rgba(255, 193, 7, 0.15);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+}
+
+.action-btn.star-btn:hover {
+  background: rgba(255, 193, 7, 0.25);
+  transform: translateY(-1px);
+  color: #ffc107;
+}
+
+.action-btn.star-btn i {
+  color: #ffc107;
+}
+
+.action-btn.like-btn {
+  background: rgba(1, 117, 194, 0.15);
+  color: #0175C2;
+  border: 1px solid rgba(1, 117, 194, 0.3);
+}
+
+.action-btn.like-btn:hover {
+  background: rgba(1, 117, 194, 0.25);
+  transform: translateY(-1px);
+  color: #0175C2;
+}
+
+.action-btn.like-btn i {
+  color: #0175C2;
+}
+
 @media (max-width: 768px) {
   .projects-container {
     grid-template-columns: 1fr;
+  }
+
+  .social-proof-section {
+    flex-direction: column;
+  }
+
+  .social-proof-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-actions .project-link,
+  .project-actions .action-btn {
+    text-align: center;
+    justify-content: center;
   }
 }
 
