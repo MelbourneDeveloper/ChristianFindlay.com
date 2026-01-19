@@ -24,7 +24,7 @@ void resetCachedRepos() => _cachedRepos = [];
 // ignore: non_constant_identifier_names
 ReactElement App({FetchReposFn? fetchFn}) => createElement(
   ((JSAny props) {
-    final sortState = useState('active');
+    final sortState = useState('popular');
     final loadingState = useState(true);
     final errorState = useStateJS(null);
 

@@ -1,0 +1,59 @@
+# Christian Findlay - Flutter & .NET Developer
+
+> Christian Findlay is a software developer with 20+ years of experience specializing in Flutter, Dart, and .NET development. He is the Director of Nimblesite, Melbourne's premiere Flutter development agency. This site contains his blog with technical articles, open source projects, and professional services.
+
+## About
+
+Christian builds open source tools for the Dart and Flutter ecosystem. He has extensive experience in mobile app development, cloud architecture (Azure, GCP, AWS), and AI integration. He offers consulting, training, and development services.
+
+## Services
+
+- Flutter mobile app development
+- .NET backend development
+- Flutter testing training and mentorship
+- AI integration consulting
+- Cloud architecture design
+- Code reviews and audits
+
+## Open Source Projects
+
+- [Osprey](https://www.ospreylang.dev): A modern functional programming language designed for elegance, safety, and performance
+- [dart_node](https://dartnode.org): Write React, React Native, and Express apps entirely in Dart with runtime type safety
+- [dart_mutant](https://dartmutant.dev): Mutation testing for Dart - inject bugs to expose weak tests, powered by Rust
+- [DataProvider](https://dataprovider.tech): .NET toolkit for type-safe, source-generated SQL access
+- [RestClient.Net](https://github.com/MelbourneDeveloper/RestClient.Net): Type-safe REST client for .NET with Result types
+- [flutter_vst3](https://github.com/MelbourneDeveloper/flutter_vst3): Build VST3 audio plugins with Flutter UIs
+
+## Blog - Flutter & Dart
+
+- [Full App Widget Testing](/blog/flutter_full_app_widget_testing): Comprehensive guide to testing entire Flutter apps with widget tests
+- [Run Widget Tests as Integration Tests](/blog/flutter-integration-tests): How to reuse widget tests for integration testing
+- [Flutter Mock Functions for Testing](/blog/flutter-mock-functions-for-testing): Effective mocking strategies for Flutter tests
+- [Dart Switch Expressions](/blog/dart-switch-expressions): Pattern matching and switch expressions in Dart 3
+- [Dart Records and Futures](/blog/dart-records-and-futures): Using records with async Dart code
+- [Dart Algebraic Data Types](/blog/dart-algebraic-data-types): Sealed classes and pattern matching in Dart
+- [Flutter State Management](/blog/flutter-state-management-components): Comparing state management approaches
+- [Flutter Material Design 3](/blog/flutter-mastering-material-design3): Implementing Material 3 in Flutter apps
+
+## Blog - .NET
+
+- [RestClient.Net](/blog/restclient-net): Cross-platform REST client for .NET
+- [Stop NullReferenceExceptions](/blog/stop-nullreferenceexceptions): Eliminating null reference errors in C#
+- [Upgrade to .NET 6](/blog/upgrade-to-net-6): Migration guide for .NET Framework to .NET 6+
+- [ASP.NET Core Minimal Webhooks](/blog/asp-dotnet-core-minimal-webhooks): Building webhooks with minimal APIs
+- [Entity Framework Core SQL](/blog/sql-generated-by-entity-framework-core): Understanding EF Core generated queries
+
+## Blog - Software Development
+
+- [Mutation Testing](/blog/mutation-testing): Using mutation testing to improve test quality
+- [Test Coverage](/blog/test-coverage): Understanding and improving code coverage
+- [AI Agent Development](/blog/intro-ai-agent-dev): Introduction to building AI agents
+- [How to Hire Good Developers](/blog/how-to-hire-good-software-developers): Guide for hiring software engineers
+
+## Contact
+
+- Website: https://christianfindlay.com
+- Company: [Nimblesite](https://www.nimblesite.co)
+- GitHub: [MelbourneDeveloper](https://github.com/MelbourneDeveloper)
+- LinkedIn: [christian-findlay](https://www.linkedin.com/in/christian-findlay/)
+- Location: Melbourne, Australia

@@ -1,0 +1,284 @@
+# Christian Findlay - Flutter & .NET Developer
+
+> Christian Findlay is a software developer with 20+ years of experience specializing in Flutter, Dart, and .NET development. He is the Director of Nimblesite, Melbourne's premiere Flutter development agency. This site contains his technical blog with in-depth articles on Flutter testing, Dart programming, .NET development, and software architecture.
+
+## About Christian Findlay
+
+Christian Findlay is a Melbourne-based software developer who has been building software professionally for over 20 years. He specializes in:
+
+- **Flutter & Dart**: Building cross-platform mobile applications with comprehensive test coverage
+- **.NET Development**: Backend services, APIs, and cloud architecture with C# and ASP.NET Core
+- **Open Source**: Creator and maintainer of several popular libraries including RestClient.Net, Device.Net, and ioc_container
+- **Testing & Quality**: Expert in widget testing, integration testing, and test-driven development
+- **AI Integration**: Helping teams integrate AI capabilities into applications and workflows
+
+He is the Director of Nimblesite, Melbourne's premiere Flutter development agency, where he helps businesses build high-quality mobile applications.
+
+## Services Offered
+
+### Mobile App Development
+Full-service Flutter app development from concept to App Store deployment. Specializing in:
+- Cross-platform mobile apps (iOS and Android from single codebase)
+- High test coverage with widget and integration tests
+- Material Design 3 implementation
+- State management architecture
+
+### .NET Backend Development
+Enterprise-grade backend services with:
+- ASP.NET Core APIs and microservices
+- Cloud deployment (Azure, AWS, Google Cloud)
+- Database design and optimization
+- Migration from .NET Framework to modern .NET
+
+### Flutter Testing Training
+Comprehensive training programs for teams including:
+- Widget testing fundamentals and advanced patterns
+- Integration testing strategies
+- Test-driven development workflows
+- CI/CD pipeline setup for automated testing
+
+### Code Reviews & Architecture Consulting
+Expert analysis of existing codebases to:
+- Identify technical debt and quality issues
+- Recommend architectural improvements
+- Establish coding standards and best practices
+
+## Open Source Projects
+
+### Osprey Programming Language
+[ospreylang.dev](https://www.ospreylang.dev)
+A modern functional programming language designed for elegance, safety, and performance. Features algebraic data types, pattern matching, and a strong type system.
+
+### dart_node
+[dartnode.org](https://dartnode.org)
+Write React, React Native, and Express apps entirely in Dart with runtime type safety. Brings the Dart ecosystem to Node.js development.
+
+### dart_mutant
+[dartmutant.dev](https://dartmutant.dev)
+Mutation testing for Dart applications. Automatically injects bugs into your code to verify your tests can detect them. Powered by Rust for performance.
+
+### DataProvider
+[dataprovider.tech](https://dataprovider.tech)
+A .NET toolkit for type-safe, source-generated SQL access with Lambda Query Language. Eliminates runtime SQL errors through compile-time verification.
+
+### RestClient.Net
+[GitHub](https://github.com/MelbourneDeveloper/RestClient.Net)
+The safest way to make REST calls in C#. Features type-safe responses, Result types for error handling, and exhaustive pattern matching.
+
+### flutter_vst3
+[GitHub](https://github.com/MelbourneDeveloper/flutter_vst3)
+Build professional VST3 audio plugins with Flutter UIs and pure Dart audio processing. Bridges Flutter's UI capabilities with audio plugin development.
+
+### Device.Net
+[GitHub](https://github.com/MelbourneDeveloper/Device.Net)
+Cross-platform C# library for USB and HID device communication. Works on Windows, Linux, macOS, Android, and UWP.
+
+### ioc_container
+[pub.dev](https://pub.dev/packages/ioc_container)
+Lightweight dependency injection container for Dart and Flutter. Simple API with compile-time safety.
+
+## Blog Categories
+
+### Flutter & Dart Development
+
+#### Testing
+- **Full App Widget Testing**: Comprehensive approach to testing entire Flutter apps with widget tests, covering dependency injection, mocking, and test organization
+- **Widget Tests as Integration Tests**: Technique for reusing widget tests as integration tests to run on real devices
+- **Mock Functions for Testing**: Effective strategies for mocking functions and dependencies in Flutter tests
+
+#### Dart Language Features
+- **Dart 3 Records and Futures**: Using Dart 3's records feature with async code and futures
+- **Switch Expressions**: Pattern matching and exhaustive switch expressions in Dart 3
+- **Algebraic Data Types**: Implementing sealed classes and sum types for type-safe state modeling
+- **Extension Methods**: Creating and using extension methods effectively in Dart
+
+#### State Management
+- **Flutter State Management Components**: Comparing approaches including Provider, Riverpod, BLoC, and signals
+- **Breaking BLoC Rules**: When and why to deviate from strict BLoC architecture
+- **Reactive Programming with Signals**: Using observables and computed values
+
+#### UI Development
+- **Material Design 3 in Flutter**: Complete guide to theming with Material 3
+- **Hexadecimal Colors**: Working with hex color codes in Flutter
+- **Navigation Drawer**: Building Material Design navigation drawers
+- **Search Bar in AppBar**: Adding search functionality to app bars
+
+### .NET Development
+
+#### REST APIs and HTTP
+- **RestClient.Net**: Cross-platform type-safe REST client for .NET
+- **ASP.NET Core Webhooks**: Building webhook receivers with minimal APIs
+- **Protobuf Web API**: Using Protocol Buffers in ASP.NET Core
+
+#### Code Quality
+- **Stop NullReferenceExceptions**: Nullable reference types and null safety patterns
+- **C# Code Rules**: Configuring and enforcing code analysis rules
+- **Code Quality with Analyzers**: Setting up static analysis in .NET projects
+
+#### Architecture
+- **Choose ASP.NET Core**: Why ASP.NET Core is the right choice for new projects
+- **Entity Framework Core SQL**: Understanding and optimizing generated queries
+- **Delegates with DI**: Using delegates as dependencies in IoC containers
+
+#### Migration & Upgrades
+- **Upgrade to .NET 6**: Step-by-step migration guide from .NET Framework
+- **Cross-Platform C# UI**: Comparing Avalonia, Uno Platform, MAUI, and Blazor
+
+### Software Development Practices
+
+#### Testing Philosophy
+- **Mutation Testing**: Using mutation testing to measure test effectiveness
+- **Test Coverage**: Understanding what code coverage metrics really mean
+- **Test Isolation Costs**: The trade-offs of isolated unit tests vs integration tests
+
+#### Process & Methodology
+- **Fortnightly Waterfall (Scrum Critique)**: Analysis of common Scrum anti-patterns
+- **How to Hire Developers**: Practical guide to technical interviews and evaluation
+- **Cross-Platform vs Native**: When to choose cross-platform frameworks
+
+#### AI & Modern Development
+- **AI Agent Development Introduction**: Getting started with building AI agents
+- **Building Apps with ChatGPT**: Using AI assistants for Flutter development
+- **Leveraging AI for App Development**: Practical AI integration strategies
+
+## Technical Expertise
+
+### Languages & Frameworks
+- Dart, Flutter
+- C#, .NET Core, ASP.NET Core
+- F# (functional programming)
+- TypeScript, JavaScript
+- Rust (for performance-critical tools)
+
+### Platforms & Cloud
+- iOS and Android mobile development
+- Azure (App Service, Functions, Cosmos DB)
+- Google Cloud (Cloud Run, Firebase)
+- AWS (Lambda, DynamoDB)
+
+### Specializations
+- Widget and integration testing
+- Cross-platform architecture
+- API design and REST best practices
+- CI/CD pipeline configuration
+- Open source library development
+
+## Contact Information
+
+- **Website**: https://christianfindlay.com
+- **Company**: [Nimblesite](https://www.nimblesite.co) - Melbourne Flutter Agency
+- **GitHub**: [MelbourneDeveloper](https://github.com/MelbourneDeveloper)
+- **LinkedIn**: [christian-findlay](https://www.linkedin.com/in/christian-findlay/)
+- **Twitter/X**: [@CFDevelop](https://twitter.com/CFDevelop)
+- **YouTube**: [Channel](https://www.youtube.com/channel/UCBEdRhnuksiUnLonJT9lIaw)
+- **Location**: Melbourne, Australia
+
+## All Blog Posts
+
+### Flutter
+- [Full App Widget Testing](/blog/flutter_full_app_widget_testing)
+- [Run Widget Tests as Integration Tests](/blog/flutter-integration-tests)
+- [Mock Functions for Testing](/blog/flutter-mock-functions-for-testing)
+- [Reactive Programming with Signals, Riverpod and RxDart](/blog/flutter-rx-signals-riverpod-rxdart)
+- [Breaking BLoC Rules](/blog/flutter-breaking-bloc-rules)
+- [State Management Components](/blog/flutter-state-management-components)
+- [Mastering Material Design 3](/blog/flutter-mastering-material-design3)
+- [Material Design 3 Rounded Buttons](/blog/flutter_material_design_3_rounded_buttons)
+- [Flutter Navigation Drawer](/blog/flutter-navigation-drawer)
+- [Add Search Bar to AppBar](/blog/flutter-search-bar)
+- [Basic Animations with Tweens](/blog/basic-flutter-animations-with-tweens)
+- [Hexadecimal Colors](/blog/flutter-hexadecimal-colors)
+- [Flutter First Impressions](/blog/flutter-first-impressions)
+- [Flutter for Startups](/blog/flutter-startups)
+- [Build Your First App with ChatGPT](/blog/flutter-chatgpt)
+
+### Dart
+- [Dart 3 Records and Futures](/blog/dart-records-and-futures)
+- [Dart Switch Expressions](/blog/dart-switch-expressions)
+- [Dart Algebraic Data Types](/blog/dart-algebraic-data-types)
+- [Dart Immutable Collections](/blog/dart-immutable-collections)
+- [Dart Extension Methods](/blog/flutter-dart-extensions)
+- [Dart Classes for C# Programmers](/blog/dart-classes)
+- [Dart Formatting and Trailing Commas](/blog/dart-formatting-and-trailing-commas)
+- [Immutability: Dart vs F#](/blog/immutability-dart-vs-fsharp)
+
+### .NET
+- [RestClient.Net](/blog/restclient-net)
+- [RestClient.Net 3.0](/blog/restclient-net-3-0)
+- [RestClient.Net 4.0](/blog/restclient-net-4-0)
+- [RestClient.Net 5](/blog/restclient-net-5)
+- [RestClient.Net 7](/blog/restclient-net-7)
+- [Device.Net 3.0](/blog/device-net-3-0)
+- [Device.Net 4.0](/blog/device-net-4)
+- [Device.Net Project Status](/blog/device-net-project-status)
+- [ASP.NET Core Minimal Webhooks](/blog/asp-dotnet-core-minimal-webhooks)
+- [Choose ASP.NET Core in 2021](/blog/choose-asp-net-core-in-2021)
+- [Upgrade to .NET 6](/blog/upgrade-to-net-6)
+- [Stop NullReferenceExceptions](/blog/stop-nullreferenceexceptions)
+- [C# Code Quality](/blog/c-code-quality-part-1)
+- [C# Code Rules](/blog/code-rules)
+- [C# String Interpolation](/blog/c-string-interpolation)
+- [C# Serial Port Access](/blog/c-serial-port-access-windows)
+- [C# Delegates with DI](/blog/c-delegates-with-ioc-containers-and-dependency-injection)
+- [Change Record Constructor Behavior](/blog/change-behavior-of-record-constructor)
+- [ILogger Usage and Testing](/blog/ilogger)
+- [ILogger and Null Object Pattern](/blog/ilogger-nullobject)
+- [INotifyPropertyChanged](/blog/inotifypropertychanged)
+- [Entity Framework Core SQL](/blog/sql-generated-by-entity-framework-core)
+- [How to Use F# from C#](/blog/how-to-use-fsharp-and-csharp)
+- [Cross-Platform C# UI Technologies](/blog/cross-platform-c-ui-technologies)
+- [Cross-Platform C# UI Part 2](/blog/csharp-crossplatform-2)
+- [Cross-Platform USB and HID](/blog/cross-platform-usb-and-hid-programming)
+- [C# and gRPC](/blog/c-and-grpc-part-one)
+- [C# and WebAssembly](/blog/c-and-webassembly-wasm)
+- [Blazor vs React/Angular/Vue](/blog/blazor-vs-react-angular-vue-js)
+- [Blazor vs Traditional Web Apps](/blog/blazor-vs-traditional-web-apps)
+- [Blazor WebAssembly Rest Client](/blog/blazor-webassembly-rest-client)
+- [Protobuf Web API in C#](/blog/protobuf-web-api-in-c)
+- [.NET Standard](/blog/net-standard)
+- [.NET Application Frameworks](/blog/net-application-frameworks-part-1)
+- [Sign Assembly in Visual Studio](/blog/net-how-to-sign-an-assembly-in-visual-studio-2019)
+- [Source Link with NuGet](/blog/source-link-nuget-azure-pipelines)
+
+### Software Development
+- [Mutation Testing](/blog/mutation-testing)
+- [Test Coverage](/blog/test-coverage)
+- [Test Isolation is Expensive](/blog/test-isolation-expensive)
+- [How to Hire Good Developers](/blog/how-to-hire-good-software-developers)
+- [Cross-Platform vs Native Apps](/blog/cross-platform-vs-native)
+- [Anti-patterns: A Misused Term](/blog/anti-patterns)
+- [Fortnightly Waterfall (Scrum)](/blog/fornightly-waterfall)
+- [Performance vs Scalability](/blog/performance-vs-scalability)
+- [Separate Business Logic and Presentation](/blog/separate-business-logic-and-presentation)
+- [N-Tier Architecture Mistake](/blog/ntier-mistake)
+- [Buy a Computer for Cross-Platform Dev](/blog/buy-crossplatform-dev-computer)
+- [Google Cloud Run](/blog/google-cloud-run)
+- [Independent Developer vs Consultancy](/blog/independent-software-developer-vs-software-consultancy)
+- [Stateful Factory Pattern](/blog/stateful_factory_pattern)
+- [Rx Hot vs Cold Observables](/blog/rx-hot-vs-cold)
+
+### App Deployment
+- [App Store Deployment](/blog/app-store-deployment)
+- [App Store Deployment - Backend First](/blog/app-store-deployment-back-end-first)
+- [Backend-Frontend Versioning](/blog/back-end-front-end-versioning)
+- [API Versioning: Mandatory Columns](/blog/api-versioning-mandatory-columns)
+- [Investing in Mobile Apps 2024](/blog/investing-in-mobile-apps-2024)
+- [Mobile App Success 2024](/blog/mobile-app-success-2024)
+
+### AI & Tools
+- [Introduction to AI Agent Development](/blog/intro-ai-agent-dev)
+- [Leveraging AI to Build Apps](/blog/leveraging-ai-to-build-apps)
+- [AI Content Policy](/blog/ai-writing)
+- [Screen Gaslighting](/blog/screen-gaslighting)
+
+### Other Projects
+- [ioc_container for Flutter](/blog/ioc-container-v1)
+- [USB Flutter .NET](/blog/usb-flutter-dotnet)
+- [Reviving Charts for Flutter](/blog/reviving-charts-flutter)
+- [Papilio](/blog/papilio-1)
+- [Uno Platform Multitargeting](/blog/uno-multitargeting)
+- [Uno Platform Course](/blog/uno-platform-course)
+- [xUnit Strongly Typed Test Data](/blog/xunit-strongly-typed-test-data)
+- [Visual Studio Break on Exceptions](/blog/visual-studio-break-on-all-exceptions)
+- [System.Text.Json Rest Client](/blog/system-text-json-rest-client)
+- [Submodules vs NuGet](/blog/submodules-vs-nuget)

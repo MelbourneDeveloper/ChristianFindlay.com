@@ -25,8 +25,8 @@ typedef SortOption = ({String id, String label});
 
 /// Available sort options
 const sortOptions = <SortOption>[
-  (id: 'active', label: 'Most Active (Last Year)'),
   (id: 'popular', label: 'Most Popular'),
+  (id: 'active', label: 'Most Active (Last Year)'),
   (id: 'stars', label: 'Most Stars'),
   (id: 'forks', label: 'Most Forks'),
   (id: 'updated', label: 'Recently Updated'),
