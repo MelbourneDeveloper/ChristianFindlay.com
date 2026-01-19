@@ -8,6 +8,8 @@ image: "/assets/images/blog/gcp/header.png"
 tags: app-development serverless
 categories: [software development]
 permalink: /blog/:title
+description: "Deploy containerized apps to Google Cloud Run with automatic horizontal scaling and pay-per-use pricing. Covers why containers, comparison to Kubernetes, and practical deployment guidance for serverless container apps."
+keywords: [Google Cloud Run, serverless containers, GCP deployment, container orchestration, Kubernetes alternative, serverless apps, cloud deployment]
 ---
 
 [Google Cloud Run](https://cloud.google.com/run) is a serverless container app service. You can deploy containerised apps to the cloud, which will autoscale horizontally with minimal configuration. It is an alternative to [Kubernetes](https://kubernetes.io/), but you only pay for usage. You do not pay for server uptime when there is no server usage.   

@@ -10,6 +10,8 @@ post_image_height: 300
 image: "/assets/images/art/rubiks.jpg"
 trending: true
 permalink: /blog/:title
+description: "When and why to break conventional BLoC pattern rules in Flutter. Examines the evolution of BLoC from Google's original talk to flutter_bloc library, and questions common assumptions about state management architecture."
+keywords: [Flutter BLoC, BLoC pattern, Flutter state management, flutter_bloc, state management architecture, BLoC rules]
 ---
 
 BloC is a common UI pattern in the Flutter world. Google originally created the idea early on in Flutter's life. Since its inception, the pattern has taken several forms, and now the most popular approach is to use the [library](https://pub.dev/packages/flutter_bloc) named after the pattern. There is no real official BloC pattern other than what Google articulated in the [original talk](https://www.youtube.com/watch?v=RS36gBEp8OI). The closest documentation may be [this article](https://medium.com/codechai/architecting-your-flutter-project-bd04e144a8f1) that the Flutter documentation links to. However, the pattern has evolved over time and picked up several characteristics, core concepts, and unofficial rules. 

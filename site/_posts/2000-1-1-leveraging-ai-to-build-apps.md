@@ -8,6 +8,8 @@ image: "/assets/images/blog/ai/header.jpg"
 tags: app-development ai
 categories: [software development]
 permalink: /blog/:title
+description: "Practical guide to using AI for app development: generating boilerplate code, writing tests, code review, and reducing development costs. Real-world examples of how AI tools like ChatGPT can streamline your development workflow."
+keywords: [AI app development, ChatGPT coding, AI code generation, AI testing, AI code review, AI development tools]
 ---
 
 Artificial intelligence (AI) has already significantly impacted various industries and is quickly making its way into software development. As AI technology advances, software businesses will increasingly leverage it to build apps. In this blog post, I will explore how software businesses can and should use AI to streamline the app development process and reduce development costs.  

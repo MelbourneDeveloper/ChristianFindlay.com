@@ -9,6 +9,8 @@ post_image: "/assets/images/blog/ioc_container/header.jpeg"
 image: "/assets/images/blog/ioc_container/header.jpeg"
 trending: true
 permalink: /blog/:title
+description: "Introducing ioc_container v1.0 - a lightweight dependency injection container for Dart and Flutter in just 81 lines of code. Features scoped dependencies, lazy initialization, and compile-time safety for testing."
+keywords: [ioc_container, Flutter dependency injection, Dart DI, IoC container, Flutter testing, dependency injection Flutter]
 ---
 
 `ioc_container` is an IoC Container for Dart and Flutter. It started about five months ago as a quick way to replace dependencies for testing but evolved into a comprehensive Dependency Injection library for Dart and Flutter. Version 1.0.0 rounds off the major features and weighs in at [81 lines of code](https://github.com/MelbourneDeveloper/ioc_container/blob/f92bb3bd03fb3e3139211d0a8ec2474a737d7463/lib/ioc_container.dart#L2) according to test coverage. You should try it in your project, and here's why.

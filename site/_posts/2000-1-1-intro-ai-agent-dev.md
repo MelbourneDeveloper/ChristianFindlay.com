@@ -12,6 +12,8 @@ description: "Learn about AI coding agents - IDE-based (Cursor, GitHub Copilot, 
 keywords: [AI coding agents, Cursor, GitHub Copilot, Claude Code, Aider, Devin AI, LangChain, LangGraph, AI development tools, coding assistants, AI pair programming]
 ---
 
+> **Key Takeaways**: AI coding agents are IDE-based (Cursor, Copilot, Cline), CLI-based (Claude Code, Aider), or cloud-based (Devin). Build custom agents with LangChain/LangGraph. Python dominates the AI agent space. Agents will change how we write code within 5 years.
+
 AI agents are new LLM (AI) based tools tools that can really enhance your productivity. They are transforming how we approach coding, testing, and deployment tasks. This article introduces you to the various tooling available right now, talks a little about the theory and mentions how development-based AI agents might evolve over the next few years.
 
 ## What Are AI Agents?

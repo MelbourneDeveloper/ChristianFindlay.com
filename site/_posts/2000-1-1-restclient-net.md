@@ -8,6 +8,8 @@ image: "/assets/images/blog/restclientdotnet/logo.png"
 categories: [dotnet]
 tags: restclient-net csharp
 permalink: /blog/:title
+description: "RestClient.Net is a type-safe REST client for .NET with Result types and exhaustiveness checking. Open source library for making HTTP API calls with compile-time safety and clean error handling."
+keywords: [RestClient.Net, .NET REST client, C# HTTP client, type-safe REST, .NET API client, REST API C#]
 ---
 
 *Edit: this library has undergone multiple iterations since this early blog post. It is no longer in beta, and has been moved to GitHub. Check the repository for the latest samples*

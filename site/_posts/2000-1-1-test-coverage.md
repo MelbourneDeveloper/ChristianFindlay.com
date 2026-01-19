@@ -9,6 +9,8 @@ tags: testing software-quality
 categories: [software development]
 permalink: /blog/:title
 slider_post: true
+description: "Understanding test coverage metrics and why 100% coverage doesn't guarantee bug-free code. Learn about meaningful coverage strategies, the relationship between test isolation and coverage, and how to maximize test value."
+keywords: [test coverage, code coverage, software testing, unit testing, integration testing, test metrics, test quality]
 ---
 
 This article is part of a series I am writing about testing. It refers to an [article](test-isolation-expensive) I wrote on test isolation, which is important reading for this topic.   

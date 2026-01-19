@@ -9,6 +9,8 @@ tags: testing software-quality
 categories: [software development]
 permalink: /blog/:title
 slider_post: true
+description: "Why isolating tests too much increases maintenance cost and reduces actual coverage. Learn the hidden costs of over-mocking and excessive test isolation, and how to find the right balance between unit and integration tests."
+keywords: [test isolation, unit testing, integration testing, mocking, test maintenance, software testing costs, test strategy]
 ---
 
 This article is part of a series on testing that I am writing, and this series is part of an e-book on testing that I am compiling. This article doesn't dwell on the value of different testing approaches or try to weigh the pros and cons of different approaches. Let's say it is a given that any system will require a mixture of fine-grained tests, such as unit tests, and coarser tests, like integration tests. The ratio is a question for the broader topic. Read more on [Test Coverage](/blog/test-coverage).
