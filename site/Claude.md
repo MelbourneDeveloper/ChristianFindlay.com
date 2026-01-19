@@ -4,6 +4,14 @@
 - Avoiding duplication generally is the highest priority. Alway search before adding code
 - Don't COPY code. MOVE code.
 
+## Apply The Principles Here
+
+Study these and ensure the website conforms to the best practices
+
+[https://developers.google.com/search/blog/2025/05/succeeding-in-ai-search](Top ways to ensure your content performs well in Google's AI experiences on Search)
+[https://developers.google.com/search/docs/fundamentals/seo-starter-guide](Search Engine Optimization (SEO) Starter Guide)
+
+
 # Dart Rules
 
 - All Dart. Absolutely minimal JS
