@@ -107,6 +107,6 @@ By using and contributing to nimble_charts, you're not only supporting our effor
 
 ## Need a Web Dashboard?
 
-Call Nimblesite to build a web dashboard for your business: <a href="tel:1300794205">1300 794 205</a>, send us an email at <strong>sales at nimblesite.co</strong>, or fill out the [contact form](/#contact)
+Contact Nimblesite to build a web dashboard for your business: send us an email at <strong>sales at nimblesite.co</strong>, or fill out the [contact form](/#contact)
 
 This [article](https://www.nimblesite.co/blog/reviving-charts-flutter/) was original published on the [Nimblesite website](https://www.nimblesite.co/), and the package/repo belong to them.

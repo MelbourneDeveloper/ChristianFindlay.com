@@ -193,4 +193,4 @@ Advertising your app effectively on digital stores is critical for driving downl
 
 Building a successful mobile app in 2024 is about much more than just development. You need to take a holistic approach to marketing, customer engagement, and community building. Create people-first content and engage genuinely with your audience. This will allow you to build a strong foundation for your app's success. The goal is to create value that resonates well beyond the digital screens, fostering a community of loyal users and advocates for your brand.
 
-This [article](https://www.nimblesite.co/blog/mobile-app-success-2024/) belongs to [Nimblesite](https://www.nimblesite.co). Call them on <a href="tel:1300794205">1300 794 205</a>, send them an email at <strong>sales at nimblesite.co</strong>, or fill out the [contact form](https://www.nimblesite.co/#contact)
+This [article](https://www.nimblesite.co/blog/mobile-app-success-2024/) belongs to [Nimblesite](https://www.nimblesite.co). Send them an email at <strong>sales at nimblesite.co</strong>, or fill out the [contact form](https://www.nimblesite.co/#contact)
