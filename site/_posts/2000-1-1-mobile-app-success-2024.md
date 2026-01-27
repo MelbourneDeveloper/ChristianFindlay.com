@@ -25,7 +25,7 @@ Social media is a powerful tool for growing your SaaS business. It allows you to
 
 #### Actionable Advice
 
-**Create Accounts on Relevant Platforms**: Focus on platforms where your target audience is most active. For B2B SaaS, [LinkedIn](https://www.linkedin.com) is a must. For consumer-focused apps, consider platforms like [Instagram](https://www.instagram.com/), [TikTok](https://www.tiktok.com/), and [Pinterest](https://au.pinterest.com/).
+**Create Accounts on Relevant Platforms**: Focus on platforms where your target audience is most active. For B2B SaaS, [LinkedIn](https://www.linkedin.com) is a must. For consumer-focused apps, consider platforms like [Instagram](https://www.instagram.com/), [TikTok](https://www.tiktok.com/explore), and [Pinterest](https://au.pinterest.com/).
 
 **Create a Content Calendar**: [Plan your posts in advance](https://blog.hootsuite.com/how-to-create-a-social-media-content-calendar/), including a mix of product updates, industry insights, and engaging content such as polls or user-generated content.
 
@@ -71,7 +71,7 @@ Fundraising is a critical component of scaling any SaaS business. Prepare clear,
 
 **Practice Your Pitch**: Refine your delivery by practising with mentors or peers, and be prepared to answer tough questions investors might ask.
 
-**Connect With VCs and Angel Investors**: Use platforms like [AngelList](https://angel.co/) and [Crunchbase](https://www.crunchbase.com/) to find potential investors. Attend pitch events and network with investors to build relationships, particularly in your local area.
+**Connect With VCs and Angel Investors**: Use platforms like [Wellfound](https://wellfound.com) and [Crunchbase](https://crunchbase.com) to find potential investors. Attend pitch events and network with investors to build relationships, particularly in your local area.
 
 **Understand Your Metrics**: Be prepared to discuss key metrics like customer acquisition cost (CAC), lifetime value (LTV), and churn rate. Investors want to see that you understand your business and have a clear path to growth.
 
@@ -85,7 +85,7 @@ Positive app store ratings can significantly influence potential users' percepti
 
 **Address Negative Feedback**: Quickly and professionally respond to negative reviews. This shows potential customers your commitment to customer satisfaction. Try to fix bugs in a timely manner and communicate updates to users.
 
-**Leverage Positive Reviews**: Share positive reviews on your website and social media to build credibility and trust with potential users. Forbes offers an excellent [guide](https://www.forbes.com/councils/forbesagencycouncil/2022/11/23/15-tips-for-leveraging-positive-customer-reviews-as-testimonials/) to help you do this.
+**Leverage Positive Reviews**: Share positive reviews on your website and social media to build credibility and trust with potential users. Share them as testimonials to help you do this.
 
 **Monitor Ratings and Reviews**: Regularly check app store ratings and reviews to identify trends and areas for improvement. Show that you are paying attention by responding to feedback and making necessary changes.
 
@@ -93,7 +93,7 @@ Positive app store ratings can significantly influence potential users' percepti
 
 Engage with your users and solicit feedback through surveys, social media, and direct communications. This demonstrates that you value their input and are committed to evolving your product to meet their needs. Use this feedback to inform product updates and customer service improvements, but remember to quantify data where possible.
 
-Qualitative data like social media posts and complaints can influence the decision-making process, but they are not objective metrics. [Data-Driven Decision Making](https://online.hbs.edu/blog/post/data-driven-decision-making) is about making decisions based on objective, quantifiable data. Try to transition your analytics collection to facilitate this. 
+Qualitative data like social media posts and complaints can influence the decision-making process, but they are not objective metrics. Data-Driven Decision Making is about making decisions based on objective, quantifiable data. Try to transition your analytics collection to facilitate this. 
 
 #### Actionable Advice
 
@@ -115,7 +115,7 @@ Email marketing remains a powerful tool for direct communication. Use it to info
 
 #### Actionable Advice
 
-**Collect Email Addresses**: User registrations are the primary means of collecting email addresses for marketing purposes. Once you have these, use tools like [Mailchimp](https://mailchimp.com/) or [Sendinblue](https://www.sendinblue.com/) to manage your email campaigns.
+**Collect Email Addresses**: User registrations are the primary means of collecting email addresses for marketing purposes. Once you have these, use tools like [Mailchimp](https://mailchimp.com/) or [Brevo](https://brevo.com) to manage your email campaigns.
 
 **Understand Privacy and Ethical Use of Email**: When collecting and using email addresses, ensure you comply with [GDPR](https://gdpr.eu/) and other privacy regulations.
 
@@ -141,11 +141,11 @@ Pay close attention to how influencers go about their business. If they are not 
 
 #### Actionable Advice
 
-**Identify Relevant Influencers**: Use tools like [BuzzSumo](https://buzzsumo.com/) or [Traackr](https://www.traackr.com/) to [find influencers in your industry](https://contentmarketinginstitute.com/articles/identify-influencers-industry/) who are not only prominent but also align with your brand's values and audience.
+**Identify Relevant Influencers**: Use tools like [BuzzSumo](https://buzzsumo.com/) or [Traackr](https://www.traackr.com/) to [find influencers in your industry](https://contentmarketinginstitute.com/social-media-content/3-steps-to-identify-influencers-in-your-industry) who are not only prominent but also align with your brand's values and audience.
 
 **Evaluate Influencer Engagement**: Don't just look at follower counts. Analyze their engagement rates, audience comments, and the quality of interactions influencers have with their followers.
 
-**Establish Clear Collaboration Goals**: Define what you hope to [achieve through the partnership with goals](https://www.forbes.com/councils/forbescommunicationscouncil/2018/11/05/the-art-of-influencer-selection-and-crucial-goal-setting-for-success/), whether it's increasing brand awareness, driving sales, or something else. Make sure these goals are known and agreed upon by both parties.
+**Establish Clear Collaboration Goals**: Define what you hope to [achieve through the partnership](https://www.aspire.io/blog/how-to-set-and-achieve-your-influencer-marketing-goals), whether it's increasing brand awareness, driving sales, or something else. Make sure these goals are known and agreed upon by both parties.
 
 **Clear Messaging**: Ensure that influencers understand your brand's messaging and values. Provide them with guidelines and resources to help them create content and ensure that their values align with the messaging you want to convey.
 
@@ -167,7 +167,7 @@ Excellent customer support can be a game-changer for SaaS products. Ensure that 
 
 **Develop a Comprehensive Knowledge Base**: Use a tool like [Freshdesk](https://support.freshdesk.com/support/solutions/folders/272620) to create detailed FAQs, how-to guides, and troubleshooting articles. This allows customers to find answers quickly on their own and reduces the workload on your support team.
 
-**Leverage AI Tools for Efficiency**: [Implement AI-driven tools](https://www.gartner.com/en/newsroom/press-releases/2023-08-30-gartner-reveals-three-technologies-that-will-transform-customer-service-and-support-by-2028), such as chatbots, to handle initial inquiries and common questions, freeing up human agents for more complex issues.
+**Leverage AI Tools for Efficiency**: [Implement AI-driven tools](https://www.zendesk.com/au/blog/ai-customer-service/), such as chatbots, to handle initial inquiries and common questions, freeing up human agents for more complex issues.
 
 **Regularly Gather Customer Feedback**: [Use surveys and direct feedback tools to learn from customer interactions](https://www.qualtrics.com/experience-management/customer/collecting-customer-feedback/). This can guide improvements in your support services.
 
@@ -183,7 +183,7 @@ Advertising your app effectively on digital stores is critical for driving downl
 
 **Leverage Search Ads**: Utilize search [advertising features](https://developer.apple.com/app-store/promote/) available in app stores like Google Play Store and Apple App Store. These ads can significantly increase your app's visibility when users search for related keywords.
 
-**Implement ASO (App Store Optimization)**: Focus on improving your app's ranking and visibility in the app store through [optimization strategies](https://neilpatel.com/blog/app-store-optimization/) that enhance your app's relevance and appeal to potential users.
+**Implement ASO (App Store Optimization)**: Focus on improving your app's ranking and visibility in the app store through optimization strategies that enhance your app's relevance and appeal to potential users.
 
 **Encourage Reviews and Ratings**: Positive reviews and high ratings can improve your app's credibility and attract more users. Encourage satisfied users to leave feedback.
 
