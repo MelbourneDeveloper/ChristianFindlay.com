@@ -7,3 +7,7 @@ site/assets/js/repos.js.map
 site/assets/js/repos/.dart_tool/
 # Jekyll build
 _site/
+.commandtree/
+.claude
+
+.playwright-mcp/

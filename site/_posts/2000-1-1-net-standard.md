@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Why .NET Standard Is Still Relevant"
+description: "Learn why .NET Standard 2.0 is still relevant for cross-platform .NET libraries, how to use modern C# features, and when to multi-target with .NET 5."
 date: "2020/12/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/netstandard/header.png"

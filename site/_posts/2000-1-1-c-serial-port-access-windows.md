@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# Serial Port Access - Windows"
+description: "Learn how to read and write to serial COM ports in C# on Windows using .NET and the Device.Net framework for connected device communication."
 date: 2019/09/14 00:00:00 +0000
 tags: csharp
 categories: [dotnet]

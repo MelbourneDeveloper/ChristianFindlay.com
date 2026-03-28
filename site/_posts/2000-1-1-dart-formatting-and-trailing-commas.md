@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dart: Formatting and Trailing Commas"
+description: "Learn how trailing commas affect Dart formatting, why deterministic code formatting prevents merge conflicts, and how to enforce it with dart_code_metrics."
 date: "2022-07-30 00:00:00 +0000"
 tags: dart code-quality
 categories: [flutter]

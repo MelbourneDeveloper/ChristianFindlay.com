@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Basic Flutter Animations With Tweens"
+description: "Learn how to create Flutter animations using Tweens and AnimationController. Animate opacity, color, and position with simple Dart code examples."
 date: "2023/03/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/animation/clock.gif"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dart Classes for C# Programmers"
+description: "A practical guide to writing Dart classes for C# developers. Learn key differences in properties, null safety, constructors, and class syntax in Dart."
 date: "2021/09/06 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dartformatting/dartformatting.png"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reactive Programming: Hot Vs. Cold Observables"
+description: "Understand the difference between hot and cold observables in reactive programming with C# examples using System.Reactive and the Observer pattern."
 date: "2020/10/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/reactive/header.jpeg"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "App Store Deployment"
+description: "Navigate app store deployment challenges for Google Play, Apple Store, and Microsoft Store including submission policies, versioning, and multi-tenancy."
 date: "2019/03/23 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/appdev/header.jpg"

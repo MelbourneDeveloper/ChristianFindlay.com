@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cross-Platform Vs. Native Apps"
+description: "Cross-platform vs native app development: trade-offs, maintenance costs, and how to decide between Flutter, React Native, MAUI, and native."
 date: "2022/07/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/crossplatform/header.jpg"

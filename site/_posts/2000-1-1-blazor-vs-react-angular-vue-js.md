@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Blazor vs. React / Angular / Vue.js"
+description: "Compare Blazor with React, Angular, and Vue.js for building SPAs. Learn how Blazor uses C# and WebAssembly as an alternative to JavaScript frameworks."
 date: "2020/06/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/blazorjscsharp.png"

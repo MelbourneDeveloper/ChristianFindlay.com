@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Use and Unit Test ILogger"
+description: "Guide to using ASP.NET Core ILogger correctly: dependency injection, extension methods, BeginScope, and unit testing with Moq mocking framework."
 date: "2020/07/03 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ilogger/header.jpg"

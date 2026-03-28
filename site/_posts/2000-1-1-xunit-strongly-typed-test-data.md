@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "xUnit - Strongly Typed Test Data"
+description: "Learn how to use xUnit MemberData and Theory attributes for strongly typed test data in C#. Clean, type-safe unit testing with IEnumerable."
 date:   2019/06/30 00:00:00 +0000
 categories: [dotnet]
 tags: testing

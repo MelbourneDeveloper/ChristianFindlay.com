@@ -1,6 +1,7 @@
 ---
 layout: post
 title: System.Text.Json Rest Client
+description: "Use System.Text.Json with RestClient.Net for high-performance JSON serialization in .NET Core. Compare performance with Newtonsoft.Json."
 date: "2020/01/21 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/json/header.svg"

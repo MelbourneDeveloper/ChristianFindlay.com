@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Build a Flutter Navigation Drawer"
+description: "Build an adaptive Flutter navigation drawer that responds to screen size with a hamburger menu, icon-only, and full menu modes using Material Design."
 date: "2021/10/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/navigationdrawer/header.png"

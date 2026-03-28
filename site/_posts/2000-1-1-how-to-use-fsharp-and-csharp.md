@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Use F# from C#"
+description: "Learn how to reference F# assemblies in C# projects, convert IL to C#, and leverage functional programming features like immutability and expressions."
 date: "2020/10/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/fsharp/logo.svg"

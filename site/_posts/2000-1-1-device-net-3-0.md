@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Device.Net 3.0"
+description: "Device.Net 3.0 release: cross-platform USB and HID communication framework for C# on Android, UWP, Windows, Linux, and macOS with new fixes."
 date: "2019/08/26 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/devicenet/logo.png"

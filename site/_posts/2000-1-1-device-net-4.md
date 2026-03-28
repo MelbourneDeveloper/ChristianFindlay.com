@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Device.Net (Usb.Net, Hid.Net) 4.0"
+description: "Device.Net 4.0 brings USB control transfers, improved logging, cancellation tokens, and a simpler API for cross-platform device communication in .NET."
 date: "2021/01/31 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/devicenet/logo.png"

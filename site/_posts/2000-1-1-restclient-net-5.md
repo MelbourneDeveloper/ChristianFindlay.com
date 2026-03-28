@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "RestClient.Net 5"
+description: "RestClient.Net 5: immutable types, fluent API, and strongly typed HTTP calls in C# and F#. Easy dependency injection, Polly integration, and mocking."
 date: "2021/05/27 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"

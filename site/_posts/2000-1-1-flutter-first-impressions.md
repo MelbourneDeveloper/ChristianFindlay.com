@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Flutter: First Impressions"
+description: "A .NET developer's first impressions of Flutter and Dart. Compare Flutter with Xamarin and Uno Platform for cross-platform app development on all devices."
 date: "2021/09/04 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutter/header.svg"

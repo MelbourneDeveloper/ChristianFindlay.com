@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How To Buy a Computer for Cross-Platform Development"
+description: "A guide to choosing a Mac, PC, or both for cross-platform mobile development. Compare CPU benchmarks, prices, and setups for Xamarin and Flutter devs."
 date: "2020/08/28 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/computer/header.jpg"

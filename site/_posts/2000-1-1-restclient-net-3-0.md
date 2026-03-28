@@ -1,6 +1,7 @@
 ---
 layout: post
 title: RestClient.Net 3.0
+description: "RestClient.Net 3.0: a strongly typed, async REST client for all .NET platforms with dependency injection, Polly integration, and serialization."
 date: "2020/01/03 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"

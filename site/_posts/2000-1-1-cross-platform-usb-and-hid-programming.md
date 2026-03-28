@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cross Platform USB and Hid Programming"
+description: "Cross-platform USB and HID programming in C# with Device.Net. Communicate with connected devices on Android, Windows, and UWP from one codebase."
 date: 2018-12-30 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplatusb/usbcable.jpg"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Performance Vs. Scalability"
+description: "Understand the difference between performance and scalability in software systems. Learn about vertical and horizontal scaling strategies."
 date: "2022/02/13 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/performance/header.jpg"

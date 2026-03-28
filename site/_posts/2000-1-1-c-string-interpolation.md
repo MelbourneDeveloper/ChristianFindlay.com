@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# String Interpolation"
+description: "Master C# string interpolation with examples of formatting expressions, alignment, and when to use it over string.Format or concatenation."
 date: Oct 5, 2019
 tags: csharp
 categories: [dotnet]

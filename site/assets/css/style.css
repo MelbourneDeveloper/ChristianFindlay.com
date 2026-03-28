@@ -1254,8 +1254,6 @@ section:not(#home) {
   height: 100%;
   top: 0;
   left: 0;
-  background: url('/assets/images/patterns/dot-pattern.png');
-  background-size: 100px;
   opacity: 0.05;
   z-index: -1;
 }

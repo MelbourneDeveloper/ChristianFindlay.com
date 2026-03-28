@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# and gRPC Part One"
+description: "Introduction to gRPC with C# and .NET Core. Learn how gRPC compares to WCF, build RPC services with Protocol Buffers, and migrate from WCF."
 date: 2019-05-26 00:00:00 +0000
 tags: grpc csharp
 categories: [dotnet]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Separate Business Logic and Presentation"
+description: "How to separate business logic and presentation in Flutter using BLoC and state management. Improve testability and code readability in Dart."
 date: 2022-10-09 20:37:13 +0600
 tags: state-management bloc
 categories: [flutter]

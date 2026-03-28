@@ -26,13 +26,19 @@
   {% if page.date %}
     <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />
   {% endif %}
+  {% if page.last_modified_at %}
+    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}" />
+  {% endif %}
+  {% if page.author %}
+    <meta property="article:author" content="{{ page.author }}" />
+  {% endif %}
   {% else %}
   <meta property="og:type" content="website" />
   {% endif %}
 
-  {% assign seo_description = "Christian Findlay, Melbourne's expert in Flutter and .NET development, offers tailored solutions for building high-performance apps. Book a session today to turn your ideas into reality with expert guidance on mobile, web, and scalable backend development." %}
+  {% assign seo_description = "Christian Findlay — Flutter and .NET developer in Melbourne with 20+ years experience. Mobile apps, cloud backends, AI integration, and Flutter testing training." %}
 
-  {% assign seo_blog_description = "Discover the latest insights and trends in the world of app development with Christian Findlay's Flutter and dotnet blog. This blog is a treasure trove of information for both beginners and seasoned developers, featuring in-depth articles, tutorials, and tips on Flutter and .NET technologies. Whether you're looking to enhance your coding skills, stay updated with the latest developments, or find practical solutions to complex programming challenges, our blog is your ultimate resource. Join the community of passionate developers and start elevating your Flutter and .NET expertise today!" %}
+  {% assign seo_blog_description = "Technical blog on Flutter testing, Dart 3, .NET development, and AI coding tools by Christian Findlay. Tutorials, architecture guides, and best practices." %}
 
   {% if page.description %}
   <meta name="description" content="{{ page.description }}" />
@@ -76,6 +82,9 @@
   {% if page.post_image %}
   <meta property="og:image" content="{{ site.url }}{{ page.post_image }}" />
   <meta property="twitter:image" content="{{ site.url }}{{ page.post_image }}" />
+  {% else %}
+  <meta property="og:image" content="{{ site.url }}/assets/images/art/ChristianFindlay.webp" />
+  <meta property="twitter:image" content="{{ site.url }}/assets/images/art/ChristianFindlay.webp" />
   {% endif %}
 
   <link rel="shortcut icon" href="{{relative_url}}/assets/images/favicon.ico"/>
@@ -105,7 +114,7 @@
   <!--page wise css-->
   {% if page.custom_css -%}
     {%- for stylesheet in page.custom_css -%}
-    <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/color/{{ stylesheet }}.css">
+    <link rel="stylesheet" type="text/css" href="{{relative_url}}/assets/css/{{ stylesheet }}">
     {% endfor %}
   {%- endif -%}
   {%- if page.custom_font -%}
@@ -122,6 +131,17 @@
 
   <!-- Structured Data -->
   {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "{{ page.title | escape }}"}
+    ]
+  }
+  </script>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
