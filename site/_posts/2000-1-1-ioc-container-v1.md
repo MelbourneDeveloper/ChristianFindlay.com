@@ -26,7 +26,7 @@ Dependency Injection
 
 Dependency Injection is an established approach, and you can bring your knowledge of DI from other platforms to Flutter. The library takes inspiration from [DI in .NET](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection) and other technologies like Java.
 
-Saying all that, you can also use ioc_container as a [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern). Just declare the container in a global location, and you can access it anywhere. That means you can create scoped dependencies for a widget and dispose of them when you dispose of the widget.
+Saying all that, you can also use ioc_container as a [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern). If you're interested in the service locator approach, see this article on [how to use service locators with Flutter](https://blog.burkharts.net/one-to-find-them-all-how-to-use-service-locators-with-flutter). Just declare the container in a global location, and you can access it anywhere. That means you can create scoped dependencies for a widget and dispose of them when you dispose of the widget.
 
 It's Fast
 ---------

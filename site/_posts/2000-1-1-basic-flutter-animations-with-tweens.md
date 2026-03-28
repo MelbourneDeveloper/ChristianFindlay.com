@@ -8,9 +8,10 @@ post_image: "/assets/images/blog/animation/clock.gif"
 tags: dart
 categories: flutter
 permalink: /blog/:title
+keywords: [Flutter animation controller tween, flutter implicit animations tutorial, flutter animation performance Impeller, flutter micro-animations UX, flutter Lottie animation, AnimationController Flutter, TweenSequence Flutter, Flutter animation examples]
 ---
 
-In Flutter we create animations with the [`Animation`](https://api.flutter.dev/flutter/animation/Animation-class.html) class, which is part of the Flutter animation framework. We can use animations to change the size, position, color, opacity, and other properties of widgets in response to user input or other events. Flutter provides a variety of animation classes and widgets that make it easy to create complex animations with relatively little code.
+In Flutter we create animations with the [`Animation`](https://api.flutter.dev/flutter/animation/Animation-class.html) class, which is part of the Flutter animation framework. Whether you need flutter implicit animations for simple transitions or a full animation controller with tweens for fine-grained control, Flutter provides a variety of animation classes and widgets that make it easy to create complex animations with relatively little code.
 
 ## Tweens
 
@@ -18,7 +19,7 @@ A [Tween](https://api.flutter.dev/flutter/animation/Tween-class.html) is an inte
 
 ## Basic Animation Example
 
-This Flutter animation uses a Tween to interpolate between the beginning and ending values of a `double`. The animation is controlled by an [`AnimationController`](https://api.flutter.dev/flutter/animation/AnimationController-class.html) and changes the opacity of a FlutterLogo widget over a duration of two seconds. We use the `addListener` method to rebuild the widget tree with the new opacity value for each frame of the animation. It calls the `repeat` method on the `AnimationController` to make the animation repeat indefinitely in the reverse direction.
+This flutter animation controller tween example interpolates between the beginning and ending values of a `double`. The animation is controlled by an [`AnimationController`](https://api.flutter.dev/flutter/animation/AnimationController-class.html) and changes the opacity of a FlutterLogo widget over a duration of two seconds. We use the `addListener` method to rebuild the widget tree with the new opacity value for each frame of the animation. It calls the `repeat` method on the `AnimationController` to make the animation repeat indefinitely in the reverse direction.
 
 See the live sample [here](https://dartpad.dev/?id=ecc8abe84411f369b035c77c0e2d81cc).
 

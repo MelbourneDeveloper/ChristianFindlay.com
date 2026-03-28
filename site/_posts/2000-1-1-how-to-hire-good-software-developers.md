@@ -9,8 +9,8 @@ tags: software-quality
 categories: [software development]
 permalink: /blog/:title
 canonical_url: https://www.nimblesite.co/blog/how-to-hire-good-software-developers
-description: "Practical advice for hiring software developers from a 20+ year veteran. Covers interview techniques that actually work, red flags to watch for, evaluating technical skills, and what experience from a senior developer has shown works and doesn't work."
-keywords: [hiring developers, software developer interview, technical hiring, developer recruitment, engineering hiring, software team building]
+description: "Practical advice for hiring software developers from a 20+ year veteran. Interview techniques that work, red flags to watch for, and skills evaluation."
+keywords: [hiring developers, software developer interview, technical hiring, developer recruitment, engineering hiring, software team building, how to hire software engineers, developer interview best practices, technical assessment tips]
 ---
 
 If you're reading this, you're probably a development lead or someone else in charge of interviewing or hiring development staff. This article is based on my experience, what has worked for me, and what I've noticed other people doing that doesn't seem to work. I'm not going to pretend that I'm an expert on this topic, but I feel as though I've got some thinking to add to this topic, and hopefully, this will strike a chord with people who are trying to find talented developers. 
@@ -45,7 +45,7 @@ A resume should not be given too much weight. It should be clear, concise, and s
 Look At Their Work
 ------------------
 
-I'm convinced that this is the single most overlooked part of the hiring process. I cannot believe how many hirers ignore Github pages. A developer's Github page can give you a wealth of information about the developer. What work do they choose to do? How do they decide to go about it? How much care and attention do they pay to their work? How do they present it and respond to feedback?  _Look for_ developers who pour passion into their work, pay attention to feedback, and spend time improving their code. These are the people you want on your team.
+I'm convinced that this is the single most overlooked part of the hiring process, especially when learning how to hire software engineers effectively. I cannot believe how many hirers ignore Github pages. A developer's Github page can give you a wealth of information about the developer. What work do they choose to do? How do they decide to go about it? How much care and attention do they pay to their work? How do they present it and respond to feedback?  _Look for_ developers who pour passion into their work, pay attention to feedback, and spend time improving their code. These are the people you want on your team.
 
 Informal Chat
 -------------

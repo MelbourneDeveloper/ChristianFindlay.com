@@ -6,16 +6,16 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/reactive/flutterrx.png"
 post_image_width: 400
 image: "/assets/images/blog/reactive/flutterrx.png"
-description: "Explore the dynamic world of Reactive Programming in Flutter with this comprehensive blog post. Delve into the intricacies of Observables and Computed Values, and discover how libraries like Signals, Riverpod, and RxDart simplify state management in Flutter. The expert analysis navigates through the frameworks, emphasizing the unique approaches to reactive computations, dependency tracking, and minimizing unnecessary recomputes. Ideal for both beginners and seasoned Flutter developers, this post illuminates the advantages of integrating reactive patterns in your Flutter applications, ensuring your UI and data stay perfectly in sync. Master the art of reactive Flutter development!"
+description: "Compare Flutter signals, Riverpod, and RxDart for reactive state management. Learn how observables and computed values work in Flutter."
 tags: reactive dart
 categories: flutter
 permalink: /blog/:title
-keywords: [Reactive Programming, Flutter, Observables, Computed Values, Signals, Riverpod, RxDart, ValueNotifier, ChangeNotifier, State Management, Reactive Computation, Dependency Tracking, Memoization, Flutter Development, Dart Programming, UI Synchronization, Reactive Patterns, Flutter Widgets, Stream, BehaviorSubject, Preact.js, Flutter State, Reactive Caching, ReactiveX, Flutter Performance Optimization]
+keywords: [flutter signals state management, Riverpod, RxDart, flutter BLoC vs Riverpod comparison, flutter Riverpod 3.0, ValueNotifier vs Signals, reactive programming Flutter, computed values Flutter, BehaviorSubject Flutter, memoization Flutter]
 ---
 
 > **Key Takeaways**: You don't always need Rx libraries - basic Flutter widgets often suffice. Signals automatically tracks dependencies and minimizes recomputes. Riverpod requires manual `watch` calls. RxDart extends Dart streams with ReactiveX operators. Choose the simplest solution for each use case.
 
-This article introduces you to the concept of [Reactive programming](https://en.wikipedia.org/wiki/Reactive_programming) (Rx) in Flutter and talks about how a few popular libraries implement it. It talks about the role of "caching" or storing computed values and introduces a new library called [Signals](https://pub.dev/packages/signals) that deals with a fundamental Rx problem that other libraries don't fully cover. This library is a port from the [Preact.js](https://preactjs.com/) framework.
+This article introduces you to reactive programming and flutter signals state management, and talks about how a few popular libraries implement it. It talks about the role of "caching" or storing computed values and introduces a new library called [Signals](https://pub.dev/packages/signals) that deals with a fundamental Rx problem that other libraries don't fully cover. This library is a port from the [Preact.js](https://preactjs.com/) framework.
 
 ## Reactive Programming
 Reactive programming is a paradigm centered around reacting to changes in data over time. It facilitates propagating updates automatically. This ensures UI and data remain in sync. In Flutter terms, this means triggering rebuilds automatically whenever the state changes.
@@ -32,7 +32,7 @@ However, storing computed values is important because you don't want to recalcul
 
 ## The Core Problem
 
-The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and you need to combine them into a computation, the Rx library should do this for us automatically. Also, the library should minimize recomputes automatically to enhance performance.
+The core problem that Reactive Programming attempts to deal with is automating the triggering of computations when any value (dependency) in the dependency graph changes. If there are multiple observable values, and you need to combine them into a computation, the Rx library should do this for us automatically. Also, the library should minimize recomputes automatically to enhance performance. This is closely related to the challenge of [keeping widgets in sync with your data](https://blog.burkharts.net/keeping-widgets-in-sync-with-your-data).
 
 The `ValueNotifier` class in Flutter is reactive in a sense because it notifies observers when there is a value change, but you need to manually listen to changes on all values to compute the full value. Look at this example and note how it requires the `_updateFullName` method to work.
 

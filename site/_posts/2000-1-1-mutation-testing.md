@@ -8,8 +8,8 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/testing/mutant.jpg"
 image: "/assets/images/blog/testing/mutant.jpg"
 permalink: /blog/:title
-description: "Learn mutation testing for Dart and Flutter - a technique to measure test quality by introducing bugs (mutants) and checking if tests catch them. Includes manual mutation testing examples since Dart lacks automated tools."
-keywords: [mutation testing, Dart testing, Flutter testing, test quality, mutant testing, code coverage, test effectiveness]
+description: "Learn mutation testing for Dart and Flutter. Measure test quality by introducing bugs and checking if tests catch them. Manual examples included."
+keywords: [mutation testing, Dart testing, Flutter testing, test quality, mutant testing, code coverage, test effectiveness, mutation testing vs code coverage, mutation testing Stryker .NET, mutation testing CI CD pipeline, AI mutation testing]
 ---
 
 Mutation testing is a technique for measuring the quality of your tests.
@@ -30,7 +30,7 @@ The idea is much simpler than it sounds. A tool like Stryker Mutator will change
 
 ### Why?
 
-We do mutation testing to check the quality of our tests. When we fix a bug, we stop it once. However, bugs often come back, and someone who doesn't know the codebase may come along and put the bug back. Good quality tests ensure that the bug cannot come back. Mutation testing helps to ensure this.
+When comparing mutation testing vs code coverage, mutation testing goes further by verifying that your tests actually catch real bugs. We do mutation testing to check the quality of our tests. When we fix a bug, we stop it once. However, bugs often come back, and someone who doesn't know the codebase may come along and put the bug back. Good quality tests ensure that the bug cannot come back. Mutation testing helps to ensure this.
 
 ### Manual Mutation Testing
 

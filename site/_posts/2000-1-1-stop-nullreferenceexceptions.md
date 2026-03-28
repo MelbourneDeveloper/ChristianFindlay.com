@@ -9,8 +9,8 @@ tags: csharp
 categories: dotnet
 permalink: /blog/:title
 redirect_from: /2021/03/18/stop-nullreferenceexceptions/
-description: "Complete guide to eliminating NullReferenceExceptions in C# using Nullable Reference Types (NRT), null object pattern, treating warnings as errors, and defensive coding. Includes code examples for .NET 5+ projects."
-keywords: [NullReferenceException, C# null safety, Nullable Reference Types, NRT C#, null object pattern, C# best practices, .NET null handling]
+description: "Stop C# null reference exceptions with NRT, null object pattern, and defensive coding. Practical guide with code examples for .NET projects."
+keywords: [NullReferenceException, C# null safety, Nullable Reference Types, NRT C#, null object pattern, C# best practices, .NET null handling, C# null reference exceptions NRT, ASP.NET Core minimal API, mutation testing Stryker .NET]
 ---
 
 This article gives you a toolset for stopping NullReferenceExceptions in .NET code. The article centers around [Nullable Reference Types](https://docs.microsoft.com/en-us/dotnet/csharp/nullable-references) (NRT), a feature that Microsoft added in C# 8. This article mentions five additional tools to ensure that users will never encounter the exception and explains how to implement them in your code.
@@ -22,7 +22,7 @@ The Toolset
 *   [Treat NRT warnings as errors](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/compiler-options/errors-warnings): enforce the NRT rules to ensure that variables cannot enter a null/not-null state at the wrong time. Treat NRT warnings as errors so code will not compile if it breaks the NRT rules.
 *   [Immutability](https:/.ndepend.com/c-sharp-immutable-types-understanding-attraction/): reduce the risk of NullReferenceException by only setting the reference once
 *   [ArgumentNullException](https://docs.microsoft.com/en-us/dotnet/api/system.argumentnullexception?view=net-5.0): An oldy but a goody. Stop code execution early in cases where the consuming code does not treat NRT warnings as errors.
-*   [Unit testing](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2019): pass nulls into your code to make sure the appropriate result occurs. [Mutation testing](https://stryker-mutator.io/docs/stryker-net/technical-reference/introduction/) can help you achieve a higher level of certainty in your tests.
+*   [Unit testing](https://docs.microsoft.com/en-us/visualstudio/test/unit-test-basics?view=vs-2019): pass nulls into your code to make sure the appropriate result occurs. [Mutation testing with Stryker .NET](https://stryker-mutator.io/docs/stryker-net/technical-reference/introduction/) can help you achieve a higher level of certainty in your tests.
 
 **Note**: This article talks about libraries and consumers of those libraries. This might sound like it’s about open-source libraries, and it is, but it’s also about maintaining libraries in your team. If you publish libraries, someone will be consuming them, and that might even be you.
 

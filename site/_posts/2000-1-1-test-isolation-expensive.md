@@ -10,7 +10,7 @@ categories: [software development]
 permalink: /blog/:title
 slider_post: true
 description: "Why isolating tests too much increases maintenance cost and reduces actual coverage. Learn the hidden costs of over-mocking and excessive test isolation, and how to find the right balance between unit and integration tests."
-keywords: [test isolation, unit testing, integration testing, mocking, test maintenance, software testing costs, test strategy]
+keywords: [test isolation, unit testing, integration testing, mocking, test maintenance, software testing costs, test strategy, flutter testing best practices 2026, flutter mockito mocktail testing]
 ---
 
 This article is part of a series on testing that I am writing, and this series is part of an e-book on testing that I am compiling. This article doesn't dwell on the value of different testing approaches or try to weigh the pros and cons of different approaches. Let's say it is a given that any system will require a mixture of fine-grained tests, such as unit tests, and coarser tests, like integration tests. The ratio is a question for the broader topic. Read more on [Test Coverage](/blog/test-coverage).
@@ -40,7 +40,7 @@ We can take two approaches to testing here. We could test all the moving parts t
 
 On the other hand, integrating the functions together makes the test far less verbose. That's easy to see when you look at the first test. The difference is massive, and this is only a simple example. We are looking at about three-four times more test code. Also, notice how much more straightforward the first example is. You can understand it without context. The test doubles, in particular, make the last test difficult to understand without context.   
 
-What about more complex examples? The problem only multiplies as the system becomes more complex. Try adding more functions or turning the functions and interface dependencies. You can see how quickly the isolated tests balloon in test code size - particularly with the need for test doubles. Each dependency requires a test double to achieve test isolation. All this leads to less maintainable tests because there is more to change if you need to refactor.  
+What about more complex examples? The problem only multiplies as the system becomes more complex. Try adding more functions or turning the functions and interface dependencies. You can see how quickly the isolated tests balloon in test code size - particularly with the need for test doubles. Each dependency requires a test double (often created with tools like mockito or mocktail) to achieve test isolation. All this leads to less maintainable tests because there is more to change if you need to refactor.  
 
 ASP.NET Core API Endpoint Example
 ---------------------------------

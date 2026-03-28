@@ -8,8 +8,8 @@ image: "/assets/images/blog/gcp/header.png"
 tags: app-development serverless
 categories: [software development]
 permalink: /blog/:title
-description: "Deploy containerized apps to Google Cloud Run with automatic horizontal scaling and pay-per-use pricing. Covers why containers, comparison to Kubernetes, and practical deployment guidance for serverless container apps."
-keywords: [Google Cloud Run, serverless containers, GCP deployment, container orchestration, Kubernetes alternative, serverless apps, cloud deployment]
+description: "Deploy containerized apps to Google Cloud Run with autoscaling and pay-per-use pricing. Covers containers, Kubernetes comparison, and deployment."
+keywords: [Google Cloud Run, serverless containers, GCP deployment, container orchestration, Kubernetes alternative, serverless apps, cloud deployment, Docker container deployment, Google Cloud Build CI CD, serverless vs Kubernetes, Azure Container Apps alternative, AWS App Runner alternative]
 ---
 
 [Google Cloud Run](https://cloud.google.com/run) is a serverless container app service. You can deploy containerised apps to the cloud, which will autoscale horizontally with minimal configuration. It is an alternative to [Kubernetes](https://kubernetes.io/), but you only pay for usage. You do not pay for server uptime when there is no server usage.   
@@ -17,7 +17,7 @@ keywords: [Google Cloud Run, serverless containers, GCP deployment, container or
 Why Containers?
 ---------------
 
-Containers give your app portability. If your app runs on a Linux [Docker](https://www.docker.com/) container, your app will run just about anywhere in the cloud, on-prem or on a well-speced computer. Containers decouple your app from the Cloud Host.   
+Containers give your app portability. Docker container deployment means that if your app runs on a Linux [Docker](https://www.docker.com/) container, your app will run just about anywhere in the cloud, on-prem or on a well-speced computer. Containers decouple your app from the Cloud Host.   
 
 _A container is a runtime instance of a_ [_docker image_](https://docs.docker.com/glossary/#image)_._
 
@@ -79,7 +79,7 @@ Moreover, you can also split traffic between Kubernetes and Cloud Run. Nothing i
 How Does Deployment Work?
 -------------------------
 
-You create a Docker image by defining a [Docker File](https://docs.docker.com/engine/reference/builder/). Generally, you put this in the same folder as your app in a git repo. The file is a set of instructions to set up the app on the container. Google Cloud has a service called [Cloud Build](https://cloud.google.com/build), a CI/CD platform that builds your app in the cloud. You version your code in a git repo such as GitHub or Bitbucket and cloud build will run your docker file to create the docker image. You can trigger a build whenever you push to a branch of your repo, and you can have a new version of your app running in minutes.  
+You create a Docker image by defining a [Docker File](https://docs.docker.com/engine/reference/builder/). Generally, you put this in the same folder as your app in a git repo. The file is a set of instructions to set up the app on the container. Google Cloud has a service called [Cloud Build](https://cloud.google.com/build), a CI/CD platform that builds your app in the cloud as part of your deployment pipeline. You version your code in a git repo such as GitHub or Bitbucket and cloud build will run your docker file to create the docker image. You can trigger a build whenever you push to a branch of your repo, and you can have a new version of your app running in minutes.  
 
 Stateless Testing
 -----------------

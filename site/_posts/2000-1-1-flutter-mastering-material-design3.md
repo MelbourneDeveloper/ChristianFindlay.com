@@ -7,7 +7,7 @@ post_image: "/assets/images/blog/materialdesign/logo.webp"
 post_image_height: 300
 post_image_width: 300
 image: "/assets/images/blog/materialdesign/logo.webp"
-description: Master Material Design 3 Theming in Flutter with this comprehensive guide. Explore custom themes with ThemeData, define color palettes with ColorScheme, and learn how to adhere to Material Design guidelines. This is a guide for Flutter developers looking to enhance their UI design skills and create visually stunning, user-friendly applications.
+description: "Master Flutter Material 3 ColorScheme and dynamic theming. A complete guide to ThemeData, color palettes, and Material 2 to Material 3 migration."
 categories: flutter
 tags: material-design
 permalink: /blog/:title
@@ -31,7 +31,11 @@ keywords: [
   "Flutter theme debugging",
   "Material 3 implementation",
   "Flutter theme customization",
-  "Material Design typography"
+  "Material Design typography",
+  "flutter Material 3 ColorScheme",
+  "flutter useMaterial3 migration",
+  "flutter dynamic theming Material 3",
+  "flutter Material 2 to Material 3 migration"
 ]
 ---
 
@@ -47,7 +51,7 @@ The `ThemeData` class encapsulates a Material Design theme's colors, typography,
 
 #### Creating a Custom Theme
 
-Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. M3 is now the default design system in Flutter so you don't need to configure anything, but you can still explicitly set `useMaterial3` to true if you want to make your intentions clear.
+Create a `ThemeData` instance and assign values to the properties you wish to customize. Let's create a custom theme and apply it to our Flutter app. You can try this out in [Dartpad](https://dartpad.dev/). Just modify the existing default app there. M3 is now the default design system in Flutter so you don't need to configure anything. If you are completing a flutter Material 2 to Material 3 migration, you can still explicitly set `useMaterial3` to true if you want to make your intentions clear.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -65,7 +69,7 @@ ThemeData lightTheme = ThemeData(
 );
 ```
 
-The most important part of M3 theming is the `ColorScheme`. Instead of setting individual colors, you can use `ColorScheme.fromSeed()` to generate a complete, harmonious color scheme from a single seed color. This ensures your app follows M3 color guidelines and has good contrast ratios. It's also the easiest way to get up and running without needing to harmonize the colors yourself.
+The most important part of M3 theming is the flutter Material 3 ColorScheme. Instead of setting individual colors, you can use `ColorScheme.fromSeed()` to generate a complete, harmonious color scheme from a single seed color, enabling flutter dynamic theming with minimal effort. This ensures your app follows M3 color guidelines and has good contrast ratios. It's also the easiest way to get up and running without needing to harmonize the colors yourself.
 
 #### Applying the ThemeData Instance
 

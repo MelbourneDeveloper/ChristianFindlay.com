@@ -11,12 +11,12 @@ image: "/assets/images/art/rubiks.jpg"
 trending: true
 permalink: /blog/:title
 description: "When and why to break conventional BLoC pattern rules in Flutter. Examines the evolution of BLoC from Google's original talk to flutter_bloc library, and questions common assumptions about state management architecture."
-keywords: [Flutter BLoC, BLoC pattern, Flutter state management, flutter_bloc, state management architecture, BLoC rules]
+keywords: [Flutter BLoC, BLoC pattern, Flutter state management, flutter_bloc, state management architecture, BLoC rules, flutter BLoC vs Riverpod comparison, flutter Provider vs Riverpod migration, flutter signals state management]
 ---
 
 BloC is a common UI pattern in the Flutter world. Google originally created the idea early on in Flutter's life. Since its inception, the pattern has taken several forms, and now the most popular approach is to use the [library](https://pub.dev/packages/flutter_bloc) named after the pattern. There is no real official BloC pattern other than what Google articulated in the [original talk](https://www.youtube.com/watch?v=RS36gBEp8OI). The closest documentation may be [this article](https://medium.com/codechai/architecting-your-flutter-project-bd04e144a8f1) that the Flutter documentation links to. However, the pattern has evolved over time and picked up several characteristics, core concepts, and unofficial rules. 
 
-This article discusses BloC rules and when it may be appropriate to bend or break them. The purpose is to show you that following BloC conventions only sometimes results in the best possible code and that the strict rules may not apply to your situation.
+In the ongoing flutter BLoC vs Riverpod comparison, this article discusses BloC rules and when it may be appropriate to bend or break them. The purpose is to show you that following BloC conventions only sometimes results in the best possible code and that the strict rules may not apply to your situation.
 
 ### Overview
 
@@ -42,7 +42,7 @@ I don't recommend that you blindly follow my examples. I recommend you weigh up 
 
 ### Rules Don't Replace Thinking
 
-Software development is hard, and you cannot escape thinking about the structure of your app. There is no silver bullet you can use to force people in your team to do the right thing. Even with the wealth of documentation on the existing patterns, we regularly see glaring mistakes. Some of those mistakes are due to misunderstanding the pattern, but most of the time, it's plain old human fallibility. 
+Software development is hard, and you cannot escape thinking about the structure of your app. There is no silver bullet you can use to force people in your team to do the right thing. Even with the wealth of documentation on the existing patterns, we regularly see glaring mistakes. Some of those mistakes are due to misunderstanding the pattern, but most of the time, it's plain old human fallibility. Thomas Burkhart has a great piece on [the problems with dogmatic programming advice](https://blog.burkharts.net/understanding-the-problems-with-dogmatic-programming-advice) that reinforces this point. 
 
 The only way to deal with this is through communication, mentoring, review, and training. If you throw junior devs into the deep end and say, "Just follow the BloC documentation", you may get code that follows the rules, but you still won't get code that the team is happy with. Work with other programmers, discuss the tradeoffs, and gain consensus. A set of rules is no replacement for this.
 

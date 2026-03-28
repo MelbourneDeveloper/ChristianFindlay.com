@@ -9,7 +9,8 @@ image: "/assets/images/blog/dart/dart.png"
 tags: dart
 categories: flutter
 permalink: /blog/:title
-description: Explore the power of Dart 3 with this comprehensive guide on Records and Futures. Understand how these features enhance the robustness of Dart applications and provide a more efficient way to manage asynchronous programming. Ideal for developers looking to leverage Dart 3 in their applications.
+description: "Master Dart records and pattern matching with Futures in this comprehensive Dart 3 guide. See how records enhance async programming in Flutter apps."
+keywords: [Dart records and pattern matching, Dart 3 features, Dart records, Dart Futures, Dart async programming, Dart 3 exhaustive switch expression, Dart if-case pattern matching, Flutter development]
 ---
 
 <h1>
@@ -17,7 +18,7 @@ description: Explore the power of Dart 3 with this comprehensive guide on Record
 35 Best Flutter Blogs - Check out the top Flutter blogs
 </a></h1>
 
-Dart 3 adds [Records](https://dart.dev/language/records). Records are an anonymous, immutable, aggregate type that allows bundling multiple objects into one object. They are fixed-sized, heterogeneous, and typed. Records can be stored in variables, passed to and from functions, and stored in lists. We can also use them with [`Future`](https://dart.dev/codelabs/async-await)s, the Dart language's asynchronous programming model. This post explains how to use records with futures.
+Dart 3 adds [Records](https://dart.dev/language/records), one of the most useful new features for Dart records and pattern matching. Records are an anonymous, immutable, aggregate type that allows bundling multiple objects into one object. They are fixed-sized, heterogeneous, and typed. Records can be stored in variables, passed to and from functions, and stored in lists. We can also use them with [`Future`](https://dart.dev/codelabs/async-await)s, the Dart language's asynchronous programming model. This post explains how to use records with futures.
 
 ## Records
 The syntax for normal records involves comma-delimited lists of named or positional fields enclosed in parentheses. Records are structurally typed based on the types of their fields. Two records are equal if they have the same shape (set of fields), and their corresponding fields have the same values. Records also allow functions to return multiple values bundled together.
@@ -72,7 +73,7 @@ Future<(Todo?, String)> getTodoAsFuture(
 
 Records solve a common problem when fetching data from APIs. Any time we call an API, the API could return an error message, which differs from the JSON we expect. Also, our code could fail because of an internet connectivity issue. Records as futures allow us to do this elegantly. 
 
-Here is an example function that fetches a `Todo` from an API and returns a `Future` with a `Todo` and a message. The message is either an error message or a success message. The function randomly decides whether to return an error or an actual Todo. This example uses the new Dart [switch expression](/blog/dart-switch-expressions).
+Here is an example function that fetches a `Todo` from an API and returns a `Future` with a `Todo` and a message. The message is either an error message or a success message. The function randomly decides whether to return an error or an actual Todo. This example uses the new Dart 3 exhaustive switch expression via the [switch expression](/blog/dart-switch-expressions) feature.
 
 This approach introduces a more functional-style approach to making API calls in Dart. We don't throw exceptions, so the control flow is not interrupted whenever something goes wrong. 
 

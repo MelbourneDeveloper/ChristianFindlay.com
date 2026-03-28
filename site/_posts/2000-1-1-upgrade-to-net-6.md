@@ -8,11 +8,11 @@ image: "/assets/images/blog/upgradedotnet/header.jpg"
 tags: visual-studio dotnet-standard
 categories: [dotnet]
 permalink: /blog/:title
-description: "Learn how to upgrade your legacy .NET Framework codebase to .NET 6 with this comprehensive guide. Discover strategies for refactoring, multi-targeting, and handling dependencies to modernize your ASP.NET applications efficiently."
-keywords: [.NET Framework upgrade, .NET 6 migration, ASP.NET Core migration, legacy code modernization, multi-targeting .NET, csproj upgrade, SDK-style projects, .NET dependency management, ASP.NET to ASP.NET Core, Entity Framework migration, .NET code refactoring, Visual Studio upgrade assistant, .NET Standard compatibility, cross-platform .NET development, .NET performance optimization, WebAPI upgrade, .NET testing strategies, database code migration, .NET project structure, continuous integration for .NET]
+description: "Step-by-step guide to upgrade from .NET Framework to .NET 6. Covers multi-targeting, refactoring, dependencies, and ASP.NET Core migration."
+keywords: [.NET Framework to .NET 8 migration, .NET 6 migration guide, ASP.NET Core migration, legacy code modernization, multi-targeting .NET, SDK-style projects csproj, Entity Framework Core 8 breaking changes, .NET 8 LTS migration steps, .NET 6 to .NET 8 migration guide, Visual Studio upgrade assistant]
 ---
 
-You're probably here because your business has a legacy codebase, and you need to upgrade it. You're not alone, and almost every business goes through a similar thing at some stage. This post is part guide and part food for thought. Here, the focus is on upgrading a back-end from ASP.NET to ASP .NET Core, but you will find this helpful if you need to upgrade any code from Framework to .NET 6. You may want to break your architecture up into Microservices, or you may want to consolidate microservices back into a single service. You may want to upgrade your WPF app to WPF on .NET 6. Whatever your goal is, the process for upgrading to .NET 6 is going to be more or less the same.
+Whether you are planning a .NET Framework to .NET 8 migration or targeting .NET 6 as a stepping stone, this guide covers the essential steps. You're probably here because your business has a legacy codebase, and you need to upgrade it. You're not alone, and almost every business goes through a similar thing at some stage. This post is part guide and part food for thought. Here, the focus is on upgrading a back-end from ASP.NET to ASP .NET Core, but you will find this helpful if you need to upgrade any code from Framework to .NET 6. You may want to break your architecture up into Microservices, or you may want to consolidate microservices back into a single service. You may want to upgrade your WPF app to WPF on .NET 6. Whatever your goal is, the process for upgrading to .NET 6 is going to be more or less the same.
 
 Your Codebase
 -------------
@@ -46,7 +46,7 @@ So, your roadmap needs to include some multi-targeting. How much is up to you an
 Changing the Data Store(s)
 --------------------------
 
-You may be breaking up your data store for Microservices. Or, you may be consolidating multiple data stores. Either way, you should probably do this before or after the technology upgrade. Changing data stores in the middle of an upgrade will be far more difficult. These are ultimately different processes and you shouldn't confuse one with the other. Upgrading your code to .NET 6 will put you in a very good position to move to Microservices as the next step.
+You may be breaking up your data store for Microservices. Or, you may be consolidating multiple data stores. Either way, you should probably do this before or after the technology upgrade. Changing data stores in the middle of an upgrade will be far more difficult. These are ultimately different processes and you shouldn't confuse one with the other. Be aware of Entity Framework Core 8 breaking changes if you are upgrading your data layer at the same time. Upgrading your code to .NET 6 will put you in a very good position to move to Microservices as the next step.
 
 Step 1 - Understand Your Dependencies
 -------------------------------------

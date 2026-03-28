@@ -7,16 +7,16 @@ post_image: "/assets/images/blog/dotnet/logo.svg"
 post_image_width: 300
 post_image_height: 300
 image: "/assets/images/blog/dotnet/logo.svg"
-description: Master the art of handling webhooks with ASP.NET Core Minimal API in this comprehensive guide by Christian Findlay. Perfect for developers looking to efficiently receive and test incoming webhooks, this article walks you through creating an ASP.NET Core Minimal API application, specifically tailored for webhook POST requests. With detailed steps, from project creation to testing with tools like ngrok, this guide is ideal for those familiar with C# and ASP.NET Core. Enhance your skills in webhook integration and testing with this expertly crafted tutorial, complete with code snippets and practical insights.
+description: "Receive and test webhooks with ASP.NET Core minimal API. Step-by-step guide covering endpoint creation, integration testing, and ngrok setup."
 tags: csharp visual-studio
 categories: dotnet
 permalink: /blog/:title
-keywords: [ASP.NET Core Minimal API, webhook implementation, C# webhook handling, ASP.NET Core webhook, Minimal API testing, webhook integration testing, ASP.NET Core integration tests, ngrok webhook testing, .NET 7 webhook, Minimal API POST request, C# webhook receiver, ASP.NET Core HTTP POST, webhook endpoint creation, ASP.NET Core dependency injection, C# interface-based design, ASP.NET Core test server, webhook payload processing, ASP.NET Core HTTP client, C# asynchronous programming, Web API development .NET]
+keywords: [ASP.NET Core minimal API, webhook implementation, C# webhook handling, ASP.NET Core webhook, Minimal API testing, webhook integration testing, ASP.NET Core integration tests, ngrok webhook testing, .NET 7 webhook, Minimal API POST request, C# webhook receiver, ASP.NET Core HTTP POST]
 ---
 
 ## Introduction
 
-[ASP.NET Core Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0) is a lightweight approach for building web APIs with minimal boilerplate code. Minimal APIs is a great approach for building web APIs that receive incoming webhook POST requests because there is minimal ceremony to get an app up and running. If you're looking for a place to host your webhook service, read my article on [Google Cloud Run](/blog/google-cloud-run).
+[ASP.NET Core Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0) is a lightweight approach for building web APIs with minimal boilerplate code. An ASP.NET Core minimal API is a great approach for building web APIs that receive incoming webhook POST requests because there is minimal ceremony to get an app up and running. If you're looking for a place to host your webhook service, read my article on [Google Cloud Run](/blog/google-cloud-run).
 
 In this blog post, I will walk you through creating an ASP.NET Core Minimal API application that accepts incoming webhook POST requests and responds accordingly. You will also learn how to test that the API receives webhook POST requests.
 

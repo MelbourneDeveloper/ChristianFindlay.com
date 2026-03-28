@@ -7,13 +7,13 @@ post_image: "/assets/images/portfolio/flutter.svg"
 post_image_height: 300
 image: "/assets/images/portfolio/flutter.svg"
 description: "Understand the 4 core components of Flutter state management: Builder, Controller, State, and Dependency Manager. Learn how all state management solutions (BLoC, Riverpod, Provider) are built on the same foundation."
-keywords: [Flutter state management, BLoC, Riverpod, Provider, ChangeNotifier, ValueNotifier, Flutter architecture, state management comparison]
+keywords: [Flutter state management, BLoC, Riverpod, Provider, ChangeNotifier, ValueNotifier, Flutter architecture, state management comparison, flutter BLoC vs Riverpod comparison, flutter Provider vs Riverpod migration, flutter signals state management]
 tags: state-management cross-platform
 categories: [flutter]
 permalink: /blog/:title
 ---
 
-State management is a critical aspect of building responsive Flutter apps. We often talk about "State Management Solutions" in Flutter, but we rarely break down the components of state management into their constituent parts. Understanding the different components of state management in Flutter can help you understand why you might choose one state management solution over another and identify the simplest ways to do state management. Breaking these components down shows how all state management solutions are built on the same foundation. They are all variants of one underlying principle. This article discusses the components and gives examples of how they work together.
+State management is a critical aspect of building responsive Flutter apps. With options like BLoC, Riverpod, Provider, and signals, we often talk about "State Management Solutions" in Flutter, but we rarely break down the components of state management into their constituent parts. Understanding the different components of state management in Flutter can help you understand why you might choose one state management solution over another and identify the simplest ways to do state management. Breaking these components down shows how all state management solutions are built on the same foundation. They are all variants of one underlying principle. This article discusses the components and gives examples of how they work together.
 
 ## The Components
 There are four primary components of state management in Flutter: Builder, Controller, State, and Dependency Manager. Each of these components plays a unique role in managing the state of your application.
@@ -57,7 +57,7 @@ Importantly, dependency managers allow you to substitute dependencies with test 
 
 - `provider` is a dependency manager that primarily uses  `InheritedWidget` to provide objects to its children. It allows for a hierarchical relationship between the parent and child widgets.
 
-- `get_it` is a dependency manager that uses the service locator pattern to manage dependencies. It provides a global singleton instance that can be used across the entire application.
+- `get_it` is a dependency manager that uses the [service locator pattern](https://blog.burkharts.net/one-to-find-them-all-how-to-use-service-locators-with-flutter) to manage dependencies. It provides a global singleton instance that can be used across the entire application.
 
 ## Core Flutter Building Blocks
 

@@ -6,12 +6,13 @@ author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"
 image: "/assets/images/blog/restclientdotnet/logo.png"
 tags: restclient-net csharp functional-programming mcp openapi
-description: Generate an MCP server in .NET from an OpenAPI (Swagger) YAML/JSON document and use exhaustiveness checks on pattern matching in C# with RestClient.Net 7
+description: "Generate an MCP server from OpenAPI in .NET and use exhaustive pattern matching in C# with RestClient.Net 7, a type-safe REST client."
+keywords: [RestClient.Net, C# Refit type safe REST client, C# REST API client library .NET 8, RestClient.Net functional HTTP, C# HttpClient best practices, MCP server .NET, OpenAPI code generation, discriminated unions C#, pattern matching C#, Result types C#]
 categories: [dotnet]
 permalink: /blog/:title
 ---
 
-RestClient.Net 7 is a complete architectural rewrite from the ground up, bringing discriminated union-style Result types, compile-time exhaustiveness checking, and Model Context Protocol integration to C#. If you've been burned by hidden exceptions or missed error cases in production, RestClient.Net 7 is the right choice for you.
+RestClient.Net 7 is a complete architectural rewrite from the ground up, bringing discriminated union-style Result types, compile-time exhaustiveness checking, and Model Context Protocol integration to C#. As a C# type-safe REST client, it follows C# HttpClient best practices while adding compile-time guarantees. If you've been burned by hidden exceptions or missed error cases in production, RestClient.Net 7 is the right choice for you.
 
 ## The Problem: C# Doesn't Have Exhaustive Pattern Matching on Type
 

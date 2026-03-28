@@ -11,15 +11,15 @@ image: "/assets/images/blog/testing/header.jpeg"
 trending: true
 permalink: /blog/:title
 description: "Learn how to mock top-level functions in Flutter widget tests using typedef and dependency injection. Covers mocking url_launcher's launchUrl and other library functions without creating wrapper classes."
-keywords: [Flutter mocking, Flutter testing, mock functions Dart, typedef mocking, url_launcher testing, widget test mocking, dependency injection Flutter]
+keywords: [Flutter mocking, Flutter testing, mock functions Dart, typedef mocking, url_launcher testing, widget test mocking, dependency injection Flutter, flutter mockito mocktail testing, flutter test driven development TDD]
 ---
 
-The Dart language allows us to implement and mock any class. That's because Dart has [implicit interfaces](https://dart.dev/guides/language/language-tour#implicit-interfaces), which is great for testing. However, some libraries give us functions that don't belong to a class. That means we must do some work to mock or fake these functions for tests. This article explains how to do that.
+The Dart language allows us to implement and mock any class, which is essential for flutter test driven development. That's because Dart has [implicit interfaces](https://dart.dev/guides/language/language-tour#implicit-interfaces), which is great for testing. However, some libraries give us functions that don't belong to a class. That means we must do some work to mock or fake these functions for tests. This article explains how to do that.
 
 ## What is the Issue With Functions?
 If we call a standard top-level function in Dart, we cannot mock that function for a test. A classic case is the [launchUrl](https://pub.dev/documentation/url_launcher/latest/url_launcher/launchUrl.html) function in the [url_launcher](https://pub.dev/packages/url_launcher) library. When we run a widget test, we don't want the launcher to open the Url physically, but we may want to put a fake in place, so we know that the app did call the function. We need an abstraction for the function.
 
-A typical solution is to create a new class and add a method with the same signature as the `launchUrl` function. This does work, but it's overkill. Functions are simpler than classes and require less maintenance. We shouldn't add classes to our system only to call functions. This is especially true if we aim toward a more functional programming style. This Dart [lint rule](https://dart.dev/tools/linter-rules/one_member_abstracts) says it all. I recommend turning this rule on if you can.
+A typical solution, often seen with libraries like mockito or mocktail, is to create a new class and add a method with the same signature as the `launchUrl` function. This does work, but it's overkill. Functions are simpler than classes and require less maintenance. We shouldn't add classes to our system only to call functions. This is especially true if we aim toward a more functional programming style. This Dart [lint rule](https://dart.dev/tools/linter-rules/one_member_abstracts) says it all. I recommend turning this rule on if you can.
 
 > Unlike Java, Dart has first-class functions, closures, and a nice light syntax for using them. If all you need is something like a callback, just use a function. If you're defining a class and it only has a single abstract member with a meaningless name like call or invoke, there is a good chance you just want a function.
 

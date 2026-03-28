@@ -9,7 +9,7 @@ post_image: "/assets/images/blog/exceptionbreak/header.jpg"
 image: "/assets/images/blog/exceptionbreak/header.jpg"
 permalink: /blog/:title
 description: "Learn how to use Visual Studio's 'Break on All Exceptions' feature for efficient C# debugging and understand its benefits to improve your exception handling practices in .NET development."
-keywords: [Visual Studio debugging, Break on All Exceptions, C# exception handling, .NET debugging techniques, Visual Studio exception settings, debugging best practices, CLR exceptions, fail-fast principle, C# development tools, exception stack trace, Visual Studio for Windows, Visual Studio for Mac, Just My Code debugging, exception breakpoints, .NET exception management, Visual Studio productivity tips, C# error handling, debugger configuration, software development debugging, Visual Studio features]
+keywords: [Visual Studio Break on All Exceptions, C# exception handling, .NET debugging techniques, Visual Studio exception settings, CLR exceptions debugging, fail-fast principle C#, exception breakpoints Visual Studio, Just My Code debugging, Visual Studio for Mac exceptions, exception stack trace debugging]
 ---
 
 An app should throw exceptions when something exceptional happens. However, developers should design _apps and APIs so that under regular use, exceptions do not occur_. Exceptions are an excellent way to tell the debugger or logging tools that something went wrong. When debugging with the break on all exceptions feature is turned on, it is possible to get information about what went wrong immediately. However, by default, Visual Studio projects don't have this feature turned on. This article is a guide on how to turn on and use this feature.

@@ -165,7 +165,7 @@ Check out the Flutter counter increment sample with `Cubit` here
 Consistency
 -----------
 
-Consistency is critical for any app. That doesn't mean that one app should never use more than one approach to state management, but it does mean that there should be clear, logical reasons for using more than one approach. For example, you may use one of the three approaches mentioned here for complex screens and `StatefulWidgets` for simple ones.
+Consistency is critical for any app. That doesn't mean that one app should never use more than one approach to state management, but it does mean that there should be clear, logical reasons for using more than one approach. For a comprehensive take on making these decisions, see this article on [practical Flutter architecture](https://blog.burkharts.net/practical-flutter-architecture). For example, you may use one of the three approaches mentioned here for complex screens and `StatefulWidgets` for simple ones.
 
 However, using more than one approach could increase the cognitive load for a new team member. They may find it hard to navigate the file structure, so it's preferable to stick to one approach where possible. The key is to balance this with adding complexity for complexity's sake. If sticking to one approach makes your code too complex, consider more than one approach.
 

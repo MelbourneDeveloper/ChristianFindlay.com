@@ -8,8 +8,8 @@ image: "/assets/images/blog/restclientdotnet/logo.png"
 categories: [dotnet]
 tags: restclient-net csharp
 permalink: /blog/:title
-description: "RestClient.Net is a type-safe REST client for .NET with Result types and exhaustiveness checking. Open source library for making HTTP API calls with compile-time safety and clean error handling."
-keywords: [RestClient.Net, .NET REST client, C# HTTP client, type-safe REST, .NET API client, REST API C#]
+description: "RestClient.Net is a type-safe C# REST API client library for .NET. Open source with Result types, exhaustiveness checking, and clean error handling."
+keywords: [RestClient.Net, .NET REST client, C# HTTP client, type-safe REST, .NET API client, REST API C#, C# REST API client library .NET 8, C# HttpClient vs RestSharp comparison, RestClient.Net functional HTTP, C# HttpClient best practices]
 ---
 
 *Edit: this library has undergone multiple iterations since this early blog post. It is no longer in beta, and has been moved to GitHub. Check the repository for the latest samples*
@@ -24,7 +24,7 @@ Today I released an Open Source project under the MIT license called RestClient.
 
 https://github.com/MelbourneDeveloper/RestClient.Net.git
 
-This is a library which makes REST calls easy on any .NET related platform. It is designed to be simple, and easy to get going on any platform without trying to do any of the heavy lifting like parsing JSON etc. Here's a look at the design principles.
+This is a C# REST API client library which makes REST calls easy on any .NET related platform. If you are comparing C# HttpClient vs RestSharp, RestClient.Net offers a different approach focused on simplicity and type safety. It is designed to be simple, and easy to get going on any platform without trying to do any of the heavy lifting like parsing JSON etc. Here's a look at the design principles.
 
 ## Open Source
 

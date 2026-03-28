@@ -9,28 +9,18 @@ image: "/assets/images/blog/dart/dart.png"
 tags: ADTs dart functional-programming
 categories: flutter
 permalink: /blog/:title
-description: Dive into Dart 3's new switch expression feature and other features like pattern matching that support it. Understand how these enhance functional programming and improve Flutter development. Learn through examples for a comprehensive understanding of Dart 3.
+description: "Master Dart 3 exhaustive switch expressions with pattern matching, sealed class types, and guard clauses. Includes practical Flutter examples."
 keywords: [
-  "Dart 3 features",
-  "Switch expressions Dart",
-  "Dart pattern matching",
-  "Functional programming Dart",
   "Dart 3 switch expression",
-  "Exhaustiveness checking Dart",
-  "Dart sealed types",
-  "Flutter state management",
-  "Dart records",
+  "Dart pattern matching",
+  "Dart sealed class pattern matching",
+  "Dart 3 exhaustive switch expression",
+  "Dart exhaustiveness checking",
+  "Dart if-case pattern matching",
   "Dart guard clauses",
-  "Dart multi-paradigm programming",
-  "Flutter development",
-  "Dart 3 syntax improvements",
-  "Dart expressions vs statements",
   "Dart algebraic data types",
-  "Async snapshot handling Flutter",
-  "Dart imperative programming",
-  "Dart declarative programming",
-  "Dart code conciseness",
-  "Flutter widget composition"
+  "Dart sealed types",
+  "Flutter state management"
 ]
 ---
 
@@ -62,7 +52,7 @@ This is a very simple example that matches on type:
 ## Exhaustiveness Checking
 Exhaustiveness checking is a feature that gives compile-time errors if the switch expression does not cover all cases. For example, if you switch on a nullable Boolean (bool? b) without a case for null, you will get an error. However, a default case (_ or default) can cover all possible values, which makes any switch statement exhaustive.
 
-[Sealed types](https://dart.dev/language/class-modifiers#sealed) (another new Dart 3 feature) and enums are especially useful for switches because the compiler knows their possible values ahead of time, even without a default case. Applying the `sealed` modifier to a class enables exhaustiveness checking when switching over its subclasses. If we add a new subclass to a sealed class, the switch expression will be incomplete. Exhaustiveness checking helps flag this. 
+[Sealed types](https://dart.dev/language/class-modifiers#sealed) (another new Dart 3 feature) and enums are especially useful for switches because the compiler knows their possible values ahead of time, even without a default case. Dart sealed class exhaustiveness checking is a key benefit here: applying the `sealed` modifier to a class enables exhaustiveness checking when switching over its subclasses. If we add a new subclass to a sealed class, the switch expression will be incomplete. Exhaustiveness checking helps flag this. 
 
 <iframe style="width:99%;height:400px;" src="https://dartpad.dev/embed-inline.html?id=f734a8e08f0ff21657a54dc488d97053&split=70&mode=dart"></iframe>
 

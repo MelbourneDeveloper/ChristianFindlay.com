@@ -10,7 +10,7 @@ categories: [software development]
 permalink: /blog/:title
 slider_post: true
 description: "Understanding test coverage metrics and why 100% coverage doesn't guarantee bug-free code. Learn about meaningful coverage strategies, the relationship between test isolation and coverage, and how to maximize test value."
-keywords: [test coverage, code coverage, software testing, unit testing, integration testing, test metrics, test quality]
+keywords: [test coverage, code coverage, software testing, unit testing, integration testing, test metrics, test quality, flutter testing best practices 2026, flutter test driven development TDD]
 ---
 
 This article is part of a series I am writing about testing. It refers to an [article](test-isolation-expensive) I wrote on test isolation, which is important reading for this topic.   
@@ -28,7 +28,7 @@ In other words, hitting 100% coverage won't magically turn your software into a 
 Why Write Tests?
 ----------------
 
-To answer these questions, we must look at why we write automated tests. We test our software so we can make changes without breaking the software. We automate the process to reduce the burden on manual testers, speed up the testing process and make it more reliable. Automated tests are good when they help us ship features and fixes reliably. They are useless or even detrimental when they slow that process down.  
+To answer these questions, we must look at why we write automated tests. We test our software so we can make changes without breaking the software. We automate the process following test driven development (TDD) best practices to reduce the burden on manual testers, speed up the testing process and make it more reliable. Automated tests are good when they help us ship features and fixes reliably. They are useless or even detrimental when they slow that process down.  
 
 Good tests confirm that actual use cases are working in the app. They confirm that users can navigate through the screens, enter data, and see the correct results, or they confirm that an endpoint accepts the desired request and returns the desired response. This isn't an abstract or academic point: it's simply about ensuring the app works.  
 
