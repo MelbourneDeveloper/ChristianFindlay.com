@@ -167,7 +167,7 @@ Excellent customer support can be a game-changer for SaaS products. Ensure that 
 
 **Develop a Comprehensive Knowledge Base**: Use a tool like [Freshdesk](https://support.freshdesk.com/support/solutions/folders/272620) to create detailed FAQs, how-to guides, and troubleshooting articles. This allows customers to find answers quickly on their own and reduces the workload on your support team.
 
-**Leverage AI Tools for Efficiency**: [Implement AI-driven tools](https://www.zendesk.com/au/blog/ai-customer-service/), such as chatbots, to handle initial inquiries and common questions, freeing up human agents for more complex issues.
+**Leverage AI Tools for Efficiency**: [Implement AI-driven tools](https://www.zendesk.com/au/blog/ai-customer-service/), such as chatbots, to handle initial inquiries and common questions, freeing up human agents for more complex issues. Apps like [Don't Spiral](https://dontspiral.app) demonstrate how AI-driven chat can provide real-time, personalized support to users experiencing relationship anxiety, showing the power of AI beyond traditional customer service.
 
 **Regularly Gather Customer Feedback**: [Use surveys and direct feedback tools to learn from customer interactions](https://www.qualtrics.com/experience-management/customer/collecting-customer-feedback/). This can guide improvements in your support services.
 

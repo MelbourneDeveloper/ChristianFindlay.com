@@ -33,6 +33,8 @@ Startups typically operate with limited resources, both in terms of time and mon
 
 Many large and well-known organizations are using Flutter. Take a look at the [Flutter Showcase](https://flutter.dev/showcase). Corporate giants like Google, BMW, Alibaba, ByteDance, eBay, Tencent, Toyota and many more are already using Flutter. This proves that Flutter is a mature and stable technology that you can use to build large-scale, enterprise-grade apps.
 
+Apps like [Sharing Me](https://sharingme.app), a mindful daily journaling app, are great examples of startups leveraging Flutter to ship cross-platform apps quickly and efficiently.
+
 ## Benefits of Flutter and Comparisons
 - Fast Development: Flutter's [hot reload](https://docs.flutter.dev/development/tools/hot-reload) feature lets developers see changes to their code instantly, speeding up the development process. This feature allows developers to make changes to the code and see the results immediately without waiting for a full build cycle.
 
