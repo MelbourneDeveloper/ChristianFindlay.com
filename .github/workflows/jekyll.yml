@@ -1,3 +1,4 @@
+# agent-pmo:2c6a5ba
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
 # separate terms of service, privacy policy, and support
@@ -29,6 +30,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -42,6 +44,7 @@ jobs:
         run: |
           cd site/assets/js/repos
           dart pub get
+          dart analyze
           dart compile js web/app.dart -o ../repos.js -O2
 
       # Build Jekyll
@@ -67,6 +70,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-22.04
+    timeout-minutes: 10
     needs: build
     steps:
       - name: Deploy to GitHub Pages

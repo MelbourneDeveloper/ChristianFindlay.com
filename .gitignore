@@ -1,13 +1,28 @@
+# agent-pmo:2c6a5ba
+# OS junk
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
 
 # Dart build artifacts
 site/assets/js/repos.js
 site/assets/js/repos.js.deps
 site/assets/js/repos.js.map
 site/assets/js/repos/.dart_tool/
+
 # Jekyll build
 _site/
-.commandtree/
-.claude
+.jekyll-cache/
 
+# Local tooling caches (NOT agent config — .claude/ etc. MUST stay committed)
+.commandtree/
 .playwright-mcp/
+.deslop-cache/
+
+# Secrets / local overrides
+.env
+.env.local
+*.pem
+*.key
+!*.pub.key

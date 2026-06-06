@@ -19,6 +19,7 @@ redirect_from:
 collections:
   authors:
     output: true
+    permalink: /authors/:name/
   shop_items:
     output: true
     permalink: /shop/:name
@@ -108,8 +109,7 @@ autopages:
 
 # Configure jekyll-archives for categories only
 jekyll-archives:
-  enabled: 
-    - categories
+  enabled: []
   layouts: 
     category: 'category'
   permalinks:

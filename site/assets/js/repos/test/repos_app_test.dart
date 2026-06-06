@@ -19,10 +19,7 @@ void main() {
       final result = render(App(fetchFn: neverCompleteFetch()));
 
       expect(result.container.textContent, contains('Loading repositories...'));
-      expect(
-        result.container.textContent,
-        contains('What Should I Work On?'),
-      );
+      expect(result.container.textContent, contains('What Should I Work On?'));
 
       result.unmount();
     });
@@ -452,10 +449,7 @@ void main() {
       await Future<void>.delayed(const Duration(milliseconds: 100));
 
       final content = result.container.textContent;
-      expect(
-        content.indexOf('high-pop'),
-        lessThan(content.indexOf('low-pop')),
-      );
+      expect(content.indexOf('high-pop'), lessThan(content.indexOf('low-pop')));
 
       result.unmount();
     });

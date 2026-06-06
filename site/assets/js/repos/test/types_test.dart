@@ -133,10 +133,7 @@ void main() {
       });
 
       test('does not mutate original list', () {
-        final repos = [
-          createMockRepo(name: 'z'),
-          createMockRepo(name: 'a'),
-        ];
+        final repos = [createMockRepo(name: 'z'), createMockRepo(name: 'a')];
 
         sortRepos(repos, 'popular');
 

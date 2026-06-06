@@ -46,7 +46,6 @@ ReactElement App({FetchReposFn? fetchFn}) => createElement(
       return null;
     }, []);
 
-
     // Sort repos when sort option changes
     final sortedRepos = sortRepos(_cachedRepos, sortState.value);
     final gridKey = sortState.value;
@@ -64,7 +63,7 @@ ReactElement App({FetchReposFn? fetchFn}) => createElement(
               div(className: 'header-divider'),
               pEl(
                 'Star the repos you want me to prioritize! '
-                    'Your stars help me decide what to work on next.',
+                'Your stars help me decide what to work on next.',
                 className: 'blog-subtitle',
               ),
             ],

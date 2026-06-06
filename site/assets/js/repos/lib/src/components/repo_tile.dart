@@ -18,9 +18,7 @@ DivElement buildRepoTile(Repo repo, int index) {
     className: 'post-card-wrapper',
     props: {
       'key': repo.name,
-      'style': {
-        'animationDelay': '${index * 50}ms',
-      }.jsify(),
+      'style': {'animationDelay': '${index * 50}ms'}.jsify(),
     },
     child: div(
       className: 'post-card',
@@ -73,10 +71,7 @@ DivElement buildRepoTile(Repo repo, int index) {
                         span(' ${repo.stars}'),
                       ],
                     ),
-                    span(
-                      '\u{1F374} ${repo.forks}',
-                      className: 'repo-stat',
-                    ),
+                    span('\u{1F374} ${repo.forks}', className: 'repo-stat'),
                     span(
                       '\u{1F4CB} ${repo.openIssues}',
                       className: 'repo-stat',
@@ -85,10 +80,7 @@ DivElement buildRepoTile(Repo repo, int index) {
                 ),
 
                 // Description
-                div(
-                  className: 'post-card-excerpt',
-                  child: pEl(desc),
-                ),
+                div(className: 'post-card-excerpt', child: pEl(desc)),
 
                 // Star button - links to GitHub
                 createElement(

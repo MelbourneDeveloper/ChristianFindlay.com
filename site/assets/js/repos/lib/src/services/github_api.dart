@@ -15,13 +15,16 @@ external JSPromise<JSObject> _jsFetch(JSString url, [JSObject? options]);
 /// Fetch all public repos for MelbourneDeveloper
 Future<nadz.Result<List<Repo>, String>> fetchRepos() async {
   try {
-    final options = <String, Object>{
-      'headers': {'Accept': 'application/vnd.github.v3+json'},
-    }.jsify()! as JSObject;
+    final options =
+        <String, Object>{
+              'headers': {'Accept': 'application/vnd.github.v3+json'},
+            }.jsify()!
+            as JSObject;
 
-    final response =
-        await _jsFetch('$_apiUrl?per_page=100&sort=updated'.toJS, options)
-            .toDart;
+    final response = await _jsFetch(
+      '$_apiUrl?per_page=100&sort=updated'.toJS,
+      options,
+    ).toDart;
     final ok = response.getProperty<JSBoolean>('ok'.toJS);
 
     if (!ok.toDart) {

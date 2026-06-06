@@ -66,10 +66,8 @@ String _toJsonList(List<Object?> list) {
   return '[${items.join(',')}]';
 }
 
-String _escapeJson(String s) => s
-    .replaceAll(r'\', r'\\')
-    .replaceAll('"', r'\"')
-    .replaceAll('\n', r'\n');
+String _escapeJson(String s) =>
+    s.replaceAll(r'\', r'\\').replaceAll('"', r'\"').replaceAll('\n', r'\n');
 
 /// Create a mock repo for testing
 Repo createMockRepo({
@@ -166,9 +164,7 @@ Future<void> waitForElement(
     if (result.container.querySelector(selector) != null) return;
     await Future<void>.delayed(interval);
   }
-  throw StateError(
-    'Element "$selector" not found after $maxAttempts attempts',
-  );
+  throw StateError('Element "$selector" not found after $maxAttempts attempts');
 }
 
 Future<void> waitForNoElement(
