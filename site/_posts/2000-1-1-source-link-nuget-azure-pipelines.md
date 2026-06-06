@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Publish Source Link NuGet Packages with Azure Pipelines"
+description: "How to publish debuggable Source Link NuGet packages with Azure Pipelines, so consumers can step into your library code straight from your Git repository."
 date: "2020/12/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How to Move Uno Platform Pages to a Multi-Targeting Library"
+description: "How to move Uno Platform pages into a multi-targeting library referenced from your head projects, a better alternative to Visual Studio shared projects."
 date: "2020/08/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/uno/uno.gif"

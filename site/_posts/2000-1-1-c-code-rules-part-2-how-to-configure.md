@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# Code Rules Part 2 - How To Configure"
+description: "A step-by-step guide to configuring C# code rules and analyzers in Visual Studio 2017. Install the FxCop NuGet package and turn on static code analysis."
 date: 2019-02-23 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How To Change the Behavior of a C# Record Constructor"
+description: "How to change the behavior of a C# 9 record's default constructor to add validation, while keeping value-based equality and immutability intact."
 date: "2021/04/29 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/record.jpg"

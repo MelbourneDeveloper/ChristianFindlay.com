@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Back-end - Front-End Versioning"
+description: "How to keep back-end APIs and front-end apps in sync when they version independently. API versioning patterns for app store deployment and decoupled clients."
 date: "2019/03/23 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/versioning/header.jpeg"

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Blazor WebAssembly Rest Client"
+description: "How to use RestClient.Net to call RESTful APIs from a Blazor WebAssembly app, writing browser-based HTTP client code in C# instead of JavaScript."
 date: "2020/02/14 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/header.png"

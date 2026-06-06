@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Fortnightly Waterfall (a.k.a Scrum)"
+description: "How many teams turn Scrum into 'fortnightly waterfall': two weeks of Jira tickets with no real agility, and where Scrum goes wrong against its own guide."
 date: 2024/02/04 00:00:00 +0000
 categories: [software development]
 tags: software-quality

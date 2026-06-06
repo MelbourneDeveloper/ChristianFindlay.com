@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Immutability: Dart vs. F#"
+description: "Immutability in Dart vs F# compared: how a functional-first language and a multi-paradigm language each approach immutable data and functional programming."
 date: "2022/11/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/immutibility/header.png"

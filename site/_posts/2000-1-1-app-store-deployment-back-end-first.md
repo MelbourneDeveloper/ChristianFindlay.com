@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "App Store Deployment - Back-end First"
+description: "A strategy for App Store deployment where the back-end ships first. How API versioning lets you deploy back-end services independently of the front-end."
 date: "2019/03/23 00:00:00 +00000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/appdev/header.jpg"

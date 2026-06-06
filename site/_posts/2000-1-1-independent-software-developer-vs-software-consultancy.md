@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Hiring an Independent Software Developer vs. a Software Consultancy"
+description: "Hiring an independent software developer vs a consultancy: the pros, cons, cost, and key differences to help you choose the right option for your project."
 date: 2023-01-03 20:37:13 +0600
 author: "Christian Findlay"
 post_image: "/assets/images/art/hiring.jpg"

@@ -50,14 +50,14 @@ Testing Use Cases Is Less Expensive
 
 At this point, you may think, "but aren't higher-level tests, such as integration tests, more expensive to write and maintain?".   
 
-No. the opposite is true. Testing actual use cases results in better coverage, making the tests less expensive to write and maintain. You can read a complete explanation of that in this [article](https://www.christianfindlay.com/test-isolation-expensive). But don't take my word for it. Try testing actual use cases at the whole app level and see how much less test code is necessary to get more test coverage.  
+No. the opposite is true. Testing actual use cases results in better coverage, making the tests less expensive to write and maintain. You can read a complete explanation of that in this [article](https://www.christianfindlay.com/blog/test-isolation-expensive). But don't take my word for it. Try testing actual use cases at the whole app level and see how much less test code is necessary to get more test coverage.  
 
 Test Doubles
 ------------
 
 You can still mock/fake system components if they run too slowly or unreliably. The point is that you test as much as possible working together and replace with test doubles as necessary instead of the other way around.   
 
-[Isolated unit tests](https://www.christianfindlay.com/test-isolation-expensive) that mock everything except the SUT are expensive to create and maintain because they don't test all the moving parts together. Getting close to 100% test coverage is nearly impossible if you have to write one or more unit tests for each class in the system. This is a recipe for a 3:1 or 4:1 test code to normal code ratio. This gets exponentially harder as the system grows. You will know the pain if you've worked on a large system with many fine-grained unit tests.  
+[Isolated unit tests](https://www.christianfindlay.com/blog/test-isolation-expensive) that mock everything except the SUT are expensive to create and maintain because they don't test all the moving parts together. Getting close to 100% test coverage is nearly impossible if you have to write one or more unit tests for each class in the system. This is a recipe for a 3:1 or 4:1 test code to normal code ratio. This gets exponentially harder as the system grows. You will know the pain if you've worked on a large system with many fine-grained unit tests.  
 
 Test doubles will leave you in a situation where the tests don't cover certain code. For example, you may decide to mock database calls. That means that your database code remains untested. You still need to test that code and test doubles kick that can down the road. Where possible, testing against the database directly solves this issue, but this can be hard or too slow to get feedback quickly enough.   
 
@@ -66,7 +66,7 @@ Modern tools like the [Firebase emulator](https://firebase.google.com/docs/emul
 Test Isolation
 --------------
 
-As mentioned, [test isolation](https://www.christianfindlay.com/test-isolation-expensive) is an important characteristic of your test suite to consider. If an integration test fails, we have no idea which function is giving the incorrect result. Unit tests can tell us exactly which function gives us the incorrect result. This is the value of isolation. It narrows the problem down to a given area.  
+As mentioned, [test isolation](https://www.christianfindlay.com/blog/test-isolation-expensive) is an important characteristic of your test suite to consider. If an integration test fails, we have no idea which function is giving the incorrect result. Unit tests can tell us exactly which function gives us the incorrect result. This is the value of isolation. It narrows the problem down to a given area.  
 
 End-to-end tests can tell us if something is wrong with the system, but isolated unit tests can tell us exactly where that problem is. This is the crux of the whole decision-making process. We need high-level coarse tests to test the main use cases, but there is also value in isolating pieces of the code. It's important to understand that more isolation comes with more test code, and this is where the coverage trade-off comes in. More isolation results in less coverage.  
 

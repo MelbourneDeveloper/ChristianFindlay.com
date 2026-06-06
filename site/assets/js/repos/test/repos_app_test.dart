@@ -54,6 +54,23 @@ void main() {
       result.unmount();
     });
 
+    test('hides repos with fewer than 10 stars', () async {
+      final repos = [
+        createMockRepo(name: 'hidden-low-star-repo', stars: 9),
+        createMockRepo(name: 'visible-ten-star-repo'),
+      ];
+
+      final result = render(App(fetchFn: successFetch(repos)));
+
+      await waitForText(result, 'visible-ten-star-repo');
+      expect(
+        result.container.textContent,
+        isNot(contains('hidden-low-star-repo')),
+      );
+
+      result.unmount();
+    });
+
     test('shows star counts for repos', () async {
       final repos = [createMockRepo(name: 'starred-repo', stars: 42)];
 
@@ -187,7 +204,7 @@ void main() {
 
     test('sort by stars reorders repos', () async {
       final repos = [
-        createMockRepo(name: 'few-stars', stars: 5),
+        createMockRepo(name: 'few-stars'),
         createMockRepo(name: 'many-stars', stars: 100),
         createMockRepo(name: 'some-stars', stars: 25),
       ];

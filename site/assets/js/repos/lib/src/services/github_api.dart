@@ -7,13 +7,31 @@ import 'dart:js_interop_unsafe';
 import 'package:nadz/nadz.dart' as nadz;
 import 'package:repos/src/types.dart';
 
-const _apiUrl = 'https://api.github.com/users/MelbourneDeveloper/repos';
+/// GitHub repository API sources shown on the prioritization page.
+const repoApiUrls = [
+  'https://api.github.com/users/MelbourneDeveloper/repos',
+  'https://api.github.com/orgs/Nimblesite/repos',
+];
 
 @JS('fetch')
 external JSPromise<JSObject> _jsFetch(JSString url, [JSObject? options]);
 
-/// Fetch all public repos for MelbourneDeveloper
+/// Fetch public repos for Christian Findlay and Nimblesite.
 Future<nadz.Result<List<Repo>, String>> fetchRepos() async {
+  final repos = <Repo>[];
+  for (final apiUrl in repoApiUrls) {
+    final result = await _fetchRepoSource(apiUrl);
+    switch (result) {
+      case nadz.Success(value: final sourceRepos):
+        repos.addAll(sourceRepos);
+      case nadz.Error(error: final err):
+        return nadz.Error(err);
+    }
+  }
+  return nadz.Success(repos);
+}
+
+Future<nadz.Result<List<Repo>, String>> _fetchRepoSource(String apiUrl) async {
   try {
     final options =
         <String, Object>{
@@ -22,7 +40,7 @@ Future<nadz.Result<List<Repo>, String>> fetchRepos() async {
             as JSObject;
 
     final response = await _jsFetch(
-      '$_apiUrl?per_page=100&sort=updated'.toJS,
+      '$apiUrl?per_page=100&sort=updated'.toJS,
       options,
     ).toDart;
     final ok = response.getProperty<JSBoolean>('ok'.toJS);

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# and WebAssembly (Wasm)"
+description: "WebAssembly (Wasm) lets C# run in the browser without JavaScript. An intro to what Wasm means for .NET developers building client-side web applications."
 date: 2019/06/29 00:00:00 +0000
 categories: [dotnet]
 tags: web blazor xaml csharp

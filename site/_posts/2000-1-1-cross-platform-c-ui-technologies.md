@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cross-Platform C# UI Technologies"
+description: "Cross-platform C# UI technologies compared: which frameworks build front-end apps for desktop, mobile, and browser, with native look and app store support."
 date: 2019-05-11 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat1/header.jpg"

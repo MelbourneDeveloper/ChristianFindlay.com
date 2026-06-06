@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# Code Quality - Part 1"
+description: "How to measure and improve C# code quality in large codebases, with the tools and metrics you need to find problem areas and target refactoring effectively."
 date: 2019/11/09 00:00:00 +0000
 categories: [dotnet]
 tags: code-quality visual-studio

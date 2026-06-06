@@ -3,6 +3,7 @@
 /// These tests don't need browser - they test pure Dart logic.
 library;
 
+import 'package:repos/src/services/github_api.dart';
 import 'package:repos/src/types.dart';
 import 'package:test/test.dart';
 
@@ -345,6 +346,36 @@ void main() {
     test('all options have unique ids', () {
       final ids = sortOptions.map((o) => o.id).toSet();
       expect(ids.length, equals(sortOptions.length));
+    });
+  });
+
+  group('repo visibility', () {
+    test('filters out repos with fewer than 10 stars', () {
+      final repos = [
+        createMockRepo(name: 'nine-stars', stars: 9),
+        createMockRepo(name: 'ten-stars'),
+        createMockRepo(name: 'many-stars', stars: 100),
+      ];
+
+      final visible = visibleRepos(repos);
+
+      expect(
+        visible.map((repo) => repo.name),
+        equals(['ten-stars', 'many-stars']),
+      );
+    });
+  });
+
+  group('repoApiUrls', () {
+    test('includes MelbourneDeveloper and Nimblesite repositories', () {
+      expect(
+        repoApiUrls,
+        contains('https://api.github.com/users/MelbourneDeveloper/repos'),
+      );
+      expect(
+        repoApiUrls,
+        contains('https://api.github.com/orgs/Nimblesite/repos'),
+      );
     });
   });
 

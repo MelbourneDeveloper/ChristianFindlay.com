@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Cross-Platform C# UI Technologies Part 2"
+description: "Cross-platform C# UI technologies compared: Blazor, Uno Platform, MAUI, and Xamarin.Forms. Clearing up the confusion around the future of .NET app development."
 date: "2020/06/24 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/xplat2/header.jpeg"

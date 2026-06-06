@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ".NET - How to Sign an Assembly in Visual Studio 2019"
+description: "A step-by-step tutorial on signing a .NET assembly with a strong name key (SNK) in Visual Studio 2019, including the common pitfalls to avoid."
 date: "2020/01/25 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/sign/header.jpeg"

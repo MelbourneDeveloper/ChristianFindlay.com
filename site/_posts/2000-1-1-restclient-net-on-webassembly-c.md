@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "RestClient.Net on WebAssembly (C#)"
+description: "How to use RestClient.Net in a C# WebAssembly app built with Uno Platform, making strongly typed REST calls to third-party APIs from inside the browser."
 date: 2019/08/15 00:00:00 +0000
 categories: [dotnet]
 tags: restclient-net csharp wasm

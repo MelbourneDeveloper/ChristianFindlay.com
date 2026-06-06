@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "First Uno Platform Course Published"
+description: "My first Uno Platform course is live on Udemy. Learn to build single-source, cross-platform apps for web, desktop, and mobile with C# and Uno Platform."
 date: "2020/08/05 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/uno/uno.gif"

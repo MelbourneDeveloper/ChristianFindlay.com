@@ -23,6 +23,9 @@ typedef Repo = ({
 /// Sort option for repos
 typedef SortOption = ({String id, String label});
 
+/// Minimum star count required for a repo to be shown.
+const minimumVisibleStars = 10;
+
 /// Available sort options
 const sortOptions = <SortOption>[
   (id: 'popular', label: 'Most Popular'),
@@ -37,6 +40,12 @@ const sortOptions = <SortOption>[
 /// Calculate popularity score for a repo (weighted composite)
 int popularityScore(Repo repo) =>
     (repo.stars * 3) + (repo.forks * 2) + repo.watchers + repo.openIssues;
+
+/// Filter repos shown in the prioritization page.
+List<Repo> visibleRepos(List<Repo> repos) => [
+  for (final repo in repos)
+    if (repo.stars >= minimumVisibleStars) repo,
+];
 
 /// Calculate activity score for a repo based on last year's activity
 /// Weights: recent pushes heavily, plus issues, forks, and stars

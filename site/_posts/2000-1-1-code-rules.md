@@ -2,6 +2,7 @@
 image: /assets/images/blog/coderules/rules.jpg
 layout: post
 title: "C# Code Rules"
+description: "Roslyn ships a huge set of C# analyzers, but you must turn them on. How to enable and configure code rules to catch mistakes and enforce conventions."
 date: "Apr 24, 2022"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"

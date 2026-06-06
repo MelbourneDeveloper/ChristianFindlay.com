@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ".NET Application Frameworks - Part 1"
+description: "Why every .NET system needs an application framework covering UI, database, and logic, and how declarative frameworks stop teams reinventing the wheel."
 date: 2019/12/19 00:00:00 +0000
 tags: csharp
 categories: [dotnet]

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Choose ASP.NET Core in 2021"
+description: "Why ASP.NET Core is the right choice for building web apps and Web APIs in 2021, how it differs from classic ASP.NET, and where it fits in the cloud."
 date: "2021/02/26 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/dotnet/logo.svg"

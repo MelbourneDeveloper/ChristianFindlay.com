@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "C# Code Rules Part 1"
+description: "An intro to C# code rules and analyzers: why static code analysis matters and how tools like FxCop catch coding mistakes automatically at build time."
 date: 2019-02-11 00:00:00 +0000
 author: "Christian Findlay"
 post_image: "/assets/images/blog/coderules/rules.jpg"

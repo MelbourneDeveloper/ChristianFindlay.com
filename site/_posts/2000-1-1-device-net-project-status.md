@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Device.Net Project Status"
+description: "A status update on Device.Net, the cross-platform C# USB and HID library: project history, the search for contributors, and thoughts on funding open source."
 date: "2022/08/06 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/devicenet/logo.png"

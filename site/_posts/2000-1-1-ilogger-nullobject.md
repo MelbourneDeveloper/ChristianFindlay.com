@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ILogger and Null Object Pattern"
+description: "How to apply the Null Object Pattern to ILogger in C#, avoiding null checks and NullReferenceExceptions without forcing callers to supply a logger."
 date: "2020/09/30 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ilogger/nothing.jpg"

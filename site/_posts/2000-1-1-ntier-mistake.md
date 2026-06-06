@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "N-tier Architecture Was a Mistake: Long Live Apps That Talk Directly to the Database"
+description: "Why n-tier architecture may have been a mistake, and how Backend-as-a-Service brings back the simplicity of apps talking directly to the database, securely."
 date: "2023/06/12 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/ntier/tiers.webp"

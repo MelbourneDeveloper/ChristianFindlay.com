@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Git Submodules Vs. NuGet Dependencies"
+description: "Git submodules vs NuGet dependencies for breaking .NET solutions into libraries: the pros, cons, and pitfalls of each approach to dependency management."
 date: "2020/08/28 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/git/header.jpg"

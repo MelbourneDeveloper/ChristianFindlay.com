@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Android HID/USB with Flutter and .NET"
+description: "How to read a USB HID thermometer on Android using a Flutter UI with .NET logic, via Flutnet and Device.Net. Includes a working sample to clone and run."
 date: "2020/10/09 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/flutnet/header.png"

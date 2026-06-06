@@ -34,7 +34,7 @@ ReactElement App({FetchReposFn? fetchFn}) => createElement(
         final result = await (fetchFn ?? fetchRepos)();
         switch (result) {
           case nadz.Success(value: final repos):
-            _cachedRepos = repos;
+            _cachedRepos = visibleRepos(repos);
             errorState.set(null);
           case nadz.Error(error: final err):
             errorState.set(err.toJS);

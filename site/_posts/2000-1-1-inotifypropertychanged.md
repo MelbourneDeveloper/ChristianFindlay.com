@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "XAML: How to Implement INotifyPropertyChanged"
+description: "How to implement INotifyPropertyChanged in XAML apps, with C# examples for UWP, WPF, Uno Platform, and Xamarin.Forms data binding, with or without MVVM."
 date: "2020/09/11 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/inotify/header.jpeg"

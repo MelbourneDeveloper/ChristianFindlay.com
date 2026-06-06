@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "RestClient.Net 4"
+description: "RestClient.Net 4.0 is released: a cross-platform C# REST client for .NET, iOS, Android, WASM, and UWP. What's new, the major fixes, and how to give feedback."
 date: "2020/06/17 00:00:00 +0000"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/restclientdotnet/logo.png"

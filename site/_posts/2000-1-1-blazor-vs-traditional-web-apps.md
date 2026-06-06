@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Blazor Vs. Traditional Web Apps"
+description: "Blazor vs traditional web apps: how Microsoft's C# SPA framework compares to ASP.NET MVC, and the difference between server-side and client-side rendering."
 date: "Jul 9, 2020"
 author: "Christian Findlay"
 post_image: "/assets/images/blog/blazor/logo.jpg"

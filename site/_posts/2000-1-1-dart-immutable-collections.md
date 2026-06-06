@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Dart Immutable Collections"
+description: "Why a Dart class with a mutable collection isn't truly immutable, and how to use immutable collections so every member of your class stays unchangeable."
 date: "2022-09-29 00:00:00 +0000"
 tags: dart functional-programming
 categories: [flutter]
