@@ -51,7 +51,7 @@ permalink: "/page:num/"
       <div class="blog-content">
         <div class="blog grid">
           {% for post in paginator.posts %}
-          {% include post_loop.html %}
+          {% include post_loop.html featured=forloop.first %}
           {% endfor %}
         </div>
 

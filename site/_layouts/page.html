@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% include one_page_nav.html %}
+
+<main class="post-content">
+  <div class="container">
+    <article class="article">
+      <h1 class="article-title">{{ page.title }}</h1>
+      {% if page.sub_title %}
+      <div class="article-content">
+        <p>{{ page.sub_title }}</p>
+      </div>
+      {% endif %}
+      <div class="article-content">
+        {{ content }}
+      </div>
+    </article>
+  </div>
+</main>
+
+{% include footer_2.html light_logo="true" %}

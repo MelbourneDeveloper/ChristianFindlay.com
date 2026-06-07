@@ -26,3 +26,6 @@ _site/
 *.pem
 *.key
 !*.pub.key
+
+
+/*.png

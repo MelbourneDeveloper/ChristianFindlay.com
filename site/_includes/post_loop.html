@@ -8,31 +8,30 @@
 				</a>
 			</div>
 			{% endif %}
-			
+
 			<div class="post-card-content">
 				<div class="post-card-taxonomy">
-					{% include taxonomy_chips.html categories=post.categories tags=post.tags %}
+					{% include taxonomy_chips.html categories=post.categories %}
 				</div>
 
 				<h3 class="post-card-title">
 					<a href="{{ post.url | relative_url }}">{{ post.title }}</a>
 				</h3>
 
+				<div class="post-card-excerpt">
+					{% if include.featured %}
+					{{ post.content | strip_html | truncatewords: 140 }}
+					{% else %}
+					{{ post.excerpt | strip_html | truncatewords: 25 }}
+					{% endif %}
+				</div>
+
 				<div class="post-card-meta">
 					{% if post.author %}
 					{% include author_display.html author=post.author %}
 					{% endif %}
 					<span class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</span>
-					<span class="post-card-read-time">{{ post.content | number_of_words | divided_by: 250 | plus: 1 }} min read</span>
 				</div>
-
-				<div class="post-card-excerpt">
-					{{ post.excerpt | strip_html | truncatewords: 25 }}
-				</div>
-				
-				<a href="{{ post.url | relative_url }}" class="post-card-read-more">
-					Read Article
-				</a>
 			</div>
 		</div>
 	</article>

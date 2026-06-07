@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Only add transitions to non-nav, non-navbar links that navigate within the site
-    const blogLinks = document.querySelectorAll('.post-card-read-more, .pagination a');
+    const blogLinks = document.querySelectorAll('.post-card-title a, .pagination a');
     
     blogLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {

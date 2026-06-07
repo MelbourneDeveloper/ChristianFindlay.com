@@ -66,7 +66,7 @@ His argument is that VS Code's source being open isn't the same thing as the VS 
 
 Huntley specifically called out Python. He pointed to the replacement of Microsoft's open-source Python Language Server with Pylance, and argued the default had quietly moved to a proprietary extension. [Visual Studio Magazine](https://visualstudiomagazine.com/articles/2021/11/05/vscode-python-nov21.aspx?p=1) reported the same shift: the open-source Microsoft Python Language Server reached end of life, and Pylance became the replacement. [The Register](https://www.theregister.com/2021/09/07/python_extension_vs_code_september/) noted the open-source cost of swapping the old language server for a closed one.
 
-This isn't a Microsoft hate piece. Microsoft employs great engineers, Pyright is good software, and VS Code is genuinely useful. None of that makes Pylance a healthy default for the Python ecosystem.
+Microsoft employs great engineers, Pyright is good software, and VS Code is a genuinely excellent IDE. None of that makes Pylance a healthy default for the Python ecosystem.
 
 But we should be honest about the incentives. When the best default experience is proprietary and tied to one vendor's product, the whole ecosystem bends around that product. Every fork, cloud IDE, open-source build, and AI-first editor either accepts a worse Python experience or burns engineering time recreating what should have been a portable language server in the first place.
 
@@ -206,19 +206,19 @@ I'm not interested in reinventing every good Python tool. Ruff is excellent. uv 
 
 This matters more now, because AI agents are editor-native. Cursor, Windsurf, and Antigravity aren't just editors with autocomplete. They're agent environments. If Python language intelligence is degraded in those environments, the agent is degraded with it. An agent that can't trust the type information in a project is a worse agent.
 
-## This Is Political
+## Let's Shake Things Up
 
-I don't usually like turning tooling choices into ideology. Use what works, ship software, and don't waste your life performing loyalty to a toolchain. But some tooling decisions are political, because they shape what the ecosystem can become.
+Tooling is not ideology. Use what works, ship software, and don't waste your life performing loyalty to a toolchain. But some tooling decisions shape what the whole ecosystem can become.
 
-If the Python community accepts that the best Python IDE experience lives inside a proprietary Microsoft extension, then every new editor starts behind. Open-source builds start behind. Cloud IDEs start behind. AI-first forks start behind. Neovim and Zed users start behind. The community keeps rebuilding around a proprietary center, over and over.
+When the best Python IDE experience only lives behind one proprietary extension, every new editor starts behind. Open-source builds start behind. Cloud IDEs start behind. AI-first forks start behind. Neovim and Zed users start behind. The community keeps rebuilding the same experience around a closed center, over and over.
 
-That's not healthy. And the fix isn't to yell at Microsoft. Microsoft is behaving exactly like a large platform vendor, and large platform vendors create defaults that benefit their platform. The fix is to build better open tools.
+The status quo just isn't good enough anymore. Portable language intelligence is the entire promise of the LSP, and Python developers still don't really have it. The way forward is to build open tools that are good enough to be the default everywhere.
 
-That's why Basilisk exists. It isn't a revenge project, and it isn't an anti-Microsoft project. It's a pro-Python, pro-open-tooling project, for people who want the same excellent Python experience in Cursor, Windsurf, Antigravity, Zed, Neovim, VS Code, and whatever comes after them.
+That's why Basilisk exists. It's a pro-Python, pro-open-tooling project, for people who want the same excellent Python experience in Cursor, Windsurf, Antigravity, Zed, Neovim, VS Code, and whatever comes after them.
 
 ## Where Basilisk Is At
 
-Basilisk is still early, and I won't pretend otherwise. Pyright has far more maturity today. Pylance has years of production use. mypy has the oldest ecosystem. Basedpyright is already useful for a lot of developers. Astral's ty and Meta's Pyrefly are pushing the space forward too. That's a good thing. Python needs more serious type checking work, not less.
+Basilisk is still early, and I won't pretend otherwise. Pyright and Pylance are mature. mypy has the oldest ecosystem. Astral's ty is pushing the space forward too. That's a good thing. Python needs more serious type checking work, not less.
 
 What makes Basilisk different is the stance:
 

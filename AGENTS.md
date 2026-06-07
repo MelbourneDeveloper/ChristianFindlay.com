@@ -49,6 +49,8 @@ personal Flutter/.NET blog and website. It is a **[Jekyll](https://jekyllrb.com/
 - **Do NOT name CSS after the section it appears in.** Give classes generic, reusable names so a
   class can be used anywhere on the site.
 - Search existing styles before adding new ones; reuse over re-declare.
+- **Max CSS budget 1.8k LOC**
+- CSS classes for prose pages like blog and docs should be named prose and all prose elements should use these
 
 ## Dart Rules (`site/assets/js/repos/`)
 

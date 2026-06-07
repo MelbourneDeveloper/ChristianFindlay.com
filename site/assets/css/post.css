@@ -120,20 +120,6 @@ body {
   align-items: center;
 }
 
-.post-card-date::before {
-  content: '📅';
-  margin-right: var(--spacing-2);
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-.post-card-read-time::before {
-  content: '⏱️';
-  margin-right: var(--spacing-2);
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
 /* Post taxonomy (categories and tags) */
 .post-taxonomy {
   margin-bottom: var(--spacing-6);

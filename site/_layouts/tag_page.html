@@ -36,7 +36,7 @@ autopages:
         <div class="blog grid">
           {% if paginator.posts.size > 0 %}
             {% for post in paginator.posts %}
-              {% include post_loop.html %}
+              {% include post_loop.html featured=forloop.first %}
             {% endfor %}
           {% else %}
             <div class="empty-posts-message">
