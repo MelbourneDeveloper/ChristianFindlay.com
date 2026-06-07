@@ -55,7 +55,9 @@ jobs:
           # Bundler >= 2.5 understands libc-specific platforms (x86_64-linux-gnu),
           # so it installs the precompiled sass-embedded gem instead of trying to
           # build it from source (which fails on the runner). 2.4.x cannot.
-          bundler: latest
+          # Pinned (must match BUNDLED WITH in Gemfile.lock) so bundler does not
+          # self-switch back to the Ruby-default 2.4.2. 'latest' is now 4.x.
+          bundler: '2.5.23'
           bundler-cache: true
           cache-version: 1
       - name: Setup Pages
