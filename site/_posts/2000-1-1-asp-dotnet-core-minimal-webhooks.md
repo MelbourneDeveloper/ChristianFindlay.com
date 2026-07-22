@@ -100,6 +100,8 @@ That's all you need. You now have a working endpoint that can receive POST data 
 
 You can use a tool like Postman, curl to send a POST request to your API's "/webhook" endpoint. You should see the webhook payload printed in your console and receive a JSON response with the message "Thanks! We got your webhook."
 
+Note that this endpoint is wide open: anyone who discovers the URL can POST to it. Most webhook senders sign their payloads, so verifying the signature inside `ProcessRequest` is usually the right first step. If you'd rather push the check up into the authorization pipeline, Samson Amaugo's guide to [policy-based authorization in Minimal APIs](https://swacblooms.com/exploring-policy-based-authorization-in-minimal-api-with-net-8/) walks through building custom requirements and handlers and attaching them to a `MapPost` endpoint.
+
 # Testing
 
 ## Overview
