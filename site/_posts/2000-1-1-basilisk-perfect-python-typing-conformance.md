@@ -12,6 +12,14 @@ permalink: /blog/:title
 keywords: [Basilisk, Python type checker, python typing conformance, Pyright, Pyrefly, ty, mypy, Rust type checker, Ruff, Astral]
 ---
 
+> **RETRACTED — 8 August 2026.** The central claim in this post is wrong. Basilisk's conformance
+> score reflected the exact source text of the test files rather than conformance to the Python
+> typing specification: many rules matched raw source text and hard-coded typing symbol names
+> instead of resolved symbols on the AST. Basilisk was removed from the python/typing conformance
+> results at my request on 5 August 2026 ([PR #2330](https://github.com/python/typing/pull/2330)).
+> Nothing below should be relied on until Basilisk has been thoroughly audited, including the comparison table. The post is left up unedited
+> as a record. See [Basilisk's 100% Python Conformance Score Was Not Real](/blog/basilisk-conformance-apology).
+
 Python has a great type system, but most people don't realize this. The TLDR; is that a Python type checker basically works the same way as Typescript. Type checked Python is to regular Python what Typescript is to JavaScript. For a long time `mypy` was the most common type checker, then Pyright, and the gradual typing story went on. Today there are seven officially recognized type checkers listed in the Python typing repo and the only one with a 100% score is Basilisk, my tool.
 
 The Python type repo has a way to measure who is right. The Python typing team maintains a [conformance test suite](https://github.com/python/typing/tree/main/conformance/tests) — a large body of Python files that each type checker is run against, with the expected errors marked line by line. It is the closest thing the ecosystem has to an objective referee. A tool doesn't get to grade its own homework. The suite grades everyone on the same run and [publishes the results](https://github.com/python/typing/blob/main/conformance/results/results.html).
@@ -79,7 +87,7 @@ So the trade everyone expects — correctness *or* speed — isn't a trade here.
 
 ## None of This Exists Without Ruff
 
-Basilisk does not have its own hand-rolled Python parser. It uses [`ruff_python_parser`](https://github.com/astral-sh/ruff) to turn your source into an AST, and it formats code with `ruff_python_formatter`. Both come from [Ruff](https://github.com/astral-sh/ruff), the linter and formatter built by [Astral](https://astral.sh). Charlie Marsh is the man behind all this and it now looks as though Astral is being [acquired by OpenAI](http://localhost:8080/blog/openai-acquires-astral-what-it-means-for-basilisk/). 
+Basilisk does not have its own hand-rolled Python parser. It uses [`ruff_python_parser`](https://github.com/astral-sh/ruff) to turn your source into an AST, and it formats code with `ruff_python_formatter`. Both come from [Ruff](https://github.com/astral-sh/ruff), the linter and formatter built by [Astral](https://astral.sh). Charlie Marsh is the man behind all this and it now looks as though Astral is being [acquired by OpenAI](https://openai.com/index/openai-to-acquire-astral/). 
 
 Writing a fast, correct, spec-faithful Python parser is a brutal, thankless, multi-year job. It is the kind of foundational work that everyone depends on and nobody thanks anyone for. Charlie Marsh and the team at Astral did that work, in Rust, and — this is the part that matters — they made it *reusable*. Because Ruff's parser is a real crate rather than a locked box, a project like Basilisk can stand on it and put its energy into the type system instead of re-litigating Python's grammar for the tenth time.
 

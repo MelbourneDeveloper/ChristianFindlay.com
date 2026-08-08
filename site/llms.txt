@@ -72,6 +72,7 @@ Christian builds open source tools for the Dart and Flutter ecosystem. He has sh
 ## Blog - AI & Software Development
 
 - [Why I Built Basilisk](/blog/why-i-built-basilisk): An open-source Python language server, type checker, debugger, and profiler for VS Code, Cursor, Windsurf, Zed, and Neovim — a Pylance/Pyright alternative for AI coding agents
+- [Basilisk's 100% Python Conformance Score Was Not Real](/blog/basilisk-conformance-apology): Retraction and apology — Basilisk's rules matched raw source text instead of resolved symbols, so its python/typing conformance score measured the test files' spelling and was removed at the author's request
 - [Introduction to AI Coding Agents](/blog/intro-ai-agent-dev): Overview of IDE-based (Cursor, Copilot), CLI-based (Claude Code, Aider), and cloud-based (Devin) AI agents, plus frameworks like LangChain
 - [Leveraging AI to Build Apps](/blog/leveraging-ai-to-build-apps): Practical strategies for using AI assistants in development
 - [Flutter ChatGPT](/blog/flutter-chatgpt): Integrating ChatGPT into Flutter applications
