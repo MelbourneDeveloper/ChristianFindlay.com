@@ -127,7 +127,7 @@ Now apply Kevin's Phase 3 gate to it honestly. With two decoders, extracting `de
 
 Kevin's skill is an audit. It runs when you ask it to, over a repository or a diff.
 
-The other half of the loop runs continuously. Deslop's MCP server exposes `find-similar`, which an agent calls *before* it writes a function, and gets back the canonical implementation if one already exists. I have that enforced in the `AGENTS.md` of every repo I work in: call `find-similar` before authoring anything, and if the fused similarity signal comes back above 0.85, reuse the existing code instead of adding a fourth copy.
+The other half of the loop runs continuously. Deslop's MCP server exposes `find-similar`, which an agent calls *before* it writes a function, and gets back the canonical implementation if one already exists. I have that enforced in the `AGENTS.md` of every repo I work in, the same [rules-file discipline](https://apparencekit.dev/blog/vibe-coding-flutter-claude-code/) a good `CLAUDE.md` relies on: call `find-similar` before authoring anything, and if the fused similarity signal comes back above 0.85, reuse the existing code instead of adding a fourth copy.
 
 Prevention is cheaper than remediation, because the second copy is free to not write and expensive to delete once three files import it. But prevention only covers code written from now on. Every repository already contains the copies made before anyone was watching, and that's what an audit skill is for. Use both.
 

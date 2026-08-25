@@ -56,7 +56,7 @@ Do you have infinite resources and time? If so, the choice is easy: build native
 
 The business proposition is clear for the other businesses (including Facebook, Instagram, Microsoft, BMW, Google, eBay, Alibaba, Tencent, and countless others): put your time and resources into building one single-source app that works well. All these companies use cross-platform toolkits, and they obviously work well. If they didn't, these giant corporations wouldn't use them.   
 
-Check out the list of companies using [Flutter](https://flutter.dev/showcase) (self-rendering) and [React Native](https://reactnative.dev/showcase) (more native-UI).  
+Check out the list of companies using [Flutter](https://flutter.dev/showcase) (self-rendering) and [React Native](https://reactnative.dev/showcase) (more native-UI), and this [comparison of the two](https://apparencekit.dev/blog/flutter-vs-react-native-2025/) if that is the choice in front of you.  
 
 Your business does not have infinite time and resources. That app you started recently will become a liability for you to maintain in the future. You will have to hire at least one person per app to maintain them. If you choose a cross-platform toolkit, you can invest your time and money into making that app as perfect as possible.   
 
