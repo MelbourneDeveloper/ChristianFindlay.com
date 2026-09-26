@@ -71,6 +71,7 @@ Christian builds open source tools for the Dart and Flutter ecosystem. He has sh
 
 ## Blog - AI & Software Development
 
+- [How To Set Up Remote Agent Dev](/blog/remote-agent-dev): Step-by-step tutorial for running Claude Code and Codex on a disposable Linux dev box (WSL2 on Windows, Multipass on Mac), driving them from your phone with Remote Control, and reaching the box securely from anywhere with Tailscale SSH
 - [Why I Built Basilisk](/blog/why-i-built-basilisk): An open-source Python language server, type checker, debugger, and profiler for VS Code, Cursor, Windsurf, Zed, and Neovim — a Pylance/Pyright alternative for AI coding agents
 - [Basilisk's 100% Python Conformance Score Was Not Real](/blog/basilisk-conformance-apology): Retraction and apology — Basilisk's rules matched raw source text instead of resolved symbols, so its python/typing conformance score measured the test files' spelling and was removed at the author's request
 - [Introduction to AI Coding Agents](/blog/intro-ai-agent-dev): Overview of IDE-based (Cursor, Copilot), CLI-based (Claude Code, Aider), and cloud-based (Devin) AI agents, plus frameworks like LangChain

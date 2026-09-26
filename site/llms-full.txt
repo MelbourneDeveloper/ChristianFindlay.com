@@ -266,6 +266,7 @@ Lightweight dependency injection container for Dart and Flutter. Simple API with
 - [Mobile App Success 2024](/blog/mobile-app-success-2024)
 
 ### AI & Tools
+- [How To Set Up Remote Agent Dev](/blog/remote-agent-dev)
 - [Introduction to AI Agent Development](/blog/intro-ai-agent-dev)
 - [Leveraging AI to Build Apps](/blog/leveraging-ai-to-build-apps)
 - [AI Content Policy](/blog/ai-writing)
