@@ -361,6 +361,7 @@ Your code lives in git, so push often. Anything that isn't pushed and isn't in t
 - **Remote Control needs a subscription.** It doesn't work with an API key, or with the long-lived tokens from `claude setup-token`. Sign in with `claude` normally.
 - **Remote Control transcripts are stored on Anthropic's servers** while you're connected. That's how the conversation syncs across devices. If you're on a Pro or Max plan, consider turning on **Require trusted devices** in your Claude account settings.
 - **Codex on Windows refuses to run with admin rights.** This only matters if you also run Codex on the Windows host. Start it from a normal terminal, not an elevated one.
+- **"Failed to start the systemd user session" on WSL.** If you already run another systemd distro, the box's user services can fail with `Device or resource busy`. This is a [known WSL issue](https://github.com/microsoft/WSL/issues/8842). Run `wsl --shutdown` once and open the box again.
 - **Disk space.** The Linux disk grows on your host's drive. Rust `target` folders and Docker images add up fast.
 
 ## Remote Agent Dev Is a Solved Problem
