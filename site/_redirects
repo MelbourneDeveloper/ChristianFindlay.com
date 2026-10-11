@@ -1,0 +1,2 @@
+# Redirect rules to fix duplicate URLs
+/blog/page/*/index.html  /blog/page/:splat/  301 
