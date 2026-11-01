@@ -89,5 +89,13 @@ So how does this lead to FP?
 
 Languages like [Ocaml](https://ocaml.org), [Haskell](https://www.haskell.org), [Rust](https://rust-lang.org) and [F#](https://fsharp.org) are elegant, safe and performant. Rust in particular, while not a pure FP language, nails the balance of safety and performance, giving you fine grained control of these aspects with minimal costs.
 
+Moreover, these languages are not bloated to the moon with features that you probably wouldn't even want to use. The language designers were careful. They took their time to design these languages properly and not include features unless their userbase was unanimous on them.
 
+C# on the other hand adds features like a hobo stuffing pigeons in a sack after sprinkling of bird seed. This adds to the cognitive load of having two many different approaches to doing the same thing in a codebase. Do I want a class? A record? Should I ban unions? Primary constructors? It never ends and the complexity is more than most people can keep track of.
+
+All this is why I've come to prefer FP and FP languages, and it's why I ended up building [Osprey](https://www.ospreylang.dev). Osprey isn't the reason I started writing this article but my instincts were right. The progress on Osprey has been breathtaking. Just check out the showcase video on the main page to see what I've been able to build on top of Osprey recently.
+
+## Wrap-up
+
+This isn't a tribal thing. If you like OOP, there is no problem with sticking with it. But just understand that there hasn't really been a pure OOP language since small talk and you're going to be dealing with a mish mash of constructs in any modern hybrid language you work with. I like FP because it narrows the construct down to a simple handful of necessary ones and ignores all the fluff that seem to exist in the hybrid languages
 
