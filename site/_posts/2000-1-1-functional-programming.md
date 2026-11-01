@@ -57,4 +57,37 @@ C# is getting unions in C# 15 and most other moden languages either have unions 
 
 Suffice it to say that after about a decade of working with C# I clearly saw the cracks in the paradigm and so did everyone else. Today, C# is a mish mash of OOP and FP constructs, just like nearly every other popular programming language. C# has immutable records, unions and various other FP constructs. We now call these languages "hybrid" languages, which is another way of saying that the language doesn't properly belong to any paradigm. Yet another way to put it is that most modern programming languages have become garbage dumps for features that are supposed to make it easy for any developer to adopt.
 
+### FP Is Nice By Default
+
+All the issues I just mentioned are just not issues in the FP world. Data is immutable by default. You don't generally mix behavior and state and FP deals with effects (the stuff we write mocks for) in a much more structured way. 
+
+I gradually drifted towards writing all my Dart and C# code in an FP style and it ended up solving a lot of the kinds of problems that used to rack my brain when trying to come up with an elegant solution ten years ago. For example, I now use sealed classes in Dart to specify that a an API endpoint can either return a typed Success value, ***or*** a failure value of a different type. The exhaustiveness checks in Dart force me to deal with either side.
+
+The Rust community came to the same realization and the Rust syntax has gravitated towards a mostly FP approach. Recently, I've been working with Rust a lot and I can clearly see that it promotes performance and safety through the FP style type system.
+
+### But What About The AI Era?
+
+AI understands most languages easily. You can easily vibe-code any app, and most of the time, AI will do a reasonable job of structuring the code as long as you guide it and push it in the right direction when it goes off course. AI knows about the performance nuances of most modern languages and it can use profilers to find bottlenecks in code when it's slow. So why care about the language at all?
+
+The studies are clear that some languages are safer and more performant than others. C++ is a very fast language but [Rust has better memory safety out of the box](https://blog.google/security/rust-in-android-move-fast-fix-things/).
+
+The third axis is elegance. It's about doing more with less code because all code is a liability.
+
+> The more code you have, the more places there are for bugs to hide.
+
+~ [Rich Screnta in The Best Code is No Code At All](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
+
+It is a [well-established principle](https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html) that the more code you have, the more work you or the AI need to do.
+
+Every language makes trade-offs on these three things: safety, performance and elegance. They're not always direct trade-offs but good programming languages get a balance of all these things right. It's about where the language designers put their resources and efforts. 
+
+All these things matter whether you write the code or the AI writes the code. If you can write less code, you will have fewer bugs and spend fewer tokens. If you use a fast language, you will provide a better user experience and save on cloud costs. Memory safety is just a no-brainer. You don't mess with this unless you're doing things that require extreme performance without major risk.
+
+So how does this lead to FP?
+
+### FP Gets It Mostly Right
+
+Languages like [Ocaml](https://ocaml.org), [Haskell](https://www.haskell.org), [Rust](https://rust-lang.org) and [F#](https://fsharp.org) are elegant, safe and performant. Rust in particular, while not a pure FP language, nails the balance of safety and performance, giving you fine grained control of these aspects with minimal costs.
+
+
 
