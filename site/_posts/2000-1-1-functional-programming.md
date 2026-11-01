@@ -47,4 +47,14 @@ I never really felt as though OOP code was a good fit for the kinds of apps and 
 
 I wanted to pass through model through from the DB to the server and back because it was C# on both sides. So, I decided to convert the `Save` methods to static (like top-level functions) so the models would be independent of the data layer. That only makes sense. The models should be decoupled from the data layer, and that's how most systems work these days. But, why wasn't the OOP approach the right approach?
 
-Then came the mocking frameworks. I was horrified when people first explained these contorted 
+Then came the mocking frameworks. I was horrified when people first explained these contorted monstrosities to me. The idea of test doubles makes sense for certain scenarios, but why did we need the heavyweight OOP solutions when we could just functions or lambdas? It never made a lot of sense to me and it still doesn't.
+
+I wanted to use the features of C# to their fullest to make the code as reusable as possible, but the other big problem that I kept hitting was inheritance. If I build a type hierarchy with inheritance, my logic is baked into that structure and I cannot use the methods as functions in other parts of the code. I would have to refactor these methods into static functions and move them elsewhere, which again, defeats the purpose of OOP.
+
+But by far the worst thing about C#, which is [about to be fixed](https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/union), is the lack of unions. Most modern programming languages have unions or allow for something like a union. I constantly hit cases where a type would need one set of data, ***or*** some other completely different set of data. 
+
+C# is getting unions in C# 15 and most other moden languages either have unions like Typescript and F#, or allow for closed type hierarchies with sealed classes like Kotlin and Dart. It's about time because it's almost impossible to model data when you can't specify that the data set is either one strict set of data fields, or another strict set of fields. 
+
+Suffice it to say that after about a decade of working with C# I clearly saw the cracks in the paradigm and so did everyone else. Today, C# is a mish mash of OOP and FP constructs, just like nearly every other popular programming language. C# has immutable records, unions and various other FP constructs. We now call these languages "hybrid" languages, which is another way of saying that the language doesn't properly belong to any paradigm. Yet another way to put it is that most modern programming languages have become garbage dumps for features that are supposed to make it easy for any developer to adopt.
+
+
