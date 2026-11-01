@@ -29,7 +29,7 @@ Elon Musk [said that he thinks AI will start building apps by directly writing t
 
 This is not in the least bit shocking to me because I've seen how powerful AI coding agents have become. I've also seen how they can seamlessly jump from language to language without getting muddled in any way. This is something that humans just cannot do. So why should we care about the programming language at all?
 
-Well, the answer is that the programming language still matters a lot, and FP languages routinely get overlooked. We may get to a point where we can directly build simple apps from prompts to machine code, but the problem is that there is absolutely no way for a human to be able to tell what machine code is doing without using a dissasembler. It is not auditable, and if a security flaw creeps in, we'd have to depend on AI to catch it. We need programming languages because they are **deterministic** ways of expressing programming logic. We can't store programs as natural language because it's not deterministic, and machine code would banish humans from the equation altogether simply because we cannot understand it.
+Well, the answer is that the programming language still matters a lot, and FP languages routinely get overlooked. We may get to a point where we can directly build simple apps from prompts to machine code, but the problem is that there is absolutely no way for a human to be able to tell what machine code is doing without using a disassembler. It is not auditable, and if a security flaw creeps in, we'd have to depend on AI to catch it. We need programming languages because they are **deterministic** ways of expressing programming logic. We can't store programs as natural language because it's not deterministic, and machine code would banish humans from the equation altogether simply because we cannot understand it.
 
 ## Why Functional Programming
 
@@ -55,7 +55,7 @@ But by far the worst thing about C#, which is [about to be fixed](https://learn.
 
 C# is getting unions in C# 15 and most other modern languages either have unions like TypeScript and F#, or allow for closed type hierarchies with sealed classes like Kotlin and Dart. It's about time because it's almost impossible to model data when you can't specify that the data set is either one strict set of data fields, or another strict set of fields. 
 
-Suffice it to say that after about a decade of working with C# I clearly saw the cracks in the paradigm and so did everyone else. Today, C# is a mish mash of OOP and FP constructs, just like nearly every other popular programming language. C# has immutable records, unions and various other FP constructs. We now call these languages "hybrid" languages, which is another way of saying that the language doesn't properly belong to any paradigm. Yet another way to put it is that most modern programming languages have become garbage dumps for features that are supposed to make it easy for any developer to adopt.
+Suffice it to say that after about a decade of working with C# I clearly saw the cracks in the paradigm and so did everyone else. Today, C# is a mish mash of OOP and FP constructs, just like nearly every other popular programming language. C# has immutable records and various other FP constructs, and will have unions in C# 15. We now call these languages "hybrid" languages, which is another way of saying that the language doesn't properly belong to any paradigm. Yet another way to put it is that most modern programming languages have become garbage dumps for features that are supposed to make it easy for any developer to adopt.
 
 ### FP Is Nice By Default
 
@@ -75,7 +75,7 @@ The third axis is elegance. It's about doing more with less code because all cod
 
 > The more code you have, the more places there are for bugs to hide.
 
-~ [Rich Skrenta in The Best Code is No Code At All](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
+~ [Rich Skrenta, quoted by Jeff Atwood in The Best Code is No Code At All](https://blog.codinghorror.com/the-best-code-is-no-code-at-all/)
 
 It is a [well-established principle](https://www.cs.utexas.edu/~EWD/transcriptions/EWD10xx/EWD1036.html) that the more code you have, the more work you or the AI need to do.
 
@@ -89,7 +89,7 @@ So how does this lead to FP?
 
 Languages like [OCaml](https://ocaml.org), [Haskell](https://www.haskell.org), [Rust](https://rust-lang.org) and [F#](https://fsharp.org) are elegant, safe and performant. Rust in particular, while not a pure FP language, nails the balance of safety and performance, giving you fine grained control of these aspects with minimal costs.
 
-Moreover, these languages are not bloated to the moon with features that you probably wouldn't even want to use. The language designers were careful. They took their time to design these languages properly and not add core features without very carful deliberation over time.
+Moreover, these languages are not bloated to the moon with features that you probably wouldn't even want to use. The language designers were careful. They took their time to design these languages properly and not add core features without very careful deliberation over time.
 
 C# on the other hand adds features like a hobo stuffing pigeons in a sack after sprinkling bird seed. This adds to the cognitive load of having too many different approaches to doing the same thing in a codebase. Do I want a class? A record? Should I ban unions? Primary constructors? It never ends and the complexity is more than most people can keep track of.
 
@@ -97,5 +97,5 @@ All this is why I've come to prefer FP and FP languages, and it's why I ended up
 
 ## Wrap-up
 
-This isn't a tribal thing. If you like OOP, there is no problem with sticking with it. But just understand that there have been very few pure OOP language since Smalltalk and you're going to be dealing with a mish mash of constructs in any modern hybrid language you work with. I like FP because it narrows the construct down to a simple handful of necessary ones and ignores all the fluff that seems to exist in the hybrid languages.
+This isn't a tribal thing. If you like OOP, there is no problem with sticking with it. But just understand that there have been very few pure OOP languages since Smalltalk and you're going to be dealing with a mish mash of constructs in any modern hybrid language you work with. I like FP because it narrows the construct down to a simple handful of necessary ones and ignores all the fluff that seems to exist in the hybrid languages.
 
