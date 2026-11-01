@@ -13,7 +13,7 @@ permalink: /blog/:title
 
 Most of you know that I have been working with .NET for a long time and also work with Flutter. C# and Dart mostly come from an Object Oriented Programming (OOP) background, but I've drifted towards Functional Programming (FP) more and more over the last few years. You can see it in several of my blog posts, but I wanted to go into what led me to this point. The TLDR; is that I've ended up building an FP language [Osprey](https://www.ospreylang.dev/) from scratch over the last year and a half, this language should be of interest to all .NET and Flutter devs and that there are good reasons to get more interested in FP as a style and FP languages in general.
 
-We're living in a time where a lot of people are saying "The language doesn't matter anymore". There's some truth to that because AI can build software in literally any language, even made up ones. A few years ago, AI couldn't consistently write code in languages it didn't know. Claude Code with Opus 5.5 now writes flawless Osprey code. It's been building apps from scratch in the different Osprey syntax flavors without flinching, but the point is that it's time to have a think about whether programming languages are important at all, and if so, what aspects of the language are important.
+We're living in a time where a lot of people are saying "The language doesn't matter anymore". There's some truth to that because AI can build software in literally any language, even made up ones. A few years ago, AI couldn't consistently write code in languages it didn't know. Claude Code with Opus 5.5 now usually writes well-structured Osprey code. It's been building apps from scratch in the different Osprey syntax flavors without flinching, but the point is that it's time to have a think about whether programming languages are important at all, and if so, what aspects of the language are important.
 
 Elon Musk [said that he thinks AI will start building apps by directly writing to machine code](https://x.com/XFreeze/status/2021699619927781842). Robert C. Martin (Uncle Bob) said that he doesn't look at the code anymore.
 
@@ -29,7 +29,7 @@ Elon Musk [said that he thinks AI will start building apps by directly writing t
 
 This is not in the least bit shocking to me because I've seen how powerful AI coding agents have become. I've also seen how they can seamlessly jump from language to language without getting muddled in any way. This is something that humans just cannot do. So why should we care about the programming language at all?
 
-Well, the answer is that the programming language still matters a lot, and FP languages routinely get overlooked. We may get to a point where we can directly build simple apps from prompts to machine code, but the problem is that there is absolutely no way for a human to be able to tell what machine code is doing. It is not auditable, and if a security flaw creeps in, we'd have to depend on AI to catch it. We need programming languages because they are **deterministic** ways of expressing programming logic. We can't store programs as natural language because it's not deterministic, and machine code would banish humans from the equation altogether simply because we cannot understand it.
+Well, the answer is that the programming language still matters a lot, and FP languages routinely get overlooked. We may get to a point where we can directly build simple apps from prompts to machine code, but the problem is that there is absolutely no way for a human to be able to tell what machine code is doing without using a dissasembler. It is not auditable, and if a security flaw creeps in, we'd have to depend on AI to catch it. We need programming languages because they are **deterministic** ways of expressing programming logic. We can't store programs as natural language because it's not deterministic, and machine code would banish humans from the equation altogether simply because we cannot understand it.
 
 ## Why Functional Programming
 
@@ -63,7 +63,7 @@ All the issues I just mentioned are just not issues in the FP world. Data is imm
 
 I gradually drifted towards writing all my Dart and C# code in an FP style and it ended up solving a lot of the kinds of problems that used to rack my brain when trying to come up with an elegant solution ten years ago. For example, I now use sealed classes in Dart to specify that an API endpoint can either return a typed Success value, ***or*** a failure value of a different type. The exhaustiveness checks in Dart force me to deal with either side.
 
-The Rust community came to the same realization and the Rust syntax has gravitated towards a mostly FP approach. Recently, I've been working with Rust a lot and I can clearly see that it promotes performance and safety through the FP style type system.
+The Rust community must have had the same opinion, given Rust takes a mostly FP approach. Recently, I've been working with Rust a lot and I can clearly see that it promotes performance and safety through the FP style type system.
 
 ### But What About The AI Era?
 
@@ -89,7 +89,7 @@ So how does this lead to FP?
 
 Languages like [OCaml](https://ocaml.org), [Haskell](https://www.haskell.org), [Rust](https://rust-lang.org) and [F#](https://fsharp.org) are elegant, safe and performant. Rust in particular, while not a pure FP language, nails the balance of safety and performance, giving you fine grained control of these aspects with minimal costs.
 
-Moreover, these languages are not bloated to the moon with features that you probably wouldn't even want to use. The language designers were careful. They took their time to design these languages properly and not include features unless their userbase was unanimous on them.
+Moreover, these languages are not bloated to the moon with features that you probably wouldn't even want to use. The language designers were careful. They took their time to design these languages properly and not add core features without very carful deliberation over time.
 
 C# on the other hand adds features like a hobo stuffing pigeons in a sack after sprinkling bird seed. This adds to the cognitive load of having too many different approaches to doing the same thing in a codebase. Do I want a class? A record? Should I ban unions? Primary constructors? It never ends and the complexity is more than most people can keep track of.
 
@@ -97,5 +97,5 @@ All this is why I've come to prefer FP and FP languages, and it's why I ended up
 
 ## Wrap-up
 
-This isn't a tribal thing. If you like OOP, there is no problem with sticking with it. But just understand that there hasn't really been a pure OOP language since Smalltalk and you're going to be dealing with a mish mash of constructs in any modern hybrid language you work with. I like FP because it narrows the construct down to a simple handful of necessary ones and ignores all the fluff that seems to exist in the hybrid languages.
+This isn't a tribal thing. If you like OOP, there is no problem with sticking with it. But just understand that there have been very few pure OOP language since Smalltalk and you're going to be dealing with a mish mash of constructs in any modern hybrid language you work with. I like FP because it narrows the construct down to a simple handful of necessary ones and ignores all the fluff that seems to exist in the hybrid languages.
 
